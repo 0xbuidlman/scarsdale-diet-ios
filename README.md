@@ -1,4 +1,4 @@
-scarsdale-diet-ios
+Scarsdale Diet iOS
 ==================
 
 Simple iOS application that helps users follow Scarsdale Diet's food plan.

@@ -15,7 +15,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MAw-o7-k0n"/>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uWc-DL-3aF">
                                 <items>
-                                    <navigationItem title="Scarsdale Diet" id="lMI-kf-nYD"/>
+                                    <navigationItem title="Title" id="mCj-hD-ISi">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="oCk-Yp-RIP"/>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                         </subviews>
@@ -32,23 +34,13 @@
                     </view>
                     <connections>
                         <outlet property="calendarView" destination="MAw-o7-k0n" id="qfl-jC-xIe"/>
+                        <outlet property="doneButton" destination="oCk-Yp-RIP" id="OKV-RF-qv9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
-    <classes>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="SDViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SDViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="calendarView" candidateClass="UIView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "VRGCalendarView.h"
-
+#define kDietDaysPeriod 14
 @interface SDViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UIView *calendarView;
+@property (strong, nonatomic) IBOutlet UIView *calendarView;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *doneButton;
+@property (strong, nonatomic) UIDatePicker *datePicker;
 @end
