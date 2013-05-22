@@ -9,23 +9,36 @@
 #import "SDViewController.h"
 
 @interface SDViewController ()
-
+    
 @end
 
 @implementation SDViewController
 
-@synthesize datePicker, doneButton;
+@synthesize datePicker, doneButton, navigationItem, dietStart;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+
+    self.dietStart = [defaults objectForKey:@"dietStart"];
+    
+    if (self.navigationItem == nil) {
+        self.navigationItem = [[UINavigationItem alloc] initWithTitle:@"Scarsdale Diet"];
+    }
+    
     VRGCalendarView *calendar = [[VRGCalendarView alloc] init];
     calendar.delegate = self;
     [self.calendarView addSubview:calendar];
     
-    [self showDatePicker];
+    if (self.dietStart == nil) {
+        [self showDatePicker];
+    }
     
+    [self.navigationBar pushNavigationItem:self.navigationItem animated:NO];
 }
 
 - (void) showDatePicker {
@@ -50,7 +63,7 @@
     self.datePicker.maximumDate = [self getDateWithOffset:kDietDaysPeriod];
     
     [self.view addSubview:self.datePicker];
-    
+
     [self showDoneButton];
 }
 
@@ -61,6 +74,21 @@
     }
     
     self.navigationItem.rightBarButtonItem = self.doneButton;
+
+}
+
+- (void) dateSelected:(id)sender {
+    self.navigationItem.rightBarButtonItem = nil;
+    
+    NSDate *selectedDate = self.datePicker.date;
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    self.dietStart = selectedDate;
+    [defaults setObject:selectedDate forKey:@"dietStart"];
+    [defaults synchronize];
+    
+    [self.datePicker removeFromSuperview];
 }
 
 -(NSDate *) getDateWithOffset:(NSInteger)offset

@@ -13,5 +13,9 @@
 @property (strong, nonatomic) IBOutlet UIView *calendarView;
 @property (strong, nonatomic) UIBarButtonItem *doneButton;
 @property (strong, nonatomic) UIDatePicker *datePicker;
+
 @property (weak, nonatomic) IBOutlet UINavigationBar *navigationBar;
+@property (strong, nonatomic) UINavigationItem *navigationItem;
+
+@property (weak, nonatomic) NSDate *dietStart;
 @end
