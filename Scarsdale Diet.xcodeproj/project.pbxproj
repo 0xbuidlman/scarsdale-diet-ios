@@ -18,6 +18,12 @@
 		0C10334A174CE2A7004C2ACC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C103349174CE2A7004C2ACC /* Default-568h@2x.png */; };
 		0C10334D174CE2A7004C2ACC /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C10334B174CE2A7004C2ACC /* MainStoryboard.storyboard */; };
 		0C103350174CE2A7004C2ACC /* SDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C10334F174CE2A7004C2ACC /* SDViewController.m */; };
+		0C103362174CE407004C2ACC /* NSDate+convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C103357174CE407004C2ACC /* NSDate+convenience.m */; };
+		0C103363174CE407004C2ACC /* NSMutableArray+convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C103359174CE407004C2ACC /* NSMutableArray+convenience.m */; };
+		0C103364174CE407004C2ACC /* UIColor+expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C10335B174CE407004C2ACC /* UIColor+expanded.m */; };
+		0C103365174CE407004C2ACC /* UIView+convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C10335D174CE407004C2ACC /* UIView+convenience.m */; };
+		0C103366174CE407004C2ACC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C10335F174CE407004C2ACC /* ViewController.m */; };
+		0C103367174CE407004C2ACC /* VRGCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C103361174CE407004C2ACC /* VRGCalendarView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +43,18 @@
 		0C10334C174CE2A7004C2ACC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		0C10334E174CE2A7004C2ACC /* SDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDViewController.h; sourceTree = "<group>"; };
 		0C10334F174CE2A7004C2ACC /* SDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDViewController.m; sourceTree = "<group>"; };
+		0C103356174CE407004C2ACC /* NSDate+convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+convenience.h"; path = "Scarsdale Diet/NSDate+convenience.h"; sourceTree = "<group>"; };
+		0C103357174CE407004C2ACC /* NSDate+convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+convenience.m"; path = "Scarsdale Diet/NSDate+convenience.m"; sourceTree = "<group>"; };
+		0C103358174CE407004C2ACC /* NSMutableArray+convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+convenience.h"; path = "Scarsdale Diet/NSMutableArray+convenience.h"; sourceTree = "<group>"; };
+		0C103359174CE407004C2ACC /* NSMutableArray+convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+convenience.m"; path = "Scarsdale Diet/NSMutableArray+convenience.m"; sourceTree = "<group>"; };
+		0C10335A174CE407004C2ACC /* UIColor+expanded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+expanded.h"; path = "Scarsdale Diet/UIColor+expanded.h"; sourceTree = "<group>"; };
+		0C10335B174CE407004C2ACC /* UIColor+expanded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+expanded.m"; path = "Scarsdale Diet/UIColor+expanded.m"; sourceTree = "<group>"; };
+		0C10335C174CE407004C2ACC /* UIView+convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+convenience.h"; path = "Scarsdale Diet/UIView+convenience.h"; sourceTree = "<group>"; };
+		0C10335D174CE407004C2ACC /* UIView+convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+convenience.m"; path = "Scarsdale Diet/UIView+convenience.m"; sourceTree = "<group>"; };
+		0C10335E174CE407004C2ACC /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = "Scarsdale Diet/ViewController.h"; sourceTree = "<group>"; };
+		0C10335F174CE407004C2ACC /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = "Scarsdale Diet/ViewController.m"; sourceTree = "<group>"; };
+		0C103360174CE407004C2ACC /* VRGCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VRGCalendarView.h; path = "Scarsdale Diet/VRGCalendarView.h"; sourceTree = "<group>"; };
+		0C103361174CE407004C2ACC /* VRGCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VRGCalendarView.m; path = "Scarsdale Diet/VRGCalendarView.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +101,7 @@
 		0C103339174CE2A7004C2ACC /* Scarsdale Diet */ = {
 			isa = PBXGroup;
 			children = (
+				0C103368174CE412004C2ACC /* calendar */,
 				0C103342174CE2A7004C2ACC /* SDAppDelegate.h */,
 				0C103343174CE2A7004C2ACC /* SDAppDelegate.m */,
 				0C10334B174CE2A7004C2ACC /* MainStoryboard.storyboard */,
@@ -105,6 +124,26 @@
 				0C103349174CE2A7004C2ACC /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0C103368174CE412004C2ACC /* calendar */ = {
+			isa = PBXGroup;
+			children = (
+				0C103356174CE407004C2ACC /* NSDate+convenience.h */,
+				0C103357174CE407004C2ACC /* NSDate+convenience.m */,
+				0C103358174CE407004C2ACC /* NSMutableArray+convenience.h */,
+				0C103359174CE407004C2ACC /* NSMutableArray+convenience.m */,
+				0C10335A174CE407004C2ACC /* UIColor+expanded.h */,
+				0C10335B174CE407004C2ACC /* UIColor+expanded.m */,
+				0C10335C174CE407004C2ACC /* UIView+convenience.h */,
+				0C10335D174CE407004C2ACC /* UIView+convenience.m */,
+				0C10335E174CE407004C2ACC /* ViewController.h */,
+				0C10335F174CE407004C2ACC /* ViewController.m */,
+				0C103360174CE407004C2ACC /* VRGCalendarView.h */,
+				0C103361174CE407004C2ACC /* VRGCalendarView.m */,
+			);
+			name = calendar;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +216,12 @@
 				0C103340174CE2A7004C2ACC /* main.m in Sources */,
 				0C103344174CE2A7004C2ACC /* SDAppDelegate.m in Sources */,
 				0C103350174CE2A7004C2ACC /* SDViewController.m in Sources */,
+				0C103362174CE407004C2ACC /* NSDate+convenience.m in Sources */,
+				0C103363174CE407004C2ACC /* NSMutableArray+convenience.m in Sources */,
+				0C103364174CE407004C2ACC /* UIColor+expanded.m in Sources */,
+				0C103365174CE407004C2ACC /* UIView+convenience.m in Sources */,
+				0C103366174CE407004C2ACC /* ViewController.m in Sources */,
+				0C103367174CE407004C2ACC /* VRGCalendarView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
