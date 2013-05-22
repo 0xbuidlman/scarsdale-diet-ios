@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "VRGCalendarView.h"
 
 @interface SDViewController : UIViewController
-
+@property (weak, nonatomic) IBOutlet UIView *calendarView;
 @end

@@ -18,7 +18,19 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    VRGCalendarView *calendar = [[VRGCalendarView alloc] init];
+    calendar.delegate = self;
+    [self.calendarView addSubview:calendar];
 }
+
+
+-(void)calendarView:(VRGCalendarView *)calendarView switchedToMonth:(int)month targetHeight:(float)targetHeight animated:(BOOL)animated {
+    if (month==[[NSDate date] month]) {
+        NSArray *dates = [NSArray arrayWithObjects:[NSNumber numberWithInt:1],[NSNumber numberWithInt:5], nil];
+        [calendarView markDates:dates];
+    }
+}
+
 
 - (void)didReceiveMemoryWarning
 {
