@@ -96,28 +96,57 @@
     [self markDietDays];
 }
 
+-(unsigned)getUnitFlags
+{
+    return NSYearCalendarUnit | NSMonthCalendarUnit |  NSDayCalendarUnit;
+}
+
 -(void) settingDietDays
 {
     NSCalendar *cal = [NSCalendar currentCalendar];
     
-    unsigned unitFlags = NSYearCalendarUnit | NSMonthCalendarUnit |  NSDayCalendarUnit;
+    unsigned unitFlags = [self getUnitFlags];
     
     NSDateComponents *comps = [cal components:unitFlags fromDate:self.dietStart];
     NSDate *aDay;
+    NSMutableString *monthString = [NSString stringWithFormat:@"%i", [comps month]];
+    NSMutableString *monthStringKeeper = [NSMutableString stringWithString:monthString];
+    NSMutableDictionary *tempDict = [NSMutableDictionary dictionary];
+    NSMutableArray *tempArray = [NSMutableArray array];
+
     for (int i = 0; i < 14; i++) {
         [comps setDay:([comps day] + 1)];
         aDay = [cal dateFromComponents:comps];
-        
-        [self.dietDays setObject:aDay forKey:[NSString stringWithFormat:@"%i", [comps month]]];
-    }
 
+        comps = [cal components:unitFlags fromDate:aDay];
+        
+        monthString = [NSString stringWithFormat:@"%i", [comps month]];
+        
+        if (![monthStringKeeper isEqualToString:monthString]) {
+            tempArray = [[NSMutableArray alloc] init];
+            
+            monthStringKeeper = [NSMutableString stringWithString:monthString];
+        }
+        [tempArray addObject:aDay];        
+        [tempDict setObject:tempArray forKey:monthString];
+    }
+    self.dietDays = tempDict;
 }
 
 -(void) markDietDays
 {
     [self settingDietDays];
-    NSArray *dates = [NSArray arrayWithObjects:[NSNumber numberWithInt:1],[NSNumber numberWithInt:6], nil];
-    [self.calendar markDates:dates];
+    
+    NSCalendar *cal = [NSCalendar currentCalendar];
+    NSDateComponents *comps = [cal components:[self getUnitFlags] fromDate:self.calendar.currentMonth];
+    NSString *currentMonthString = [NSString stringWithFormat:@"%i", [comps month]];
+    
+    if ([self.dietDays objectForKey:currentMonthString]) {
+        NSArray *dates = [NSArray arrayWithObjects:[NSNumber numberWithInt:1],[NSNumber numberWithInt:6], nil];
+        [self.calendar markDates:dates];
+
+    }
+    
 }
 
 -(NSDate *) getDateWithOffset:(NSInteger)offset
