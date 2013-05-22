@@ -11,6 +11,7 @@
 #define kDietDaysPeriod 14
 @interface SDViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UIView *calendarView;
-@property (strong, nonatomic) IBOutlet UIBarButtonItem *doneButton;
+@property (strong, nonatomic) UIBarButtonItem *doneButton;
 @property (strong, nonatomic) UIDatePicker *datePicker;
+@property (weak, nonatomic) IBOutlet UINavigationBar *navigationBar;
 @end

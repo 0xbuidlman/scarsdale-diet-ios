@@ -15,9 +15,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MAw-o7-k0n"/>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uWc-DL-3aF">
                                 <items>
-                                    <navigationItem title="Title" id="mCj-hD-ISi">
-                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="oCk-Yp-RIP"/>
-                                    </navigationItem>
+                                    <navigationItem title="Title" id="mCj-hD-ISi"/>
                                 </items>
                             </navigationBar>
                         </subviews>
@@ -34,7 +32,7 @@
                     </view>
                     <connections>
                         <outlet property="calendarView" destination="MAw-o7-k0n" id="qfl-jC-xIe"/>
-                        <outlet property="doneButton" destination="oCk-Yp-RIP" id="OKV-RF-qv9"/>
+                        <outlet property="navigationBar" destination="uWc-DL-3aF" id="3yM-8n-W0e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>

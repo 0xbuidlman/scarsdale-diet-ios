@@ -14,6 +14,8 @@
 
 @implementation SDViewController
 
+@synthesize datePicker, doneButton;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -48,8 +50,18 @@
     self.datePicker.maximumDate = [self getDateWithOffset:kDietDaysPeriod];
     
     [self.view addSubview:self.datePicker];
+    
+    [self showDoneButton];
 }
 
+-(void) showDoneButton
+{
+    if (self.doneButton == nil) {
+        self.doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(dateSelected:)];
+    }
+    
+    self.navigationItem.rightBarButtonItem = self.doneButton;
+}
 
 -(NSDate *) getDateWithOffset:(NSInteger)offset
 {
@@ -64,14 +76,8 @@
     [comps setDay:([comps day] + offset)];
 
     return [cal dateFromComponents:comps];
-    
 }
 
-- (void) datePickerDateChanged:(UIDatePicker *)paramDatePicker{
-    if ([paramDatePicker isEqual:self.datePicker]){
-        NSLog(@"Selected date = %@", paramDatePicker.date);
-    }
-}
 
 -(void)calendarView:(VRGCalendarView *)calendarView switchedToMonth:(int)month targetHeight:(float)targetHeight animated:(BOOL)animated {
     if (month==[[NSDate date] month]) {
