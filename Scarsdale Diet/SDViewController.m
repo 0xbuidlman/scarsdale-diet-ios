@@ -14,7 +14,7 @@
 
 @implementation SDViewController
 
-@synthesize datePicker, doneButton, navigationItem, dietStart;
+@synthesize datePicker, doneButton, navigationItem, dietStart, calendar, dietDays;
 
 - (void)viewDidLoad
 {
@@ -30,9 +30,13 @@
         self.navigationItem = [[UINavigationItem alloc] initWithTitle:@"Scarsdale Diet"];
     }
     
-    VRGCalendarView *calendar = [[VRGCalendarView alloc] init];
-    calendar.delegate = self;
-    [self.calendarView addSubview:calendar];
+    if (self.calendar == nil) {
+        self.calendar = [[VRGCalendarView alloc] init];
+        self.calendar.delegate = self;
+
+    }
+    
+    [self.calendarView addSubview:self.calendar];
     
     if (self.dietStart == nil) {
         [self showDatePicker];
@@ -89,6 +93,31 @@
     [defaults synchronize];
     
     [self.datePicker removeFromSuperview];
+    [self markDietDays];
+}
+
+-(void) settingDietDays
+{
+    NSCalendar *cal = [NSCalendar currentCalendar];
+    
+    unsigned unitFlags = NSYearCalendarUnit | NSMonthCalendarUnit |  NSDayCalendarUnit;
+    
+    NSDateComponents *comps = [cal components:unitFlags fromDate:self.dietStart];
+    NSDate *aDay;
+    for (int i = 0; i < 14; i++) {
+        [comps setDay:([comps day] + 1)];
+        aDay = [cal dateFromComponents:comps];
+        
+        [self.dietDays setObject:aDay forKey:[NSString stringWithFormat:@"%i", [comps month]]];
+    }
+
+}
+
+-(void) markDietDays
+{
+    [self settingDietDays];
+    NSArray *dates = [NSArray arrayWithObjects:[NSNumber numberWithInt:1],[NSNumber numberWithInt:6], nil];
+    [self.calendar markDates:dates];
 }
 
 -(NSDate *) getDateWithOffset:(NSInteger)offset
