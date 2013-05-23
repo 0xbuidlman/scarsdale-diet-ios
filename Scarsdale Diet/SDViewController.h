@@ -21,6 +21,6 @@
 @property (weak, nonatomic) IBOutlet UINavigationBar *navigationBar;
 @property (strong, nonatomic) UINavigationItem *navigationItem;
 
-@property (weak, nonatomic) NSDate *dietStart;
+@property (strong, nonatomic) NSDate *dietStart;
 @property (weak, nonatomic) NSDictionary *dietDays;
 @end

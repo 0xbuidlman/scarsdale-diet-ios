@@ -95,7 +95,7 @@
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
-    self.dietStart = selectedDate;
+    self.dietStart = [[NSDate alloc] initWithTimeInterval:0 sinceDate:selectedDate];
     [defaults setObject:selectedDate forKey:@"dietStart"];
     [defaults synchronize];
     
