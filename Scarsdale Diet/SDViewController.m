@@ -100,7 +100,7 @@
     [defaults synchronize];
     
     [self.datePicker removeFromSuperview];
-    [self markDietDays];
+    [self.calendar markDates:[self markDietDays:self.calendar.currentMonth]];
 }
 
 // returnes flags used in NSDateComponents object
@@ -113,7 +113,7 @@
  * Creates a dictionary with all diet days. The keys represent months numbers
  * and values are arrays with diet days in that month
  */
--(void) settingDietDays
+-(NSDictionary *) settingDietDays
 {
     NSCalendar *cal = [NSCalendar currentCalendar];
     
@@ -149,22 +149,24 @@
         [tempDict setObject:tempArray forKey:monthString];
         [comps setDay:([comps day] + 1)];
     }
-    self.dietDays = tempDict;
+
+    return tempDict;
 }
 
 /**
  * Once a diet start day is selected all diet days are marked on the calendar.
  */
--(void) markDietDays
+-(NSArray *) markDietDays:(NSDate *)forGivenMonth
 {
-    [self settingDietDays];
+    self.dietDays = [self settingDietDays];
     
     NSCalendar *cal = [NSCalendar currentCalendar];
-    NSDateComponents *comps = [cal components:[self getUnitFlags] fromDate:self.calendar.currentMonth];
+    NSDateComponents *comps = [cal components:[self getUnitFlags] fromDate:forGivenMonth];
     NSString *currentMonthString = [NSString stringWithFormat:@"%i", [comps month]];
+    NSMutableArray *dates = [NSMutableArray array];
     
     if ([self.dietDays objectForKey:currentMonthString]) {
-        NSMutableArray *dates = [NSMutableArray array];
+        
         for (id aDate in [self.dietDays objectForKey:currentMonthString]) {
             comps = [cal components:[self getUnitFlags] fromDate:aDate];
 
@@ -174,6 +176,7 @@
 
     }
     
+    return dates;
 }
 /**
  * Returns a date object that is <#offset#> days before or after today.
@@ -185,9 +188,7 @@
 
     NSCalendar *cal = [NSCalendar currentCalendar];
     
-    unsigned unitFlags = NSYearCalendarUnit | NSMonthCalendarUnit |  NSDayCalendarUnit;
-
-    NSDateComponents *comps = [cal components:unitFlags fromDate:today];
+    NSDateComponents *comps = [cal components:[self getUnitFlags] fromDate:today];
     
     [comps setDay:([comps day] + offset)];
 
@@ -198,8 +199,26 @@
  * Delegates switching months event. Used to prepopulate diet days.
  */
 -(void)calendarView:(VRGCalendarView *)calendarView switchedToMonth:(int)month targetHeight:(float)targetHeight animated:(BOOL)animated {
-    if (month==[[NSDate date] month]) {
-        NSArray *dates = [NSArray arrayWithObjects:[NSNumber numberWithInt:1],[NSNumber numberWithInt:5], nil];
+    
+    if (!self.dietDays && self.dietStart) {
+        self.dietDays = [self settingDietDays];
+    }
+    
+    NSString *currentMonthString = [NSString stringWithFormat:@"%i", month];
+    
+    if ([self.dietDays objectForKey:currentMonthString]) {
+        
+        NSCalendar *cal = [NSCalendar currentCalendar];
+        NSDateComponents *comps;
+        NSMutableArray *dates = [NSMutableArray array];
+        
+        for (id aDate in [self.dietDays objectForKey:currentMonthString]) {
+            comps = [cal components:[self getUnitFlags] fromDate:aDate];
+            
+            [dates addObject:[NSNumber numberWithInt:[comps day]]];
+        }
+
+//        NSArray *dates = [NSArray arrayWithObjects:[NSNumber numberWithInt:1],[NSNumber numberWithInt:5], nil];
         [calendarView markDates:dates];
     }
 }
