@@ -115,7 +115,7 @@
     NSMutableArray *tempArray = [NSMutableArray array];
 
     for (int i = 0; i < 14; i++) {
-        [comps setDay:([comps day] + 1)];
+
         aDay = [cal dateFromComponents:comps];
 
         comps = [cal components:unitFlags fromDate:aDay];
@@ -129,6 +129,7 @@
         }
         [tempArray addObject:aDay];        
         [tempDict setObject:tempArray forKey:monthString];
+        [comps setDay:([comps day] + 1)];
     }
     self.dietDays = tempDict;
 }
@@ -142,7 +143,12 @@
     NSString *currentMonthString = [NSString stringWithFormat:@"%i", [comps month]];
     
     if ([self.dietDays objectForKey:currentMonthString]) {
-        NSArray *dates = [NSArray arrayWithObjects:[NSNumber numberWithInt:1],[NSNumber numberWithInt:6], nil];
+        NSMutableArray *dates = [NSMutableArray array];
+        for (id aDate in [self.dietDays objectForKey:currentMonthString]) {
+            comps = [cal components:[self getUnitFlags] fromDate:aDate];
+
+            [dates addObject:[NSNumber numberWithInt:[comps day]]];
+        }
         [self.calendar markDates:dates];
 
     }
