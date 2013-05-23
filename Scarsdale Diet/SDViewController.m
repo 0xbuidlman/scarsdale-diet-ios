@@ -45,6 +45,10 @@
     [self.navigationBar pushNavigationItem:self.navigationItem animated:NO];
 }
 
+/**
+ * Initialize a new datePicker with min and max date (+/- 14 days) and 
+ * adds it to the main view.
+ */
 - (void) showDatePicker {
     if (self.datePicker == nil) {
         self.datePicker = [[UIDatePicker alloc] init];
@@ -81,6 +85,9 @@
 
 }
 
+/**
+ * Handles doneButton selection. Diet days is set in NSUserDefaults
+ */
 - (void) dateSelected:(id)sender {
     self.navigationItem.rightBarButtonItem = nil;
     
@@ -96,11 +103,16 @@
     [self markDietDays];
 }
 
+// returnes flags used in NSDateComponents object
 -(unsigned)getUnitFlags
 {
     return NSYearCalendarUnit | NSMonthCalendarUnit |  NSDayCalendarUnit;
 }
 
+/**
+ * Creates a dictionary with all diet days. The keys represent months numbers
+ * and values are arrays with diet days in that month
+ */
 -(void) settingDietDays
 {
     NSCalendar *cal = [NSCalendar currentCalendar];
@@ -109,6 +121,7 @@
     
     NSDateComponents *comps = [cal components:unitFlags fromDate:self.dietStart];
     NSDate *aDay;
+    // initalize with dietStart date's month
     NSMutableString *monthString = [NSString stringWithFormat:@"%i", [comps month]];
     NSMutableString *monthStringKeeper = [NSMutableString stringWithString:monthString];
     NSMutableDictionary *tempDict = [NSMutableDictionary dictionary];
@@ -122,6 +135,11 @@
         
         monthString = [NSString stringWithFormat:@"%i", [comps month]];
         
+        /**
+         * If diet is spread in two months new value have to be added in the
+         * dictionary. <#tempArray#> is reallocated.
+         * hacking :)
+         */
         if (![monthStringKeeper isEqualToString:monthString]) {
             tempArray = [[NSMutableArray alloc] init];
             
@@ -134,6 +152,9 @@
     self.dietDays = tempDict;
 }
 
+/**
+ * Once a diet start day is selected all diet days are marked on the calendar.
+ */
 -(void) markDietDays
 {
     [self settingDietDays];
@@ -154,7 +175,10 @@
     }
     
 }
-
+/**
+ * Returns a date object that is <#offset#> days before or after today.
+ * Method accepts positive and negative numbers
+ */
 -(NSDate *) getDateWithOffset:(NSInteger)offset
 {
     NSDate *today = [NSDate date];
@@ -170,7 +194,9 @@
     return [cal dateFromComponents:comps];
 }
 
-
+/**
+ * Delegates switching months event. Used to prepopulate diet days.
+ */
 -(void)calendarView:(VRGCalendarView *)calendarView switchedToMonth:(int)month targetHeight:(float)targetHeight animated:(BOOL)animated {
     if (month==[[NSDate date] month]) {
         NSArray *dates = [NSArray arrayWithObjects:[NSNumber numberWithInt:1],[NSNumber numberWithInt:5], nil];
