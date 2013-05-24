@@ -13,7 +13,6 @@
 @interface SDViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UIView *calendarView;
-@property (strong, nonatomic) UIBarButtonItem *doneButton;
 
 @property (strong, nonatomic) UIDatePicker *datePicker;
 
