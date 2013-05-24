@@ -24,6 +24,7 @@
 		0C103365174CE407004C2ACC /* UIView+convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C10335D174CE407004C2ACC /* UIView+convenience.m */; };
 		0C103366174CE407004C2ACC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C10335F174CE407004C2ACC /* ViewController.m */; };
 		0C103367174CE407004C2ACC /* VRGCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C103361174CE407004C2ACC /* VRGCalendarView.m */; };
+		0C88924C174FA67000AAAC64 /* SDDietDayDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C88924B174FA67000AAAC64 /* SDDietDayDetailsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,8 @@
 		0C10335F174CE407004C2ACC /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = "Scarsdale Diet/ViewController.m"; sourceTree = "<group>"; };
 		0C103360174CE407004C2ACC /* VRGCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VRGCalendarView.h; path = "Scarsdale Diet/VRGCalendarView.h"; sourceTree = "<group>"; };
 		0C103361174CE407004C2ACC /* VRGCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VRGCalendarView.m; path = "Scarsdale Diet/VRGCalendarView.m"; sourceTree = "<group>"; };
+		0C88924A174FA67000AAAC64 /* SDDietDayDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDDietDayDetailsViewController.h; sourceTree = "<group>"; };
+		0C88924B174FA67000AAAC64 /* SDDietDayDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDDietDayDetailsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +110,8 @@
 				0C10334B174CE2A7004C2ACC /* MainStoryboard.storyboard */,
 				0C10334E174CE2A7004C2ACC /* SDViewController.h */,
 				0C10334F174CE2A7004C2ACC /* SDViewController.m */,
+				0C88924A174FA67000AAAC64 /* SDDietDayDetailsViewController.h */,
+				0C88924B174FA67000AAAC64 /* SDDietDayDetailsViewController.m */,
 				0C10333A174CE2A7004C2ACC /* Supporting Files */,
 			);
 			path = "Scarsdale Diet";
@@ -222,6 +227,7 @@
 				0C103365174CE407004C2ACC /* UIView+convenience.m in Sources */,
 				0C103366174CE407004C2ACC /* ViewController.m in Sources */,
 				0C103367174CE407004C2ACC /* VRGCalendarView.m in Sources */,
+				0C88924C174FA67000AAAC64 /* SDDietDayDetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +350,7 @@
 				0C103355174CE2A7004C2ACC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

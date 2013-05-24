@@ -7,6 +7,7 @@
 //  init
 
 #import "SDViewController.h"
+#import "SDDietDayDetailsViewController.h"
 
 @interface SDViewController ()
     
@@ -252,6 +253,12 @@
 //        NSArray *dates = [NSArray arrayWithObjects:[NSNumber numberWithInt:1],[NSNumber numberWithInt:5], nil];
         [calendarView markDates:dates];
     }
+}
+
+-(void)calendarView:(VRGCalendarView *)calendarView dateSelected:(NSDate *)date {
+
+    UIViewController *detailsView = [[SDDietDayDetailsViewController alloc] init];
+    [self.navigationController pushViewController:detailsView animated:YES];
 }
 
 
