@@ -16,6 +16,7 @@
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
+    NSLog(@"nib");
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
@@ -23,14 +24,6 @@
     return self;
 }
 
-- (void)configureView
-{
-    // Update the user interface for the detail item.
-    
-    if (self.detailItem) {
-        self.detailInfo.text = [self.detailItem description];
-    }
-}
 - (void)viewDidLoad
 {
     [super viewDidLoad];

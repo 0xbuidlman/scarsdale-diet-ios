@@ -19,7 +19,6 @@
 
 @property (strong, nonatomic) VRGCalendarView *calendar;
 
-
 @property (strong, nonatomic) NSDate *dietStart;
 @property (weak, nonatomic) NSDictionary *dietDays;
 @end

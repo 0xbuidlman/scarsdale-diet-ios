@@ -257,8 +257,11 @@
 
 -(void)calendarView:(VRGCalendarView *)calendarView dateSelected:(NSDate *)date {
 
-    UIViewController *detailsView = [[SDDietDayDetailsViewController alloc] init];
+    UIViewController *detailsView = [self.storyboard instantiateViewControllerWithIdentifier:@"DetailView"];
     [self.navigationController pushViewController:detailsView animated:YES];
+//    UITabBarController *tabBar = [self.storyboard instantiateViewControllerWithIdentifier:@"TheTabBar"];
+//    [self.navigationController pushViewController:tabBar animated:YES];
+    
 }
 
 
