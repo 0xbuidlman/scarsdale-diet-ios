@@ -14,17 +14,14 @@
 
 @implementation SDViewController
 
-@synthesize datePicker, doneButton, navigationItem, dietStart, calendar, dietDays;
+@synthesize datePicker, doneButton, navigationItem, dietStart, calendar, dietDays, clearButton, startButton;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    
 
-    self.dietStart = [defaults objectForKey:@"dietStart"];
     
     if (self.navigationItem == nil) {
         self.navigationItem = [[UINavigationItem alloc] initWithTitle:@"Scarsdale Diet"];
@@ -37,16 +34,35 @@
     }
     
     [self.calendarView addSubview:self.calendar];
-    
+
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    self.dietStart = [defaults objectForKey:@"dietStart"];
     if (self.dietStart == nil) {
-        [self showDatePicker];
+        [self showStartButton];
+    } else {
+        [self showClearButton];
     }
     
     [self.navigationBar pushNavigationItem:self.navigationItem animated:NO];
 }
 
+-(void) showStartButton
+{
+    if (self.startButton == nil) {
+        self.startButton = [[UIBarButtonItem alloc] initWithTitle:@"Start" style:UIBarButtonItemStyleBordered target:self action:@selector(startDate:)];
+    }
+    self.navigationItem.rightBarButtonItem = self.startButton;
+}
+- (void) showClearButton
+{
+    if (self.clearButton == nil) {
+        self.clearButton = [[UIBarButtonItem alloc] initWithTitle:@"Clear" style:UIBarButtonItemStyleBordered target:self action:@selector(clearDate:)];
+    }
+    self.navigationItem.rightBarButtonItem = self.clearButton;
+}
+
 /**
- * Initialize a new datePicker with min and max date (+/- 14 days) and 
+ * Initialize a new datePicker with min and max date (+/- 14 days) and
  * adds it to the main view.
  */
 - (void) showDatePicker {
@@ -67,8 +83,8 @@
     
     self.datePicker.datePickerMode = UIDatePickerModeDate;
     self.datePicker.frame = pickerRect;
-    self.datePicker.minimumDate = [self getDateWithOffset:-kDietDaysPeriod];
-    self.datePicker.maximumDate = [self getDateWithOffset:kDietDaysPeriod];
+    self.datePicker.minimumDate = [self getDateWithOffset:-(kDietDaysPeriod - 1)];
+    self.datePicker.maximumDate = [self getDateWithOffset:(kDietDaysPeriod - 1)];
     
     [self.view addSubview:self.datePicker];
 
@@ -83,6 +99,30 @@
     
     self.navigationItem.rightBarButtonItem = self.doneButton;
 
+}
+
+- (void) startDate:(id)sender
+{
+    self.navigationItem.rightBarButtonItem = nil;
+    
+    [self showDatePicker];
+}
+
+-(void) clearDate:(id)sender
+{
+//    NSString *appDomain = [[NSBundle mainBundle] bundleIdentifier];
+//    [[NSUserDefaults standardUserDefaults] removePersistentDomainForName:appDomain];
+
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    self.dietStart = nil;
+    [defaults setObject:nil forKey:@"dietStart"];
+    [defaults synchronize];
+    self.dietDays = nil;
+    [self.calendar markDates:nil];
+    
+    self.navigationItem.rightBarButtonItem = nil;
+    [self showStartButton];
 }
 
 /**
@@ -101,6 +141,8 @@
     
     [self.datePicker removeFromSuperview];
     [self.calendar markDates:[self markDietDays:self.calendar.currentMonth]];
+    
+    [self showClearButton];
 }
 
 // returnes flags used in NSDateComponents object
