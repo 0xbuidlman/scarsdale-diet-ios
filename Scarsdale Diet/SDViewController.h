@@ -14,14 +14,11 @@
 
 @property (strong, nonatomic) IBOutlet UIView *calendarView;
 @property (strong, nonatomic) UIBarButtonItem *doneButton;
-@property (strong, nonatomic) UIBarButtonItem *clearButton;
-@property (strong, nonatomic) UIBarButtonItem *startButton;
+
 @property (strong, nonatomic) UIDatePicker *datePicker;
 
 @property (strong, nonatomic) VRGCalendarView *calendar;
 
-@property (weak, nonatomic) IBOutlet UINavigationBar *navigationBar;
-@property (strong, nonatomic) UINavigationItem *navigationItem;
 
 @property (strong, nonatomic) NSDate *dietStart;
 @property (weak, nonatomic) NSDictionary *dietDays;

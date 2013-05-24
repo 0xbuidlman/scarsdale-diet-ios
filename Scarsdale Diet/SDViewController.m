@@ -14,19 +14,13 @@
 
 @implementation SDViewController
 
-@synthesize datePicker, doneButton, navigationItem, dietStart, calendar, dietDays, clearButton, startButton;
+@synthesize datePicker, dietStart, calendar, dietDays;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    
 
-    
-    if (self.navigationItem == nil) {
-        self.navigationItem = [[UINavigationItem alloc] initWithTitle:@"Scarsdale Diet"];
-    }
-    
     if (self.calendar == nil) {
         self.calendar = [[VRGCalendarView alloc] init];
         self.calendar.delegate = self;
@@ -43,23 +37,30 @@
         [self showClearButton];
     }
     
-    [self.navigationBar pushNavigationItem:self.navigationItem animated:NO];
 }
 
 -(void) showStartButton
 {
-    if (self.startButton == nil) {
-        self.startButton = [[UIBarButtonItem alloc] initWithTitle:@"Start" style:UIBarButtonItemStyleBordered target:self action:@selector(startDate:)];
-    }
-    self.navigationItem.rightBarButtonItem = self.startButton;
+
+    UIBarButtonItem *startButton = [[UIBarButtonItem alloc] initWithTitle:@"Start" style:UIBarButtonItemStyleBordered target:self action:@selector(startDate:)];
+    
+    self.navigationItem.rightBarButtonItem = startButton;
 }
 - (void) showClearButton
 {
-    if (self.clearButton == nil) {
-        self.clearButton = [[UIBarButtonItem alloc] initWithTitle:@"Clear" style:UIBarButtonItemStyleBordered target:self action:@selector(clearDate:)];
-    }
-    self.navigationItem.rightBarButtonItem = self.clearButton;
+    UIBarButtonItem *clearButton = [[UIBarButtonItem alloc] initWithTitle:@"Clear" style:UIBarButtonItemStyleBordered target:self action:@selector(clearDate:)];
+    
+    
+    self.navigationItem.rightBarButtonItem = clearButton;
 }
+
+-(void) showDoneButton
+{
+    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(dateSelected:)];
+    
+    self.navigationItem.rightBarButtonItem = doneButton;
+}
+
 
 /**
  * Initialize a new datePicker with min and max date (+/- 14 days) and
@@ -91,19 +92,9 @@
     [self showDoneButton];
 }
 
--(void) showDoneButton
-{
-    if (self.doneButton == nil) {
-        self.doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(dateSelected:)];
-    }
-    
-    self.navigationItem.rightBarButtonItem = self.doneButton;
-
-}
 
 - (void) startDate:(id)sender
 {
-    self.navigationItem.rightBarButtonItem = nil;
     
     [self showDatePicker];
 }
@@ -121,7 +112,6 @@
     self.dietDays = nil;
     [self.calendar markDates:nil];
     
-    self.navigationItem.rightBarButtonItem = nil;
     [self showStartButton];
 }
 
@@ -129,7 +119,6 @@
  * Handles doneButton selection. Diet days is set in NSUserDefaults
  */
 - (void) dateSelected:(id)sender {
-    self.navigationItem.rightBarButtonItem = nil;
     
     NSDate *selectedDate = self.datePicker.date;
     
