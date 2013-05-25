@@ -16,7 +16,7 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="MAw-o7-k0n" secondAttribute="bottom" constant="178" id="4vw-rC-1vc"/>
+                            <constraint firstAttribute="bottom" secondItem="MAw-o7-k0n" secondAttribute="bottom" constant="134" id="AZh-zy-4XZ"/>
                             <constraint firstItem="MAw-o7-k0n" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="Jdz-Oo-zi7"/>
                             <constraint firstItem="MAw-o7-k0n" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="sdq-Ek-Piu"/>
                             <constraint firstItem="MAw-o7-k0n" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="ttX-4z-Wks"/>
@@ -25,6 +25,7 @@
                     <navigationItem key="navigationItem" title="Calendar" id="UZh-HY-7VK"/>
                     <connections>
                         <outlet property="calendarView" destination="MAw-o7-k0n" id="qfl-jC-xIe"/>
+                        <segue destination="WQo-Pz-Xdu" kind="push" identifier="SegueSelectDietDayToShowDetails" id="6t8-S2-XVB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
@@ -51,7 +52,7 @@
             <objects>
                 <viewController storyboardIdentifier="DetailView" id="WQo-Pz-Xdu" customClass="SDDietDayDetailsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hGt-EZ-hDP">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Brx-pv-vFY">
@@ -73,13 +74,13 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="y7y-at-9Uk" firstAttribute="leading" secondItem="Brx-pv-vFY" secondAttribute="leading" type="default" id="5Wx-NQ-W5H"/>
+                                    <constraint firstItem="RbU-Pj-PLD" firstAttribute="centerX" secondItem="Brx-pv-vFY" secondAttribute="centerX" type="default" id="6mY-NN-OcH"/>
                                     <constraint firstItem="RbU-Pj-PLD" firstAttribute="leading" secondItem="Brx-pv-vFY" secondAttribute="leading" type="default" id="8dn-sf-ANU"/>
                                     <constraint firstItem="RbU-Pj-PLD" firstAttribute="trailing" secondItem="Brx-pv-vFY" secondAttribute="trailing" type="default" id="CJN-c8-GoZ"/>
                                     <constraint firstItem="y7y-at-9Uk" firstAttribute="bottom" secondItem="Brx-pv-vFY" secondAttribute="bottom" type="default" id="DMn-ku-MwZ"/>
-                                    <constraint firstItem="y7y-at-9Uk" firstAttribute="centerX" secondItem="Brx-pv-vFY" secondAttribute="centerX" type="default" id="KTA-TO-kNo"/>
-                                    <constraint firstItem="y7y-at-9Uk" firstAttribute="top" secondItem="Brx-pv-vFY" secondAttribute="top" constant="255" id="MH2-qv-JrU"/>
+                                    <constraint firstItem="RbU-Pj-PLD" firstAttribute="top" secondItem="Brx-pv-vFY" secondAttribute="top" type="default" id="QKB-Fh-6Yi"/>
                                     <constraint firstItem="y7y-at-9Uk" firstAttribute="trailing" secondItem="Brx-pv-vFY" secondAttribute="trailing" type="default" id="lqC-qD-ZVd"/>
-                                    <constraint firstItem="RbU-Pj-PLD" firstAttribute="top" secondItem="Brx-pv-vFY" secondAttribute="top" type="default" id="vpc-cd-m2C"/>
+                                    <constraint firstItem="y7y-at-9Uk" firstAttribute="top" secondItem="Brx-pv-vFY" secondAttribute="top" constant="255" id="szq-f0-0PG"/>
                                 </constraints>
                             </scrollView>
                         </subviews>

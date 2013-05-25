@@ -35,6 +35,8 @@
     if (self.dietStart == nil) {
         [self showStartButton];
     } else {
+        self.dietDays = [self settingDietDays];
+        
         [self showClearButton];
     }
     
@@ -257,13 +259,42 @@
 
 -(void)calendarView:(VRGCalendarView *)calendarView dateSelected:(NSDate *)date {
 
-    UIViewController *detailsView = [self.storyboard instantiateViewControllerWithIdentifier:@"DetailView"];
-    [self.navigationController pushViewController:detailsView animated:YES];
+    if ([self isDietDay:date]) {
+//        UIViewController *detailsView = [self.storyboard instantiateViewControllerWithIdentifier:@"DetailView"];
+//        [self.navigationController pushViewController:detailsView animated:YES];
+        [self performSegueWithIdentifier:@"SegueSelectDietDayToShowDetails sender" sender:self];
+    }
 //    UITabBarController *tabBar = [self.storyboard instantiateViewControllerWithIdentifier:@"TheTabBar"];
 //    [self.navigationController pushViewController:tabBar animated:YES];
     
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+//    if ([[segue identifier] isEqualToString:@"showDetail"]) {
+//        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+//        NSDate *object = _objects[indexPath.row];
+//        [[segue destinationViewController] setDetailItem:object];
+//    }
+    NSLog(@"segue");
+}
+
+/**
+ *
+ */
+-(BOOL)isDietDay:(NSDate *)date
+{
+    NSCalendar *cal = [NSCalendar currentCalendar];
+    
+    NSDateComponents *comps = [cal components:[self getUnitFlags] fromDate:date];
+    
+    NSString *monthString = [NSString stringWithFormat:@"%i", [comps month]];
+    if ([self.dietDays objectForKey:monthString] && [self.dietDays[monthString] containsObject:date]) {
+        
+        return YES;
+    }
+    return NO;
+}
 
 - (void)didReceiveMemoryWarning
 {
