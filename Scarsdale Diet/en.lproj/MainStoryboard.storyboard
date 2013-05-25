@@ -62,25 +62,48 @@
                                             <constraint firstAttribute="height" constant="217" id="phD-jA-0Bf"/>
                                         </constraints>
                                     </imageView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y7y-at-9Uk">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Breakfast" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1qA-N8-t8e">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hyp-cY-CXM">
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="249" id="MOt-D5-7Zm"/>
+                                            <constraint firstAttribute="height" constant="128" id="DBi-0a-gDP"/>
                                         </constraints>
-                                        <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <attributedString key="attributedText">
+                                            <fragment>
+                                                <string key="content">1/2 low-fat cheese or cottage cheese mixed with 1 tablespoon cream;
+fruit cut as desired;
+6 halves walnuts or pecans whole or chopped and mixed with cheese or sprinkled on fruit;
+</string>
+                                                <attributes>
+                                                    <font key="NSFont" size="14" name="Helvetica"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="coffee, tea, soda water with a little lemon;">
+                                                <attributes>
+                                                    <font key="NSFont" size="14" name="Helvetica"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="y7y-at-9Uk" firstAttribute="leading" secondItem="Brx-pv-vFY" secondAttribute="leading" type="default" id="5Wx-NQ-W5H"/>
-                                    <constraint firstItem="RbU-Pj-PLD" firstAttribute="centerX" secondItem="Brx-pv-vFY" secondAttribute="centerX" type="default" id="6mY-NN-OcH"/>
+                                    <constraint firstAttribute="bottom" secondItem="hyp-cY-CXM" secondAttribute="bottom" constant="122" id="0w6-a8-2aY"/>
                                     <constraint firstItem="RbU-Pj-PLD" firstAttribute="leading" secondItem="Brx-pv-vFY" secondAttribute="leading" type="default" id="8dn-sf-ANU"/>
+                                    <constraint firstAttribute="trailing" secondItem="hyp-cY-CXM" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="9zu-xj-s6q"/>
                                     <constraint firstItem="RbU-Pj-PLD" firstAttribute="trailing" secondItem="Brx-pv-vFY" secondAttribute="trailing" type="default" id="CJN-c8-GoZ"/>
-                                    <constraint firstItem="y7y-at-9Uk" firstAttribute="bottom" secondItem="Brx-pv-vFY" secondAttribute="bottom" type="default" id="DMn-ku-MwZ"/>
+                                    <constraint firstItem="hyp-cY-CXM" firstAttribute="top" secondItem="1qA-N8-t8e" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Exf-UV-byh"/>
+                                    <constraint firstItem="hyp-cY-CXM" firstAttribute="leading" secondItem="Brx-pv-vFY" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="JSc-r0-fzS"/>
+                                    <constraint firstItem="1qA-N8-t8e" firstAttribute="centerX" secondItem="hyp-cY-CXM" secondAttribute="centerX" type="default" id="Q9F-uf-kVh"/>
                                     <constraint firstItem="RbU-Pj-PLD" firstAttribute="top" secondItem="Brx-pv-vFY" secondAttribute="top" type="default" id="QKB-Fh-6Yi"/>
-                                    <constraint firstItem="y7y-at-9Uk" firstAttribute="trailing" secondItem="Brx-pv-vFY" secondAttribute="trailing" type="default" id="lqC-qD-ZVd"/>
-                                    <constraint firstItem="y7y-at-9Uk" firstAttribute="top" secondItem="Brx-pv-vFY" secondAttribute="top" constant="255" id="szq-f0-0PG"/>
+                                    <constraint firstItem="1qA-N8-t8e" firstAttribute="top" secondItem="RbU-Pj-PLD" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="v9b-sZ-9i5"/>
+                                    <constraint firstItem="1qA-N8-t8e" firstAttribute="centerX" secondItem="Brx-pv-vFY" secondAttribute="centerX" type="default" id="w3Y-rZ-n5w"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -95,7 +118,6 @@
                     <navigationItem key="navigationItem" id="9y8-eZ-vlw"/>
                     <connections>
                         <outlet property="detailImage" destination="RbU-Pj-PLD" id="KdY-nY-yfZ"/>
-                        <outlet property="detailInfo" destination="y7y-at-9Uk" id="idk-e8-63t"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LSz-2c-7jE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -114,7 +136,6 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SDDietDayDetailsViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="detailImage" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="detailInfo" candidateClass="UITextView"/>
             </relationships>
         </class>
         <class className="SDViewController" superclassName="UIViewController">
