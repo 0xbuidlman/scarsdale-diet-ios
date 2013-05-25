@@ -27,16 +27,17 @@
 		<string>fruit_salad.jpg</string>
 	</dict>
 	<key>3</key>
-	<dict/>
-	<key>lunch</key>
-	<string>\t&amp;#8226; tuna salad or salmon (drained of fat) with lemon or vinegar;\n
+	<dict>
+		<key>lunch</key>
+		<string>\t&amp;#8226; tuna salad or salmon (drained of fat) with lemon or vinegar;\n
 \t&amp;#8226; grapefruit, melon or seasonal fruit;\n
 \t&amp;#8226; coffee or tea;</string>
-	<key>dinner</key>
-	<string>\t&amp;#8226; roast lamb, cut into slices of fat removed;\n
+		<key>dinner</key>
+		<string>\t&amp;#8226; roast lamb, cut into slices of fat removed;\n
 \t&amp;#8226; salad of lettuce, tomatoes, cucumber, celery</string>
-	<key>img</key>
-	<string>tuna_salad.jpg</string>
+		<key>img</key>
+		<string>tuna_salad.jpg</string>
+	</dict>
 	<key>4</key>
 	<dict>
 		<key>lunch</key>
