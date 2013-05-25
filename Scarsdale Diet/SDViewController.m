@@ -15,7 +15,7 @@
 
 @implementation SDViewController
 
-@synthesize datePicker, dietStart, calendar, dietDays;
+//@synthesize datePicker, dietStart, calendar, dietDays;
 
 - (void)viewDidLoad
 {
@@ -59,7 +59,7 @@
 
 -(void) showDoneButton
 {
-    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(dateSelected:)];
+    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(dietStartDateSelected:)];
     
     self.navigationItem.rightBarButtonItem = doneButton;
 }
@@ -121,13 +121,20 @@
 /**
  * Handles doneButton selection. Diet days is set in NSUserDefaults
  */
-- (void) dateSelected:(id)sender {
+- (void) dietStartDateSelected:(id)sender {
     
     NSDate *selectedDate = self.datePicker.date;
     
+    NSCalendar *cal = [NSCalendar currentCalendar];
+    NSDateComponents *comps = [cal components:[self getUnitFlags] fromDate:selectedDate];
+    
+    [comps setHour:0];
+    [comps setMinute:0];
+    [comps setSecond:0];
+    
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
-    self.dietStart = [[NSDate alloc] initWithTimeInterval:0 sinceDate:selectedDate];
+    self.dietStart = [cal dateFromComponents:comps];
     [defaults setObject:selectedDate forKey:@"dietStart"];
     [defaults synchronize];
     
@@ -262,20 +269,31 @@
     if ([self isDietDay:date]) {
 //        UIViewController *detailsView = [self.storyboard instantiateViewControllerWithIdentifier:@"DetailView"];
 //        [self.navigationController pushViewController:detailsView animated:YES];
-        [self performSegueWithIdentifier:@"SegueSelectDietDayToShowDetails sender" sender:self];
+        [self performSegueWithIdentifier:@"SegueSelectDietDayToShowDetails" sender:date];
     }
 //    UITabBarController *tabBar = [self.storyboard instantiateViewControllerWithIdentifier:@"TheTabBar"];
 //    [self.navigationController pushViewController:tabBar animated:YES];
     
 }
 
+-(NSInteger)getDifferenceBetweenStartDateAndSelected:(NSDate*)selectedDate
+{
+    NSCalendar *cal = [NSCalendar currentCalendar];
+    NSDateComponents *comps;
+    comps = [cal components:NSDayCalendarUnit fromDate:self.dietStart toDate:selectedDate options:0];
+
+    NSInteger difference = [comps day];
+    return difference;
+}
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-//    if ([[segue identifier] isEqualToString:@"showDetail"]) {
+    if ([[segue identifier] isEqualToString:@"SegueSelectDietDayToShowDetails"]) {
 //        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
 //        NSDate *object = _objects[indexPath.row];
-//        [[segue destinationViewController] setDetailItem:object];
-//    }
+        NSNumber *differenceBetweenStartDateAndSelectedDate = [NSNumber numberWithInteger:[self getDifferenceBetweenStartDateAndSelected:sender]];
+        [[segue destinationViewController] setDetailItem:differenceBetweenStartDateAndSelectedDate];
+    }
     NSLog(@"segue");
 }
 
