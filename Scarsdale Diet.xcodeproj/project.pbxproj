@@ -25,6 +25,13 @@
 		0C103366174CE407004C2ACC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C10335F174CE407004C2ACC /* ViewController.m */; };
 		0C103367174CE407004C2ACC /* VRGCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C103361174CE407004C2ACC /* VRGCalendarView.m */; };
 		0C88924C174FA67000AAAC64 /* SDDietDayDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C88924B174FA67000AAAC64 /* SDDietDayDetailsViewController.m */; };
+		0C8892541750100400AAAC64 /* fish.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C8892531750100400AAAC64 /* fish.jpg */; };
+		0C8892561750105900AAAC64 /* beef.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C8892551750105900AAAC64 /* beef.jpg */; };
+		0C8892581750108800AAAC64 /* tuna_salad.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C8892571750108800AAAC64 /* tuna_salad.jpg */; };
+		0C88925A1750138000AAAC64 /* diet-info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C8892591750138000AAAC64 /* diet-info.plist */; };
+		0C88925C1750A7F800AAAC64 /* fruit_salad.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C88925B1750A7F800AAAC64 /* fruit_salad.jpg */; };
+		0C88925E1750A9C300AAAC64 /* eggs.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C88925D1750A9C300AAAC64 /* eggs.jpg */; };
+		0C8892601750AAE000AAAC64 /* tomatoes_lettuce.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C88925F1750AAE000AAAC64 /* tomatoes_lettuce.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +65,13 @@
 		0C103361174CE407004C2ACC /* VRGCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VRGCalendarView.m; path = "Scarsdale Diet/VRGCalendarView.m"; sourceTree = "<group>"; };
 		0C88924A174FA67000AAAC64 /* SDDietDayDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDDietDayDetailsViewController.h; sourceTree = "<group>"; };
 		0C88924B174FA67000AAAC64 /* SDDietDayDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDDietDayDetailsViewController.m; sourceTree = "<group>"; };
+		0C8892531750100400AAAC64 /* fish.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fish.jpg; sourceTree = "<group>"; };
+		0C8892551750105900AAAC64 /* beef.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = beef.jpg; sourceTree = "<group>"; };
+		0C8892571750108800AAAC64 /* tuna_salad.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tuna_salad.jpg; sourceTree = "<group>"; };
+		0C8892591750138000AAAC64 /* diet-info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "diet-info.plist"; sourceTree = "<group>"; };
+		0C88925B1750A7F800AAAC64 /* fruit_salad.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fruit_salad.jpg; sourceTree = "<group>"; };
+		0C88925D1750A9C300AAAC64 /* eggs.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = eggs.jpg; sourceTree = "<group>"; };
+		0C88925F1750AAE000AAAC64 /* tomatoes_lettuce.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tomatoes_lettuce.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +118,7 @@
 		0C103339174CE2A7004C2ACC /* Scarsdale Diet */ = {
 			isa = PBXGroup;
 			children = (
+				0C88925217500F8B00AAAC64 /* images */,
 				0C103368174CE412004C2ACC /* calendar */,
 				0C103342174CE2A7004C2ACC /* SDAppDelegate.h */,
 				0C103343174CE2A7004C2ACC /* SDAppDelegate.m */,
@@ -127,6 +142,7 @@
 				0C103345174CE2A7004C2ACC /* Default.png */,
 				0C103347174CE2A7004C2ACC /* Default@2x.png */,
 				0C103349174CE2A7004C2ACC /* Default-568h@2x.png */,
+				0C8892591750138000AAAC64 /* diet-info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -149,6 +165,19 @@
 			);
 			name = calendar;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		0C88925217500F8B00AAAC64 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				0C88925F1750AAE000AAAC64 /* tomatoes_lettuce.jpg */,
+				0C88925D1750A9C300AAAC64 /* eggs.jpg */,
+				0C88925B1750A7F800AAAC64 /* fruit_salad.jpg */,
+				0C8892571750108800AAAC64 /* tuna_salad.jpg */,
+				0C8892551750105900AAAC64 /* beef.jpg */,
+				0C8892531750100400AAAC64 /* fish.jpg */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,6 +237,13 @@
 				0C103348174CE2A7004C2ACC /* Default@2x.png in Resources */,
 				0C10334A174CE2A7004C2ACC /* Default-568h@2x.png in Resources */,
 				0C10334D174CE2A7004C2ACC /* MainStoryboard.storyboard in Resources */,
+				0C8892541750100400AAAC64 /* fish.jpg in Resources */,
+				0C8892561750105900AAAC64 /* beef.jpg in Resources */,
+				0C8892581750108800AAAC64 /* tuna_salad.jpg in Resources */,
+				0C88925A1750138000AAAC64 /* diet-info.plist in Resources */,
+				0C88925C1750A7F800AAAC64 /* fruit_salad.jpg in Resources */,
+				0C88925E1750A9C300AAAC64 /* eggs.jpg in Resources */,
+				0C8892601750AAE000AAAC64 /* tomatoes_lettuce.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
