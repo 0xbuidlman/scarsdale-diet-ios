@@ -30,7 +30,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="118" y="101"/>
+            <point key="canvasLocation" x="110" y="340"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Hrt-Kg-APq">
@@ -52,7 +52,7 @@
             <objects>
                 <viewController storyboardIdentifier="DetailView" id="WQo-Pz-Xdu" customClass="SDDietDayDetailsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hGt-EZ-hDP">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Brx-pv-vFY">
@@ -67,7 +67,7 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hyp-cY-CXM">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hyp-cY-CXM">
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="128" id="DBi-0a-gDP"/>
@@ -92,37 +92,101 @@ fruit cut as desired;
                                         </attributedString>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Lunch" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kj4-Hg-EgA">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYn-BU-K23">
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="135" id="ny1-ke-GOq"/>
+                                        </constraints>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Dinner" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YwC-6t-faJ">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJu-qi-ejN">
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="135" id="8tB-ct-pmS"/>
+                                        </constraints>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Replacement Meal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="61p-XX-gVE">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYn-I0-EFX">
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="135" id="kb9-MW-bN5"/>
+                                            <constraint firstAttribute="width" constant="279" id="lba-qA-8AL"/>
+                                        </constraints>
+                                        <string key="text">1/2 low-fat cheese or cottage cheese mixed with 1 tablespoon cream;
+fruit cut as desired;
+6 halves walnuts or pecans whole or chopped and mixed with cheese or sprinkled on fruit;
+coffee, tea, soda water with a little lemon;</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="hyp-cY-CXM" secondAttribute="bottom" constant="122" id="0w6-a8-2aY"/>
-                                    <constraint firstItem="RbU-Pj-PLD" firstAttribute="leading" secondItem="Brx-pv-vFY" secondAttribute="leading" type="default" id="8dn-sf-ANU"/>
-                                    <constraint firstAttribute="trailing" secondItem="hyp-cY-CXM" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="9zu-xj-s6q"/>
-                                    <constraint firstItem="RbU-Pj-PLD" firstAttribute="trailing" secondItem="Brx-pv-vFY" secondAttribute="trailing" type="default" id="CJN-c8-GoZ"/>
-                                    <constraint firstItem="hyp-cY-CXM" firstAttribute="top" secondItem="1qA-N8-t8e" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Exf-UV-byh"/>
-                                    <constraint firstItem="hyp-cY-CXM" firstAttribute="leading" secondItem="Brx-pv-vFY" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="JSc-r0-fzS"/>
-                                    <constraint firstItem="1qA-N8-t8e" firstAttribute="centerX" secondItem="hyp-cY-CXM" secondAttribute="centerX" type="default" id="Q9F-uf-kVh"/>
-                                    <constraint firstItem="RbU-Pj-PLD" firstAttribute="top" secondItem="Brx-pv-vFY" secondAttribute="top" type="default" id="QKB-Fh-6Yi"/>
-                                    <constraint firstItem="1qA-N8-t8e" firstAttribute="top" secondItem="RbU-Pj-PLD" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="v9b-sZ-9i5"/>
-                                    <constraint firstItem="1qA-N8-t8e" firstAttribute="centerX" secondItem="Brx-pv-vFY" secondAttribute="centerX" type="default" id="w3Y-rZ-n5w"/>
+                                    <constraint firstItem="RbU-Pj-PLD" firstAttribute="top" secondItem="Brx-pv-vFY" secondAttribute="top" type="default" id="0Oc-Ta-pF5"/>
+                                    <constraint firstItem="RYn-I0-EFX" firstAttribute="centerX" secondItem="61p-XX-gVE" secondAttribute="centerX" type="default" id="29q-Hq-0ne"/>
+                                    <constraint firstItem="61p-XX-gVE" firstAttribute="top" secondItem="PJu-qi-ejN" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="5tA-cq-PWd"/>
+                                    <constraint firstItem="PJu-qi-ejN" firstAttribute="trailing" secondItem="YwC-6t-faJ" secondAttribute="trailing" type="default" id="6nq-RR-jpC"/>
+                                    <constraint firstItem="YwC-6t-faJ" firstAttribute="leading" secondItem="PJu-qi-ejN" secondAttribute="leading" type="default" id="82c-bD-Ur9"/>
+                                    <constraint firstItem="RYn-I0-EFX" firstAttribute="leading" secondItem="Brx-pv-vFY" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="87e-XO-diy"/>
+                                    <constraint firstItem="RYn-I0-EFX" firstAttribute="top" secondItem="61p-XX-gVE" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="AsL-D4-AgN"/>
+                                    <constraint firstItem="61p-XX-gVE" firstAttribute="centerX" secondItem="PJu-qi-ejN" secondAttribute="centerX" type="default" id="FGU-dd-RLU"/>
+                                    <constraint firstItem="fYn-BU-K23" firstAttribute="top" secondItem="Kj4-Hg-EgA" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Kjz-OI-7qj"/>
+                                    <constraint firstItem="1qA-N8-t8e" firstAttribute="centerX" secondItem="Brx-pv-vFY" secondAttribute="centerX" type="default" id="PXj-Az-rsQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="fYn-BU-K23" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Pno-e7-9Bs"/>
+                                    <constraint firstItem="hyp-cY-CXM" firstAttribute="top" secondItem="1qA-N8-t8e" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="QEb-d4-YMG"/>
+                                    <constraint firstItem="YwC-6t-faJ" firstAttribute="leading" secondItem="Kj4-Hg-EgA" secondAttribute="leading" type="default" id="RcF-aC-SO8"/>
+                                    <constraint firstItem="PJu-qi-ejN" firstAttribute="top" secondItem="YwC-6t-faJ" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="UoA-5h-PxV"/>
+                                    <constraint firstItem="Kj4-Hg-EgA" firstAttribute="top" secondItem="hyp-cY-CXM" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="WSf-dj-H5V"/>
+                                    <constraint firstItem="YwC-6t-faJ" firstAttribute="top" secondItem="fYn-BU-K23" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="XrG-Ev-7Wx"/>
+                                    <constraint firstAttribute="trailing" secondItem="1qA-N8-t8e" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Yab-gl-PUZ"/>
+                                    <constraint firstItem="fYn-BU-K23" firstAttribute="leading" secondItem="Brx-pv-vFY" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="eTd-kH-fpT"/>
+                                    <constraint firstItem="hyp-cY-CXM" firstAttribute="leading" secondItem="Kj4-Hg-EgA" secondAttribute="leading" type="default" id="efT-Rh-o9m"/>
+                                    <constraint firstItem="1qA-N8-t8e" firstAttribute="top" secondItem="RbU-Pj-PLD" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="lBk-x9-5N6"/>
+                                    <constraint firstItem="RbU-Pj-PLD" firstAttribute="trailing" secondItem="Brx-pv-vFY" secondAttribute="trailing" type="default" id="oax-cI-DeE"/>
+                                    <constraint firstAttribute="bottom" secondItem="RYn-I0-EFX" secondAttribute="bottom" constant="126" id="r0w-XX-PlP"/>
+                                    <constraint firstItem="RYn-I0-EFX" firstAttribute="trailing" secondItem="PJu-qi-ejN" secondAttribute="trailing" type="default" id="sd8-1p-Onr"/>
+                                    <constraint firstItem="hyp-cY-CXM" firstAttribute="trailing" secondItem="Kj4-Hg-EgA" secondAttribute="trailing" type="default" id="tfY-WE-Wuw"/>
+                                    <constraint firstItem="1qA-N8-t8e" firstAttribute="leading" secondItem="Brx-pv-vFY" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="u56-xC-gmv"/>
+                                    <constraint firstItem="Kj4-Hg-EgA" firstAttribute="trailing" secondItem="YwC-6t-faJ" secondAttribute="trailing" type="default" id="vqV-Pq-7GV"/>
+                                    <constraint firstItem="RbU-Pj-PLD" firstAttribute="centerX" secondItem="hyp-cY-CXM" secondAttribute="centerX" type="default" id="wOf-AT-YiF"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Brx-pv-vFY" firstAttribute="bottom" secondItem="hGt-EZ-hDP" secondAttribute="bottom" type="default" id="XwN-eX-SzY"/>
+                            <constraint firstItem="Brx-pv-vFY" firstAttribute="top" secondItem="hGt-EZ-hDP" secondAttribute="top" type="default" id="LNq-QI-0g3"/>
+                            <constraint firstItem="Brx-pv-vFY" firstAttribute="bottom" secondItem="hGt-EZ-hDP" secondAttribute="bottom" type="default" id="OoW-Ir-ibS"/>
                             <constraint firstItem="Brx-pv-vFY" firstAttribute="trailing" secondItem="hGt-EZ-hDP" secondAttribute="trailing" type="default" id="Xzw-a7-QIR"/>
-                            <constraint firstItem="Brx-pv-vFY" firstAttribute="top" secondItem="hGt-EZ-hDP" secondAttribute="top" type="default" id="dd0-gU-jIv"/>
                             <constraint firstItem="Brx-pv-vFY" firstAttribute="leading" secondItem="hGt-EZ-hDP" secondAttribute="leading" type="default" id="m5Q-j2-6yl"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9y8-eZ-vlw"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="detailImage" destination="RbU-Pj-PLD" id="KdY-nY-yfZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LSz-2c-7jE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="587" y="101"/>
+            <point key="canvasLocation" x="565" y="-88"/>
         </scene>
     </scenes>
     <resources>

@@ -289,12 +289,9 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:@"SegueSelectDietDayToShowDetails"]) {
-//        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-//        NSDate *object = _objects[indexPath.row];
         NSNumber *differenceBetweenStartDateAndSelectedDate = [NSNumber numberWithInteger:[self getDifferenceBetweenStartDateAndSelected:sender]];
         [[segue destinationViewController] setDetailItem:differenceBetweenStartDateAndSelectedDate];
     }
-    NSLog(@"segue");
 }
 
 /**
