@@ -57,7 +57,7 @@
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Brx-pv-vFY">
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" image="fish.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="RbU-Pj-PLD">
+                                    <imageView userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="scaleAspectFill" image="fish.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="RbU-Pj-PLD">
                                         <constraints>
                                             <constraint firstAttribute="height" constant="217" id="phD-jA-0Bf"/>
                                         </constraints>
