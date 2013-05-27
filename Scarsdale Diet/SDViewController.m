@@ -8,6 +8,7 @@
 
 #import "SDViewController.h"
 #import "SDDietDayDetailsViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface SDViewController ()
 @property (strong, nonatomic) NSDictionary *dietDaysInfoDictionary;
@@ -22,6 +23,10 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 
+    [self setRoundedCournersForNavigationController];
+    
+    self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:10/255.0f green:145/255.0f blue:5/255.0f alpha:1];
+    
     if (self.calendar == nil) {
         self.calendar = [[VRGCalendarView alloc] init];
         self.calendar.delegate = self;
@@ -46,11 +51,32 @@
         [self showClearButton];
     }
     
-
-        
-    
 }
 
+-(void) setRoundedCournersForNavigationController
+{
+    CALayer *capa = [self.navigationController navigationBar].layer;
+    [capa setShadowColor: [[UIColor blackColor] CGColor]];
+    [capa setShadowOpacity:0.85f];
+    [capa setShadowOffset: CGSizeMake(0.0f, 1.5f)];
+    [capa setShadowRadius:2.0f];
+    [capa setShouldRasterize:YES];
+    
+    
+    //Round
+    CGRect bounds = capa.bounds;
+    bounds.size.height += 10.0f;    //I'm reserving enough room for the shadow
+    UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:bounds
+                                                   byRoundingCorners:(UIRectCornerTopLeft | UIRectCornerTopRight)
+                                                         cornerRadii:CGSizeMake(kCornerRadius, kCornerRadius)];
+    
+    CAShapeLayer *maskLayer = [CAShapeLayer layer];
+    maskLayer.frame = bounds;
+    maskLayer.path = maskPath.CGPath;
+    
+    [capa addSublayer:maskLayer];
+    capa.mask = maskLayer;
+}
 -(void) showStartButton
 {
 

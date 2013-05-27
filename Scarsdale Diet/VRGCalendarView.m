@@ -428,7 +428,7 @@
     }
     
     for (int i=0; i<numBlocks; i++) {
-        int targetDate = i;
+        int targetDate;
         int targetColumn = i%7;
         int targetRow = i/7;
         int targetX = targetColumn * (kVRGCalendarViewDayWidth+2);
@@ -460,7 +460,7 @@
         if (selectedDate && i==selectedDateBlock) {
             CGRect rectangleGrid = CGRectMake(targetX,targetY,kVRGCalendarViewDayWidth+2,kVRGCalendarViewDayHeight+2);
             CGContextAddRect(context, rectangleGrid);
-            CGContextSetFillColorWithColor(context, [UIColor colorWithHexString:@"0x006dbc"].CGColor);
+            CGContextSetFillColorWithColor(context, [UIColor colorWithHexString:@"0x219b1c"].CGColor);
             CGContextFillPath(context);
             
             CGContextSetFillColorWithColor(context, 

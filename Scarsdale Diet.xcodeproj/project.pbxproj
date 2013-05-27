@@ -35,6 +35,7 @@
 		0C88926B17520F4700AAAC64 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C88926A17520F4700AAAC64 /* Default-568h@2x.png */; };
 		0C96D74417536CF40043489C /* SDTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C96D74317536CF40043489C /* SDTestViewController.m */; };
 		0C96D746175393100043489C /* fish.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C96D745175393100043489C /* fish.jpg */; };
+		0C96D7481753A12B0043489C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C96D7471753A12B0043489C /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +80,7 @@
 		0C96D74217536CF40043489C /* SDTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDTestViewController.h; sourceTree = "<group>"; };
 		0C96D74317536CF40043489C /* SDTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDTestViewController.m; sourceTree = "<group>"; };
 		0C96D745175393100043489C /* fish.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = fish.jpg; path = ../../../Downloads/fish.jpg; sourceTree = "<group>"; };
+		0C96D7471753A12B0043489C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C96D7481753A12B0043489C /* QuartzCore.framework in Frameworks */,
 				0C103334174CE2A7004C2ACC /* UIKit.framework in Frameworks */,
 				0C103336174CE2A7004C2ACC /* Foundation.framework in Frameworks */,
 				0C103338174CE2A7004C2ACC /* CoreGraphics.framework in Frameworks */,
@@ -98,6 +101,7 @@
 		0C103327174CE2A7004C2ACC = {
 			isa = PBXGroup;
 			children = (
+				0C96D7471753A12B0043489C /* QuartzCore.framework */,
 				0C103339174CE2A7004C2ACC /* Scarsdale Diet */,
 				0C103332174CE2A7004C2ACC /* Frameworks */,
 				0C103331174CE2A7004C2ACC /* Products */,

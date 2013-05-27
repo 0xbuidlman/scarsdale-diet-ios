@@ -40,36 +40,9 @@
                     <view key="view" contentMode="scaleToFill" id="Hjd-9E-FIF">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="test" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KYF-1P-DCY">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RAv-wM-Bmq">
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" priority="1" constant="99" type="user" id="lPZ-5s-fNh"/>
-                                </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="RAv-wM-Bmq" firstAttribute="leading" secondItem="Hjd-9E-FIF" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="LtY-2H-gvy"/>
-                            <constraint firstAttribute="trailing" secondItem="RAv-wM-Bmq" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Q9v-LR-bKi"/>
-                            <constraint firstItem="KYF-1P-DCY" firstAttribute="top" secondItem="Hjd-9E-FIF" secondAttribute="top" constant="156" id="e4N-l5-zKo"/>
-                            <constraint firstItem="KYF-1P-DCY" firstAttribute="leading" secondItem="Hjd-9E-FIF" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="yZq-Wz-sCt"/>
-                            <constraint firstItem="KYF-1P-DCY" firstAttribute="top" secondItem="RAv-wM-Bmq" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="zkm-jp-UYs"/>
-                        </constraints>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="ViG-Fj-Vdd"/>
-                    <connections>
-                        <outlet property="bigLabel" destination="KYF-1P-DCY" id="Gwr-8y-wqE"/>
-                        <outlet property="testView" destination="RAv-wM-Bmq" id="36j-ei-YyK"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4AS-N5-ekl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -173,12 +146,12 @@ fruit cut as desired;
                                         <constraints>
                                             <constraint firstAttribute="height" constant="210" id="9tE-iH-epL"/>
                                         </constraints>
-                                        <mutableString key="text">If you wish, you can replace any Scarsdale Diet's menu with the following menu:  
+                                        <string key="text">If you wish, you can replace any Scarsdale Diet's menu with the following menu:  
 
 1/2 low-fat cheese or cottage cheese mixed with 1 tablespoon cream;
 fruit cut as desired;
 6 halves walnuts or pecans whole or chopped and mixed with cheese or sprinkled on fruit;
-coffee, tea, soda water with a little lemon;</mutableString>
+coffee, tea, soda water with a little lemon;</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
@@ -227,9 +200,11 @@ coffee, tea, soda water with a little lemon;</mutableString>
                     <navigationItem key="navigationItem" id="9y8-eZ-vlw"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="breakfastTextView" destination="hyp-cY-CXM" id="CAA-vL-gHx"/>
                         <outlet property="detailImage" destination="RbU-Pj-PLD" id="KdY-nY-yfZ"/>
                         <outlet property="dinnerTextView" destination="PJu-qi-ejN" id="VKY-41-hyM"/>
                         <outlet property="lunchTextView" destination="fYn-BU-K23" id="3JS-sA-O5r"/>
+                        <outlet property="replaceMealTextView" destination="RYn-I0-EFX" id="PpD-Pp-u30"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LSz-2c-7jE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -237,32 +212,6 @@ coffee, tea, soda water with a little lemon;</mutableString>
             <point key="canvasLocation" x="565" y="-88"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="SDDietDayDetailsViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SDDietDayDetailsViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="detailImage" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="dinnerTextView" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="lunchTextView" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-        <class className="SDTestViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SDTestViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="bigLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="testView" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-        <class className="SDViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SDViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="calendarView" candidateClass="UIView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#define kCornerRadius 4
 
 @interface SDDietDayDetailsViewController : UIViewController
 
@@ -14,6 +15,8 @@
 @property (weak, nonatomic) IBOutlet UIImageView *detailImage;
 @property (weak, nonatomic) IBOutlet UITextView *lunchTextView;
 @property (weak, nonatomic) IBOutlet UITextView *dinnerTextView;
+@property (weak, nonatomic) IBOutlet UITextView *breakfastTextView;
+@property (weak, nonatomic) IBOutlet UITextView *replaceMealTextView;
 
 
 @end
