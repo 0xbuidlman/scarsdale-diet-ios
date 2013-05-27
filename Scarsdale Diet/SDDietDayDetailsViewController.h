@@ -12,5 +12,8 @@
 
 @property (strong, nonatomic) id detailItem;
 @property (weak, nonatomic) IBOutlet UIImageView *detailImage;
+@property (weak, nonatomic) IBOutlet UITextView *lunchTextView;
+@property (weak, nonatomic) IBOutlet UITextView *dinnerTextView;
+
 
 @end

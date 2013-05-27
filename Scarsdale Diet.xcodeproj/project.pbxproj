@@ -24,7 +24,6 @@
 		0C7751A117524584009C636F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C7751A017524584009C636F /* Default@2x.png */; };
 		0C7751A3175245B1009C636F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C7751A2175245B1009C636F /* Default.png */; };
 		0C88924C174FA67000AAAC64 /* SDDietDayDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C88924B174FA67000AAAC64 /* SDDietDayDetailsViewController.m */; };
-		0C8892541750100400AAAC64 /* fish.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C8892531750100400AAAC64 /* fish.jpg */; };
 		0C8892561750105900AAAC64 /* beef.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C8892551750105900AAAC64 /* beef.jpg */; };
 		0C8892581750108800AAAC64 /* tuna_salad.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C8892571750108800AAAC64 /* tuna_salad.jpg */; };
 		0C88925A1750138000AAAC64 /* diet-info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C8892591750138000AAAC64 /* diet-info.plist */; };
@@ -34,6 +33,8 @@
 		0C8892671752084A00AAAC64 /* 57.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C8892661752084A00AAAC64 /* 57.png */; };
 		0C8892691752084F00AAAC64 /* 114.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C8892681752084F00AAAC64 /* 114.png */; };
 		0C88926B17520F4700AAAC64 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C88926A17520F4700AAAC64 /* Default-568h@2x.png */; };
+		0C96D74417536CF40043489C /* SDTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C96D74317536CF40043489C /* SDTestViewController.m */; };
+		0C96D746175393100043489C /* fish.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C96D745175393100043489C /* fish.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,7 +67,6 @@
 		0C7751A2175245B1009C636F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
 		0C88924A174FA67000AAAC64 /* SDDietDayDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDDietDayDetailsViewController.h; sourceTree = "<group>"; };
 		0C88924B174FA67000AAAC64 /* SDDietDayDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDDietDayDetailsViewController.m; sourceTree = "<group>"; };
-		0C8892531750100400AAAC64 /* fish.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fish.jpg; sourceTree = "<group>"; };
 		0C8892551750105900AAAC64 /* beef.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = beef.jpg; sourceTree = "<group>"; };
 		0C8892571750108800AAAC64 /* tuna_salad.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tuna_salad.jpg; sourceTree = "<group>"; };
 		0C8892591750138000AAAC64 /* diet-info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "diet-info.plist"; sourceTree = "<group>"; };
@@ -76,6 +76,9 @@
 		0C8892661752084A00AAAC64 /* 57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 57.png; path = ../57.png; sourceTree = "<group>"; };
 		0C8892681752084F00AAAC64 /* 114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 114.png; path = ../114.png; sourceTree = "<group>"; };
 		0C88926A17520F4700AAAC64 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
+		0C96D74217536CF40043489C /* SDTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDTestViewController.h; sourceTree = "<group>"; };
+		0C96D74317536CF40043489C /* SDTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDTestViewController.m; sourceTree = "<group>"; };
+		0C96D745175393100043489C /* fish.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = fish.jpg; path = ../../../Downloads/fish.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +130,8 @@
 				0C103342174CE2A7004C2ACC /* SDAppDelegate.h */,
 				0C103343174CE2A7004C2ACC /* SDAppDelegate.m */,
 				0C10334B174CE2A7004C2ACC /* MainStoryboard.storyboard */,
+				0C96D74217536CF40043489C /* SDTestViewController.h */,
+				0C96D74317536CF40043489C /* SDTestViewController.m */,
 				0C10334E174CE2A7004C2ACC /* SDViewController.h */,
 				0C10334F174CE2A7004C2ACC /* SDViewController.m */,
 				0C88924A174FA67000AAAC64 /* SDDietDayDetailsViewController.h */,
@@ -176,12 +181,12 @@
 		0C88925217500F8B00AAAC64 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				0C96D745175393100043489C /* fish.jpg */,
 				0C88925F1750AAE000AAAC64 /* tomatoes_lettuce.jpg */,
 				0C88925D1750A9C300AAAC64 /* eggs.jpg */,
 				0C88925B1750A7F800AAAC64 /* fruit_salad.jpg */,
 				0C8892571750108800AAAC64 /* tuna_salad.jpg */,
 				0C8892551750105900AAAC64 /* beef.jpg */,
-				0C8892531750100400AAAC64 /* fish.jpg */,
 			);
 			name = images;
 			sourceTree = "<group>";
@@ -240,7 +245,6 @@
 			files = (
 				0C10333E174CE2A7004C2ACC /* InfoPlist.strings in Resources */,
 				0C10334D174CE2A7004C2ACC /* MainStoryboard.storyboard in Resources */,
-				0C8892541750100400AAAC64 /* fish.jpg in Resources */,
 				0C8892561750105900AAAC64 /* beef.jpg in Resources */,
 				0C8892581750108800AAAC64 /* tuna_salad.jpg in Resources */,
 				0C88925A1750138000AAAC64 /* diet-info.plist in Resources */,
@@ -252,6 +256,7 @@
 				0C88926B17520F4700AAAC64 /* Default-568h@2x.png in Resources */,
 				0C7751A117524584009C636F /* Default@2x.png in Resources */,
 				0C7751A3175245B1009C636F /* Default.png in Resources */,
+				0C96D746175393100043489C /* fish.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +277,7 @@
 				0C103366174CE407004C2ACC /* ViewController.m in Sources */,
 				0C103367174CE407004C2ACC /* VRGCalendarView.m in Sources */,
 				0C88924C174FA67000AAAC64 /* SDDietDayDetailsViewController.m in Sources */,
+				0C96D74417536CF40043489C /* SDTestViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

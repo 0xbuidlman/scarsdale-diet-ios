@@ -27,6 +27,14 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+
+    self.lunchTextView.text = self.detailItem[@"lunch"];
+    self.dinnerTextView.text = self.detailItem[@"dinner"];
+    
+    NSString *imageName = self.detailItem[@"img"];
+    NSString *imagePath = [[NSBundle mainBundle] pathForResource:imageName ofType:@"jpg"];
+    
+    self.detailImage.image = [UIImage imageNamed:imageName];
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,4 +43,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewDidUnload {
+    [self setLunchTextView:nil];
+    [self setDinnerTextView:nil];
+    [super viewDidUnload];
+}
 @end

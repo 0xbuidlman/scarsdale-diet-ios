@@ -10,7 +10,7 @@
 #import "SDDietDayDetailsViewController.h"
 
 @interface SDViewController ()
-    
+@property (strong, nonatomic) NSDictionary *dietDaysInfoDictionary;
 @end
 
 @implementation SDViewController
@@ -30,15 +30,24 @@
     
     [self.calendarView addSubview:self.calendar];
 
+    if (!self.dietDaysInfoDictionary) {
+        NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"diet-info" ofType:@"plist"];
+        self.dietDaysInfoDictionary = [NSDictionary dictionaryWithContentsOfFile:plistPath];
+    }
+    
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     self.dietStart = [defaults objectForKey:@"dietStart"];
     if (self.dietStart == nil) {
         [self showStartButton];
     } else {
-        self.dietDays = [self settingDietDays];
+        if (!self.dietDays)
+            self.dietDays = [self settingDietDays];
         
         [self showClearButton];
     }
+    
+
+        
     
 }
 
@@ -125,17 +134,18 @@
     
     NSDate *selectedDate = self.datePicker.date;
     
-    NSCalendar *cal = [NSCalendar currentCalendar];
-    NSDateComponents *comps = [cal components:[self getUnitFlags] fromDate:selectedDate];
+    NSCalendar *currentCalendar = [NSCalendar currentCalendar];
+    NSDateComponents *selectedDateComponents = [currentCalendar components:[self getUnitFlags] fromDate:selectedDate];
+    NSDateComponents *dietStartComponents = [[NSDateComponents alloc] init];
     
-    [comps setHour:0];
-    [comps setMinute:0];
-    [comps setSecond:0];
+    [dietStartComponents setDay: [selectedDateComponents day]];
+    [dietStartComponents setMonth: [selectedDateComponents month]];
+    [dietStartComponents setYear:[selectedDateComponents year]];
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
-    self.dietStart = [cal dateFromComponents:comps];
-    [defaults setObject:selectedDate forKey:@"dietStart"];
+    self.dietStart = [currentCalendar dateFromComponents:dietStartComponents];
+    [defaults setObject:self.dietStart forKey:@"dietStart"];
     [defaults synchronize];
     
     [self.datePicker removeFromSuperview];
@@ -199,7 +209,8 @@
  */
 -(NSArray *) markDietDays:(NSDate *)forGivenMonth
 {
-    self.dietDays = [self settingDietDays];
+    if (!self.dietDays)
+        self.dietDays = [self settingDietDays];
     
     NSCalendar *cal = [NSCalendar currentCalendar];
     NSDateComponents *comps = [cal components:[self getUnitFlags] fromDate:forGivenMonth];
@@ -267,16 +278,15 @@
 -(void)calendarView:(VRGCalendarView *)calendarView dateSelected:(NSDate *)date {
 
     if ([self isDietDay:date]) {
-//        UIViewController *detailsView = [self.storyboard instantiateViewControllerWithIdentifier:@"DetailView"];
-//        [self.navigationController pushViewController:detailsView animated:YES];
+
         [self performSegueWithIdentifier:@"SegueSelectDietDayToShowDetails" sender:date];
+    } else {
+//        [self performSegueWithIdentifier:@"SegueSelectDietDayTest" sender:self];
     }
-//    UITabBarController *tabBar = [self.storyboard instantiateViewControllerWithIdentifier:@"TheTabBar"];
-//    [self.navigationController pushViewController:tabBar animated:YES];
     
 }
 
--(NSInteger)getDifferenceBetweenStartDateAndSelected:(NSDate*)selectedDate
+-(int)getDifferenceBetweenStartDateAndSelected:(NSDate*)selectedDate
 {
     NSCalendar *cal = [NSCalendar currentCalendar];
     NSDateComponents *comps;
@@ -289,9 +299,17 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:@"SegueSelectDietDayToShowDetails"]) {
-        NSNumber *differenceBetweenStartDateAndSelectedDate = [NSNumber numberWithInteger:[self getDifferenceBetweenStartDateAndSelected:sender]];
-        [[segue destinationViewController] setDetailItem:differenceBetweenStartDateAndSelectedDate];
+        
+        NSInteger differenceBetweenStartDateAndSelectedDate = [self getDifferenceBetweenStartDateAndSelected:sender];
+        
+        NSString *key = [NSString stringWithFormat:@"%i", (differenceBetweenStartDateAndSelectedDate % 7)];
+        NSDictionary *dietDayInfo = self.dietDaysInfoDictionary[key];
+        [[segue destinationViewController] setDetailItem:dietDayInfo];
+        
+    } else if ([[segue identifier] isEqualToString:@"SegueSelectDietDayTest"]) {
+        
     }
+    
 }
 
 /**

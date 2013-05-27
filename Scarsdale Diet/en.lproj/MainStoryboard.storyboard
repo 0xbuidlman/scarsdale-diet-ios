@@ -26,11 +26,54 @@
                     <connections>
                         <outlet property="calendarView" destination="MAw-o7-k0n" id="qfl-jC-xIe"/>
                         <segue destination="WQo-Pz-Xdu" kind="push" identifier="SegueSelectDietDayToShowDetails" id="6t8-S2-XVB"/>
+                        <segue destination="FYB-Ew-pJ3" kind="push" identifier="SegueSelectDietDayTest" id="lRU-Ml-WlX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="110" y="340"/>
+        </scene>
+        <!--Test View Controller-->
+        <scene sceneID="YTg-hM-dCi">
+            <objects>
+                <viewController id="FYB-Ew-pJ3" customClass="SDTestViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hjd-9E-FIF">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="test" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KYF-1P-DCY">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RAv-wM-Bmq">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="1" constant="99" type="user" id="lPZ-5s-fNh"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RAv-wM-Bmq" firstAttribute="leading" secondItem="Hjd-9E-FIF" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="LtY-2H-gvy"/>
+                            <constraint firstAttribute="trailing" secondItem="RAv-wM-Bmq" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Q9v-LR-bKi"/>
+                            <constraint firstItem="KYF-1P-DCY" firstAttribute="top" secondItem="Hjd-9E-FIF" secondAttribute="top" constant="156" id="e4N-l5-zKo"/>
+                            <constraint firstItem="KYF-1P-DCY" firstAttribute="leading" secondItem="Hjd-9E-FIF" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="yZq-Wz-sCt"/>
+                            <constraint firstItem="KYF-1P-DCY" firstAttribute="top" secondItem="RAv-wM-Bmq" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="zkm-jp-UYs"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ViG-Fj-Vdd"/>
+                    <connections>
+                        <outlet property="bigLabel" destination="KYF-1P-DCY" id="Gwr-8y-wqE"/>
+                        <outlet property="testView" destination="RAv-wM-Bmq" id="36j-ei-YyK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4AS-N5-ekl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="565" y="1124"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Hrt-Kg-APq">
@@ -57,7 +100,7 @@
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Brx-pv-vFY">
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="scaleAspectFill" image="fish.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="RbU-Pj-PLD">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="RbU-Pj-PLD">
                                         <constraints>
                                             <constraint firstAttribute="height" constant="217" id="phD-jA-0Bf"/>
                                         </constraints>
@@ -67,10 +110,10 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hyp-cY-CXM">
+                                    <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hyp-cY-CXM">
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="128" id="DBi-0a-gDP"/>
+                                            <constraint firstAttribute="height" constant="136" id="LKm-62-f0U"/>
                                         </constraints>
                                         <attributedString key="attributedText">
                                             <fragment>
@@ -97,10 +140,10 @@ fruit cut as desired;
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYn-BU-K23">
+                                    <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYn-BU-K23">
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="135" id="ny1-ke-GOq"/>
+                                            <constraint firstAttribute="height" constant="136" id="qlk-KF-zqu"/>
                                         </constraints>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -111,10 +154,10 @@ fruit cut as desired;
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJu-qi-ejN">
+                                    <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJu-qi-ejN">
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="135" id="8tB-ct-pmS"/>
+                                            <constraint firstAttribute="height" constant="136" id="8xp-79-4vD"/>
                                         </constraints>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -125,48 +168,51 @@ fruit cut as desired;
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYn-I0-EFX">
+                                    <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYn-I0-EFX">
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="135" id="kb9-MW-bN5"/>
-                                            <constraint firstAttribute="width" constant="279" id="lba-qA-8AL"/>
+                                            <constraint firstAttribute="height" constant="210" id="9tE-iH-epL"/>
                                         </constraints>
-                                        <string key="text">1/2 low-fat cheese or cottage cheese mixed with 1 tablespoon cream;
+                                        <mutableString key="text">If you wish, you can replace any Scarsdale Diet's menu with the following menu:  
+
+1/2 low-fat cheese or cottage cheese mixed with 1 tablespoon cream;
 fruit cut as desired;
 6 halves walnuts or pecans whole or chopped and mixed with cheese or sprinkled on fruit;
-coffee, tea, soda water with a little lemon;</string>
+coffee, tea, soda water with a little lemon;</mutableString>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="fYn-BU-K23" firstAttribute="leading" secondItem="Brx-pv-vFY" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="0Bp-Zo-uII"/>
                                     <constraint firstItem="RbU-Pj-PLD" firstAttribute="top" secondItem="Brx-pv-vFY" secondAttribute="top" type="default" id="0Oc-Ta-pF5"/>
-                                    <constraint firstItem="RYn-I0-EFX" firstAttribute="centerX" secondItem="61p-XX-gVE" secondAttribute="centerX" type="default" id="29q-Hq-0ne"/>
-                                    <constraint firstItem="61p-XX-gVE" firstAttribute="top" secondItem="PJu-qi-ejN" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="5tA-cq-PWd"/>
-                                    <constraint firstItem="PJu-qi-ejN" firstAttribute="trailing" secondItem="YwC-6t-faJ" secondAttribute="trailing" type="default" id="6nq-RR-jpC"/>
-                                    <constraint firstItem="YwC-6t-faJ" firstAttribute="leading" secondItem="PJu-qi-ejN" secondAttribute="leading" type="default" id="82c-bD-Ur9"/>
-                                    <constraint firstItem="RYn-I0-EFX" firstAttribute="leading" secondItem="Brx-pv-vFY" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="87e-XO-diy"/>
-                                    <constraint firstItem="RYn-I0-EFX" firstAttribute="top" secondItem="61p-XX-gVE" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="AsL-D4-AgN"/>
-                                    <constraint firstItem="61p-XX-gVE" firstAttribute="centerX" secondItem="PJu-qi-ejN" secondAttribute="centerX" type="default" id="FGU-dd-RLU"/>
-                                    <constraint firstItem="fYn-BU-K23" firstAttribute="top" secondItem="Kj4-Hg-EgA" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Kjz-OI-7qj"/>
-                                    <constraint firstItem="1qA-N8-t8e" firstAttribute="centerX" secondItem="Brx-pv-vFY" secondAttribute="centerX" type="default" id="PXj-Az-rsQ"/>
-                                    <constraint firstAttribute="trailing" secondItem="fYn-BU-K23" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Pno-e7-9Bs"/>
+                                    <constraint firstItem="fYn-BU-K23" firstAttribute="top" secondItem="Kj4-Hg-EgA" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="1x3-g8-52c"/>
+                                    <constraint firstItem="YwC-6t-faJ" firstAttribute="trailing" secondItem="Kj4-Hg-EgA" secondAttribute="trailing" type="default" id="3Cy-dG-Sbe"/>
+                                    <constraint firstItem="Kj4-Hg-EgA" firstAttribute="centerX" secondItem="Brx-pv-vFY" secondAttribute="centerX" type="default" id="CGx-Yt-N3s"/>
+                                    <constraint firstItem="YwC-6t-faJ" firstAttribute="leading" secondItem="PJu-qi-ejN" secondAttribute="leading" type="default" id="DP4-8v-gNl"/>
+                                    <constraint firstItem="YwC-6t-faJ" firstAttribute="trailing" secondItem="PJu-qi-ejN" secondAttribute="trailing" type="default" id="GDY-Bd-b7N"/>
+                                    <constraint firstItem="YwC-6t-faJ" firstAttribute="top" secondItem="fYn-BU-K23" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Gfs-P6-CPx"/>
+                                    <constraint firstItem="YwC-6t-faJ" firstAttribute="leading" secondItem="Kj4-Hg-EgA" secondAttribute="leading" type="default" id="LQc-mV-Rjo"/>
+                                    <constraint firstItem="RYn-I0-EFX" firstAttribute="top" secondItem="61p-XX-gVE" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="M0T-ZW-7XH"/>
                                     <constraint firstItem="hyp-cY-CXM" firstAttribute="top" secondItem="1qA-N8-t8e" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="QEb-d4-YMG"/>
-                                    <constraint firstItem="YwC-6t-faJ" firstAttribute="leading" secondItem="Kj4-Hg-EgA" secondAttribute="leading" type="default" id="RcF-aC-SO8"/>
-                                    <constraint firstItem="PJu-qi-ejN" firstAttribute="top" secondItem="YwC-6t-faJ" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="UoA-5h-PxV"/>
-                                    <constraint firstItem="Kj4-Hg-EgA" firstAttribute="top" secondItem="hyp-cY-CXM" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="WSf-dj-H5V"/>
-                                    <constraint firstItem="YwC-6t-faJ" firstAttribute="top" secondItem="fYn-BU-K23" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="XrG-Ev-7Wx"/>
+                                    <constraint firstItem="PJu-qi-ejN" firstAttribute="top" secondItem="YwC-6t-faJ" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="R6F-XT-Sbz"/>
+                                    <constraint firstItem="hyp-cY-CXM" firstAttribute="centerX" secondItem="1qA-N8-t8e" secondAttribute="centerX" type="default" id="Uje-7r-V9z"/>
+                                    <constraint firstAttribute="trailing" secondItem="RYn-I0-EFX" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="YF5-u9-HBe"/>
                                     <constraint firstAttribute="trailing" secondItem="1qA-N8-t8e" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Yab-gl-PUZ"/>
-                                    <constraint firstItem="fYn-BU-K23" firstAttribute="leading" secondItem="Brx-pv-vFY" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="eTd-kH-fpT"/>
+                                    <constraint firstAttribute="trailing" secondItem="fYn-BU-K23" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="cnw-mW-nRk"/>
                                     <constraint firstItem="hyp-cY-CXM" firstAttribute="leading" secondItem="Kj4-Hg-EgA" secondAttribute="leading" type="default" id="efT-Rh-o9m"/>
+                                    <constraint firstItem="PJu-qi-ejN" firstAttribute="centerX" secondItem="RYn-I0-EFX" secondAttribute="centerX" type="default" id="gdc-57-NtW"/>
+                                    <constraint firstAttribute="bottom" secondItem="RYn-I0-EFX" secondAttribute="bottom" constant="41" id="hgi-dD-CLm"/>
+                                    <constraint firstItem="Kj4-Hg-EgA" firstAttribute="top" secondItem="hyp-cY-CXM" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="jrA-UP-b9s"/>
                                     <constraint firstItem="1qA-N8-t8e" firstAttribute="top" secondItem="RbU-Pj-PLD" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="lBk-x9-5N6"/>
+                                    <constraint firstItem="RYn-I0-EFX" firstAttribute="leading" secondItem="PJu-qi-ejN" secondAttribute="leading" type="default" id="lZM-4T-nrK"/>
+                                    <constraint firstItem="61p-XX-gVE" firstAttribute="top" secondItem="PJu-qi-ejN" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="ma2-L9-28j"/>
+                                    <constraint firstItem="RbU-Pj-PLD" firstAttribute="leading" secondItem="Brx-pv-vFY" secondAttribute="leading" type="default" id="nhf-K0-ANu"/>
                                     <constraint firstItem="RbU-Pj-PLD" firstAttribute="trailing" secondItem="Brx-pv-vFY" secondAttribute="trailing" type="default" id="oax-cI-DeE"/>
-                                    <constraint firstAttribute="bottom" secondItem="RYn-I0-EFX" secondAttribute="bottom" constant="126" id="r0w-XX-PlP"/>
-                                    <constraint firstItem="RYn-I0-EFX" firstAttribute="trailing" secondItem="PJu-qi-ejN" secondAttribute="trailing" type="default" id="sd8-1p-Onr"/>
+                                    <constraint firstItem="61p-XX-gVE" firstAttribute="leading" secondItem="Brx-pv-vFY" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="sa6-1U-QHa"/>
                                     <constraint firstItem="hyp-cY-CXM" firstAttribute="trailing" secondItem="Kj4-Hg-EgA" secondAttribute="trailing" type="default" id="tfY-WE-Wuw"/>
                                     <constraint firstItem="1qA-N8-t8e" firstAttribute="leading" secondItem="Brx-pv-vFY" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="u56-xC-gmv"/>
-                                    <constraint firstItem="Kj4-Hg-EgA" firstAttribute="trailing" secondItem="YwC-6t-faJ" secondAttribute="trailing" type="default" id="vqV-Pq-7GV"/>
-                                    <constraint firstItem="RbU-Pj-PLD" firstAttribute="centerX" secondItem="hyp-cY-CXM" secondAttribute="centerX" type="default" id="wOf-AT-YiF"/>
+                                    <constraint firstItem="PJu-qi-ejN" firstAttribute="trailing" secondItem="61p-XX-gVE" secondAttribute="trailing" type="default" id="x4J-vf-KMX"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -182,6 +228,8 @@ coffee, tea, soda water with a little lemon;</string>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="detailImage" destination="RbU-Pj-PLD" id="KdY-nY-yfZ"/>
+                        <outlet property="dinnerTextView" destination="PJu-qi-ejN" id="VKY-41-hyM"/>
+                        <outlet property="lunchTextView" destination="fYn-BU-K23" id="3JS-sA-O5r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LSz-2c-7jE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -189,9 +237,6 @@ coffee, tea, soda water with a little lemon;</string>
             <point key="canvasLocation" x="565" y="-88"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="fish.jpg" width="400" height="400"/>
-    </resources>
     <classes>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
@@ -200,6 +245,15 @@ coffee, tea, soda water with a little lemon;</string>
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SDDietDayDetailsViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="detailImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="dinnerTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="lunchTextView" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="SDTestViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SDTestViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="bigLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="testView" candidateClass="UITextView"/>
             </relationships>
         </class>
         <class className="SDViewController" superclassName="UIViewController">
