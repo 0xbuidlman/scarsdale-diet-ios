@@ -4,7 +4,7 @@
 //
 //  Created by mihata on 5/22/13.
 //  Copyright (c) 2013 Mihail Velikov. All rights reserved.
-//  init
+//
 
 #import "SDViewController.h"
 #import "SDDietDayDetailsViewController.h"
