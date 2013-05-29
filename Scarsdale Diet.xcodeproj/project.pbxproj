@@ -366,11 +366,13 @@
 		0C103354174CE2A7004C2ACC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Mihail Velikov (8YJG7WCC9H)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Scarsdale Diet/Scarsdale Diet-Prefix.pch";
 				INFOPLIST_FILE = "Scarsdale Diet/Scarsdale Diet-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "3393E995-F6C2-44CB-871D-C73D39288E8C";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -378,11 +380,13 @@
 		0C103355174CE2A7004C2ACC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Mihail Velikov (8YJG7WCC9H)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Scarsdale Diet/Scarsdale Diet-Prefix.pch";
 				INFOPLIST_FILE = "Scarsdale Diet/Scarsdale Diet-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "3393E995-F6C2-44CB-871D-C73D39288E8C";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

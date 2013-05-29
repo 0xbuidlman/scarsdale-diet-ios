@@ -39,9 +39,14 @@
         NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"diet-info" ofType:@"plist"];
         self.dietDaysInfoDictionary = [NSDictionary dictionaryWithContentsOfFile:plistPath];
     }
+
+    
+
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
     self.dietStart = [defaults objectForKey:@"dietStart"];
+    
     if (self.dietStart == nil) {
         [self showStartButton];
     } else {
@@ -51,6 +56,22 @@
         [self showClearButton];
     }
     
+    BOOL disclaimer = [defaults boolForKey:@"disclaimer"];
+
+    if (!disclaimer) {
+        NSString *disclaimerMsg = @"Each customer chooses whether and when to observe the diet described, the author of the application is not responsible for any complications due to the observance of the diet that does not meet his/hers personal needs. The diet incorporates essential nutrients, suggesting that during its observance users you should feel well, if you do not, please contact your doctor and stop the diet.\nThis application is not associated, affiliated, endorsed, or sponsored by The Scarsdale Medical Diet authors or their representatives, nor have they been reviewed tested or certified by them.";
+        
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Disclaimer"
+                message:disclaimerMsg
+                delegate:self
+                cancelButtonTitle:nil
+                otherButtonTitles:@"OK", nil];
+        
+        alertView.alertViewStyle = UIAlertViewStyleDefault;
+        
+        [alertView show];
+    }
+
 }
 
 -(void) setRoundedCournersForNavigationController
@@ -114,7 +135,6 @@
     }
     
     CGRect screenRect = [self.view frame];
-    NSLog(@"Screen frame %f %f", screenRect.origin.y, screenRect.size.height);
     
     CGSize pickerSize = [self.datePicker sizeThatFits:CGSizeZero];
     
@@ -130,6 +150,15 @@
     [self showDoneButton];
 }
 
+
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    BOOL disclaimer = YES;
+    [defaults setBool:disclaimer forKey:@"disclaimer"];
+    [defaults synchronize];
+}
 
 - (void) startDate:(id)sender
 {
