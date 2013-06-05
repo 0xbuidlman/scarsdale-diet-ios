@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>0</key>
+	<dict>
+		<key>lunch</key>
+		<string>ausgewähltes kaltes unfettes Fleisch (nach Wahl – Hähnchen, Puten, Zunge, zartes Rindflesich)
+Tomaten, geschnitten, gebacken oder gedünstet
+Kaffee, Tee, Sodawasser</string>
+		<key>dinner</key>
+		<string>Fisch oder Krebsen, Garnellini
+kombinierter Salat (von jederlei  Gemüse nach Wahl)
+1 Scheibe Vollkorn- oder Proteinbrot geröstet
+Grapefruit oder Obst nach der Saison</string>
+		<key>img</key>
+		<string>fish.jpg</string>
+	</dict>
+	<key>1</key>
+	<dict>
+		<key>lunch</key>
+		<string>Obstsalat, jegliche Kombination aus Obst, so viel wie Sie wollen</string>
+		<key>dinner</key>
+		<string>große Frikadelle aus Rindfleisch
+Tomaten, Gartensalat, Sellerie, Oliven, Rosenkohl, Gurke</string>
+		<key>img</key>
+		<string>fruit_salad.jpg</string>
+	</dict>
+	<key>2</key>
+	<dict>
+		<key>lunch</key>
+		<string>Thunfisch- oder Lachssalat (mit entferntem Öl) mit Zitrone oder Essig
+Grapefruit, Melone oder Saisonfrucht
+Kaffee, Tee, Sodawasser</string>
+		<key>dinner</key>
+		<string>Lammbraten, geschnitten von Scheiben mit entfernten Fett
+Salat von Gartensalat, Tomaten, Gurken, Sellerie</string>
+		<key>img</key>
+		<string>tuna_salad.jpg</string>
+	</dict>
+	<key>3</key>
+	<dict>
+		<key>lunch</key>
+		<string>Zwei Eier zubereitet nach Wahl, aber ohne Öl
+fettarme frische Käse/Quark
+Zucchini oder grüne Bohnen oder Tomaten- geschnitte oder gedünstet
+1 Scheibe Protein- oder Vollkornbrot, geröstet
+Tee oder Kaffee</string>
+		<key>dinner</key>
+		<string>Hähnchen, zubereitet in Grill, auf dem Rost oder im Ofen (mit entfertem Haut oder Fett)
+große Portion von Spinat, Paprika  oder grüne Bohnen</string>
+		<key>img</key>
+		<string>eggs.jpg</string>
+	</dict>
+	<key>4</key>
+	<dict>
+		<key>lunch</key>
+		<string>Käse (fettarme), verschieden Arten, geschnitten in Scheiben
+Spinat
+1 Scheibe geröstes Protein- oder Vollkornbrot</string>
+		<key>dinner</key>
+		<string>Fisch oder Krebs, Garnellini
+kombinierter Salat von jederlei Gemüse nach Wahl
+1 Scheibe gerösteter Protein oder Vollkornbrot</string>
+		<key>img</key>
+		<string>fish.jpg</string>
+	</dict>
+	<key>5</key>
+	<dict>
+		<key>lunch</key>
+		<string>Obstsalat
+Kaffee oder Tee</string>
+		<key>dinner</key>
+		<string>Puten- oder Hähnchenbraten
+Salat mit Tomaten oder Gartensalat
+Grapefruit oder Saisonfrucht</string>
+		<key>img</key>
+		<string>tomatoes_lettuce.jpg</string>
+	</dict>
+	<key>6</key>
+	<dict>
+		<key>lunch</key>
+		<string>kaltes oder heißes Hähnchen- oder Putenfleisch
+Tomaten, Mören, gekochte Kohl, Brokkoli oder Blumenkohl
+Grapefruit oder Saisonfrucht
+Kaffee oder Tee</string>
+		<key>dinner</key>
+		<string>ein großes Steck (mit sichtbarem entfernten Fett vor dem Essen)
+Salat mit Gartensalat, Gurke, Sellerie, Tomaten, Rosenkohl</string>
+		<key>img</key>
+		<string>beef.jpg</string>
+	</dict>
+</dict>
+</plist>

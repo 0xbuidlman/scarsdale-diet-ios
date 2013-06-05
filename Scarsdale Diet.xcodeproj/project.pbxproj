@@ -21,21 +21,30 @@
 		0C103365174CE407004C2ACC /* UIView+convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C10335D174CE407004C2ACC /* UIView+convenience.m */; };
 		0C103366174CE407004C2ACC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C10335F174CE407004C2ACC /* ViewController.m */; };
 		0C103367174CE407004C2ACC /* VRGCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C103361174CE407004C2ACC /* VRGCalendarView.m */; };
+		0C17D9111758C1A3001520DC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C96D7471753A12B0043489C /* QuartzCore.framework */; };
+		0C17D9121758C319001520DC /* SDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C10334F174CE2A7004C2ACC /* SDViewController.m */; };
+		0C17D9131758C337001520DC /* VRGCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C103361174CE407004C2ACC /* VRGCalendarView.m */; };
+		0C17D9141758C496001520DC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C103337174CE2A7004C2ACC /* CoreGraphics.framework */; };
+		0C651EE0175F79CA00A0F01C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0C651EE2175F79CA00A0F01C /* Localizable.strings */; };
+		0C651EE4175F7D4B00A0F01C /* diet-info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C651EE6175F7D4B00A0F01C /* diet-info.plist */; };
 		0C7751A117524584009C636F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C7751A017524584009C636F /* Default@2x.png */; };
 		0C7751A3175245B1009C636F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C7751A2175245B1009C636F /* Default.png */; };
 		0C88924C174FA67000AAAC64 /* SDDietDayDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C88924B174FA67000AAAC64 /* SDDietDayDetailsViewController.m */; };
 		0C8892561750105900AAAC64 /* beef.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C8892551750105900AAAC64 /* beef.jpg */; };
 		0C8892581750108800AAAC64 /* tuna_salad.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C8892571750108800AAAC64 /* tuna_salad.jpg */; };
-		0C88925A1750138000AAAC64 /* diet-info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C8892591750138000AAAC64 /* diet-info.plist */; };
 		0C88925C1750A7F800AAAC64 /* fruit_salad.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C88925B1750A7F800AAAC64 /* fruit_salad.jpg */; };
 		0C88925E1750A9C300AAAC64 /* eggs.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C88925D1750A9C300AAAC64 /* eggs.jpg */; };
 		0C8892601750AAE000AAAC64 /* tomatoes_lettuce.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C88925F1750AAE000AAAC64 /* tomatoes_lettuce.jpg */; };
 		0C8892671752084A00AAAC64 /* 57.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C8892661752084A00AAAC64 /* 57.png */; };
 		0C8892691752084F00AAAC64 /* 114.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C8892681752084F00AAAC64 /* 114.png */; };
 		0C88926B17520F4700AAAC64 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C88926A17520F4700AAAC64 /* Default-568h@2x.png */; };
-		0C96D74417536CF40043489C /* SDTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C96D74317536CF40043489C /* SDTestViewController.m */; };
 		0C96D746175393100043489C /* fish.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C96D745175393100043489C /* fish.jpg */; };
 		0C96D7481753A12B0043489C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C96D7471753A12B0043489C /* QuartzCore.framework */; };
+		0CF067BC1757BF9C009A93E0 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CF067BB1757BF9C009A93E0 /* SenTestingKit.framework */; };
+		0CF067BD1757BF9C009A93E0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C103333174CE2A7004C2ACC /* UIKit.framework */; };
+		0CF067BE1757BF9C009A93E0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C103335174CE2A7004C2ACC /* Foundation.framework */; };
+		0CF067C41757BF9D009A93E0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0CF067C21757BF9D009A93E0 /* InfoPlist.strings */; };
+		0CF067C71757BF9D009A93E0 /* ScarsdaleDietLogicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF067C61757BF9D009A93E0 /* ScarsdaleDietLogicTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,7 +58,6 @@
 		0C103341174CE2A7004C2ACC /* Scarsdale Diet-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Scarsdale Diet-Prefix.pch"; sourceTree = "<group>"; };
 		0C103342174CE2A7004C2ACC /* SDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDAppDelegate.h; sourceTree = "<group>"; };
 		0C103343174CE2A7004C2ACC /* SDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDAppDelegate.m; sourceTree = "<group>"; };
-		0C10334C174CE2A7004C2ACC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		0C10334E174CE2A7004C2ACC /* SDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDViewController.h; sourceTree = "<group>"; };
 		0C10334F174CE2A7004C2ACC /* SDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDViewController.m; sourceTree = "<group>"; };
 		0C103356174CE407004C2ACC /* NSDate+convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+convenience.h"; path = "Scarsdale Diet/NSDate+convenience.h"; sourceTree = "<group>"; };
@@ -64,23 +72,33 @@
 		0C10335F174CE407004C2ACC /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = "Scarsdale Diet/ViewController.m"; sourceTree = "<group>"; };
 		0C103360174CE407004C2ACC /* VRGCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VRGCalendarView.h; path = "Scarsdale Diet/VRGCalendarView.h"; sourceTree = "<group>"; };
 		0C103361174CE407004C2ACC /* VRGCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VRGCalendarView.m; path = "Scarsdale Diet/VRGCalendarView.m"; sourceTree = "<group>"; };
+		0C651EDF175F792500A0F01C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0C651EE1175F79CA00A0F01C /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0C651EE3175F79E800A0F01C /* de */ = {isa = PBXFileReference; lastKnownFileType = file; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0C651EE5175F7D4B00A0F01C /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = "en.lproj/diet-info.plist"; sourceTree = "<group>"; };
+		0C651EE7175F7D6F00A0F01C /* de */ = {isa = PBXFileReference; lastKnownFileType = file; name = de; path = "de.lproj/diet-info.plist"; sourceTree = "<group>"; };
+		0C651EE8175F823F00A0F01C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		0C7751A017524584009C636F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
 		0C7751A2175245B1009C636F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
 		0C88924A174FA67000AAAC64 /* SDDietDayDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDDietDayDetailsViewController.h; sourceTree = "<group>"; };
 		0C88924B174FA67000AAAC64 /* SDDietDayDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDDietDayDetailsViewController.m; sourceTree = "<group>"; };
 		0C8892551750105900AAAC64 /* beef.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = beef.jpg; sourceTree = "<group>"; };
 		0C8892571750108800AAAC64 /* tuna_salad.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tuna_salad.jpg; sourceTree = "<group>"; };
-		0C8892591750138000AAAC64 /* diet-info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "diet-info.plist"; sourceTree = "<group>"; };
 		0C88925B1750A7F800AAAC64 /* fruit_salad.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fruit_salad.jpg; sourceTree = "<group>"; };
 		0C88925D1750A9C300AAAC64 /* eggs.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = eggs.jpg; sourceTree = "<group>"; };
 		0C88925F1750AAE000AAAC64 /* tomatoes_lettuce.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tomatoes_lettuce.jpg; sourceTree = "<group>"; };
 		0C8892661752084A00AAAC64 /* 57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 57.png; path = ../57.png; sourceTree = "<group>"; };
 		0C8892681752084F00AAAC64 /* 114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 114.png; path = ../114.png; sourceTree = "<group>"; };
 		0C88926A17520F4700AAAC64 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
-		0C96D74217536CF40043489C /* SDTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDTestViewController.h; sourceTree = "<group>"; };
-		0C96D74317536CF40043489C /* SDTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDTestViewController.m; sourceTree = "<group>"; };
 		0C96D745175393100043489C /* fish.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = fish.jpg; path = ../../../Downloads/fish.jpg; sourceTree = "<group>"; };
 		0C96D7471753A12B0043489C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		0CF067BA1757BF9C009A93E0 /* ScarsdaleDietLogicTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScarsdaleDietLogicTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CF067BB1757BF9C009A93E0 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		0CF067C11757BF9D009A93E0 /* ScarsdaleDietLogicTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ScarsdaleDietLogicTests-Info.plist"; sourceTree = "<group>"; };
+		0CF067C31757BF9D009A93E0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0CF067C51757BF9D009A93E0 /* ScarsdaleDietLogicTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScarsdaleDietLogicTests.h; sourceTree = "<group>"; };
+		0CF067C61757BF9D009A93E0 /* ScarsdaleDietLogicTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScarsdaleDietLogicTests.m; sourceTree = "<group>"; };
+		0CF067C81757BF9D009A93E0 /* ScarsdaleDietLogicTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ScarsdaleDietLogicTests-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +113,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0CF067B61757BF9C009A93E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C17D9141758C496001520DC /* CoreGraphics.framework in Frameworks */,
+				0C17D9111758C1A3001520DC /* QuartzCore.framework in Frameworks */,
+				0CF067BC1757BF9C009A93E0 /* SenTestingKit.framework in Frameworks */,
+				0CF067BD1757BF9C009A93E0 /* UIKit.framework in Frameworks */,
+				0CF067BE1757BF9C009A93E0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -103,6 +133,7 @@
 			children = (
 				0C96D7471753A12B0043489C /* QuartzCore.framework */,
 				0C103339174CE2A7004C2ACC /* Scarsdale Diet */,
+				0CF067BF1757BF9C009A93E0 /* ScarsdaleDietLogicTests */,
 				0C103332174CE2A7004C2ACC /* Frameworks */,
 				0C103331174CE2A7004C2ACC /* Products */,
 			);
@@ -112,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				0C103330174CE2A7004C2ACC /* Scarsdale Diet.app */,
+				0CF067BA1757BF9C009A93E0 /* ScarsdaleDietLogicTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -122,6 +154,7 @@
 				0C103333174CE2A7004C2ACC /* UIKit.framework */,
 				0C103335174CE2A7004C2ACC /* Foundation.framework */,
 				0C103337174CE2A7004C2ACC /* CoreGraphics.framework */,
+				0CF067BB1757BF9C009A93E0 /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -129,13 +162,11 @@
 		0C103339174CE2A7004C2ACC /* Scarsdale Diet */ = {
 			isa = PBXGroup;
 			children = (
-				0C88925217500F8B00AAAC64 /* images */,
-				0C103368174CE412004C2ACC /* calendar */,
+				0C651EDA175F76FE00A0F01C /* Resources */,
+				0C103368174CE412004C2ACC /* Calendar */,
 				0C103342174CE2A7004C2ACC /* SDAppDelegate.h */,
 				0C103343174CE2A7004C2ACC /* SDAppDelegate.m */,
 				0C10334B174CE2A7004C2ACC /* MainStoryboard.storyboard */,
-				0C96D74217536CF40043489C /* SDTestViewController.h */,
-				0C96D74317536CF40043489C /* SDTestViewController.m */,
 				0C10334E174CE2A7004C2ACC /* SDViewController.h */,
 				0C10334F174CE2A7004C2ACC /* SDViewController.m */,
 				0C88924A174FA67000AAAC64 /* SDDietDayDetailsViewController.h */,
@@ -157,12 +188,12 @@
 				0C10333C174CE2A7004C2ACC /* InfoPlist.strings */,
 				0C10333F174CE2A7004C2ACC /* main.m */,
 				0C103341174CE2A7004C2ACC /* Scarsdale Diet-Prefix.pch */,
-				0C8892591750138000AAAC64 /* diet-info.plist */,
+				0C651EE6175F7D4B00A0F01C /* diet-info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		0C103368174CE412004C2ACC /* calendar */ = {
+		0C103368174CE412004C2ACC /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
 				0C103356174CE407004C2ACC /* NSDate+convenience.h */,
@@ -178,11 +209,20 @@
 				0C103360174CE407004C2ACC /* VRGCalendarView.h */,
 				0C103361174CE407004C2ACC /* VRGCalendarView.m */,
 			);
-			name = calendar;
+			name = Calendar;
 			path = ..;
 			sourceTree = "<group>";
 		};
-		0C88925217500F8B00AAAC64 /* images */ = {
+		0C651EDA175F76FE00A0F01C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0C88925217500F8B00AAAC64 /* Images */,
+				0C651EE2175F79CA00A0F01C /* Localizable.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		0C88925217500F8B00AAAC64 /* Images */ = {
 			isa = PBXGroup;
 			children = (
 				0C96D745175393100043489C /* fish.jpg */,
@@ -192,7 +232,27 @@
 				0C8892571750108800AAAC64 /* tuna_salad.jpg */,
 				0C8892551750105900AAAC64 /* beef.jpg */,
 			);
-			name = images;
+			name = Images;
+			sourceTree = "<group>";
+		};
+		0CF067BF1757BF9C009A93E0 /* ScarsdaleDietLogicTests */ = {
+			isa = PBXGroup;
+			children = (
+				0CF067C51757BF9D009A93E0 /* ScarsdaleDietLogicTests.h */,
+				0CF067C61757BF9D009A93E0 /* ScarsdaleDietLogicTests.m */,
+				0CF067C01757BF9D009A93E0 /* Supporting Files */,
+			);
+			path = ScarsdaleDietLogicTests;
+			sourceTree = "<group>";
+		};
+		0CF067C01757BF9D009A93E0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0CF067C11757BF9D009A93E0 /* ScarsdaleDietLogicTests-Info.plist */,
+				0CF067C21757BF9D009A93E0 /* InfoPlist.strings */,
+				0CF067C81757BF9D009A93E0 /* ScarsdaleDietLogicTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,6 +275,24 @@
 			productReference = 0C103330174CE2A7004C2ACC /* Scarsdale Diet.app */;
 			productType = "com.apple.product-type.application";
 		};
+		0CF067B91757BF9C009A93E0 /* ScarsdaleDietLogicTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0CF067C91757BF9D009A93E0 /* Build configuration list for PBXNativeTarget "ScarsdaleDietLogicTests" */;
+			buildPhases = (
+				0CF067B51757BF9C009A93E0 /* Sources */,
+				0CF067B61757BF9C009A93E0 /* Frameworks */,
+				0CF067B71757BF9C009A93E0 /* Resources */,
+				0CF067B81757BF9C009A93E0 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ScarsdaleDietLogicTests;
+			productName = ScarsdaleDietLogicTests;
+			productReference = 0CF067BA1757BF9C009A93E0 /* ScarsdaleDietLogicTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -231,6 +309,8 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				de,
+				Base,
 			);
 			mainGroup = 0C103327174CE2A7004C2ACC;
 			productRefGroup = 0C103331174CE2A7004C2ACC /* Products */;
@@ -238,6 +318,7 @@
 			projectRoot = "";
 			targets = (
 				0C10332F174CE2A7004C2ACC /* Scarsdale Diet */,
+				0CF067B91757BF9C009A93E0 /* ScarsdaleDietLogicTests */,
 			);
 		};
 /* End PBXProject section */
@@ -251,7 +332,7 @@
 				0C10334D174CE2A7004C2ACC /* MainStoryboard.storyboard in Resources */,
 				0C8892561750105900AAAC64 /* beef.jpg in Resources */,
 				0C8892581750108800AAAC64 /* tuna_salad.jpg in Resources */,
-				0C88925A1750138000AAAC64 /* diet-info.plist in Resources */,
+				0C651EE4175F7D4B00A0F01C /* diet-info.plist in Resources */,
 				0C88925C1750A7F800AAAC64 /* fruit_salad.jpg in Resources */,
 				0C88925E1750A9C300AAAC64 /* eggs.jpg in Resources */,
 				0C8892601750AAE000AAAC64 /* tomatoes_lettuce.jpg in Resources */,
@@ -261,10 +342,35 @@
 				0C7751A117524584009C636F /* Default@2x.png in Resources */,
 				0C7751A3175245B1009C636F /* Default.png in Resources */,
 				0C96D746175393100043489C /* fish.jpg in Resources */,
+				0C651EE0175F79CA00A0F01C /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0CF067B71757BF9C009A93E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CF067C41757BF9D009A93E0 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0CF067B81757BF9C009A93E0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0C10332C174CE2A7004C2ACC /* Sources */ = {
@@ -281,7 +387,16 @@
 				0C103366174CE407004C2ACC /* ViewController.m in Sources */,
 				0C103367174CE407004C2ACC /* VRGCalendarView.m in Sources */,
 				0C88924C174FA67000AAAC64 /* SDDietDayDetailsViewController.m in Sources */,
-				0C96D74417536CF40043489C /* SDTestViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0CF067B51757BF9C009A93E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C17D9131758C337001520DC /* VRGCalendarView.m in Sources */,
+				0C17D9121758C319001520DC /* SDViewController.m in Sources */,
+				0CF067C71757BF9D009A93E0 /* ScarsdaleDietLogicTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,9 +414,36 @@
 		0C10334B174CE2A7004C2ACC /* MainStoryboard.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				0C10334C174CE2A7004C2ACC /* en */,
+				0C651EE8175F823F00A0F01C /* Base */,
 			);
 			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		0C651EE2175F79CA00A0F01C /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0C651EE1175F79CA00A0F01C /* en */,
+				0C651EE3175F79E800A0F01C /* de */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		0C651EE6175F7D4B00A0F01C /* diet-info.plist */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0C651EE5175F7D4B00A0F01C /* en */,
+				0C651EE7175F7D6F00A0F01C /* de */,
+			);
+			name = "diet-info.plist";
+			sourceTree = "<group>";
+		};
+		0CF067C21757BF9D009A93E0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0CF067C31757BF9D009A93E0 /* en */,
+				0C651EDF175F792500A0F01C /* de */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -391,6 +533,39 @@
 			};
 			name = Release;
 		};
+		0CF067CA1757BF9D009A93E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ScarsdaleDietLogicTests/ScarsdaleDietLogicTests-Prefix.pch";
+				INFOPLIST_FILE = "ScarsdaleDietLogicTests/ScarsdaleDietLogicTests-Info.plist";
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		0CF067CB1757BF9D009A93E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ScarsdaleDietLogicTests/ScarsdaleDietLogicTests-Prefix.pch";
+				INFOPLIST_FILE = "ScarsdaleDietLogicTests/ScarsdaleDietLogicTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -408,6 +583,15 @@
 			buildConfigurations = (
 				0C103354174CE2A7004C2ACC /* Debug */,
 				0C103355174CE2A7004C2ACC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0CF067C91757BF9D009A93E0 /* Build configuration list for PBXNativeTarget "ScarsdaleDietLogicTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0CF067CA1757BF9D009A93E0 /* Debug */,
+				0CF067CB1757BF9D009A93E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

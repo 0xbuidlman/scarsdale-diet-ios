@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  Scarsdale Diet
+
+  Created by mihata on 6/5/13.
+  Copyright (c) 2013 Mihail Velikov. All rights reserved.
+*/
+
+"disclaimer" = "Each customer chooses whether and when to observe the diet described, the author of the application is not responsible for any complications due to the observance of the diet that does not meet his/hers personal needs. The diet incorporates essential nutrients, suggesting that during its observance users you should feel well, if you do not, please contact your doctor and stop the diet.\nThis application is not associated, affiliated, endorsed, or sponsored by The Scarsdale Medical Diet authors or their representatives, nor have they been reviewed tested or certified by them.";
