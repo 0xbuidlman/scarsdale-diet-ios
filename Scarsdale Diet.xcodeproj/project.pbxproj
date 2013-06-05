@@ -78,6 +78,7 @@
 		0C651EE5175F7D4B00A0F01C /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = "en.lproj/diet-info.plist"; sourceTree = "<group>"; };
 		0C651EE7175F7D6F00A0F01C /* de */ = {isa = PBXFileReference; lastKnownFileType = file; name = de; path = "de.lproj/diet-info.plist"; sourceTree = "<group>"; };
 		0C651EE8175F823F00A0F01C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		0C651EEC175F8BFE00A0F01C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/MainStoryboard.strings; sourceTree = "<group>"; };
 		0C7751A017524584009C636F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
 		0C7751A2175245B1009C636F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
 		0C88924A174FA67000AAAC64 /* SDDietDayDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDDietDayDetailsViewController.h; sourceTree = "<group>"; };
@@ -415,6 +416,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				0C651EE8175F823F00A0F01C /* Base */,
+				0C651EEC175F8BFE00A0F01C /* de */,
 			);
 			name = MainStoryboard.storyboard;
 			sourceTree = "<group>";

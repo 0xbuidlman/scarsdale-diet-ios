@@ -59,13 +59,13 @@
     BOOL disclaimer = [defaults boolForKey:@"disclaimer"];
 
     if (!disclaimer) {
-        NSString *disclaimerMsg = NSLocalizedString(@"disclaimer", nil);
+        NSString *disclaimerMsg = NSLocalizedString(@"disclaimer message", @"Terms and Conditions");
         
-            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Disclaimer"
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"disclaimer title", nil)
                 message:disclaimerMsg
                 delegate:self
                 cancelButtonTitle:nil
-                otherButtonTitles:@"OK", nil];
+                otherButtonTitles:NSLocalizedString(@"OK", nil), nil];
         
         alertView.alertViewStyle = UIAlertViewStyleDefault;
         
@@ -101,13 +101,13 @@
 -(void) showStartButton
 {
 
-    UIBarButtonItem *startButton = [[UIBarButtonItem alloc] initWithTitle:@"Start" style:UIBarButtonItemStyleBordered target:self action:@selector(startDate:)];
+    UIBarButtonItem *startButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Start", nil) style:UIBarButtonItemStyleBordered target:self action:@selector(startDate:)];
     
     self.navigationItem.rightBarButtonItem = startButton;
 }
 - (void) showClearButton
 {
-    UIBarButtonItem *clearButton = [[UIBarButtonItem alloc] initWithTitle:@"Clear" style:UIBarButtonItemStyleBordered target:self action:@selector(clearDate:)];
+    UIBarButtonItem *clearButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Clear", nil) style:UIBarButtonItemStyleBordered target:self action:@selector(clearDate:)];
     
     
     self.navigationItem.rightBarButtonItem = clearButton;
@@ -115,7 +115,7 @@
 
 -(void) showDoneButton
 {
-    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(dietStartDateSelected:)];
+    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Done", nil) style:UIBarButtonItemStyleDone target:self action:@selector(dietStartDateSelected:)];
     
     self.navigationItem.rightBarButtonItem = doneButton;
 }
