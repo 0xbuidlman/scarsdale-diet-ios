@@ -33,7 +33,6 @@
 }
 
 -(void)calendarView:(VRGCalendarView *)calendarView dateSelected:(NSDate *)date {
-    NSLog(@"Selected date = %@",date);
 }
 
 

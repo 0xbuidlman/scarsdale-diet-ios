@@ -1,0 +1,25 @@
+
+/* Class = "IBUILabel"; text = "Breakfast"; ObjectID = "1qA-N8-t8e"; */
+"1qA-N8-t8e.text" = "Закуска";
+
+/* Class = "IBUILabel"; text = "Replacement Meal"; ObjectID = "61p-XX-gVE"; */
+"61p-XX-gVE.text" = "Заместващо хранене";
+
+/* Class = "IBUILabel"; text = "Lunch"; ObjectID = "Kj4-Hg-EgA"; */
+"Kj4-Hg-EgA.text" = "Обяд";
+
+/* Class = "IBUITextView"; text = "If you wish, you can replace any Scarsdale Diet's menu with the following menu:
+ 
+ \n\n1/2 low-fat cheese or cottage cheese mixed with 1 tablespoon cream;\nfruit cut as desired;\n6 halves walnuts or pecans whole or chopped and mixed with cheese or sprinkled on fruit;\ncoffee, tea, soda water with a little lemon;"; ObjectID = "RYn-I0-EFX"; */
+"RYn-I0-EFX.text" = "Aко желаете, можете да заместите някое от менютата от Диетата на Скарсдейл със следното меню:
+
+\n\n1/2 нискомаслено прясно сирене или извара смесено с 1 с.л. сметана;\nплодове, нарязани колкото желаете;\n3 орехови ядки или американски орехи цели или нарязани и смесени със сиренето или поръсени върху плодовете;\nкафе, чай газирана вода с малко лимон;";
+
+/* Class = "IBUINavigationItem"; title = "Calendar"; ObjectID = "UZh-HY-7VK"; */
+"UZh-HY-7VK.title" = "Календар";
+
+/* Class = "IBUILabel"; text = "Dinner"; ObjectID = "YwC-6t-faJ"; */
+"YwC-6t-faJ.text" = "Вечеря";
+
+/* Class = "IBUITextView"; text = "1/2 grapefruit (if available - seasonal fruits);\na slice of toasted protein bread;\ncoffee or tea without sugar, cream or milk"; ObjectID = "wv7-fK-dyd"; */
+"wv7-fK-dyd.text" = "1/2 грейпфурт (ако не разполагате – плодове според сезона);\nедна филия препечена протеинов или пълнозърнест хляб, без да се намазва;\nкафе или чай без захар, сметана или мляко";
