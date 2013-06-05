@@ -10,7 +10,6 @@
 		0C103334174CE2A7004C2ACC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C103333174CE2A7004C2ACC /* UIKit.framework */; };
 		0C103336174CE2A7004C2ACC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C103335174CE2A7004C2ACC /* Foundation.framework */; };
 		0C103338174CE2A7004C2ACC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C103337174CE2A7004C2ACC /* CoreGraphics.framework */; };
-		0C10333E174CE2A7004C2ACC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0C10333C174CE2A7004C2ACC /* InfoPlist.strings */; };
 		0C103340174CE2A7004C2ACC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C10333F174CE2A7004C2ACC /* main.m */; };
 		0C103344174CE2A7004C2ACC /* SDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C103343174CE2A7004C2ACC /* SDAppDelegate.m */; };
 		0C10334D174CE2A7004C2ACC /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C10334B174CE2A7004C2ACC /* MainStoryboard.storyboard */; };
@@ -53,7 +52,6 @@
 		0C103335174CE2A7004C2ACC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0C103337174CE2A7004C2ACC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		0C10333B174CE2A7004C2ACC /* Scarsdale Diet-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Scarsdale Diet-Info.plist"; sourceTree = "<group>"; };
-		0C10333D174CE2A7004C2ACC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0C10333F174CE2A7004C2ACC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0C103341174CE2A7004C2ACC /* Scarsdale Diet-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Scarsdale Diet-Prefix.pch"; sourceTree = "<group>"; };
 		0C103342174CE2A7004C2ACC /* SDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDAppDelegate.h; sourceTree = "<group>"; };
@@ -74,7 +72,6 @@
 		0C103361174CE407004C2ACC /* VRGCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VRGCalendarView.m; path = "Scarsdale Diet/VRGCalendarView.m"; sourceTree = "<group>"; };
 		0C4AA7C8175FCF7400F99051 /* bg */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bg; path = bg.lproj/MainStoryboard.strings; sourceTree = "<group>"; };
 		0C4AA7C9175FCF7400F99051 /* bg */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bg; path = bg.lproj/Localizable.strings; sourceTree = "<group>"; };
-		0C4AA7CA175FCF7400F99051 /* bg */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bg; path = bg.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0C4AA7CB175FCF7400F99051 /* bg */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = bg; path = "bg.lproj/diet-info.plist"; sourceTree = "<group>"; };
 		0C4AA7CC175FCF7400F99051 /* bg */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bg; path = bg.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0C651EDF175F792500A0F01C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -191,7 +188,6 @@
 				0C8892681752084F00AAAC64 /* 114.png */,
 				0C8892661752084A00AAAC64 /* 57.png */,
 				0C10333B174CE2A7004C2ACC /* Scarsdale Diet-Info.plist */,
-				0C10333C174CE2A7004C2ACC /* InfoPlist.strings */,
 				0C10333F174CE2A7004C2ACC /* main.m */,
 				0C103341174CE2A7004C2ACC /* Scarsdale Diet-Prefix.pch */,
 				0C651EE6175F7D4B00A0F01C /* diet-info.plist */,
@@ -335,7 +331,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C10333E174CE2A7004C2ACC /* InfoPlist.strings in Resources */,
 				0C10334D174CE2A7004C2ACC /* MainStoryboard.storyboard in Resources */,
 				0C8892561750105900AAAC64 /* beef.jpg in Resources */,
 				0C8892581750108800AAAC64 /* tuna_salad.jpg in Resources */,
@@ -410,15 +405,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		0C10333C174CE2A7004C2ACC /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0C10333D174CE2A7004C2ACC /* en */,
-				0C4AA7CA175FCF7400F99051 /* bg */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 		0C10334B174CE2A7004C2ACC /* MainStoryboard.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
