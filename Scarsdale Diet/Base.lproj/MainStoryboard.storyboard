@@ -52,7 +52,7 @@
             <objects>
                 <viewController storyboardIdentifier="DetailView" id="WQo-Pz-Xdu" customClass="SDDietDayDetailsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hGt-EZ-hDP">
-                        <rect key="frame" x="0.0" y="64" width="320" height="1024"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="1044"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Brx-pv-vFY">
@@ -101,7 +101,7 @@
                                     <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYn-I0-EFX">
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="210" id="9tE-iH-epL"/>
+                                            <constraint firstAttribute="height" constant="251" id="HYJ-r1-gTE"/>
                                         </constraints>
                                         <string key="text">If you wish, you can replace any Scarsdale Diet's menu with the following menu:  
 
@@ -130,6 +130,7 @@ coffee or tea without sugar, cream or milk</string>
                                     <constraint firstItem="Kj4-Hg-EgA" firstAttribute="top" secondItem="wv7-fK-dyd" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="19Q-4d-dW7"/>
                                     <constraint firstItem="fYn-BU-K23" firstAttribute="top" secondItem="Kj4-Hg-EgA" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="1x3-g8-52c"/>
                                     <constraint firstItem="wv7-fK-dyd" firstAttribute="leading" secondItem="Brx-pv-vFY" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="6wC-Y5-yiy"/>
+                                    <constraint firstAttribute="bottom" secondItem="RYn-I0-EFX" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="APO-ns-Bbc"/>
                                     <constraint firstItem="Kj4-Hg-EgA" firstAttribute="leading" secondItem="Brx-pv-vFY" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Eyj-8i-Ge7"/>
                                     <constraint firstItem="YwC-6t-faJ" firstAttribute="top" secondItem="fYn-BU-K23" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Gfs-P6-CPx"/>
                                     <constraint firstItem="PJu-qi-ejN" firstAttribute="leading" secondItem="Brx-pv-vFY" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="H5w-v2-8Dl"/>
@@ -137,14 +138,12 @@ coffee or tea without sugar, cream or milk</string>
                                     <constraint firstItem="RYn-I0-EFX" firstAttribute="leading" secondItem="Brx-pv-vFY" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="OaK-RS-9Yb"/>
                                     <constraint firstItem="PJu-qi-ejN" firstAttribute="top" secondItem="YwC-6t-faJ" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="R6F-XT-Sbz"/>
                                     <constraint firstItem="YwC-6t-faJ" firstAttribute="leading" secondItem="Brx-pv-vFY" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="SAr-sg-xxN"/>
-                                    <constraint firstItem="1qA-N8-t8e" firstAttribute="centerX" secondItem="Brx-pv-vFY" secondAttribute="centerX" type="default" id="V2c-qb-9ab"/>
                                     <constraint firstAttribute="trailing" secondItem="RYn-I0-EFX" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="YF5-u9-HBe"/>
                                     <constraint firstAttribute="trailing" secondItem="1qA-N8-t8e" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Yab-gl-PUZ"/>
                                     <constraint firstAttribute="trailing" secondItem="fYn-BU-K23" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="cnw-mW-nRk"/>
                                     <constraint firstAttribute="trailing" secondItem="YwC-6t-faJ" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="cte-Vj-c6x"/>
                                     <constraint firstAttribute="trailing" secondItem="Kj4-Hg-EgA" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="grT-el-dUg"/>
                                     <constraint firstAttribute="trailing" secondItem="PJu-qi-ejN" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="hK4-Vj-BFE"/>
-                                    <constraint firstAttribute="bottom" secondItem="RYn-I0-EFX" secondAttribute="bottom" constant="41" id="hgi-dD-CLm"/>
                                     <constraint firstAttribute="trailing" secondItem="61p-XX-gVE" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="ieD-dM-N6V"/>
                                     <constraint firstAttribute="trailing" secondItem="wv7-fK-dyd" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="kjF-F3-azb"/>
                                     <constraint firstItem="1qA-N8-t8e" firstAttribute="top" secondItem="RbU-Pj-PLD" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="lBk-x9-5N6"/>
@@ -154,13 +153,14 @@ coffee or tea without sugar, cream or milk</string>
                                     <constraint firstItem="wv7-fK-dyd" firstAttribute="top" secondItem="1qA-N8-t8e" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="sQw-AD-fEc"/>
                                     <constraint firstItem="61p-XX-gVE" firstAttribute="leading" secondItem="Brx-pv-vFY" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="sa6-1U-QHa"/>
                                     <constraint firstItem="1qA-N8-t8e" firstAttribute="leading" secondItem="Brx-pv-vFY" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="u56-xC-gmv"/>
+                                    <constraint firstItem="Kj4-Hg-EgA" firstAttribute="centerX" secondItem="Brx-pv-vFY" secondAttribute="centerX" type="default" id="uaO-ZX-7cS"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Brx-pv-vFY" firstAttribute="top" secondItem="hGt-EZ-hDP" secondAttribute="top" type="default" id="LNq-QI-0g3"/>
-                            <constraint firstItem="Brx-pv-vFY" firstAttribute="bottom" secondItem="hGt-EZ-hDP" secondAttribute="bottom" type="default" id="OoW-Ir-ibS"/>
+                            <constraint firstItem="Brx-pv-vFY" firstAttribute="top" secondItem="hGt-EZ-hDP" secondAttribute="top" type="default" id="4Nb-D7-TpY"/>
+                            <constraint firstItem="Brx-pv-vFY" firstAttribute="bottom" secondItem="hGt-EZ-hDP" secondAttribute="bottom" type="default" id="HCf-FJ-zdz"/>
                             <constraint firstItem="Brx-pv-vFY" firstAttribute="trailing" secondItem="hGt-EZ-hDP" secondAttribute="trailing" type="default" id="Xzw-a7-QIR"/>
                             <constraint firstItem="Brx-pv-vFY" firstAttribute="leading" secondItem="hGt-EZ-hDP" secondAttribute="leading" type="default" id="m5Q-j2-6yl"/>
                         </constraints>

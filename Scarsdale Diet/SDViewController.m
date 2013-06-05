@@ -42,7 +42,7 @@
 
     
     NSString *locale = [[NSLocale currentLocale] localeIdentifier];
-    NSLog(locale);
+
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
     self.dietStart = [defaults objectForKey:@"dietStart"];

@@ -13,6 +13,13 @@
 int main(int argc, char *argv[])
 {
     @autoreleasepool {
+        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+        id language = [userDefaults objectForKey:@"custom_language"];
+        
+        if (language) {
+            [userDefaults setObject:[NSArray arrayWithObjects:language, nil] forKey:@"AppleLanguages"];
+            [[NSUserDefaults standardUserDefaults] synchronize]; //to make the change immediate
+        }
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([SDAppDelegate class]));
     }
 }
