@@ -80,9 +80,6 @@
 		0C651EE7175F7D6F00A0F01C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = de; path = "de.lproj/diet-info.plist"; sourceTree = "<group>"; };
 		0C651EE8175F823F00A0F01C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		0C651EEC175F8BFE00A0F01C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/MainStoryboard.strings; sourceTree = "<group>"; };
-		0C754C03175FF0470070B774 /* bg-BG */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "bg-BG"; path = "bg-BG.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		0C754C05175FF0470070B774 /* bg-BG */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "bg-BG"; path = "bg-BG.lproj/diet-info.plist"; sourceTree = "<group>"; };
-		0C754C08175FF0720070B774 /* bg-BG */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "bg-BG"; path = "bg-BG.lproj/MainStoryboard.strings"; sourceTree = "<group>"; };
 		0C7751A017524584009C636F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
 		0C7751A2175245B1009C636F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
 		0C88924A174FA67000AAAC64 /* SDDietDayDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDDietDayDetailsViewController.h; sourceTree = "<group>"; };
@@ -413,7 +410,6 @@
 				0C651EE8175F823F00A0F01C /* Base */,
 				0C651EEC175F8BFE00A0F01C /* de */,
 				0C4AA7C8175FCF7400F99051 /* bg */,
-				0C754C08175FF0720070B774 /* bg-BG */,
 			);
 			name = MainStoryboard.storyboard;
 			sourceTree = "<group>";
@@ -424,7 +420,6 @@
 				0C651EE1175F79CA00A0F01C /* en */,
 				0C651EE3175F79E800A0F01C /* de */,
 				0C4AA7C9175FCF7400F99051 /* bg */,
-				0C754C03175FF0470070B774 /* bg-BG */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -435,7 +430,6 @@
 				0C651EE5175F7D4B00A0F01C /* en */,
 				0C651EE7175F7D6F00A0F01C /* de */,
 				0C4AA7CB175FCF7400F99051 /* bg */,
-				0C754C05175FF0470070B774 /* bg-BG */,
 			);
 			name = "diet-info.plist";
 			sourceTree = "<group>";
