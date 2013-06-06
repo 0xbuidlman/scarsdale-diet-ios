@@ -15,9 +15,14 @@ int main(int argc, char *argv[])
     @autoreleasepool {
         NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
         id language = [userDefaults objectForKey:@"customLanguage"];
-        
+       
         if (language) {
-            [userDefaults setObject:[NSArray arrayWithObjects:language, nil] forKey:@"AppleLanguages"];
+            NSMutableArray *customAppleLanguages = [NSMutableArray arrayWithObjects:language, nil];
+            NSArray *appleLanguages = [userDefaults objectForKey:@"AppleLanguages"];
+            
+            [customAppleLanguages addObjectsFromArray:appleLanguages];
+            
+            [userDefaults setObject:customAppleLanguages forKey:@"AppleLanguages"];
             [[NSUserDefaults standardUserDefaults] synchronize]; //to make the change immediate
         }
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([SDAppDelegate class]));
