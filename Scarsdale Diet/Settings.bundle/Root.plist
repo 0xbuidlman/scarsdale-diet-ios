@@ -16,7 +16,7 @@
 			<key>Title</key>
 			<string>Language</string>
 			<key>Key</key>
-			<string>custom_language</string>
+			<string>customLanguage</string>
 			<key>DefaultValue</key>
 			<string>NO</string>
 			<key>Values</key>

@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 {
     @autoreleasepool {
         NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-        id language = [userDefaults objectForKey:@"custom_language"];
+        id language = [userDefaults objectForKey:@"customLanguage"];
         
         if (language) {
             [userDefaults setObject:[NSArray arrayWithObjects:language, nil] forKey:@"AppleLanguages"];

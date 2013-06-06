@@ -25,6 +25,7 @@
     return self;
 }
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -55,5 +56,21 @@
     [self setBreakfastTextView:nil];
     [self setReplaceMealTextView:nil];
     [super viewDidUnload];
+}
+- (IBAction)shareButton:(id)sender {
+    NSString *textToShare = NSLocalizedString(@"Share Title", nil);
+    UIImage *imageToShare = self.detailImage.image;
+    
+    NSMutableArray *activityItems = [NSMutableArray alloc];
+    
+    if (textToShare)
+        [activityItems addObject:textToShare];
+    if (imageToShare)
+        [activityItems addObject:imageToShare];
+    
+    UIActivityViewController *activityShareController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
+    
+    [self presentViewController:activityShareController animated:YES completion:nil];
+
 }
 @end

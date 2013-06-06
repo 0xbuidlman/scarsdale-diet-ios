@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UITextView *dinnerTextView;
 @property (weak, nonatomic) IBOutlet UITextView *breakfastTextView;
 @property (weak, nonatomic) IBOutlet UITextView *replaceMealTextView;
+- (IBAction)shareButton:(id)sender;
 
 
 @end

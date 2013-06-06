@@ -52,7 +52,7 @@
             <objects>
                 <viewController storyboardIdentifier="DetailView" id="WQo-Pz-Xdu" customClass="SDDietDayDetailsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hGt-EZ-hDP">
-                        <rect key="frame" x="0.0" y="64" width="320" height="1044"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="1104"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Brx-pv-vFY">
@@ -123,6 +123,19 @@ coffee or tea without sugar, cream or milk</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KeC-7p-1yC">
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Share">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="shareButton:" destination="WQo-Pz-Xdu" eventType="touchUpInside" id="5hY-CA-MTL"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="fYn-BU-K23" firstAttribute="leading" secondItem="Brx-pv-vFY" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="0Bp-Zo-uII"/>
@@ -130,7 +143,10 @@ coffee or tea without sugar, cream or milk</string>
                                     <constraint firstItem="Kj4-Hg-EgA" firstAttribute="top" secondItem="wv7-fK-dyd" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="19Q-4d-dW7"/>
                                     <constraint firstItem="fYn-BU-K23" firstAttribute="top" secondItem="Kj4-Hg-EgA" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="1x3-g8-52c"/>
                                     <constraint firstItem="wv7-fK-dyd" firstAttribute="leading" secondItem="Brx-pv-vFY" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="6wC-Y5-yiy"/>
-                                    <constraint firstAttribute="bottom" secondItem="RYn-I0-EFX" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="APO-ns-Bbc"/>
+                                    <constraint firstItem="KeC-7p-1yC" firstAttribute="top" secondItem="Brx-pv-vFY" secondAttribute="top" constant="1041" id="8jV-bR-CWN"/>
+                                    <constraint firstAttribute="bottom" secondItem="KeC-7p-1yC" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="9uY-WQ-LQf"/>
+                                    <constraint firstAttribute="trailing" secondItem="KeC-7p-1yC" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="CIt-65-r04"/>
+                                    <constraint firstItem="KeC-7p-1yC" firstAttribute="leading" secondItem="Brx-pv-vFY" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="DVN-M8-rJ1"/>
                                     <constraint firstItem="Kj4-Hg-EgA" firstAttribute="leading" secondItem="Brx-pv-vFY" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Eyj-8i-Ge7"/>
                                     <constraint firstItem="YwC-6t-faJ" firstAttribute="top" secondItem="fYn-BU-K23" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Gfs-P6-CPx"/>
                                     <constraint firstItem="PJu-qi-ejN" firstAttribute="leading" secondItem="Brx-pv-vFY" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="H5w-v2-8Dl"/>
@@ -138,6 +154,7 @@ coffee or tea without sugar, cream or milk</string>
                                     <constraint firstItem="RYn-I0-EFX" firstAttribute="leading" secondItem="Brx-pv-vFY" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="OaK-RS-9Yb"/>
                                     <constraint firstItem="PJu-qi-ejN" firstAttribute="top" secondItem="YwC-6t-faJ" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="R6F-XT-Sbz"/>
                                     <constraint firstItem="YwC-6t-faJ" firstAttribute="leading" secondItem="Brx-pv-vFY" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="SAr-sg-xxN"/>
+                                    <constraint firstItem="RbU-Pj-PLD" firstAttribute="centerX" secondItem="Brx-pv-vFY" secondAttribute="centerX" type="default" id="TsH-nZ-jjR"/>
                                     <constraint firstAttribute="trailing" secondItem="RYn-I0-EFX" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="YF5-u9-HBe"/>
                                     <constraint firstAttribute="trailing" secondItem="1qA-N8-t8e" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Yab-gl-PUZ"/>
                                     <constraint firstAttribute="trailing" secondItem="fYn-BU-K23" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="cnw-mW-nRk"/>
@@ -153,15 +170,14 @@ coffee or tea without sugar, cream or milk</string>
                                     <constraint firstItem="wv7-fK-dyd" firstAttribute="top" secondItem="1qA-N8-t8e" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="sQw-AD-fEc"/>
                                     <constraint firstItem="61p-XX-gVE" firstAttribute="leading" secondItem="Brx-pv-vFY" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="sa6-1U-QHa"/>
                                     <constraint firstItem="1qA-N8-t8e" firstAttribute="leading" secondItem="Brx-pv-vFY" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="u56-xC-gmv"/>
-                                    <constraint firstItem="Kj4-Hg-EgA" firstAttribute="centerX" secondItem="Brx-pv-vFY" secondAttribute="centerX" type="default" id="uaO-ZX-7cS"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Brx-pv-vFY" firstAttribute="top" secondItem="hGt-EZ-hDP" secondAttribute="top" type="default" id="4Nb-D7-TpY"/>
-                            <constraint firstItem="Brx-pv-vFY" firstAttribute="bottom" secondItem="hGt-EZ-hDP" secondAttribute="bottom" type="default" id="HCf-FJ-zdz"/>
                             <constraint firstItem="Brx-pv-vFY" firstAttribute="trailing" secondItem="hGt-EZ-hDP" secondAttribute="trailing" type="default" id="Xzw-a7-QIR"/>
+                            <constraint firstItem="Brx-pv-vFY" firstAttribute="bottom" secondItem="hGt-EZ-hDP" secondAttribute="bottom" type="default" id="cnP-Z5-FRI"/>
+                            <constraint firstItem="Brx-pv-vFY" firstAttribute="top" secondItem="hGt-EZ-hDP" secondAttribute="top" type="default" id="gTa-xQ-DQQ"/>
                             <constraint firstItem="Brx-pv-vFY" firstAttribute="leading" secondItem="hGt-EZ-hDP" secondAttribute="leading" type="default" id="m5Q-j2-6yl"/>
                         </constraints>
                     </view>
@@ -187,6 +203,7 @@ coffee or tea without sugar, cream or milk</string>
         <class className="SDDietDayDetailsViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SDDietDayDetailsViewController.h"/>
             <relationships>
+                <relationship kind="action" name="shareButton:"/>
                 <relationship kind="outlet" name="breakfastTextView" candidateClass="UITextView"/>
                 <relationship kind="outlet" name="detailImage" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="dinnerTextView" candidateClass="UITextView"/>
