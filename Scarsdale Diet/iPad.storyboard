@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="pKz-gn-eA3">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Diet Day Details View Controller-->
+        <scene sceneID="qPB-rp-3u7">
+            <objects>
+                <viewController id="jNj-dg-dDh" customClass="SDDietDayDetailsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n3G-2s-vta">
+                        <rect key="frame" x="0.0" y="20" width="703" height="748"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5rz-bd-CVb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="329" y="452"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="PdY-hS-OKp">
+            <objects>
+                <navigationController id="EqZ-bY-soa" sceneMemberID="viewController">
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="53j-4c-9xN">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Yyi-Xe-E0A" kind="relationship" relationship="rootViewController" id="Uce-K6-gXy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MLT-DL-RXf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="329" y="-485"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="8Mt-sV-T0F">
+            <objects>
+                <viewController id="Yyi-Xe-E0A" customClass="SDViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qOY-IK-ePS">
+                        <rect key="frame" x="0.0" y="64" width="320" height="704"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TIs-RE-vgn">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="TIs-RE-vgn" secondAttribute="bottom" constant="314" id="MBa-N2-uSh"/>
+                            <constraint firstItem="TIs-RE-vgn" firstAttribute="top" secondItem="qOY-IK-ePS" secondAttribute="top" constant="-70" id="P5X-jH-gkl"/>
+                            <constraint firstItem="TIs-RE-vgn" firstAttribute="leading" secondItem="qOY-IK-ePS" secondAttribute="leading" type="default" id="azz-V8-VnO"/>
+                            <constraint firstItem="TIs-RE-vgn" firstAttribute="trailing" secondItem="qOY-IK-ePS" secondAttribute="trailing" type="default" id="d5g-6P-vT8"/>
+                        </constraints>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7Hw-g3-8Tl"/>
+                    <connections>
+                        <outlet property="calendarView" destination="TIs-RE-vgn" id="jmN-mB-7su"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Cn-Pn-E2S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="874" y="-485"/>
+        </scene>
+        <!--Split View Controller-->
+        <scene sceneID="hQs-4i-Hzi">
+            <objects>
+                <splitViewController id="pKz-gn-eA3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <segue destination="EqZ-bY-soa" kind="relationship" relationship="masterViewController" id="XJt-9V-6Cu"/>
+                        <segue destination="jNj-dg-dDh" kind="relationship" relationship="detailViewController" id="whp-1z-p1P"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fPA-B8-Oet" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-875" y="-10"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="SDDietDayDetailsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SDDietDayDetailsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="shareButton:"/>
+                <relationship kind="outlet" name="breakfastTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="detailImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="dinnerTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="lunchTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="replaceMealTextView" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="SDViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SDViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="calendarView" candidateClass="UIView"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

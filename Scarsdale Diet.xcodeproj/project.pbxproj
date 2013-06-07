@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0C02200C1760849500896649 /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C02200B1760849500896649 /* share.png */; };
+		0C02200E1761C99D00896649 /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C02200D1761C99D00896649 /* iPad.storyboard */; };
 		0C103334174CE2A7004C2ACC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C103333174CE2A7004C2ACC /* UIKit.framework */; };
 		0C103336174CE2A7004C2ACC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C103335174CE2A7004C2ACC /* Foundation.framework */; };
 		0C103338174CE2A7004C2ACC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C103337174CE2A7004C2ACC /* CoreGraphics.framework */; };
@@ -50,6 +51,7 @@
 
 /* Begin PBXFileReference section */
 		0C02200B1760849500896649 /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
+		0C02200D1761C99D00896649 /* iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPad.storyboard; sourceTree = "<group>"; };
 		0C103330174CE2A7004C2ACC /* Scarsdale Diet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Scarsdale Diet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C103333174CE2A7004C2ACC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0C103335174CE2A7004C2ACC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -133,6 +135,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C02200F1761C9AF00896649 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				0C10334E174CE2A7004C2ACC /* SDViewController.h */,
+				0C10334F174CE2A7004C2ACC /* SDViewController.m */,
+				0C88924A174FA67000AAAC64 /* SDDietDayDetailsViewController.h */,
+				0C88924B174FA67000AAAC64 /* SDDietDayDetailsViewController.m */,
+				0C103342174CE2A7004C2ACC /* SDAppDelegate.h */,
+				0C103343174CE2A7004C2ACC /* SDAppDelegate.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		0C0220101761C9C200896649 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0C02200D1761C99D00896649 /* iPad.storyboard */,
+				0C10334B174CE2A7004C2ACC /* MainStoryboard.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		0C103327174CE2A7004C2ACC = {
 			isa = PBXGroup;
 			children = (
@@ -168,15 +192,10 @@
 		0C103339174CE2A7004C2ACC /* Scarsdale Diet */ = {
 			isa = PBXGroup;
 			children = (
+				0C0220101761C9C200896649 /* Views */,
+				0C02200F1761C9AF00896649 /* Classes */,
 				0C651EDA175F76FE00A0F01C /* Resources */,
 				0C103368174CE412004C2ACC /* Calendar */,
-				0C103342174CE2A7004C2ACC /* SDAppDelegate.h */,
-				0C103343174CE2A7004C2ACC /* SDAppDelegate.m */,
-				0C10334B174CE2A7004C2ACC /* MainStoryboard.storyboard */,
-				0C10334E174CE2A7004C2ACC /* SDViewController.h */,
-				0C10334F174CE2A7004C2ACC /* SDViewController.m */,
-				0C88924A174FA67000AAAC64 /* SDDietDayDetailsViewController.h */,
-				0C88924B174FA67000AAAC64 /* SDDietDayDetailsViewController.m */,
 				0C10333A174CE2A7004C2ACC /* Supporting Files */,
 			);
 			path = "Scarsdale Diet";
@@ -353,6 +372,7 @@
 				0C4AA7CE175FE86800F99051 /* InfoPlist.strings in Resources */,
 				0C754C0B175FF5B50070B774 /* Settings.bundle in Resources */,
 				0C02200C1760849500896649 /* share.png in Resources */,
+				0C02200E1761C99D00896649 /* iPad.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,9 +528,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Scarsdale Diet/Scarsdale Diet-Prefix.pch";
 				INFOPLIST_FILE = "Scarsdale Diet/Scarsdale Diet-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "3393E995-F6C2-44CB-871D-C73D39288E8C";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -522,9 +543,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Scarsdale Diet/Scarsdale Diet-Prefix.pch";
 				INFOPLIST_FILE = "Scarsdale Diet/Scarsdale Diet-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "3393E995-F6C2-44CB-871D-C73D39288E8C";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
