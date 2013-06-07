@@ -20,4 +20,6 @@
 
 @property (strong, nonatomic) NSDate *dietStart;
 @property (strong, nonatomic) NSDictionary *dietDays;
+-(BOOL)isDietDay:(NSDate *)date;
+-(void)calendarView:(VRGCalendarView *)calendarView dateSelected:(NSDate *)date1;
 @end

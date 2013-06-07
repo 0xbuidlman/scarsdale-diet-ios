@@ -12,6 +12,7 @@
 
 @interface SDViewController ()
 @property (strong, nonatomic) NSDictionary *dietDaysInfoDictionary;
+
 @end
 
 @implementation SDViewController
@@ -360,8 +361,6 @@
         NSString *key = [NSString stringWithFormat:@"%i", (differenceBetweenStartDateAndSelectedDate % 7)];
         NSDictionary *dietDayInfo = self.dietDaysInfoDictionary[key];
         [[segue destinationViewController] setDetailItem:dietDayInfo];
-        
-    } else if ([[segue identifier] isEqualToString:@"SegueSelectDietDayTest"]) {
         
     }
     

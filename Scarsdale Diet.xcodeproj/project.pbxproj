@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0C02200C1760849500896649 /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C02200B1760849500896649 /* share.png */; };
 		0C02200E1761C99D00896649 /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C02200D1761C99D00896649 /* iPad.storyboard */; };
+		0C0220481761ED6400896649 /* SDViewControlleriPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C0220471761ED6400896649 /* SDViewControlleriPad.m */; };
 		0C103334174CE2A7004C2ACC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C103333174CE2A7004C2ACC /* UIKit.framework */; };
 		0C103336174CE2A7004C2ACC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C103335174CE2A7004C2ACC /* Foundation.framework */; };
 		0C103338174CE2A7004C2ACC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C103337174CE2A7004C2ACC /* CoreGraphics.framework */; };
@@ -52,6 +53,8 @@
 /* Begin PBXFileReference section */
 		0C02200B1760849500896649 /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
 		0C02200D1761C99D00896649 /* iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPad.storyboard; sourceTree = "<group>"; };
+		0C0220461761ED6300896649 /* SDViewControlleriPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDViewControlleriPad.h; sourceTree = "<group>"; };
+		0C0220471761ED6400896649 /* SDViewControlleriPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDViewControlleriPad.m; sourceTree = "<group>"; };
 		0C103330174CE2A7004C2ACC /* Scarsdale Diet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Scarsdale Diet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C103333174CE2A7004C2ACC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0C103335174CE2A7004C2ACC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -138,12 +141,14 @@
 		0C02200F1761C9AF00896649 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				0C10334E174CE2A7004C2ACC /* SDViewController.h */,
-				0C10334F174CE2A7004C2ACC /* SDViewController.m */,
-				0C88924A174FA67000AAAC64 /* SDDietDayDetailsViewController.h */,
-				0C88924B174FA67000AAAC64 /* SDDietDayDetailsViewController.m */,
 				0C103342174CE2A7004C2ACC /* SDAppDelegate.h */,
 				0C103343174CE2A7004C2ACC /* SDAppDelegate.m */,
+				0C10334E174CE2A7004C2ACC /* SDViewController.h */,
+				0C10334F174CE2A7004C2ACC /* SDViewController.m */,
+				0C0220461761ED6300896649 /* SDViewControlleriPad.h */,
+				0C0220471761ED6400896649 /* SDViewControlleriPad.m */,
+				0C88924A174FA67000AAAC64 /* SDDietDayDetailsViewController.h */,
+				0C88924B174FA67000AAAC64 /* SDDietDayDetailsViewController.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -416,6 +421,7 @@
 				0C103366174CE407004C2ACC /* ViewController.m in Sources */,
 				0C103367174CE407004C2ACC /* VRGCalendarView.m in Sources */,
 				0C88924C174FA67000AAAC64 /* SDDietDayDetailsViewController.m in Sources */,
+				0C0220481761ED6400896649 /* SDViewControlleriPad.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -4,22 +4,38 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--Diet Day Details View Controller-->
-        <scene sceneID="qPB-rp-3u7">
+        <!--Navigation Controller-->
+        <scene sceneID="EQN-iz-oMC">
             <objects>
-                <viewController id="jNj-dg-dDh" customClass="SDDietDayDetailsViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="n3G-2s-vta">
-                        <rect key="frame" x="0.0" y="20" width="703" height="748"/>
+                <navigationController definesPresentationContext="YES" id="5z1-AB-B5Q" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jrf-eV-7r0">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="DAj-pn-Fus" kind="relationship" relationship="rootViewController" id="REo-4F-nzG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nVO-CE-JFt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="504" y="696"/>
+        </scene>
+        <!--Diet Day Details View Controller-->
+        <scene sceneID="ZLV-bp-fuD">
+            <objects>
+                <viewController storyboardIdentifier="DetailView" id="DAj-pn-Fus" customClass="SDDietDayDetailsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4QX-VK-e1b">
+                        <rect key="frame" x="0.0" y="64" width="703" height="704"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
-                    <toolbarItems/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <navigationItem key="navigationItem" id="FaF-om-Fxs">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="Ke1-MJ-Hc7"/>
+                    </navigationItem>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5rz-bd-CVb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7kQ-5C-h5Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="329" y="452"/>
+            <point key="canvasLocation" x="1442" y="696"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="PdY-hS-OKp">
@@ -37,10 +53,10 @@
             </objects>
             <point key="canvasLocation" x="329" y="-485"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controlleri Pad-->
         <scene sceneID="8Mt-sV-T0F">
             <objects>
-                <viewController id="Yyi-Xe-E0A" customClass="SDViewController" sceneMemberID="viewController">
+                <viewController id="Yyi-Xe-E0A" customClass="SDViewControlleriPad" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qOY-IK-ePS">
                         <rect key="frame" x="0.0" y="64" width="320" height="704"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -61,6 +77,7 @@
                     <navigationItem key="navigationItem" id="7Hw-g3-8Tl"/>
                     <connections>
                         <outlet property="calendarView" destination="TIs-RE-vgn" id="jmN-mB-7su"/>
+                        <segue destination="5z1-AB-B5Q" kind="replace" identifier="SegueSelectDietDayToShowDetails" splitViewControllerTargetIndex="1" id="JBr-mH-Etx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Cn-Pn-E2S" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -75,7 +92,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <segue destination="EqZ-bY-soa" kind="relationship" relationship="masterViewController" id="XJt-9V-6Cu"/>
-                        <segue destination="jNj-dg-dDh" kind="relationship" relationship="detailViewController" id="whp-1z-p1P"/>
+                        <segue destination="5z1-AB-B5Q" kind="relationship" relationship="detailViewController" id="2j4-fE-DlE"/>
                     </connections>
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fPA-B8-Oet" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -83,31 +100,12 @@
             <point key="canvasLocation" x="-875" y="-10"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="SDDietDayDetailsViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SDDietDayDetailsViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="shareButton:"/>
-                <relationship kind="outlet" name="breakfastTextView" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="detailImage" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="dinnerTextView" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="lunchTextView" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="replaceMealTextView" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-        <class className="SDViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SDViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="calendarView" candidateClass="UIView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="JBr-mH-Etx"/>
+    </inferredMetricsTieBreakers>
 </document>
