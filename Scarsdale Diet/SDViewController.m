@@ -11,7 +11,6 @@
 #import <QuartzCore/QuartzCore.h>
 
 @interface SDViewController ()
-@property (strong, nonatomic) NSDictionary *dietDaysInfoDictionary;
 
 @end
 
@@ -336,8 +335,6 @@
     if ([self isDietDay:date]) {
 
         [self performSegueWithIdentifier:@"SegueSelectDietDayToShowDetails" sender:date];
-    } else {
-//        [self performSegueWithIdentifier:@"SegueSelectDietDayTest" sender:self];
     }
     
 }
@@ -356,14 +353,19 @@
 {
     if ([[segue identifier] isEqualToString:@"SegueSelectDietDayToShowDetails"]) {
         
-        NSInteger differenceBetweenStartDateAndSelectedDate = [self getDifferenceBetweenStartDateAndSelected:sender];
-        
-        NSString *key = [NSString stringWithFormat:@"%i", (differenceBetweenStartDateAndSelectedDate % 7)];
+        NSString* key = [self getDietDayOffsetByDate:sender];
         NSDictionary *dietDayInfo = self.dietDaysInfoDictionary[key];
-        [[segue destinationViewController] setDetailItem:dietDayInfo];
-        
+        [[segue destinationViewController] setDetailItem:dietDayInfo];        
     }
     
+}
+
+-(NSString *)getDietDayOffsetByDate:(NSDate *)theDate {
+    NSInteger differenceBetweenStartDateAndSelectedDate = [self getDifferenceBetweenStartDateAndSelected:theDate];
+    
+    NSString *key = [NSString stringWithFormat:@"%i", (differenceBetweenStartDateAndSelectedDate % 7)];
+    
+    return key;
 }
 
 /**

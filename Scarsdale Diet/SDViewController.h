@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "VRGCalendarView.h"
+#import "SDDietDayDetailsViewController.h"
 #define kDietDaysPeriod 14
 
 @interface SDViewController : UIViewController
@@ -20,6 +21,13 @@
 
 @property (strong, nonatomic) NSDate *dietStart;
 @property (strong, nonatomic) NSDictionary *dietDays;
+
+@property (strong, nonatomic) NSDictionary *dietDaysInfoDictionary;
+
+@property (strong, nonatomic) SDDietDayDetailsViewController *detailsViewController;
+
+
 -(BOOL)isDietDay:(NSDate *)date;
--(void)calendarView:(VRGCalendarView *)calendarView dateSelected:(NSDate *)date1;
+-(void)calendarView:(VRGCalendarView *)calendarView dateSelected:(NSDate *)date;
+-(NSString *)getDietDayOffsetByDate:(NSDate *)theDate;
 @end

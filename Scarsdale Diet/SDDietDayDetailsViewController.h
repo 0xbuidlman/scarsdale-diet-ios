@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #define kCornerRadius 4
 
-@interface SDDietDayDetailsViewController : UIViewController
+@interface SDDietDayDetailsViewController : UIViewController <UISplitViewControllerDelegate>
 
 @property (strong, nonatomic) id detailItem;
 @property (weak, nonatomic) IBOutlet UIImageView *detailImage;

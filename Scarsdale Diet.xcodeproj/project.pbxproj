@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C02200C1760849500896649 /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C02200B1760849500896649 /* share.png */; };
 		0C02200E1761C99D00896649 /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C02200D1761C99D00896649 /* iPad.storyboard */; };
 		0C0220481761ED6400896649 /* SDViewControlleriPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C0220471761ED6400896649 /* SDViewControlleriPad.m */; };
 		0C103334174CE2A7004C2ACC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C103333174CE2A7004C2ACC /* UIKit.framework */; };
@@ -51,7 +50,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0C02200B1760849500896649 /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
 		0C02200D1761C99D00896649 /* iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPad.storyboard; sourceTree = "<group>"; };
 		0C0220461761ED6300896649 /* SDViewControlleriPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDViewControlleriPad.h; sourceTree = "<group>"; };
 		0C0220471761ED6400896649 /* SDViewControlleriPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDViewControlleriPad.m; sourceTree = "<group>"; };
@@ -209,7 +207,6 @@
 		0C10333A174CE2A7004C2ACC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				0C02200B1760849500896649 /* share.png */,
 				0C4AA7CD175FE86800F99051 /* InfoPlist.strings */,
 				0C7751A2175245B1009C636F /* Default.png */,
 				0C7751A017524584009C636F /* Default@2x.png */,
@@ -376,7 +373,6 @@
 				0C651EE0175F79CA00A0F01C /* Localizable.strings in Resources */,
 				0C4AA7CE175FE86800F99051 /* InfoPlist.strings in Resources */,
 				0C754C0B175FF5B50070B774 /* Settings.bundle in Resources */,
-				0C02200C1760849500896649 /* share.png in Resources */,
 				0C02200E1761C99D00896649 /* iPad.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

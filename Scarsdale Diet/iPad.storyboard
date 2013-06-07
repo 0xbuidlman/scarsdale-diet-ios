@@ -30,7 +30,11 @@
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="FaF-om-Fxs">
-                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="Ke1-MJ-Hc7"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="Ke1-MJ-Hc7">
+                            <connections>
+                                <action selector="shareButton:" destination="DAj-pn-Fus" id="cga-sO-jaF"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7kQ-5C-h5Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -100,6 +104,31 @@
             <point key="canvasLocation" x="-875" y="-10"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="SDDietDayDetailsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SDDietDayDetailsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="shareButton:"/>
+                <relationship kind="outlet" name="breakfastTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="detailImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="dinnerTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="lunchTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="replaceMealTextView" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="SDViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SDViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="calendarView" candidateClass="UIView"/>
+            </relationships>
+        </class>
+        <class className="SDViewControlleriPad" superclassName="SDViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SDViewControlleriPad.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

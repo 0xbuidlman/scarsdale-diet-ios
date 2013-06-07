@@ -26,7 +26,10 @@
 -(void)calendarView:(VRGCalendarView *)calendarView dateSelected:(NSDate *)date {
     
     NSLog(@"Date selected");
-    
+    NSString *key = [self getDietDayOffsetByDate:date];
+    NSDictionary *tmpItem = self.dietDaysInfoDictionary[key];
+    SDDietDayDetailsViewController *tmpDetailViewController = self.detailsViewController;
+    tmpDetailViewController.detailItem = tmpItem;
 }
 
 - (void)viewDidLoad
