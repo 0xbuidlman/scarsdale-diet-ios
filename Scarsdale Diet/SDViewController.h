@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "VRGCalendarView.h"
-#import "SDDietDayDetailsViewController.h"
+//#import "SDDietDayDetailsViewController.h"
 #define kDietDaysPeriod 14
+
+@class SDDietDayDetailsViewController;
 
 @interface SDViewController : UIViewController
 

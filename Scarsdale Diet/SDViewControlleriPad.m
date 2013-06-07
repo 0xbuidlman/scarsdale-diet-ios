@@ -7,6 +7,7 @@
 //
 
 #import "SDViewControlleriPad.h"
+#import "SDDietDayDetailsViewController.h"
 
 @interface SDViewControlleriPad ()
 
@@ -25,10 +26,10 @@
 
 -(void)calendarView:(VRGCalendarView *)calendarView dateSelected:(NSDate *)date {
     
-    NSLog(@"Date selected");
     NSString *key = [self getDietDayOffsetByDate:date];
     NSDictionary *tmpItem = self.dietDaysInfoDictionary[key];
     SDDietDayDetailsViewController *tmpDetailViewController = self.detailsViewController;
+//    [tmpDetailViewController setDetailItem:tmpItem];
     tmpDetailViewController.detailItem = tmpItem;
 }
 
