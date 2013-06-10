@@ -1,0 +1,27 @@
+
+/* Class = "IBUITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "DHY-QC-ZQN"; */
+"DHY-QC-ZQN.text" = "";
+
+/* Class = "IBUITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "DWW-aV-Gs4"; */
+"DWW-aV-Gs4.text" = "";
+
+/* Class = "IBUILabel"; text = "Replacement Meal"; ObjectID = "EhD-Fh-f8a"; */
+"EhD-Fh-f8a.text" = "Заместващо хранене";
+
+/* Class = "IBUITextView"; text = "1/2 grapefruit (if available - seasonal fruits);\na slice of toasted protein bread;\ncoffee or tea without sugar, cream or milk"; ObjectID = "Lpd-r3-N3K"; */
+"Lpd-r3-N3K.text" = "1/2 грейпфурт (ако не разполагате – плодове според сезона);\nедна филия препечена протеинов или пълнозърнест хляб, без да се намазва;\nкафе или чай без захар, сметана или мляко";
+
+/* Class = "IBUILabel"; text = "Dinner"; ObjectID = "bbr-ln-6fM"; */
+"bbr-ln-6fM.text" = "Вечеря";
+
+/* Class = "IBUILabel"; text = "Lunch"; ObjectID = "t7v-18-eRe"; */
+"t7v-18-eRe.text" = "Обяд";
+
+/* Class = "IBUILabel"; text = "Breakfast"; ObjectID = "uMX-dG-n1a"; */
+"uMX-dG-n1a.text" = "Закуска";
+
+/* Class = "IBUITextView"; text = "If you wish, you can replace any Scarsdale Diet's menu with the following menu:
+
+\n\n1/2 low-fat cheese or cottage cheese mixed with 1 tablespoon cream;\nfruit cut as desired;\n6 halves walnuts or pecans whole or chopped and mixed with cheese or sprinkled on fruit;\ncoffee, tea, soda water with a little lemon;"; ObjectID = "wLV-J6-JUL"; */
+"wLV-J6-JUL.text" = "Aко желаете, можете да заместите някое от менютата от Диетата на Скарсдейл със следното меню:
+\n1/2 нискомаслено прясно сирене или извара смесено с 1 с.л. сметана;\nплодове, нарязани колкото желаете;\n3 орехови ядки или американски орехи цели или нарязани и смесени със сиренето или поръсени върху плодовете;\nкафе, чай газирана вода с малко лимон;";

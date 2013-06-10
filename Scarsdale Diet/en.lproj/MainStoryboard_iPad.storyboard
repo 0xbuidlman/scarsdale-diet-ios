@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="pKz-gn-eA3">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="EQN-iz-oMC">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="5z1-AB-B5Q" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jrf-eV-7r0">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="DAj-pn-Fus" kind="relationship" relationship="rootViewController" id="REo-4F-nzG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nVO-CE-JFt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="504" y="696"/>
+        </scene>
+        <!--Diet Day Details View Controller-->
+        <scene sceneID="ZLV-bp-fuD">
+            <objects>
+                <viewController storyboardIdentifier="DetailView" id="DAj-pn-Fus" customClass="SDDietDayDetailsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4QX-VK-e1b">
+                        <rect key="frame" x="0.0" y="64" width="703" height="704"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JoQ-6k-B3v">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="V7t-fi-mKt"/>
+                                    <constraint firstAttribute="width" constant="400" id="tOe-8Z-9RP"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Breakfast" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uMX-dG-n1a">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lpd-r3-N3K">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="147" id="l8Q-Oo-ZvS"/>
+                                </constraints>
+                                <string key="text">1/2 grapefruit (if available - seasonal fruits);
+a slice of toasted protein bread;
+coffee or tea without sugar, cream or milk</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DHY-QC-ZQN">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="327" id="Lyo-2i-Z1M"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wLV-J6-JUL">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <mutableString key="text">If you wish, you can replace any Scarsdale Diet's menu with the following menu:  
+
+1/2 low-fat cheese or cottage cheese mixed with 1 tablespoon cream;
+fruit cut as desired;
+6 halves walnuts or pecans whole or chopped and mixed with cheese or sprinkled on fruit;
+coffee, tea, soda water with a little lemon;</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWW-aV-Gs4">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="178" id="ZLp-Vj-Y1K"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Lunch" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t7v-18-eRe">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Dinner" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbr-ln-6fM">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Replacement Meal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EhD-Fh-f8a">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="wLV-J6-JUL" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="3lb-cZ-CmA"/>
+                            <constraint firstItem="uMX-dG-n1a" firstAttribute="leading" secondItem="4QX-VK-e1b" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="4sc-gK-3yO"/>
+                            <constraint firstItem="DWW-aV-Gs4" firstAttribute="leading" secondItem="4QX-VK-e1b" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="4wi-Na-Seb"/>
+                            <constraint firstItem="JoQ-6k-B3v" firstAttribute="centerX" secondItem="4QX-VK-e1b" secondAttribute="centerX" type="default" id="6dO-q9-us1"/>
+                            <constraint firstItem="Lpd-r3-N3K" firstAttribute="leading" secondItem="4QX-VK-e1b" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="C8c-1M-0Mi"/>
+                            <constraint firstItem="EhD-Fh-f8a" firstAttribute="leading" secondItem="DHY-QC-ZQN" secondAttribute="leading" type="default" id="J7C-7F-C4t"/>
+                            <constraint firstItem="wLV-J6-JUL" firstAttribute="leading" secondItem="DWW-aV-Gs4" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="KXi-8p-Xwj"/>
+                            <constraint firstItem="JoQ-6k-B3v" firstAttribute="top" secondItem="4QX-VK-e1b" secondAttribute="top" constant="20" symbolic="YES" type="default" id="NOI-4o-Oqd"/>
+                            <constraint firstItem="Lpd-r3-N3K" firstAttribute="top" secondItem="4QX-VK-e1b" secondAttribute="top" constant="288" id="OEk-kp-MSa"/>
+                            <constraint firstItem="DWW-aV-Gs4" firstAttribute="top" secondItem="bbr-ln-6fM" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="OmK-43-rbP"/>
+                            <constraint firstItem="DHY-QC-ZQN" firstAttribute="top" secondItem="Lpd-r3-N3K" secondAttribute="top" type="default" id="QhY-G3-R61"/>
+                            <constraint firstItem="DHY-QC-ZQN" firstAttribute="leading" secondItem="t7v-18-eRe" secondAttribute="leading" type="default" id="S0K-n1-Yf9"/>
+                            <constraint firstItem="wLV-J6-JUL" firstAttribute="leading" secondItem="EhD-Fh-f8a" secondAttribute="leading" type="default" id="WTS-xr-ymb"/>
+                            <constraint firstItem="t7v-18-eRe" firstAttribute="baseline" secondItem="uMX-dG-n1a" secondAttribute="baseline" type="default" id="Yek-xt-fLE"/>
+                            <constraint firstItem="wLV-J6-JUL" firstAttribute="top" secondItem="EhD-Fh-f8a" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Yi5-41-D7a"/>
+                            <constraint firstItem="DWW-aV-Gs4" firstAttribute="bottom" secondItem="wLV-J6-JUL" secondAttribute="bottom" type="default" id="cfZ-J5-dXk"/>
+                            <constraint firstItem="DHY-QC-ZQN" firstAttribute="leading" secondItem="Lpd-r3-N3K" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="ipB-lQ-ssu"/>
+                            <constraint firstItem="bbr-ln-6fM" firstAttribute="baseline" secondItem="EhD-Fh-f8a" secondAttribute="baseline" type="default" id="nDv-S3-jm1"/>
+                            <constraint firstItem="bbr-ln-6fM" firstAttribute="top" secondItem="Lpd-r3-N3K" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="ncF-MN-Mnu"/>
+                            <constraint firstItem="EhD-Fh-f8a" firstAttribute="top" secondItem="DHY-QC-ZQN" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="otO-6y-OPL"/>
+                            <constraint firstItem="bbr-ln-6fM" firstAttribute="leading" secondItem="4QX-VK-e1b" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="si1-IR-qOm"/>
+                            <constraint firstItem="uMX-dG-n1a" firstAttribute="top" secondItem="4QX-VK-e1b" secondAttribute="top" constant="262" id="yKT-kc-oTN"/>
+                            <constraint firstAttribute="trailing" secondItem="DHY-QC-ZQN" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="ywV-KR-cX5"/>
+                        </constraints>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="FaF-om-Fxs">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="Ke1-MJ-Hc7">
+                            <connections>
+                                <action selector="shareButton:" destination="DAj-pn-Fus" id="LBd-Sz-te2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="breakfastTextView" destination="Lpd-r3-N3K" id="ACR-WZ-OZm"/>
+                        <outlet property="detailImage" destination="JoQ-6k-B3v" id="Nen-Ty-0YG"/>
+                        <outlet property="dinnerTextView" destination="DWW-aV-Gs4" id="4RA-He-WLD"/>
+                        <outlet property="lunchTextView" destination="DHY-QC-ZQN" id="kb5-q0-Ghf"/>
+                        <outlet property="replaceMealTextView" destination="wLV-J6-JUL" id="dKR-bV-Qsa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7kQ-5C-h5Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1442" y="696"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="PdY-hS-OKp">
+            <objects>
+                <navigationController id="EqZ-bY-soa" sceneMemberID="viewController">
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="53j-4c-9xN">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Yyi-Xe-E0A" kind="relationship" relationship="rootViewController" id="Uce-K6-gXy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MLT-DL-RXf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="329" y="-485"/>
+        </scene>
+        <!--View Controlleri Pad-->
+        <scene sceneID="8Mt-sV-T0F">
+            <objects>
+                <viewController id="Yyi-Xe-E0A" customClass="SDViewControlleriPad" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qOY-IK-ePS">
+                        <rect key="frame" x="0.0" y="64" width="320" height="704"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TIs-RE-vgn">
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="TIs-RE-vgn" firstAttribute="leading" secondItem="qOY-IK-ePS" secondAttribute="leading" type="default" id="azz-V8-VnO"/>
+                            <constraint firstItem="TIs-RE-vgn" firstAttribute="trailing" secondItem="qOY-IK-ePS" secondAttribute="trailing" type="default" id="d5g-6P-vT8"/>
+                            <constraint firstItem="TIs-RE-vgn" firstAttribute="top" secondItem="qOY-IK-ePS" secondAttribute="top" type="default" id="gt9-0y-2EH"/>
+                            <constraint firstAttribute="bottom" secondItem="TIs-RE-vgn" secondAttribute="bottom" constant="244" id="pgo-vs-cJK"/>
+                        </constraints>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7Hw-g3-8Tl"/>
+                    <connections>
+                        <outlet property="calendarView" destination="TIs-RE-vgn" id="jmN-mB-7su"/>
+                        <segue destination="5z1-AB-B5Q" kind="replace" identifier="SegueSelectDietDayToShowDetails" splitViewControllerTargetIndex="1" id="JBr-mH-Etx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Cn-Pn-E2S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="874" y="-485"/>
+        </scene>
+        <!--Split View Controller-->
+        <scene sceneID="hQs-4i-Hzi">
+            <objects>
+                <splitViewController id="pKz-gn-eA3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <segue destination="EqZ-bY-soa" kind="relationship" relationship="masterViewController" id="XJt-9V-6Cu"/>
+                        <segue destination="5z1-AB-B5Q" kind="relationship" relationship="detailViewController" id="2j4-fE-DlE"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fPA-B8-Oet" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-875" y="-10"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="SDDietDayDetailsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SDDietDayDetailsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="shareButton:"/>
+                <relationship kind="outlet" name="breakfastTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="detailImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="dinnerTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="lunchTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="replaceMealTextView" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="SDViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SDViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="calendarView" candidateClass="UIView"/>
+            </relationships>
+        </class>
+        <class className="SDViewControlleriPad" superclassName="SDViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SDViewControlleriPad.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="JBr-mH-Etx"/>
+    </inferredMetricsTieBreakers>
+</document>
