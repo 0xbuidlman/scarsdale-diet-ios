@@ -8,6 +8,7 @@
 
 #import "SDDietDayDetailsViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "VRGCalendarView.h"
 
 
 @interface SDDietDayDetailsViewController ()
@@ -63,6 +64,11 @@
     self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:10/255.0f green:145/255.0f blue:5/255.0f alpha:1];
 }
 
+-(void)calendarView:(VRGCalendarView *)calendarView dateSelected:(NSDate *)date
+{
+    NSLog(@"Details");
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -76,6 +82,7 @@
     [self setReplaceMealTextView:nil];
     [super viewDidUnload];
 }
+
 - (IBAction)shareButton:(id)sender {
     NSString *textToShare = NSLocalizedString(@"Share Title", nil);
     UIImage *imageToShare = [UIImage imageNamed:@"114.png"];

@@ -7,26 +7,11 @@
 //
 
 #import "SDAppDelegate.h"
-#import "SDViewController.h"
-#import "SDDietDayDetailsViewController.h"
 
 @implementation SDAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-        
-        UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
-        
-        UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
-        
-//        splitViewController.delegate = (id)navigationController.topViewController;
-        
-        SDDietDayDetailsViewController *detailsView = [splitViewController.viewControllers lastObject];
-        splitViewController.delegate = detailsView;
-        
-    }
     // Override point for customization after application launch.
     return YES;
 }

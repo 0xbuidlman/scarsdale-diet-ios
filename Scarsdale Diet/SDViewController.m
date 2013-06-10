@@ -41,7 +41,7 @@
     }
 
     
-    NSString *locale = [[NSLocale currentLocale] localeIdentifier];
+//    NSString *locale = [[NSLocale currentLocale] localeIdentifier];
 
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     

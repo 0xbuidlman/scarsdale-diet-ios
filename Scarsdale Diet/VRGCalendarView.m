@@ -11,6 +11,7 @@
 #import "NSDate+convenience.h"
 #import "NSMutableArray+convenience.h"
 #import "UIView+convenience.h"
+#import "SDDietDayDetailsViewController.h"
 
 @implementation VRGCalendarView
 @synthesize currentMonth,delegate,labelCurrentMonth, animationView_A,animationView_B;

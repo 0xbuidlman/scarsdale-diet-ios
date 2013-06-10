@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C02200E1761C99D00896649 /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C02200D1761C99D00896649 /* iPad.storyboard */; };
+		0C02200E1761C99D00896649 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C02200D1761C99D00896649 /* MainStoryboard_iPad.storyboard */; };
 		0C0220481761ED6400896649 /* SDViewControlleriPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C0220471761ED6400896649 /* SDViewControlleriPad.m */; };
 		0C103334174CE2A7004C2ACC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C103333174CE2A7004C2ACC /* UIKit.framework */; };
 		0C103336174CE2A7004C2ACC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C103335174CE2A7004C2ACC /* Foundation.framework */; };
@@ -50,7 +50,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0C02200D1761C99D00896649 /* iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPad.storyboard; sourceTree = "<group>"; };
+		0C02200D1761C99D00896649 /* MainStoryboard_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		0C0220461761ED6300896649 /* SDViewControlleriPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDViewControlleriPad.h; sourceTree = "<group>"; };
 		0C0220471761ED6400896649 /* SDViewControlleriPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDViewControlleriPad.m; sourceTree = "<group>"; };
 		0C103330174CE2A7004C2ACC /* Scarsdale Diet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Scarsdale Diet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,7 +154,7 @@
 		0C0220101761C9C200896649 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				0C02200D1761C99D00896649 /* iPad.storyboard */,
+				0C02200D1761C99D00896649 /* MainStoryboard_iPad.storyboard */,
 				0C10334B174CE2A7004C2ACC /* MainStoryboard.storyboard */,
 			);
 			name = Views;
@@ -373,7 +373,7 @@
 				0C651EE0175F79CA00A0F01C /* Localizable.strings in Resources */,
 				0C4AA7CE175FE86800F99051 /* InfoPlist.strings in Resources */,
 				0C754C0B175FF5B50070B774 /* Settings.bundle in Resources */,
-				0C02200E1761C99D00896649 /* iPad.storyboard in Resources */,
+				0C02200E1761C99D00896649 /* MainStoryboard_iPad.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

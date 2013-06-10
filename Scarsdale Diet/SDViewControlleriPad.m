@@ -29,14 +29,17 @@
     NSString *key = [self getDietDayOffsetByDate:date];
     NSDictionary *tmpItem = self.dietDaysInfoDictionary[key];
     SDDietDayDetailsViewController *tmpDetailViewController = self.detailsViewController;
-//    [tmpDetailViewController setDetailItem:tmpItem];
     tmpDetailViewController.detailItem = tmpItem;
 }
 
 - (void)viewDidLoad
 {
+
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    if (self.detailsViewController == nil) {
+        self.detailsViewController = (SDDietDayDetailsViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+    }
 }
 
 - (void)didReceiveMemoryWarning
