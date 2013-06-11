@@ -48,11 +48,12 @@
         
         self.detailImage.image = [UIImage imageNamed:imageName];
         
-        self.lunchTextView.layer.cornerRadius = kCornerRadius;
-        self.dinnerTextView.layer.cornerRadius = kCornerRadius;
-        self.breakfastTextView.layer.cornerRadius = kCornerRadius;
-        self.replaceMealTextView.layer.cornerRadius = kCornerRadius;
     }
+
+    self.lunchTextView.layer.cornerRadius = kCornerRadius;
+    self.dinnerTextView.layer.cornerRadius = kCornerRadius;
+    self.breakfastTextView.layer.cornerRadius = kCornerRadius;
+    self.replaceMealTextView.layer.cornerRadius = kCornerRadius;
 }
 
 - (void)viewDidLoad

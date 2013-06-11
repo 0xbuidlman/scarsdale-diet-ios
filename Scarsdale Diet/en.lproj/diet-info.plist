@@ -5,88 +5,88 @@
 	<key>0</key>
 	<dict>
 		<key>lunch</key>
-		<string>selected cold lean meat (optional - chicken, turkey, tongue, lean beef);
-tomatoes, sliced​​, baked or steamed;
-coffee, tea, soda water;</string>
+		<string>selected cold lean meat (optional - chicken, turkey, tongue, lean beef)
+tomatoes, sliced​​, baked or steamed
+coffee, tea, soda water</string>
 		<key>dinner</key>
-		<string>fish or crab, shrimp;
+		<string>fish or crab, shrimp
 combined salad (vegetables of all optional)
-1 slice protein bread, toasted;
-grapefruit or fruit in season;</string>
+1 slice protein bread, toasted
+grapefruit or fruit in season</string>
 		<key>img</key>
 		<string>fish.jpg</string>
 	</dict>
 	<key>1</key>
 	<dict>
 		<key>lunch</key>
-		<string>fruit salad, any combination of fruit as much as you want;</string>
+		<string>fruit salad, any combination of fruit as much as you want</string>
 		<key>dinner</key>
-		<string>large beef meatball;
-tomatoes, lettuce, celery, olives, sprouts, cucumber;</string>
+		<string>large beef meatball
+tomatoes, lettuce, celery, olives, sprouts, cucumber</string>
 		<key>img</key>
 		<string>fruit_salad.jpg</string>
 	</dict>
 	<key>2</key>
 	<dict>
 		<key>lunch</key>
-		<string>tuna salad or salmon (drained of fat) with lemon or vinegar;
-grapefruit, melon or seasonal fruit;
-coffee or tea;</string>
+		<string>tuna salad or salmon (drained of fat) with lemon or vinegar
+grapefruit, melon or seasonal fruit
+coffee or tea</string>
 		<key>dinner</key>
-		<string>roast lamb, cut into slices of fat removed;
-salad of lettuce, tomatoes, cucumber, celery;</string>
+		<string>roast lamb, cut into slices of fat removed
+salad of lettuce, tomatoes, cucumber, celery</string>
 		<key>img</key>
 		<string>tuna_salad.jpg</string>
 	</dict>
 	<key>3</key>
 	<dict>
 		<key>lunch</key>
-		<string>2 eggs cooked as desired, with little fat;
-low-fat cheese / cottage cheese;
-zucchini or green beans or tomatoes, chopped and stewed;
-1 slice protein bread, toasted;
-coffee or tea;</string>
+		<string>2 eggs cooked as desired, with little fat
+low-fat cheese / cottage cheese
+zucchini or green beans or tomatoes, chopped and stewed
+1 slice protein bread, toasted
+coffee or tea</string>
 		<key>dinner</key>
-		<string>chicken, grilled, grilled or oven (skinned or fat);
-large portion of spinach, green peppers or green beans;</string>
+		<string>chicken, grilled, grilled or oven (skinned or fat)
+large portion of spinach, green peppers or green beans</string>
 		<key>img</key>
 		<string>eggs.jpg</string>
 	</dict>
 	<key>4</key>
 	<dict>
 		<key>lunch</key>
-		<string>cheese (low fat), different kinds, cut into slices;
-spinach;
-1 slice protein bread, toasted;</string>
+		<string>cheese (low fat), different kinds, cut into slices
+spinach
+1 slice protein bread, toasted</string>
 		<key>dinner</key>
-		<string>fish or crab, shrimp;
-any combination salad vegetables as desired;
-1 slice protein bread, toasted;</string>
+		<string>fish or crab, shrimp
+any combination salad vegetables as desired
+1 slice protein bread, toasted</string>
 		<key>img</key>
 		<string>fish.jpg</string>
 	</dict>
 	<key>5</key>
 	<dict>
 		<key>lunch</key>
-		<string>fruit salad;
-coffee or tea;</string>
+		<string>fruit salad
+coffee or tea</string>
 		<key>dinner</key>
-		<string>roast turkey or chicken;
-salad with tomatoes and lettuce;
-grapefruit or seasonal fruit;</string>
+		<string>roast turkey or chicken
+salad with tomatoes and lettuce
+grapefruit or seasonal fruit</string>
 		<key>img</key>
 		<string>tomatoes_lettuce.jpg</string>
 	</dict>
 	<key>6</key>
 	<dict>
 		<key>lunch</key>
-		<string>cold or hot turkey or chicken;
-tomatoes, carrots, cooked cabbage, broccoli or cauliflower;
-grapefruit or seasonal fruit;
-coffee or tea;</string>
+		<string>cold or hot turkey or chicken
+tomatoes, carrots, cooked cabbage, broccoli or cauliflower
+grapefruit or seasonal fruit
+coffee or tea</string>
 		<key>dinner</key>
-		<string>great steak (with visible fat removed before eating);
-salad of lettuce, cucumber, celery, tomatoes, sprouts;</string>
+		<string>great steak (with visible fat removed before eating)
+salad of lettuce, cucumber, celery, tomatoes, sprouts</string>
 		<key>img</key>
 		<string>beef.jpg</string>
 	</dict>

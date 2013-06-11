@@ -42,6 +42,7 @@
 		0C88926B17520F4700AAAC64 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C88926A17520F4700AAAC64 /* Default-568h@2x.png */; };
 		0C96D746175393100043489C /* fish.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C96D745175393100043489C /* fish.jpg */; };
 		0C96D7481753A12B0043489C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C96D7471753A12B0043489C /* QuartzCore.framework */; };
+		0CB9727F1767300100900D5E /* SDDietDayDetailsViewControlleriPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CB9727E1767300100900D5E /* SDDietDayDetailsViewControlleriPad.m */; };
 		0CDDFD5C176661390011D0CA /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CDDFD5E176661390011D0CA /* MainStoryboard_iPad.storyboard */; };
 		0CF067BC1757BF9C009A93E0 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CF067BB1757BF9C009A93E0 /* SenTestingKit.framework */; };
 		0CF067BD1757BF9C009A93E0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C103333174CE2A7004C2ACC /* UIKit.framework */; };
@@ -100,7 +101,9 @@
 		0C88926A17520F4700AAAC64 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		0C96D745175393100043489C /* fish.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = fish.jpg; path = ../../../Downloads/fish.jpg; sourceTree = "<group>"; };
 		0C96D7471753A12B0043489C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		0CDDFD5F1766613F0011D0CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file; name = Base; path = Base.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		0CB9727D1767300100900D5E /* SDDietDayDetailsViewControlleriPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDDietDayDetailsViewControlleriPad.h; sourceTree = "<group>"; };
+		0CB9727E1767300100900D5E /* SDDietDayDetailsViewControlleriPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDDietDayDetailsViewControlleriPad.m; sourceTree = "<group>"; };
+		0CDDFD5F1766613F0011D0CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		0CDDFD61176661440011D0CA /* bg */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bg; path = bg.lproj/MainStoryboard_iPad.strings; sourceTree = "<group>"; };
 		0CDDFD63176661450011D0CA /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/MainStoryboard_iPad.strings; sourceTree = "<group>"; };
 		0CF067BA1757BF9C009A93E0 /* ScarsdaleDietLogicTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScarsdaleDietLogicTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,6 +152,8 @@
 				0C0220471761ED6400896649 /* SDViewControlleriPad.m */,
 				0C88924A174FA67000AAAC64 /* SDDietDayDetailsViewController.h */,
 				0C88924B174FA67000AAAC64 /* SDDietDayDetailsViewController.m */,
+				0CB9727D1767300100900D5E /* SDDietDayDetailsViewControlleriPad.h */,
+				0CB9727E1767300100900D5E /* SDDietDayDetailsViewControlleriPad.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -420,6 +425,7 @@
 				0C103367174CE407004C2ACC /* VRGCalendarView.m in Sources */,
 				0C88924C174FA67000AAAC64 /* SDDietDayDetailsViewController.m in Sources */,
 				0C0220481761ED6400896649 /* SDViewControlleriPad.m in Sources */,
+				0CB9727F1767300100900D5E /* SDDietDayDetailsViewControlleriPad.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
