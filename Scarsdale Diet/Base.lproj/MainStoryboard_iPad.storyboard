@@ -24,101 +24,115 @@
             <objects>
                 <viewController storyboardIdentifier="DetailView" id="DAj-pn-Fus" customClass="SDDietDayDetailsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4QX-VK-e1b">
-                        <rect key="frame" x="0.0" y="64" width="703" height="704"/>
+                        <rect key="frame" x="0.0" y="64" width="703" height="1044"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JoQ-6k-B3v">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="240" id="V7t-fi-mKt"/>
-                                    <constraint firstAttribute="width" constant="400" id="tOe-8Z-9RP"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Breakfast" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uMX-dG-n1a">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lpd-r3-N3K">
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="147" id="l8Q-Oo-ZvS"/>
-                                </constraints>
-                                <string key="text">1/2 grapefruit (if available - seasonal fruits);
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9oa-on-frY">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JoQ-6k-B3v">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="240" id="NwH-2j-X5z"/>
+                                            <constraint firstAttribute="width" constant="402" id="bkG-br-0RJ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Breakfast" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uMX-dG-n1a">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lpd-r3-N3K">
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="U4Q-6S-ydo"/>
+                                        </constraints>
+                                        <string key="text">1/2 grapefruit (if available - seasonal fruits);
 a slice of toasted protein bread;
 coffee or tea without sugar, cream or milk</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DHY-QC-ZQN">
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="327" id="Lyo-2i-Z1M"/>
-                                </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wLV-J6-JUL">
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text">If you wish, you can replace any Scarsdale Diet's menu with the following menu:  
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DHY-QC-ZQN">
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="qdD-fq-8EX"/>
+                                        </constraints>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wLV-J6-JUL">
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="154" id="USm-uB-4Ba"/>
+                                        </constraints>
+                                        <string key="text">If you wish, you can replace any Scarsdale Diet's menu with the following menu:  
 
 1/2 low-fat cheese or cottage cheese mixed with 1 tablespoon cream;
 fruit cut as desired;
 6 halves walnuts or pecans whole or chopped and mixed with cheese or sprinkled on fruit;
 coffee, tea, soda water with a little lemon;</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWW-aV-Gs4">
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWW-aV-Gs4">
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="EtQ-U6-kaa"/>
+                                        </constraints>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Lunch" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t7v-18-eRe">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Dinner" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbr-ln-6fM">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Replacement Meal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EhD-Fh-f8a">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="212" id="bvh-6h-dMe"/>
+                                    <constraint firstItem="bbr-ln-6fM" firstAttribute="leading" secondItem="DHY-QC-ZQN" secondAttribute="leading" type="default" id="7q9-05-ocy"/>
+                                    <constraint firstItem="Lpd-r3-N3K" firstAttribute="trailing" secondItem="JoQ-6k-B3v" secondAttribute="trailing" type="default" id="93J-Ve-IwL"/>
+                                    <constraint firstItem="DHY-QC-ZQN" firstAttribute="trailing" secondItem="Lpd-r3-N3K" secondAttribute="trailing" type="default" id="B8K-kP-B8V"/>
+                                    <constraint firstItem="uMX-dG-n1a" firstAttribute="top" secondItem="JoQ-6k-B3v" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="BJt-Bo-hRq"/>
+                                    <constraint firstItem="DWW-aV-Gs4" firstAttribute="top" secondItem="bbr-ln-6fM" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="EE6-jY-G87"/>
+                                    <constraint firstItem="DWW-aV-Gs4" firstAttribute="trailing" secondItem="DHY-QC-ZQN" secondAttribute="trailing" type="default" id="FVL-WW-XL9"/>
+                                    <constraint firstItem="t7v-18-eRe" firstAttribute="leading" secondItem="DHY-QC-ZQN" secondAttribute="leading" type="default" id="Gfs-ug-1U2"/>
+                                    <constraint firstItem="Lpd-r3-N3K" firstAttribute="top" secondItem="uMX-dG-n1a" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="IcY-c6-iJ0"/>
+                                    <constraint firstItem="EhD-Fh-f8a" firstAttribute="leading" secondItem="DWW-aV-Gs4" secondAttribute="leading" type="default" id="Jq3-lK-nwY"/>
+                                    <constraint firstItem="wLV-J6-JUL" firstAttribute="top" secondItem="EhD-Fh-f8a" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="KfF-mf-91A"/>
+                                    <constraint firstItem="t7v-18-eRe" firstAttribute="top" secondItem="Lpd-r3-N3K" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Md7-XB-7PZ"/>
+                                    <constraint firstItem="EhD-Fh-f8a" firstAttribute="leading" secondItem="wLV-J6-JUL" secondAttribute="leading" type="default" id="PcC-xn-7ap"/>
+                                    <constraint firstItem="DHY-QC-ZQN" firstAttribute="top" secondItem="t7v-18-eRe" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Pea-Hm-Q9o"/>
+                                    <constraint firstItem="DWW-aV-Gs4" firstAttribute="leading" secondItem="bbr-ln-6fM" secondAttribute="leading" type="default" id="Yep-xQ-PY3"/>
+                                    <constraint firstItem="bbr-ln-6fM" firstAttribute="top" secondItem="DHY-QC-ZQN" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="biN-D5-hqR"/>
+                                    <constraint firstItem="t7v-18-eRe" firstAttribute="leading" secondItem="Lpd-r3-N3K" secondAttribute="leading" type="default" id="cf2-rE-vbY"/>
+                                    <constraint firstItem="JoQ-6k-B3v" firstAttribute="leading" secondItem="uMX-dG-n1a" secondAttribute="leading" type="default" id="dtY-OF-ruT"/>
+                                    <constraint firstItem="EhD-Fh-f8a" firstAttribute="top" secondItem="DWW-aV-Gs4" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="epI-qx-fth"/>
+                                    <constraint firstAttribute="bottom" secondItem="wLV-J6-JUL" secondAttribute="bottom" constant="242" id="kc8-9d-sTB"/>
+                                    <constraint firstItem="JoQ-6k-B3v" firstAttribute="top" secondItem="9oa-on-frY" secondAttribute="top" constant="20" symbolic="YES" type="default" id="lTZ-M1-SSz"/>
+                                    <constraint firstItem="uMX-dG-n1a" firstAttribute="leading" secondItem="Lpd-r3-N3K" secondAttribute="leading" type="default" id="oyH-hf-jcA"/>
+                                    <constraint firstItem="JoQ-6k-B3v" firstAttribute="leading" secondItem="9oa-on-frY" secondAttribute="leading" constant="151" id="q2u-MC-ZBi"/>
+                                    <constraint firstAttribute="trailing" secondItem="JoQ-6k-B3v" secondAttribute="trailing" constant="150" id="qu7-4l-6WC"/>
+                                    <constraint firstItem="DWW-aV-Gs4" firstAttribute="trailing" secondItem="wLV-J6-JUL" secondAttribute="trailing" type="default" id="xPt-jt-6Rk"/>
                                 </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Lunch" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t7v-18-eRe">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Dinner" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbr-ln-6fM">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Replacement Meal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EhD-Fh-f8a">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="wLV-J6-JUL" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="3lb-cZ-CmA"/>
-                            <constraint firstItem="uMX-dG-n1a" firstAttribute="leading" secondItem="4QX-VK-e1b" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="4sc-gK-3yO"/>
-                            <constraint firstItem="DWW-aV-Gs4" firstAttribute="leading" secondItem="4QX-VK-e1b" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="4wi-Na-Seb"/>
-                            <constraint firstItem="JoQ-6k-B3v" firstAttribute="centerX" secondItem="4QX-VK-e1b" secondAttribute="centerX" type="default" id="6dO-q9-us1"/>
-                            <constraint firstItem="Lpd-r3-N3K" firstAttribute="leading" secondItem="4QX-VK-e1b" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="C8c-1M-0Mi"/>
-                            <constraint firstItem="EhD-Fh-f8a" firstAttribute="leading" secondItem="DHY-QC-ZQN" secondAttribute="leading" type="default" id="J7C-7F-C4t"/>
-                            <constraint firstItem="wLV-J6-JUL" firstAttribute="leading" secondItem="DWW-aV-Gs4" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="KXi-8p-Xwj"/>
-                            <constraint firstItem="JoQ-6k-B3v" firstAttribute="top" secondItem="4QX-VK-e1b" secondAttribute="top" constant="20" symbolic="YES" type="default" id="NOI-4o-Oqd"/>
-                            <constraint firstAttribute="bottom" secondItem="DWW-aV-Gs4" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="NvG-0g-pS9"/>
-                            <constraint firstItem="DWW-aV-Gs4" firstAttribute="top" secondItem="bbr-ln-6fM" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="OmK-43-rbP"/>
-                            <constraint firstItem="DHY-QC-ZQN" firstAttribute="top" secondItem="Lpd-r3-N3K" secondAttribute="top" type="default" id="QhY-G3-R61"/>
-                            <constraint firstItem="DHY-QC-ZQN" firstAttribute="leading" secondItem="t7v-18-eRe" secondAttribute="leading" type="default" id="S0K-n1-Yf9"/>
-                            <constraint firstItem="wLV-J6-JUL" firstAttribute="leading" secondItem="EhD-Fh-f8a" secondAttribute="leading" type="default" id="WTS-xr-ymb"/>
-                            <constraint firstItem="t7v-18-eRe" firstAttribute="baseline" secondItem="uMX-dG-n1a" secondAttribute="baseline" type="default" id="Yek-xt-fLE"/>
-                            <constraint firstItem="wLV-J6-JUL" firstAttribute="top" secondItem="EhD-Fh-f8a" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Yi5-41-D7a"/>
-                            <constraint firstItem="DHY-QC-ZQN" firstAttribute="leading" secondItem="Lpd-r3-N3K" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="ipB-lQ-ssu"/>
-                            <constraint firstItem="bbr-ln-6fM" firstAttribute="baseline" secondItem="EhD-Fh-f8a" secondAttribute="baseline" type="default" id="nDv-S3-jm1"/>
-                            <constraint firstItem="bbr-ln-6fM" firstAttribute="top" secondItem="Lpd-r3-N3K" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="ncF-MN-Mnu"/>
-                            <constraint firstItem="EhD-Fh-f8a" firstAttribute="top" secondItem="DHY-QC-ZQN" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="otO-6y-OPL"/>
-                            <constraint firstItem="bbr-ln-6fM" firstAttribute="leading" secondItem="4QX-VK-e1b" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="si1-IR-qOm"/>
-                            <constraint firstAttribute="bottom" secondItem="wLV-J6-JUL" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="x5B-Zx-JgH"/>
-                            <constraint firstItem="uMX-dG-n1a" firstAttribute="top" secondItem="4QX-VK-e1b" secondAttribute="top" constant="262" id="yKT-kc-oTN"/>
-                            <constraint firstAttribute="trailing" secondItem="DHY-QC-ZQN" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="ywV-KR-cX5"/>
+                            <constraint firstItem="9oa-on-frY" firstAttribute="bottom" secondItem="4QX-VK-e1b" secondAttribute="bottom" type="default" id="8Lt-kx-x8y"/>
+                            <constraint firstItem="9oa-on-frY" firstAttribute="trailing" secondItem="4QX-VK-e1b" secondAttribute="trailing" type="default" id="APl-Is-OVm"/>
+                            <constraint firstItem="9oa-on-frY" firstAttribute="leading" secondItem="4QX-VK-e1b" secondAttribute="leading" type="default" id="qez-v5-eXe"/>
+                            <constraint firstItem="9oa-on-frY" firstAttribute="top" secondItem="4QX-VK-e1b" secondAttribute="top" type="default" id="qgn-xM-cLz"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
@@ -129,6 +143,7 @@ coffee, tea, soda water with a little lemon;</string>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="breakfastTextView" destination="Lpd-r3-N3K" id="ACR-WZ-OZm"/>
                         <outlet property="detailImage" destination="JoQ-6k-B3v" id="Nen-Ty-0YG"/>
