@@ -48,11 +48,12 @@
         
         self.detailImage.image = [UIImage imageNamed:imageName];
         
-        self.lunchTextView.layer.cornerRadius = kCornerRadius;
-        self.dinnerTextView.layer.cornerRadius = kCornerRadius;
-        self.breakfastTextView.layer.cornerRadius = kCornerRadius;
-        self.replaceMealTextView.layer.cornerRadius = kCornerRadius;
     }
+
+    self.lunchTextView.layer.cornerRadius = kCornerRadius;
+    self.dinnerTextView.layer.cornerRadius = kCornerRadius;
+    self.breakfastTextView.layer.cornerRadius = kCornerRadius;
+    self.replaceMealTextView.layer.cornerRadius = kCornerRadius;
 }
 
 - (void)viewDidLoad
@@ -64,10 +65,6 @@
     self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:10/255.0f green:145/255.0f blue:5/255.0f alpha:1];
 }
 
--(void)calendarView:(VRGCalendarView *)calendarView dateSelected:(NSDate *)date
-{
-    NSLog(@"Details");
-}
 
 - (void)didReceiveMemoryWarning
 {

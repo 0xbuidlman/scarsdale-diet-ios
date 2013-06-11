@@ -24,6 +24,11 @@
     return self;
 }
 
+- (void) dietStartDateSelected:(id)sender
+{
+    [super dietStartDateSelected:sender];
+    [self calendarView:self.calendar dateSelected:self.dietStart];
+}
 -(void)calendarView:(VRGCalendarView *)calendarView dateSelected:(NSDate *)date {
     
     NSString *key = [self getDietDayOffsetByDate:date];
