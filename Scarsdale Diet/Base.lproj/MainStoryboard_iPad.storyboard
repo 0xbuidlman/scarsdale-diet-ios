@@ -19,14 +19,23 @@
             </objects>
             <point key="canvasLocation" x="504" y="696"/>
         </scene>
-        <!--Diet Day Details View Controlleri Pad View Controlleri Pad-->
+        <!--Diet Day Details View Controlleri Pad-->
         <scene sceneID="ZLV-bp-fuD">
             <objects>
-                <viewController storyboardIdentifier="DetailView" id="DAj-pn-Fus" customClass="SDDietDayDetailsViewControlleriPadViewControlleriPad" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailView" id="DAj-pn-Fus" customClass="SDDietDayDetailsViewControlleriPad" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4QX-VK-e1b">
                         <rect key="frame" x="0.0" y="64" width="703" height="932"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Please, select start date for your diet and select a day from the diet." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="403" translatesAutoresizingMaskIntoConstraints="NO" id="XUh-bL-myv">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="403" id="3WG-aF-fAc"/>
+                                    <constraint firstAttribute="height" constant="68" id="K0D-gv-dNL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9oa-on-frY">
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JoQ-6k-B3v">
@@ -65,12 +74,12 @@ coffee or tea without sugar, cream or milk</string>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="173" id="3XV-qc-KSz"/>
                                         </constraints>
-                                        <mutableString key="text">If you wish, you can replace any Scarsdale Diet's menu with the following menu:  
+                                        <string key="text">If you wish, you can replace any Scarsdale Diet's menu with the following menu:  
 
 1/2 low-fat cheese or cottage cheese mixed with 1 tablespoon cream
 fruit cut as desired
 6 halves walnuts or pecans whole or chopped and mixed with cheese or sprinkled on fruit
-coffee, tea, soda water with a little lemon</mutableString>
+coffee, tea, soda water with a little lemon</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
@@ -119,7 +128,7 @@ coffee, tea, soda water with a little lemon</mutableString>
                                     <constraint firstItem="t7v-18-eRe" firstAttribute="top" secondItem="9oa-on-frY" secondAttribute="top" constant="394" id="eJO-aP-irZ"/>
                                     <constraint firstItem="DHY-QC-ZQN" firstAttribute="leading" secondItem="t7v-18-eRe" secondAttribute="leading" type="default" id="jDe-hD-DzZ"/>
                                     <constraint firstItem="Lpd-r3-N3K" firstAttribute="leading" secondItem="uMX-dG-n1a" secondAttribute="leading" type="default" id="mAK-r6-bov"/>
-                                    <constraint firstItem="JoQ-6k-B3v" firstAttribute="leading" secondItem="9oa-on-frY" secondAttribute="leading" constant="151" id="q2u-MC-ZBi"/>
+                                    <constraint firstItem="JoQ-6k-B3v" firstAttribute="leading" secondItem="9oa-on-frY" secondAttribute="leading" constant="151" id="rwc-06-kkw"/>
                                     <constraint firstAttribute="trailing" secondItem="JoQ-6k-B3v" secondAttribute="trailing" constant="150" id="sB1-LU-8K1"/>
                                     <constraint firstItem="DWW-aV-Gs4" firstAttribute="trailing" secondItem="wLV-J6-JUL" secondAttribute="trailing" type="default" id="xPt-jt-6Rk"/>
                                     <constraint firstItem="Lpd-r3-N3K" firstAttribute="leading" secondItem="t7v-18-eRe" secondAttribute="leading" type="default" id="yJR-mT-gK9"/>
@@ -130,9 +139,11 @@ coffee, tea, soda water with a little lemon</mutableString>
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="9oa-on-frY" firstAttribute="trailing" secondItem="4QX-VK-e1b" secondAttribute="trailing" type="default" id="APl-Is-OVm"/>
+                            <constraint firstItem="XUh-bL-myv" firstAttribute="top" secondItem="4QX-VK-e1b" secondAttribute="top" constant="330" id="JX1-JU-WXM"/>
                             <constraint firstItem="9oa-on-frY" firstAttribute="bottom" secondItem="4QX-VK-e1b" secondAttribute="bottom" type="default" id="ZLr-GX-cKp"/>
                             <constraint firstItem="9oa-on-frY" firstAttribute="leading" secondItem="4QX-VK-e1b" secondAttribute="leading" type="default" id="qez-v5-eXe"/>
                             <constraint firstItem="9oa-on-frY" firstAttribute="top" secondItem="4QX-VK-e1b" secondAttribute="top" type="default" id="r9g-qz-XiV"/>
+                            <constraint firstItem="XUh-bL-myv" firstAttribute="leading" secondItem="4QX-VK-e1b" secondAttribute="leading" constant="151" id="uCf-dE-quc"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
@@ -150,6 +161,8 @@ coffee, tea, soda water with a little lemon</mutableString>
                         <outlet property="dinnerTextView" destination="DWW-aV-Gs4" id="4RA-He-WLD"/>
                         <outlet property="lunchTextView" destination="DHY-QC-ZQN" id="kb5-q0-Ghf"/>
                         <outlet property="replaceMealTextView" destination="wLV-J6-JUL" id="dKR-bV-Qsa"/>
+                        <outlet property="scrollView" destination="9oa-on-frY" id="VTC-0D-0nh"/>
+                        <outlet property="tipLabelView" destination="XUh-bL-myv" id="h5G-TN-gpS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7kQ-5C-h5Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -219,6 +232,38 @@ coffee, tea, soda water with a little lemon</mutableString>
             <point key="canvasLocation" x="-875" y="-10"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="SDDietDayDetailsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SDDietDayDetailsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="shareButton:"/>
+                <relationship kind="outlet" name="breakfastTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="detailImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="dinnerTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="lunchTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="replaceMealTextView" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="SDDietDayDetailsViewControlleriPad" superclassName="SDDietDayDetailsViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SDDietDayDetailsViewControlleriPad.h"/>
+            <relationships>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="tipLabelView" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="SDViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SDViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="calendarView" candidateClass="UIView"/>
+            </relationships>
+        </class>
+        <class className="SDViewControlleriPad" superclassName="SDViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SDViewControlleriPad.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

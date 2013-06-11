@@ -15,6 +15,8 @@
 
 @interface SDViewController : UIViewController
 
+- (void) dietStartDateSelected:(id)sender;
+
 @property (strong, nonatomic) IBOutlet UIView *calendarView;
 
 @property (strong, nonatomic) UIDatePicker *datePicker;

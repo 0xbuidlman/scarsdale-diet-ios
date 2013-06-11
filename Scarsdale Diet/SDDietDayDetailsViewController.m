@@ -65,10 +65,6 @@
     self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:10/255.0f green:145/255.0f blue:5/255.0f alpha:1];
 }
 
--(void)calendarView:(VRGCalendarView *)calendarView dateSelected:(NSDate *)date
-{
-    NSLog(@"Details");
-}
 
 - (void)didReceiveMemoryWarning
 {

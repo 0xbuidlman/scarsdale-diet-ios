@@ -27,6 +27,20 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+}
+
+-(void)configureView
+{
+    if (self.detailItem == nil) {
+        [self.scrollView setHidden:YES];
+        [self.tipLabelView setHidden:NO];
+    } else {
+        [self.tipLabelView setHidden:YES];
+        [self.scrollView setHidden:NO];
+    }
+    
+    [super configureView];
 }
 
 - (void)didReceiveMemoryWarning

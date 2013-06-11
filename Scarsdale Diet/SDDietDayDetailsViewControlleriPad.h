@@ -9,5 +9,7 @@
 #import "SDDietDayDetailsViewController.h"
 
 @interface SDDietDayDetailsViewControlleriPad : SDDietDayDetailsViewController
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UILabel *tipLabelView;
 
 @end
