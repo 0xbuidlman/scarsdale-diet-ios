@@ -103,12 +103,12 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="251" id="HYJ-r1-gTE"/>
                                         </constraints>
-                                        <string key="text">If you wish, you can replace any Scarsdale Diet's menu with the following menu:  
+                                        <mutableString key="text">If you wish, you can replace any Scarsdale Diet's menu with the following menu:  
 
-1/2 low-fat cheese or cottage cheese mixed with 1 tablespoon cream;
-fruit cut as desired;
-6 halves walnuts or pecans whole or chopped and mixed with cheese or sprinkled on fruit;
-coffee, tea, soda water with a little lemon;</string>
+1/2 low-fat cheese or cottage cheese mixed with 1 tablespoon cream
+fruit cut as desired
+6 halves walnuts or pecans whole or chopped and mixed with cheese or sprinkled on fruit
+coffee, tea, soda water with a little lemon</mutableString>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
@@ -117,8 +117,8 @@ coffee, tea, soda water with a little lemon;</string>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="136" id="C8k-YG-oSz"/>
                                         </constraints>
-                                        <string key="text">1/2 grapefruit (if available - seasonal fruits);
-a slice of toasted protein bread;
+                                        <string key="text">1/2 grapefruit (if available - seasonal fruits)
+a slice of toasted protein bread
 coffee or tea without sugar, cream or milk</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -129,6 +129,7 @@ coffee or tea without sugar, cream or milk</string>
                                     <constraint firstItem="RbU-Pj-PLD" firstAttribute="top" secondItem="Brx-pv-vFY" secondAttribute="top" type="default" id="0Oc-Ta-pF5"/>
                                     <constraint firstItem="Kj4-Hg-EgA" firstAttribute="top" secondItem="wv7-fK-dyd" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="19Q-4d-dW7"/>
                                     <constraint firstItem="fYn-BU-K23" firstAttribute="top" secondItem="Kj4-Hg-EgA" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="1x3-g8-52c"/>
+                                    <constraint firstItem="PJu-qi-ejN" firstAttribute="centerX" secondItem="Brx-pv-vFY" secondAttribute="centerX" type="default" id="64E-s1-dMb"/>
                                     <constraint firstItem="wv7-fK-dyd" firstAttribute="leading" secondItem="Brx-pv-vFY" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="6wC-Y5-yiy"/>
                                     <constraint firstItem="Kj4-Hg-EgA" firstAttribute="leading" secondItem="Brx-pv-vFY" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Eyj-8i-Ge7"/>
                                     <constraint firstItem="YwC-6t-faJ" firstAttribute="top" secondItem="fYn-BU-K23" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Gfs-P6-CPx"/>
@@ -139,7 +140,6 @@ coffee or tea without sugar, cream or milk</string>
                                     <constraint firstItem="YwC-6t-faJ" firstAttribute="leading" secondItem="Brx-pv-vFY" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="SAr-sg-xxN"/>
                                     <constraint firstAttribute="trailing" secondItem="RYn-I0-EFX" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="YF5-u9-HBe"/>
                                     <constraint firstAttribute="trailing" secondItem="1qA-N8-t8e" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Yab-gl-PUZ"/>
-                                    <constraint firstItem="61p-XX-gVE" firstAttribute="centerX" secondItem="Brx-pv-vFY" secondAttribute="centerX" type="default" id="aLv-Uo-4gf"/>
                                     <constraint firstAttribute="trailing" secondItem="fYn-BU-K23" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="cnw-mW-nRk"/>
                                     <constraint firstAttribute="trailing" secondItem="YwC-6t-faJ" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="cte-Vj-c6x"/>
                                     <constraint firstAttribute="trailing" secondItem="Kj4-Hg-EgA" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="grT-el-dUg"/>
