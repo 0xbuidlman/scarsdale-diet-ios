@@ -31,10 +31,12 @@
 }
 -(void)calendarView:(VRGCalendarView *)calendarView dateSelected:(NSDate *)date {
     
-    NSString *key = [self getDietDayOffsetByDate:date];
-    NSDictionary *tmpItem = self.dietDaysInfoDictionary[key];
-    SDDietDayDetailsViewController *tmpDetailViewController = self.detailsViewController;
-    tmpDetailViewController.detailItem = tmpItem;
+    if ([self isDietDay:date]) {
+        NSString *key = [self getDietDayOffsetByDate:date];
+        NSDictionary *tmpItem = self.dietDaysInfoDictionary[key];
+        SDDietDayDetailsViewController *tmpDetailViewController = self.detailsViewController;
+        tmpDetailViewController.detailItem = tmpItem;
+    }
 }
 
 - (void)viewDidLoad
