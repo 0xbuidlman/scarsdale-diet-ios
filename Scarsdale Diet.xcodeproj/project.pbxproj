@@ -25,7 +25,6 @@
 		0C17D9121758C319001520DC /* SDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C10334F174CE2A7004C2ACC /* SDViewController.m */; };
 		0C17D9131758C337001520DC /* VRGCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C103361174CE407004C2ACC /* VRGCalendarView.m */; };
 		0C17D9141758C496001520DC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C103337174CE2A7004C2ACC /* CoreGraphics.framework */; };
-		0C4AA7CE175FE86800F99051 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0C4AA7CD175FE86800F99051 /* InfoPlist.strings */; };
 		0C651EE0175F79CA00A0F01C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0C651EE2175F79CA00A0F01C /* Localizable.strings */; };
 		0C651EE4175F7D4B00A0F01C /* diet-info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C651EE6175F7D4B00A0F01C /* diet-info.plist */; };
 		0C754C0B175FF5B50070B774 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0C754C0A175FF5B50070B774 /* Settings.bundle */; };
@@ -42,6 +41,7 @@
 		0C88926B17520F4700AAAC64 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C88926A17520F4700AAAC64 /* Default-568h@2x.png */; };
 		0C96D746175393100043489C /* fish.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C96D745175393100043489C /* fish.jpg */; };
 		0C96D7481753A12B0043489C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C96D7471753A12B0043489C /* QuartzCore.framework */; };
+		0CA15C42176B2AC600E6B7D0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0CA15C41176B2AC600E6B7D0 /* InfoPlist.strings */; };
 		0CB9727F1767300100900D5E /* SDDietDayDetailsViewControlleriPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CB9727E1767300100900D5E /* SDDietDayDetailsViewControlleriPad.m */; };
 		0CDDFD5C176661390011D0CA /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CDDFD5E176661390011D0CA /* MainStoryboard_iPad.storyboard */; };
 		0CF067BC1757BF9C009A93E0 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CF067BB1757BF9C009A93E0 /* SenTestingKit.framework */; };
@@ -79,7 +79,6 @@
 		0C4AA7C8175FCF7400F99051 /* bg */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bg; path = bg.lproj/MainStoryboard.strings; sourceTree = "<group>"; };
 		0C4AA7C9175FCF7400F99051 /* bg */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bg; path = bg.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0C4AA7CB175FCF7400F99051 /* bg */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = bg; path = "bg.lproj/diet-info.plist"; sourceTree = "<group>"; };
-		0C4AA7CD175FE86800F99051 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		0C651EE1175F79CA00A0F01C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0C651EE3175F79E800A0F01C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0C651EE5175F7D4B00A0F01C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = "en.lproj/diet-info.plist"; sourceTree = "<group>"; };
@@ -101,6 +100,7 @@
 		0C88926A17520F4700AAAC64 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		0C96D745175393100043489C /* fish.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = fish.jpg; path = ../../../Downloads/fish.jpg; sourceTree = "<group>"; };
 		0C96D7471753A12B0043489C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		0CA15C41176B2AC600E6B7D0 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		0CB9727D1767300100900D5E /* SDDietDayDetailsViewControlleriPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDDietDayDetailsViewControlleriPad.h; sourceTree = "<group>"; };
 		0CB9727E1767300100900D5E /* SDDietDayDetailsViewControlleriPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDDietDayDetailsViewControlleriPad.m; sourceTree = "<group>"; };
 		0CDDFD5F1766613F0011D0CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
@@ -214,7 +214,7 @@
 		0C10333A174CE2A7004C2ACC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				0C4AA7CD175FE86800F99051 /* InfoPlist.strings */,
+				0CA15C41176B2AC600E6B7D0 /* InfoPlist.strings */,
 				0C7751A2175245B1009C636F /* Default.png */,
 				0C7751A017524584009C636F /* Default@2x.png */,
 				0C88926A17520F4700AAAC64 /* Default-568h@2x.png */,
@@ -378,9 +378,9 @@
 				0C7751A3175245B1009C636F /* Default.png in Resources */,
 				0C96D746175393100043489C /* fish.jpg in Resources */,
 				0C651EE0175F79CA00A0F01C /* Localizable.strings in Resources */,
-				0C4AA7CE175FE86800F99051 /* InfoPlist.strings in Resources */,
 				0C754C0B175FF5B50070B774 /* Settings.bundle in Resources */,
 				0CDDFD5C176661390011D0CA /* MainStoryboard_iPad.storyboard in Resources */,
+				0CA15C42176B2AC600E6B7D0 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
