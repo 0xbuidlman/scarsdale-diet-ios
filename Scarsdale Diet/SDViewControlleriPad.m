@@ -49,6 +49,11 @@
     }
 }
 
+-(void) clearDate:(id)sender
+{
+    [super clearDate:sender];
+    self.detailsViewController.detailItem = nil;
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
