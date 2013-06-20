@@ -47,6 +47,8 @@
 		0CCE6584176B34B60039D470 /* Default-Landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CCE6583176B34B60039D470 /* Default-Landscape@2x~ipad.png */; };
 		0CCE6586176B35080039D470 /* 72.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CCE6585176B35080039D470 /* 72.png */; };
 		0CCE6588176B350C0039D470 /* 144.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CCE6587176B350C0039D470 /* 144.png */; };
+		0CCE658B176B39340039D470 /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CCE6589176B391B0039D470 /* Default-Portrait~ipad.png */; };
+		0CCE658D176B39380039D470 /* Default-Portrait@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CCE658C176B39380039D470 /* Default-Portrait@2x~ipad.png */; };
 		0CDDFD5C176661390011D0CA /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CDDFD5E176661390011D0CA /* MainStoryboard_iPad.storyboard */; };
 		0CF067BC1757BF9C009A93E0 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CF067BB1757BF9C009A93E0 /* SenTestingKit.framework */; };
 		0CF067BD1757BF9C009A93E0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C103333174CE2A7004C2ACC /* UIKit.framework */; };
@@ -111,6 +113,8 @@
 		0CCE6583176B34B60039D470 /* Default-Landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape@2x~ipad.png"; path = "../Default-Landscape@2x~ipad.png"; sourceTree = "<group>"; };
 		0CCE6585176B35080039D470 /* 72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 72.png; path = ../72.png; sourceTree = "<group>"; };
 		0CCE6587176B350C0039D470 /* 144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 144.png; path = ../144.png; sourceTree = "<group>"; };
+		0CCE6589176B391B0039D470 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
+		0CCE658C176B39380039D470 /* Default-Portrait@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait@2x~ipad.png"; sourceTree = "<group>"; };
 		0CDDFD5F1766613F0011D0CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		0CDDFD61176661440011D0CA /* bg */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bg; path = bg.lproj/MainStoryboard_iPad.strings; sourceTree = "<group>"; };
 		0CDDFD63176661450011D0CA /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/MainStoryboard_iPad.strings; sourceTree = "<group>"; };
@@ -178,6 +182,8 @@
 		0C103327174CE2A7004C2ACC = {
 			isa = PBXGroup;
 			children = (
+				0CCE658C176B39380039D470 /* Default-Portrait@2x~ipad.png */,
+				0CCE6589176B391B0039D470 /* Default-Portrait~ipad.png */,
 				0C754C0A175FF5B50070B774 /* Settings.bundle */,
 				0C96D7471753A12B0043489C /* QuartzCore.framework */,
 				0C103339174CE2A7004C2ACC /* Scarsdale Diet */,
@@ -397,6 +403,8 @@
 				0CCE6584176B34B60039D470 /* Default-Landscape@2x~ipad.png in Resources */,
 				0CCE6586176B35080039D470 /* 72.png in Resources */,
 				0CCE6588176B350C0039D470 /* 144.png in Resources */,
+				0CCE658B176B39340039D470 /* Default-Portrait~ipad.png in Resources */,
+				0CCE658D176B39380039D470 /* Default-Portrait@2x~ipad.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,6 +521,7 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Mihail Velikov (Q59675477H)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -528,6 +537,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "E9E6D447-9D40-4011-A27C-42DC08EAFA52";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -544,6 +554,7 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Mihail Velikov (Q59675477H)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -552,6 +563,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "E9E6D447-9D40-4011-A27C-42DC08EAFA52";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -560,13 +572,13 @@
 		0C103354174CE2A7004C2ACC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Mihail Velikov (8YJG7WCC9H)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Mihail Velikov (Q59675477H)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Scarsdale Diet/Scarsdale Diet-Prefix.pch";
 				INFOPLIST_FILE = "Scarsdale Diet/Scarsdale Diet-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3393E995-F6C2-44CB-871D-C73D39288E8C";
+				PROVISIONING_PROFILE = "E9E6D447-9D40-4011-A27C-42DC08EAFA52";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -575,13 +587,13 @@
 		0C103355174CE2A7004C2ACC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Mihail Velikov (8YJG7WCC9H)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Mihail Velikov (Q59675477H)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Scarsdale Diet/Scarsdale Diet-Prefix.pch";
 				INFOPLIST_FILE = "Scarsdale Diet/Scarsdale Diet-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3393E995-F6C2-44CB-871D-C73D39288E8C";
+				PROVISIONING_PROFILE = "E9E6D447-9D40-4011-A27C-42DC08EAFA52";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
