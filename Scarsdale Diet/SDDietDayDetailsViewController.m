@@ -82,7 +82,7 @@
 
 - (IBAction)shareButton:(id)sender {
     NSString *textToShare = NSLocalizedString(@"Share Title", nil);
-    UIImage *imageToShare = [UIImage imageNamed:@"114.png"];
+    UIImage *imageToShare = [UIImage imageNamed:@"144.png"];
     
     NSMutableArray *activityItems = [[NSMutableArray alloc] init];
     
