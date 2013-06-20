@@ -59,7 +59,7 @@
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="RbU-Pj-PLD">
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="217" id="phD-jA-0Bf"/>
+                                            <constraint firstAttribute="height" constant="217" type="user" id="phD-jA-0Bf"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Breakfast" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1qA-N8-t8e">
@@ -75,7 +75,7 @@
                                     <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYn-BU-K23">
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="136" id="qlk-KF-zqu"/>
+                                            <constraint firstAttribute="height" constant="136" type="user" id="qlk-KF-zqu"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -88,7 +88,7 @@
                                     <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJu-qi-ejN">
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="136" id="8xp-79-4vD"/>
+                                            <constraint firstAttribute="height" constant="136" type="user" id="8xp-79-4vD"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -103,19 +103,19 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="251" id="HYJ-r1-gTE"/>
                                         </constraints>
-                                        <mutableString key="text">If you wish, you can replace any Scarsdale Diet's menu with the following menu:  
+                                        <string key="text">If you wish, you can replace any Scarsdale Diet's menu with the following menu:  
 
 1/2 low-fat cheese or cottage cheese mixed with 1 tablespoon cream
 fruit cut as desired
 6 halves walnuts or pecans whole or chopped and mixed with cheese or sprinkled on fruit
-coffee, tea, soda water with a little lemon</mutableString>
+coffee, tea, soda water with a little lemon</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wv7-fK-dyd">
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="136" id="C8k-YG-oSz"/>
+                                            <constraint firstAttribute="height" constant="136" type="user" id="C8k-YG-oSz"/>
                                         </constraints>
                                         <string key="text">1/2 grapefruit (if available - seasonal fruits)
 a slice of toasted protein bread
@@ -126,34 +126,49 @@ coffee or tea without sugar, cream or milk</string>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="fYn-BU-K23" firstAttribute="leading" secondItem="Brx-pv-vFY" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="0Bp-Zo-uII"/>
-                                    <constraint firstItem="RbU-Pj-PLD" firstAttribute="top" secondItem="Brx-pv-vFY" secondAttribute="top" type="default" id="0Oc-Ta-pF5"/>
-                                    <constraint firstItem="Kj4-Hg-EgA" firstAttribute="top" secondItem="wv7-fK-dyd" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="19Q-4d-dW7"/>
-                                    <constraint firstItem="fYn-BU-K23" firstAttribute="top" secondItem="Kj4-Hg-EgA" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="1x3-g8-52c"/>
-                                    <constraint firstItem="PJu-qi-ejN" firstAttribute="centerX" secondItem="Brx-pv-vFY" secondAttribute="centerX" type="default" id="64E-s1-dMb"/>
+                                    <constraint firstItem="RbU-Pj-PLD" firstAttribute="top" secondItem="Brx-pv-vFY" secondAttribute="top" type="user" id="0Oc-Ta-pF5"/>
+                                    <constraint firstItem="Kj4-Hg-EgA" firstAttribute="top" secondItem="wv7-fK-dyd" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="19Q-4d-dW7"/>
+                                    <constraint firstItem="fYn-BU-K23" firstAttribute="top" secondItem="Kj4-Hg-EgA" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="1x3-g8-52c"/>
+                                    <constraint firstItem="fYn-BU-K23" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Brx-pv-vFY" secondAttribute="top" constant="427" type="user" id="2LD-5R-38J"/>
+                                    <constraint firstItem="61p-XX-gVE" firstAttribute="top" secondItem="Brx-pv-vFY" secondAttribute="top" constant="744" type="user" id="2NJ-OP-YtC"/>
+                                    <constraint firstItem="RbU-Pj-PLD" firstAttribute="top" secondItem="Brx-pv-vFY" secondAttribute="top" type="user" id="3gb-hN-y0y"/>
+                                    <constraint firstItem="1qA-N8-t8e" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Brx-pv-vFY" secondAttribute="top" constant="225" type="user" id="6Pa-OU-Jcf"/>
                                     <constraint firstItem="wv7-fK-dyd" firstAttribute="leading" secondItem="Brx-pv-vFY" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="6wC-Y5-yiy"/>
+                                    <constraint firstItem="YwC-6t-faJ" firstAttribute="top" secondItem="Brx-pv-vFY" secondAttribute="top" constant="571" type="user" id="Bhd-dc-caX"/>
+                                    <constraint firstItem="RbU-Pj-PLD" firstAttribute="top" secondItem="Brx-pv-vFY" secondAttribute="top" type="user" id="D4V-PV-lxy"/>
                                     <constraint firstItem="Kj4-Hg-EgA" firstAttribute="leading" secondItem="Brx-pv-vFY" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Eyj-8i-Ge7"/>
-                                    <constraint firstItem="YwC-6t-faJ" firstAttribute="top" secondItem="fYn-BU-K23" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Gfs-P6-CPx"/>
+                                    <constraint firstItem="wv7-fK-dyd" firstAttribute="centerX" secondItem="Brx-pv-vFY" secondAttribute="centerX" type="default" id="Fhq-DP-uzV"/>
+                                    <constraint firstItem="YwC-6t-faJ" firstAttribute="top" secondItem="fYn-BU-K23" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="Gfs-P6-CPx"/>
+                                    <constraint firstItem="wv7-fK-dyd" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Brx-pv-vFY" secondAttribute="top" constant="254" type="user" id="Gql-zu-GrS"/>
                                     <constraint firstItem="PJu-qi-ejN" firstAttribute="leading" secondItem="Brx-pv-vFY" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="H5w-v2-8Dl"/>
-                                    <constraint firstItem="RYn-I0-EFX" firstAttribute="top" secondItem="61p-XX-gVE" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="M0T-ZW-7XH"/>
+                                    <constraint firstItem="1qA-N8-t8e" firstAttribute="top" secondItem="Brx-pv-vFY" secondAttribute="top" constant="225" type="user" id="Iua-Ld-KTp"/>
+                                    <constraint firstItem="RYn-I0-EFX" firstAttribute="top" secondItem="61p-XX-gVE" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="M0T-ZW-7XH"/>
                                     <constraint firstItem="RYn-I0-EFX" firstAttribute="leading" secondItem="Brx-pv-vFY" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="OaK-RS-9Yb"/>
-                                    <constraint firstItem="PJu-qi-ejN" firstAttribute="top" secondItem="YwC-6t-faJ" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="R6F-XT-Sbz"/>
+                                    <constraint firstItem="PJu-qi-ejN" firstAttribute="top" secondItem="Brx-pv-vFY" secondAttribute="top" constant="600" type="user" id="Pku-Db-Toy"/>
+                                    <constraint firstItem="PJu-qi-ejN" firstAttribute="top" secondItem="YwC-6t-faJ" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="R6F-XT-Sbz"/>
                                     <constraint firstItem="YwC-6t-faJ" firstAttribute="leading" secondItem="Brx-pv-vFY" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="SAr-sg-xxN"/>
+                                    <constraint firstItem="wv7-fK-dyd" firstAttribute="top" secondItem="Brx-pv-vFY" secondAttribute="top" constant="254" type="user" id="Uz1-uZ-UJm"/>
                                     <constraint firstAttribute="trailing" secondItem="RYn-I0-EFX" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="YF5-u9-HBe"/>
                                     <constraint firstAttribute="trailing" secondItem="1qA-N8-t8e" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Yab-gl-PUZ"/>
+                                    <constraint firstItem="YwC-6t-faJ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Brx-pv-vFY" secondAttribute="top" constant="571" type="user" id="cQ8-Ns-VsF"/>
                                     <constraint firstAttribute="trailing" secondItem="fYn-BU-K23" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="cnw-mW-nRk"/>
                                     <constraint firstAttribute="trailing" secondItem="YwC-6t-faJ" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="cte-Vj-c6x"/>
                                     <constraint firstAttribute="trailing" secondItem="Kj4-Hg-EgA" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="grT-el-dUg"/>
                                     <constraint firstAttribute="trailing" secondItem="PJu-qi-ejN" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="hK4-Vj-BFE"/>
                                     <constraint firstAttribute="trailing" secondItem="61p-XX-gVE" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="ieD-dM-N6V"/>
                                     <constraint firstAttribute="trailing" secondItem="wv7-fK-dyd" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="kjF-F3-azb"/>
-                                    <constraint firstItem="1qA-N8-t8e" firstAttribute="top" secondItem="RbU-Pj-PLD" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="lBk-x9-5N6"/>
-                                    <constraint firstItem="61p-XX-gVE" firstAttribute="top" secondItem="PJu-qi-ejN" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="ma2-L9-28j"/>
+                                    <constraint firstItem="1qA-N8-t8e" firstAttribute="top" secondItem="RbU-Pj-PLD" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="lBk-x9-5N6"/>
+                                    <constraint firstItem="61p-XX-gVE" firstAttribute="top" secondItem="PJu-qi-ejN" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="ma2-L9-28j"/>
                                     <constraint firstItem="RbU-Pj-PLD" firstAttribute="leading" secondItem="Brx-pv-vFY" secondAttribute="leading" type="default" id="nhf-K0-ANu"/>
                                     <constraint firstItem="RbU-Pj-PLD" firstAttribute="trailing" secondItem="Brx-pv-vFY" secondAttribute="trailing" type="default" id="oax-cI-DeE"/>
                                     <constraint firstAttribute="bottom" secondItem="RYn-I0-EFX" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="rKQ-cw-3PR"/>
-                                    <constraint firstItem="wv7-fK-dyd" firstAttribute="top" secondItem="1qA-N8-t8e" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="sQw-AD-fEc"/>
+                                    <constraint firstItem="wv7-fK-dyd" firstAttribute="top" secondItem="1qA-N8-t8e" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="sQw-AD-fEc"/>
                                     <constraint firstItem="61p-XX-gVE" firstAttribute="leading" secondItem="Brx-pv-vFY" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="sa6-1U-QHa"/>
+                                    <constraint firstItem="fYn-BU-K23" firstAttribute="top" secondItem="Brx-pv-vFY" secondAttribute="top" constant="427" type="user" id="tTP-TZ-9QN"/>
                                     <constraint firstItem="1qA-N8-t8e" firstAttribute="leading" secondItem="Brx-pv-vFY" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="u56-xC-gmv"/>
+                                    <constraint firstItem="Kj4-Hg-EgA" firstAttribute="top" secondItem="Brx-pv-vFY" secondAttribute="top" constant="398" type="user" id="uaw-s5-qsU"/>
+                                    <constraint firstItem="Kj4-Hg-EgA" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Brx-pv-vFY" secondAttribute="top" constant="398" type="user" id="w5B-J9-9Rz"/>
+                                    <constraint firstItem="RYn-I0-EFX" firstAttribute="top" secondItem="Brx-pv-vFY" secondAttribute="top" constant="773" type="user" id="wag-sA-bAb"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
