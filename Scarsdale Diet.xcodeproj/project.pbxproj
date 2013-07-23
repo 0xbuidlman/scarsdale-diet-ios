@@ -19,7 +19,6 @@
 		0C103363174CE407004C2ACC /* NSMutableArray+convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C103359174CE407004C2ACC /* NSMutableArray+convenience.m */; };
 		0C103364174CE407004C2ACC /* UIColor+expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C10335B174CE407004C2ACC /* UIColor+expanded.m */; };
 		0C103365174CE407004C2ACC /* UIView+convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C10335D174CE407004C2ACC /* UIView+convenience.m */; };
-		0C103366174CE407004C2ACC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C10335F174CE407004C2ACC /* ViewController.m */; };
 		0C103367174CE407004C2ACC /* VRGCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C103361174CE407004C2ACC /* VRGCalendarView.m */; };
 		0C17D9111758C1A3001520DC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C96D7471753A12B0043489C /* QuartzCore.framework */; };
 		0C17D9121758C319001520DC /* SDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C10334F174CE2A7004C2ACC /* SDViewController.m */; };
@@ -47,13 +46,13 @@
 		0CCE6584176B34B60039D470 /* Default-Landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CCE6583176B34B60039D470 /* Default-Landscape@2x~ipad.png */; };
 		0CCE6586176B35080039D470 /* 72.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CCE6585176B35080039D470 /* 72.png */; };
 		0CCE6588176B350C0039D470 /* 144.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CCE6587176B350C0039D470 /* 144.png */; };
-		0CCE658B176B39340039D470 /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CCE6589176B391B0039D470 /* Default-Portrait~ipad.png */; };
 		0CCE658D176B39380039D470 /* Default-Portrait@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CCE658C176B39380039D470 /* Default-Portrait@2x~ipad.png */; };
 		0CDDFD5C176661390011D0CA /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CDDFD5E176661390011D0CA /* MainStoryboard_iPad.storyboard */; };
 		0CF067BC1757BF9C009A93E0 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CF067BB1757BF9C009A93E0 /* SenTestingKit.framework */; };
 		0CF067BD1757BF9C009A93E0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C103333174CE2A7004C2ACC /* UIKit.framework */; };
 		0CF067BE1757BF9C009A93E0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C103335174CE2A7004C2ACC /* Foundation.framework */; };
 		0CF067C71757BF9D009A93E0 /* ScarsdaleDietLogicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF067C61757BF9D009A93E0 /* ScarsdaleDietLogicTests.m */; };
+		209D198A179F1E78003F23F9 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 209D1989179F1E78003F23F9 /* Default-Landscape~ipad.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,8 +77,6 @@
 		0C10335B174CE407004C2ACC /* UIColor+expanded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+expanded.m"; path = "Scarsdale Diet/UIColor+expanded.m"; sourceTree = "<group>"; };
 		0C10335C174CE407004C2ACC /* UIView+convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+convenience.h"; path = "Scarsdale Diet/UIView+convenience.h"; sourceTree = "<group>"; };
 		0C10335D174CE407004C2ACC /* UIView+convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+convenience.m"; path = "Scarsdale Diet/UIView+convenience.m"; sourceTree = "<group>"; };
-		0C10335E174CE407004C2ACC /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = "Scarsdale Diet/ViewController.h"; sourceTree = "<group>"; };
-		0C10335F174CE407004C2ACC /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = "Scarsdale Diet/ViewController.m"; sourceTree = "<group>"; };
 		0C103360174CE407004C2ACC /* VRGCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VRGCalendarView.h; path = "Scarsdale Diet/VRGCalendarView.h"; sourceTree = "<group>"; };
 		0C103361174CE407004C2ACC /* VRGCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VRGCalendarView.m; path = "Scarsdale Diet/VRGCalendarView.m"; sourceTree = "<group>"; };
 		0C4AA7C8175FCF7400F99051 /* bg */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bg; path = bg.lproj/MainStoryboard.strings; sourceTree = "<group>"; };
@@ -113,7 +110,6 @@
 		0CCE6583176B34B60039D470 /* Default-Landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape@2x~ipad.png"; path = "../Default-Landscape@2x~ipad.png"; sourceTree = "<group>"; };
 		0CCE6585176B35080039D470 /* 72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 72.png; path = ../72.png; sourceTree = "<group>"; };
 		0CCE6587176B350C0039D470 /* 144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 144.png; path = ../144.png; sourceTree = "<group>"; };
-		0CCE6589176B391B0039D470 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
 		0CCE658C176B39380039D470 /* Default-Portrait@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait@2x~ipad.png"; sourceTree = "<group>"; };
 		0CDDFD5F1766613F0011D0CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		0CDDFD61176661440011D0CA /* bg */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bg; path = bg.lproj/MainStoryboard_iPad.strings; sourceTree = "<group>"; };
@@ -124,6 +120,7 @@
 		0CF067C51757BF9D009A93E0 /* ScarsdaleDietLogicTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScarsdaleDietLogicTests.h; sourceTree = "<group>"; };
 		0CF067C61757BF9D009A93E0 /* ScarsdaleDietLogicTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScarsdaleDietLogicTests.m; sourceTree = "<group>"; };
 		0CF067C81757BF9D009A93E0 /* ScarsdaleDietLogicTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ScarsdaleDietLogicTests-Prefix.pch"; sourceTree = "<group>"; };
+		209D1989179F1E78003F23F9 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,8 +179,8 @@
 		0C103327174CE2A7004C2ACC = {
 			isa = PBXGroup;
 			children = (
+				209D1989179F1E78003F23F9 /* Default-Landscape~ipad.png */,
 				0CCE658C176B39380039D470 /* Default-Portrait@2x~ipad.png */,
-				0CCE6589176B391B0039D470 /* Default-Portrait~ipad.png */,
 				0C754C0A175FF5B50070B774 /* Settings.bundle */,
 				0C96D7471753A12B0043489C /* QuartzCore.framework */,
 				0C103339174CE2A7004C2ACC /* Scarsdale Diet */,
@@ -257,8 +254,6 @@
 				0C10335B174CE407004C2ACC /* UIColor+expanded.m */,
 				0C10335C174CE407004C2ACC /* UIView+convenience.h */,
 				0C10335D174CE407004C2ACC /* UIView+convenience.m */,
-				0C10335E174CE407004C2ACC /* ViewController.h */,
-				0C10335F174CE407004C2ACC /* ViewController.m */,
 				0C103360174CE407004C2ACC /* VRGCalendarView.h */,
 				0C103361174CE407004C2ACC /* VRGCalendarView.m */,
 			);
@@ -389,6 +384,7 @@
 				0C88925C1750A7F800AAAC64 /* fruit_salad.jpg in Resources */,
 				0C88925E1750A9C300AAAC64 /* eggs.jpg in Resources */,
 				0C8892601750AAE000AAAC64 /* tomatoes_lettuce.jpg in Resources */,
+				209D198A179F1E78003F23F9 /* Default-Landscape~ipad.png in Resources */,
 				0C8892671752084A00AAAC64 /* 57.png in Resources */,
 				0C8892691752084F00AAAC64 /* 114.png in Resources */,
 				0C88926B17520F4700AAAC64 /* Default-568h@2x.png in Resources */,
@@ -403,7 +399,6 @@
 				0CCE6584176B34B60039D470 /* Default-Landscape@2x~ipad.png in Resources */,
 				0CCE6586176B35080039D470 /* 72.png in Resources */,
 				0CCE6588176B350C0039D470 /* 144.png in Resources */,
-				0CCE658B176B39340039D470 /* Default-Portrait~ipad.png in Resources */,
 				0CCE658D176B39380039D470 /* Default-Portrait@2x~ipad.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -445,7 +440,6 @@
 				0C103363174CE407004C2ACC /* NSMutableArray+convenience.m in Sources */,
 				0C103364174CE407004C2ACC /* UIColor+expanded.m in Sources */,
 				0C103365174CE407004C2ACC /* UIView+convenience.m in Sources */,
-				0C103366174CE407004C2ACC /* ViewController.m in Sources */,
 				0C103367174CE407004C2ACC /* VRGCalendarView.m in Sources */,
 				0C88924C174FA67000AAAC64 /* SDDietDayDetailsViewController.m in Sources */,
 				0C0220481761ED6400896649 /* SDViewControlleriPad.m in Sources */,
