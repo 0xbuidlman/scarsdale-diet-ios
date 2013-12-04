@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch.iPad" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES" initialViewController="pKz-gn-eA3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="pKz-gn-eA3">
     <dependencies>
         <deployment defaultVersion="1552" identifier="iOS"/>
-        <development version="4600" identifier="xcode"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
@@ -25,12 +24,16 @@
         <scene sceneID="ZLV-bp-fuD">
             <objects>
                 <viewController storyboardIdentifier="DetailView" id="DAj-pn-Fus" customClass="SDDietDayDetailsViewControlleriPad" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qqh-Qy-ptJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Bfc-Rl-u21"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="4QX-VK-e1b">
-                        <rect key="frame" x="0.0" y="64" width="703" height="932"/>
+                        <rect key="frame" x="0.0" y="0.0" width="703" height="980"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Please, select start date for your diet and select a day from the diet." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="403" translatesAutoresizingMaskIntoConstraints="NO" id="XUh-bL-myv">
-                                <rect key="frame" x="151" y="330" width="403" height="68"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="Please, select start date for your diet and select a day from the diet." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="403" translatesAutoresizingMaskIntoConstraints="NO" id="XUh-bL-myv">
+                                <rect key="frame" x="151" y="348" width="403" height="68"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="403" id="3WG-aF-fAc"/>
                                     <constraint firstAttribute="height" constant="68" id="K0D-gv-dNL"/>
@@ -39,14 +42,13 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9oa-on-frY">
-                                <rect key="frame" x="0.0" y="0.0" width="703" height="932"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9oa-on-frY">
+                                <rect key="frame" x="0.0" y="64" width="703" height="932"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JoQ-6k-B3v">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JoQ-6k-B3v">
                                         <rect key="frame" x="151" y="16" width="402" height="240"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="240" id="NwH-2j-X5z"/>
-                                            <constraint firstAttribute="width" constant="402" id="bkG-br-0RJ"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Breakfast" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uMX-dG-n1a">
@@ -55,7 +57,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lpd-r3-N3K">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lpd-r3-N3K">
                                         <rect key="frame" x="151" y="294" width="402" height="96"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -67,7 +69,7 @@ coffee or tea without sugar, cream or milk</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DHY-QC-ZQN">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DHY-QC-ZQN">
                                         <rect key="frame" x="151" y="425" width="402" height="120"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -77,7 +79,7 @@ coffee or tea without sugar, cream or milk</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wLV-J6-JUL">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wLV-J6-JUL">
                                         <rect key="frame" x="151" y="744" width="402" height="173"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -92,7 +94,7 @@ coffee, tea, soda water with a little lemon</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWW-aV-Gs4">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWW-aV-Gs4">
                                         <rect key="frame" x="151" y="586" width="402" height="120"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -122,40 +124,39 @@ coffee, tea, soda water with a little lemon</string>
                                     </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="DHY-QC-ZQN" firstAttribute="trailing" secondItem="Lpd-r3-N3K" secondAttribute="trailing" type="default" id="3Eb-OZ-KqJ"/>
-                                    <constraint firstItem="uMX-dG-n1a" firstAttribute="top" secondItem="JoQ-6k-B3v" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="5fJ-6c-Ese"/>
-                                    <constraint firstItem="bbr-ln-6fM" firstAttribute="leading" secondItem="DHY-QC-ZQN" secondAttribute="leading" type="default" id="7q9-05-ocy"/>
+                                    <constraint firstItem="DHY-QC-ZQN" firstAttribute="trailing" secondItem="Lpd-r3-N3K" secondAttribute="trailing" id="3Eb-OZ-KqJ"/>
+                                    <constraint firstItem="uMX-dG-n1a" firstAttribute="top" secondItem="JoQ-6k-B3v" secondAttribute="bottom" constant="8" symbolic="YES" id="5fJ-6c-Ese"/>
+                                    <constraint firstItem="bbr-ln-6fM" firstAttribute="leading" secondItem="DHY-QC-ZQN" secondAttribute="leading" id="7q9-05-ocy"/>
                                     <constraint firstItem="bbr-ln-6fM" firstAttribute="top" secondItem="9oa-on-frY" secondAttribute="top" constant="555" id="8wN-LZ-gNM"/>
                                     <constraint firstItem="DHY-QC-ZQN" firstAttribute="top" secondItem="9oa-on-frY" secondAttribute="top" constant="425" id="DdI-ci-lnr"/>
                                     <constraint firstAttribute="bottom" secondItem="wLV-J6-JUL" secondAttribute="bottom" constant="15" id="Ee6-fk-3Ky"/>
-                                    <constraint firstItem="DWW-aV-Gs4" firstAttribute="trailing" secondItem="DHY-QC-ZQN" secondAttribute="trailing" type="default" id="FVL-WW-XL9"/>
-                                    <constraint firstItem="wLV-J6-JUL" firstAttribute="top" secondItem="EhD-Fh-f8a" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="FlR-Hn-sql"/>
-                                    <constraint firstItem="t7v-18-eRe" firstAttribute="leading" secondItem="Lpd-r3-N3K" secondAttribute="leading" type="default" id="HXd-bg-3y9"/>
+                                    <constraint firstItem="wLV-J6-JUL" firstAttribute="top" secondItem="EhD-Fh-f8a" secondAttribute="bottom" constant="8" symbolic="YES" id="FlR-Hn-sql"/>
+                                    <constraint firstItem="t7v-18-eRe" firstAttribute="leading" secondItem="Lpd-r3-N3K" secondAttribute="leading" id="HXd-bg-3y9"/>
                                     <constraint firstItem="Lpd-r3-N3K" firstAttribute="top" secondItem="9oa-on-frY" secondAttribute="top" constant="294" id="J5D-vc-Vvo"/>
-                                    <constraint firstItem="EhD-Fh-f8a" firstAttribute="leading" secondItem="DWW-aV-Gs4" secondAttribute="leading" type="default" id="Jq3-lK-nwY"/>
-                                    <constraint firstItem="Lpd-r3-N3K" firstAttribute="trailing" secondItem="JoQ-6k-B3v" secondAttribute="trailing" type="default" id="NMJ-pK-Mio"/>
-                                    <constraint firstItem="EhD-Fh-f8a" firstAttribute="leading" secondItem="wLV-J6-JUL" secondAttribute="leading" type="default" id="PcC-xn-7ap"/>
+                                    <constraint firstItem="EhD-Fh-f8a" firstAttribute="leading" secondItem="DWW-aV-Gs4" secondAttribute="leading" id="Jq3-lK-nwY"/>
+                                    <constraint firstItem="Lpd-r3-N3K" firstAttribute="trailing" secondItem="JoQ-6k-B3v" secondAttribute="trailing" id="NMJ-pK-Mio"/>
+                                    <constraint firstItem="EhD-Fh-f8a" firstAttribute="leading" secondItem="wLV-J6-JUL" secondAttribute="leading" id="PcC-xn-7ap"/>
                                     <constraint firstItem="JoQ-6k-B3v" firstAttribute="top" secondItem="9oa-on-frY" secondAttribute="top" constant="16" id="UUq-Aa-blB"/>
-                                    <constraint firstItem="DWW-aV-Gs4" firstAttribute="leading" secondItem="bbr-ln-6fM" secondAttribute="leading" type="default" id="Yep-xQ-PY3"/>
+                                    <constraint firstItem="DWW-aV-Gs4" firstAttribute="leading" secondItem="bbr-ln-6fM" secondAttribute="leading" id="Yep-xQ-PY3"/>
                                     <constraint firstItem="EhD-Fh-f8a" firstAttribute="top" secondItem="9oa-on-frY" secondAttribute="top" constant="715" id="bef-Mn-WbV"/>
-                                    <constraint firstItem="JoQ-6k-B3v" firstAttribute="leading" secondItem="uMX-dG-n1a" secondAttribute="leading" type="default" id="dtY-OF-ruT"/>
+                                    <constraint firstItem="JoQ-6k-B3v" firstAttribute="leading" secondItem="uMX-dG-n1a" secondAttribute="leading" id="dtY-OF-ruT"/>
                                     <constraint firstItem="t7v-18-eRe" firstAttribute="top" secondItem="9oa-on-frY" secondAttribute="top" constant="394" id="eJO-aP-irZ"/>
-                                    <constraint firstItem="DHY-QC-ZQN" firstAttribute="leading" secondItem="t7v-18-eRe" secondAttribute="leading" type="default" id="jDe-hD-DzZ"/>
-                                    <constraint firstItem="Lpd-r3-N3K" firstAttribute="leading" secondItem="uMX-dG-n1a" secondAttribute="leading" type="default" id="mAK-r6-bov"/>
+                                    <constraint firstItem="DHY-QC-ZQN" firstAttribute="leading" secondItem="t7v-18-eRe" secondAttribute="leading" id="jDe-hD-DzZ"/>
+                                    <constraint firstItem="Lpd-r3-N3K" firstAttribute="leading" secondItem="uMX-dG-n1a" secondAttribute="leading" id="mAK-r6-bov"/>
                                     <constraint firstItem="JoQ-6k-B3v" firstAttribute="leading" secondItem="9oa-on-frY" secondAttribute="leading" constant="151" id="rwc-06-kkw"/>
                                     <constraint firstAttribute="trailing" secondItem="JoQ-6k-B3v" secondAttribute="trailing" constant="150" id="sB1-LU-8K1"/>
-                                    <constraint firstItem="DWW-aV-Gs4" firstAttribute="trailing" secondItem="wLV-J6-JUL" secondAttribute="trailing" type="default" id="xPt-jt-6Rk"/>
+                                    <constraint firstItem="DWW-aV-Gs4" firstAttribute="trailing" secondItem="wLV-J6-JUL" secondAttribute="trailing" id="xPt-jt-6Rk"/>
                                     <constraint firstItem="DWW-aV-Gs4" firstAttribute="top" secondItem="9oa-on-frY" secondAttribute="top" constant="586" id="zzV-9V-qeZ"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="9oa-on-frY" firstAttribute="trailing" secondItem="4QX-VK-e1b" secondAttribute="trailing" type="default" id="APl-Is-OVm"/>
+                            <constraint firstItem="9oa-on-frY" firstAttribute="trailing" secondItem="4QX-VK-e1b" secondAttribute="trailing" id="APl-Is-OVm"/>
                             <constraint firstItem="XUh-bL-myv" firstAttribute="top" secondItem="4QX-VK-e1b" secondAttribute="top" constant="330" id="JX1-JU-WXM"/>
-                            <constraint firstItem="9oa-on-frY" firstAttribute="bottom" secondItem="4QX-VK-e1b" secondAttribute="bottom" type="default" id="ZLr-GX-cKp"/>
-                            <constraint firstItem="9oa-on-frY" firstAttribute="leading" secondItem="4QX-VK-e1b" secondAttribute="leading" type="default" id="qez-v5-eXe"/>
-                            <constraint firstItem="9oa-on-frY" firstAttribute="top" secondItem="4QX-VK-e1b" secondAttribute="top" type="default" id="r9g-qz-XiV"/>
+                            <constraint firstItem="9oa-on-frY" firstAttribute="bottom" secondItem="4QX-VK-e1b" secondAttribute="bottom" id="ZLr-GX-cKp"/>
+                            <constraint firstItem="9oa-on-frY" firstAttribute="leading" secondItem="4QX-VK-e1b" secondAttribute="leading" id="qez-v5-eXe"/>
+                            <constraint firstItem="9oa-on-frY" firstAttribute="top" secondItem="4QX-VK-e1b" secondAttribute="top" id="r9g-qz-XiV"/>
                             <constraint firstItem="XUh-bL-myv" firstAttribute="leading" secondItem="4QX-VK-e1b" secondAttribute="leading" constant="151" id="uCf-dE-quc"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -202,21 +203,40 @@ coffee, tea, soda water with a little lemon</string>
         <scene sceneID="8Mt-sV-T0F">
             <objects>
                 <viewController id="Yyi-Xe-E0A" customClass="SDViewControlleriPad" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FxJ-ry-5uC"/>
+                        <viewControllerLayoutGuide type="bottom" id="QHF-P7-CrX"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="qOY-IK-ePS">
-                        <rect key="frame" x="0.0" y="64" width="320" height="704"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TIs-RE-vgn">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                                <rect key="frame" x="0.0" y="36" width="320" height="524"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bm0-UD-fKZ">
+                                        <rect key="frame" x="0.0" y="-37" width="320" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="128" id="CXC-uP-yno"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="Bm0-UD-fKZ" firstAttribute="top" secondItem="TIs-RE-vgn" secondAttribute="top" constant="-37" id="KEB-Dq-s3v"/>
+                                    <constraint firstAttribute="trailing" secondItem="Bm0-UD-fKZ" secondAttribute="trailing" id="q1u-Me-Vvw"/>
+                                    <constraint firstItem="Bm0-UD-fKZ" firstAttribute="leading" secondItem="TIs-RE-vgn" secondAttribute="leading" id="qXg-8S-NfF"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="TIs-RE-vgn" firstAttribute="leading" secondItem="qOY-IK-ePS" secondAttribute="leading" type="default" id="azz-V8-VnO"/>
-                            <constraint firstItem="TIs-RE-vgn" firstAttribute="trailing" secondItem="qOY-IK-ePS" secondAttribute="trailing" type="default" id="d5g-6P-vT8"/>
-                            <constraint firstItem="TIs-RE-vgn" firstAttribute="top" secondItem="qOY-IK-ePS" secondAttribute="top" type="default" id="gt9-0y-2EH"/>
-                            <constraint firstAttribute="bottom" secondItem="TIs-RE-vgn" secondAttribute="bottom" constant="244" id="pgo-vs-cJK"/>
+                            <constraint firstAttribute="bottom" secondItem="TIs-RE-vgn" secondAttribute="bottom" constant="208" id="1Cx-ay-cHO"/>
+                            <constraint firstItem="TIs-RE-vgn" firstAttribute="leading" secondItem="qOY-IK-ePS" secondAttribute="leading" id="azz-V8-VnO"/>
+                            <constraint firstItem="TIs-RE-vgn" firstAttribute="trailing" secondItem="qOY-IK-ePS" secondAttribute="trailing" id="d5g-6P-vT8"/>
+                            <constraint firstItem="TIs-RE-vgn" firstAttribute="top" secondItem="qOY-IK-ePS" secondAttribute="top" constant="36" id="eSd-pQ-wdV"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
@@ -247,7 +267,7 @@ coffee, tea, soda water with a little lemon</string>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
+        <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
