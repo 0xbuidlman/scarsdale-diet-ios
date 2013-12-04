@@ -14,15 +14,8 @@
 		0C103340174CE2A7004C2ACC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C10333F174CE2A7004C2ACC /* main.m */; };
 		0C103344174CE2A7004C2ACC /* SDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C103343174CE2A7004C2ACC /* SDAppDelegate.m */; };
 		0C10334D174CE2A7004C2ACC /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C10334B174CE2A7004C2ACC /* MainStoryboard.storyboard */; };
-		0C103350174CE2A7004C2ACC /* SDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C10334F174CE2A7004C2ACC /* SDViewController.m */; };
-		0C103362174CE407004C2ACC /* NSDate+convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C103357174CE407004C2ACC /* NSDate+convenience.m */; };
-		0C103363174CE407004C2ACC /* NSMutableArray+convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C103359174CE407004C2ACC /* NSMutableArray+convenience.m */; };
-		0C103364174CE407004C2ACC /* UIColor+expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C10335B174CE407004C2ACC /* UIColor+expanded.m */; };
-		0C103365174CE407004C2ACC /* UIView+convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C10335D174CE407004C2ACC /* UIView+convenience.m */; };
-		0C103367174CE407004C2ACC /* VRGCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C103361174CE407004C2ACC /* VRGCalendarView.m */; };
 		0C17D9111758C1A3001520DC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C96D7471753A12B0043489C /* QuartzCore.framework */; };
 		0C17D9121758C319001520DC /* SDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C10334F174CE2A7004C2ACC /* SDViewController.m */; };
-		0C17D9131758C337001520DC /* VRGCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C103361174CE407004C2ACC /* VRGCalendarView.m */; };
 		0C17D9141758C496001520DC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C103337174CE2A7004C2ACC /* CoreGraphics.framework */; };
 		0C651EE0175F79CA00A0F01C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0C651EE2175F79CA00A0F01C /* Localizable.strings */; };
 		0C651EE4175F7D4B00A0F01C /* diet-info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C651EE6175F7D4B00A0F01C /* diet-info.plist */; };
@@ -48,11 +41,13 @@
 		0CCE6588176B350C0039D470 /* 144.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CCE6587176B350C0039D470 /* 144.png */; };
 		0CCE658D176B39380039D470 /* Default-Portrait@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CCE658C176B39380039D470 /* Default-Portrait@2x~ipad.png */; };
 		0CDDFD5C176661390011D0CA /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CDDFD5E176661390011D0CA /* MainStoryboard_iPad.storyboard */; };
+		0CE74035184E7774005F6265 /* SDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C10334F174CE2A7004C2ACC /* SDViewController.m */; };
 		0CF067BC1757BF9C009A93E0 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CF067BB1757BF9C009A93E0 /* SenTestingKit.framework */; };
 		0CF067BD1757BF9C009A93E0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C103333174CE2A7004C2ACC /* UIKit.framework */; };
 		0CF067BE1757BF9C009A93E0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C103335174CE2A7004C2ACC /* Foundation.framework */; };
 		0CF067C71757BF9D009A93E0 /* ScarsdaleDietLogicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF067C61757BF9D009A93E0 /* ScarsdaleDietLogicTests.m */; };
 		209D198A179F1E78003F23F9 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 209D1989179F1E78003F23F9 /* Default-Landscape~ipad.png */; };
+		7AC91BB54EAE4506A5788697 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 991AC2B1A1004DD4BF61466B /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,16 +64,6 @@
 		0C103343174CE2A7004C2ACC /* SDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDAppDelegate.m; sourceTree = "<group>"; };
 		0C10334E174CE2A7004C2ACC /* SDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDViewController.h; sourceTree = "<group>"; };
 		0C10334F174CE2A7004C2ACC /* SDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDViewController.m; sourceTree = "<group>"; };
-		0C103356174CE407004C2ACC /* NSDate+convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+convenience.h"; path = "Scarsdale Diet/NSDate+convenience.h"; sourceTree = "<group>"; };
-		0C103357174CE407004C2ACC /* NSDate+convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+convenience.m"; path = "Scarsdale Diet/NSDate+convenience.m"; sourceTree = "<group>"; };
-		0C103358174CE407004C2ACC /* NSMutableArray+convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+convenience.h"; path = "Scarsdale Diet/NSMutableArray+convenience.h"; sourceTree = "<group>"; };
-		0C103359174CE407004C2ACC /* NSMutableArray+convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+convenience.m"; path = "Scarsdale Diet/NSMutableArray+convenience.m"; sourceTree = "<group>"; };
-		0C10335A174CE407004C2ACC /* UIColor+expanded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+expanded.h"; path = "Scarsdale Diet/UIColor+expanded.h"; sourceTree = "<group>"; };
-		0C10335B174CE407004C2ACC /* UIColor+expanded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+expanded.m"; path = "Scarsdale Diet/UIColor+expanded.m"; sourceTree = "<group>"; };
-		0C10335C174CE407004C2ACC /* UIView+convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+convenience.h"; path = "Scarsdale Diet/UIView+convenience.h"; sourceTree = "<group>"; };
-		0C10335D174CE407004C2ACC /* UIView+convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+convenience.m"; path = "Scarsdale Diet/UIView+convenience.m"; sourceTree = "<group>"; };
-		0C103360174CE407004C2ACC /* VRGCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VRGCalendarView.h; path = "Scarsdale Diet/VRGCalendarView.h"; sourceTree = "<group>"; };
-		0C103361174CE407004C2ACC /* VRGCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VRGCalendarView.m; path = "Scarsdale Diet/VRGCalendarView.m"; sourceTree = "<group>"; };
 		0C4AA7C8175FCF7400F99051 /* bg */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bg; path = bg.lproj/MainStoryboard.strings; sourceTree = "<group>"; };
 		0C4AA7C9175FCF7400F99051 /* bg */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bg; path = bg.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0C4AA7CB175FCF7400F99051 /* bg */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = bg; path = "bg.lproj/diet-info.plist"; sourceTree = "<group>"; };
@@ -121,6 +106,8 @@
 		0CF067C61757BF9D009A93E0 /* ScarsdaleDietLogicTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScarsdaleDietLogicTests.m; sourceTree = "<group>"; };
 		0CF067C81757BF9D009A93E0 /* ScarsdaleDietLogicTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ScarsdaleDietLogicTests-Prefix.pch"; sourceTree = "<group>"; };
 		209D1989179F1E78003F23F9 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
+		991AC2B1A1004DD4BF61466B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B27124DD860B4D73ADD1FB6D /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +119,7 @@
 				0C103334174CE2A7004C2ACC /* UIKit.framework in Frameworks */,
 				0C103336174CE2A7004C2ACC /* Foundation.framework in Frameworks */,
 				0C103338174CE2A7004C2ACC /* CoreGraphics.framework in Frameworks */,
+				7AC91BB54EAE4506A5788697 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,6 +175,7 @@
 				0CF067BF1757BF9C009A93E0 /* ScarsdaleDietLogicTests */,
 				0C103332174CE2A7004C2ACC /* Frameworks */,
 				0C103331174CE2A7004C2ACC /* Products */,
+				B27124DD860B4D73ADD1FB6D /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -206,6 +195,7 @@
 				0C103335174CE2A7004C2ACC /* Foundation.framework */,
 				0C103337174CE2A7004C2ACC /* CoreGraphics.framework */,
 				0CF067BB1757BF9C009A93E0 /* SenTestingKit.framework */,
+				991AC2B1A1004DD4BF61466B /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -216,7 +206,6 @@
 				0C0220101761C9C200896649 /* Views */,
 				0C02200F1761C9AF00896649 /* Classes */,
 				0C651EDA175F76FE00A0F01C /* Resources */,
-				0C103368174CE412004C2ACC /* Calendar */,
 				0C10333A174CE2A7004C2ACC /* Supporting Files */,
 			);
 			path = "Scarsdale Diet";
@@ -241,24 +230,6 @@
 				0C651EE6175F7D4B00A0F01C /* diet-info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		0C103368174CE412004C2ACC /* Calendar */ = {
-			isa = PBXGroup;
-			children = (
-				0C103356174CE407004C2ACC /* NSDate+convenience.h */,
-				0C103357174CE407004C2ACC /* NSDate+convenience.m */,
-				0C103358174CE407004C2ACC /* NSMutableArray+convenience.h */,
-				0C103359174CE407004C2ACC /* NSMutableArray+convenience.m */,
-				0C10335A174CE407004C2ACC /* UIColor+expanded.h */,
-				0C10335B174CE407004C2ACC /* UIColor+expanded.m */,
-				0C10335C174CE407004C2ACC /* UIView+convenience.h */,
-				0C10335D174CE407004C2ACC /* UIView+convenience.m */,
-				0C103360174CE407004C2ACC /* VRGCalendarView.h */,
-				0C103361174CE407004C2ACC /* VRGCalendarView.m */,
-			);
-			name = Calendar;
-			path = ..;
 			sourceTree = "<group>";
 		};
 		0C651EDA175F76FE00A0F01C /* Resources */ = {
@@ -309,9 +280,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0C103353174CE2A7004C2ACC /* Build configuration list for PBXNativeTarget "Scarsdale Diet" */;
 			buildPhases = (
+				5E2A375B4ADA405DAE54718A /* Check Pods Manifest.lock */,
 				0C10332C174CE2A7004C2ACC /* Sources */,
 				0C10332D174CE2A7004C2ACC /* Frameworks */,
 				0C10332E174CE2A7004C2ACC /* Resources */,
+				7B3E0F38273F421099359D7B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -426,6 +399,36 @@
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
+		5E2A375B4ADA405DAE54718A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7B3E0F38273F421099359D7B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -434,13 +437,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C103340174CE2A7004C2ACC /* main.m in Sources */,
+				0CE74035184E7774005F6265 /* SDViewController.m in Sources */,
 				0C103344174CE2A7004C2ACC /* SDAppDelegate.m in Sources */,
-				0C103350174CE2A7004C2ACC /* SDViewController.m in Sources */,
-				0C103362174CE407004C2ACC /* NSDate+convenience.m in Sources */,
-				0C103363174CE407004C2ACC /* NSMutableArray+convenience.m in Sources */,
-				0C103364174CE407004C2ACC /* UIColor+expanded.m in Sources */,
-				0C103365174CE407004C2ACC /* UIView+convenience.m in Sources */,
-				0C103367174CE407004C2ACC /* VRGCalendarView.m in Sources */,
 				0C88924C174FA67000AAAC64 /* SDDietDayDetailsViewController.m in Sources */,
 				0C0220481761ED6400896649 /* SDViewControlleriPad.m in Sources */,
 				0CB9727F1767300100900D5E /* SDDietDayDetailsViewControlleriPad.m in Sources */,
@@ -451,7 +449,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C17D9131758C337001520DC /* VRGCalendarView.m in Sources */,
 				0C17D9121758C319001520DC /* SDViewController.m in Sources */,
 				0CF067C71757BF9D009A93E0 /* ScarsdaleDietLogicTests.m in Sources */,
 			);
@@ -529,7 +526,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "E9E6D447-9D40-4011-A27C-42DC08EAFA52";
 				SDKROOT = iphoneos;
@@ -555,7 +552,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PROVISIONING_PROFILE = "E9E6D447-9D40-4011-A27C-42DC08EAFA52";
 				SDKROOT = iphoneos;
@@ -565,30 +562,44 @@
 		};
 		0C103354174CE2A7004C2ACC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B27124DD860B4D73ADD1FB6D /* Pods.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Mihail Velikov (Q59675477H)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Scarsdale Diet/Scarsdale Diet-Prefix.pch";
 				INFOPLIST_FILE = "Scarsdale Diet/Scarsdale Diet-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "E9E6D447-9D40-4011-A27C-42DC08EAFA52";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "../Vurig-Calendar/Vurig\\ Calendar/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
 		0C103355174CE2A7004C2ACC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B27124DD860B4D73ADD1FB6D /* Pods.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Mihail Velikov (Q59675477H)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Scarsdale Diet/Scarsdale Diet-Prefix.pch";
 				INFOPLIST_FILE = "Scarsdale Diet/Scarsdale Diet-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "E9E6D447-9D40-4011-A27C-42DC08EAFA52";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "../Vurig-Calendar/Vurig\\ Calendar/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -2,12 +2,16 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>987FE4BD-A413-49DA-882E-C6462870F93D</string>
 	<key>IDESourceControlProjectName</key>
 	<string>Scarsdale Diet</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>4D458414-C495-41FA-82DD-D33246082801</key>
+		<string>ssh://github.com/mvelikov/Vurig-Calendar.git</string>
 		<key>53383804-E74D-4084-9B94-88B800C5E388</key>
 		<string>ssh://github.com/mvelikov/scarsdale-diet-ios.git</string>
 	</dict>
@@ -15,6 +19,8 @@
 	<string>Scarsdale Diet.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>4D458414-C495-41FA-82DD-D33246082801</key>
+		<string>../../../Vurig-Calendar</string>
 		<key>53383804-E74D-4084-9B94-88B800C5E388</key>
 		<string>../..</string>
 	</dict>
@@ -33,6 +39,14 @@
 			<string>53383804-E74D-4084-9B94-88B800C5E388</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Scarsdale Diet</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>4D458414-C495-41FA-82DD-D33246082801</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Vurig-Calendar</string>
 		</dict>
 	</array>
 </dict>

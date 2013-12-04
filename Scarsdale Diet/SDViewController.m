@@ -20,6 +20,18 @@
 
 - (void)viewDidLoad
 {
+    CGRect applicationFrame = [[UIScreen mainScreen] applicationFrame];
+//    CGRect applicationFrame = CGRectMake(0, 100, 320, 300);
+    int topCalendarPadding = 64;
+    applicationFrame.origin.y = topCalendarPadding;
+    applicationFrame.size.height -= topCalendarPadding;
+    _calendarViewObj = [[RDVCalendarView alloc] initWithFrame:applicationFrame];
+    [_calendarView setAutoresizingMask:UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight];
+    [_calendarViewObj setSeparatorStyle:RDVCalendarViewDayCellSeparatorStyleHorizontal];
+    [_calendarViewObj setBackgroundColor:[UIColor whiteColor]];
+    [_calendarViewObj setDelegate:self];
+//    _calendarView = _calendarViewObj;
+    [[self view] addSubview:_calendarViewObj];
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 
@@ -27,13 +39,13 @@
     
     self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:10/255.0f green:145/255.0f blue:5/255.0f alpha:1];
     
-    if (self.calendar == nil) {
-        self.calendar = [[VRGCalendarView alloc] init];
-        self.calendar.delegate = self;
-
-    }
-    
-    [self.calendarView addSubview:self.calendar];
+//    if (self.calendar == nil) {
+////        self.calendar = [[VRGCalendarView alloc] init];
+//        self.calendar.delegate = self;
+//
+//    }
+//    
+//    [self.calendarView addSubview:self.calendar];
 
     if (!self.dietDaysInfoDictionary) {
         NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"diet-info" ofType:@"plist"];
@@ -177,7 +189,7 @@
     [defaults setObject:nil forKey:@"dietStart"];
     [defaults synchronize];
     self.dietDays = nil;
-    [self.calendar markDates:nil];
+//    [self.calendar markDates:nil];
     
     [self showStartButton];
 }
@@ -204,7 +216,7 @@
     [defaults synchronize];
     
     [self.datePicker removeFromSuperview];
-    [self.calendar markDates:[self markDietDays:self.calendar.currentMonth]];
+//    [self.calendar markDates:[self markDietDays:self.calendar.currentMonth]];
     
     [self showClearButton];
 }
@@ -279,7 +291,7 @@
 
             [dates addObject:[NSNumber numberWithInt:[comps day]]];
         }
-        [self.calendar markDates:dates];
+//        [self.calendar markDates:dates];
 
     }
     
@@ -305,39 +317,39 @@
 /**
  * Delegates switching months event. Used to prepopulate diet days.
  */
--(void)calendarView:(VRGCalendarView *)calendarView switchedToMonth:(int)month targetHeight:(float)targetHeight animated:(BOOL)animated {
-    
-    if (!self.dietDays && self.dietStart) {
-        self.dietDays = [self settingDietDays];
-    }
-    
-    NSString *currentMonthString = [NSString stringWithFormat:@"%i", month];
-    
-    if ([self.dietDays objectForKey:currentMonthString]) {
-        
-        NSCalendar *cal = [NSCalendar currentCalendar];
-        NSDateComponents *comps;
-        NSMutableArray *dates = [NSMutableArray array];
-        
-        for (id aDate in [self.dietDays objectForKey:currentMonthString]) {
-            comps = [cal components:[self getUnitFlags] fromDate:aDate];
-            
-            [dates addObject:[NSNumber numberWithInt:[comps day]]];
-        }
-
-//        NSArray *dates = [NSArray arrayWithObjects:[NSNumber numberWithInt:1],[NSNumber numberWithInt:5], nil];
-        [calendarView markDates:dates];
-    }
-}
-
--(void)calendarView:(VRGCalendarView *)calendarView dateSelected:(NSDate *)date {
-
-    if ([self isDietDay:date]) {
-
-        [self performSegueWithIdentifier:@"SegueSelectDietDayToShowDetails" sender:date];
-    }
-    
-}
+//-(void)calendarView:(VRGCalendarView *)calendarView switchedToMonth:(int)month targetHeight:(float)targetHeight animated:(BOOL)animated {
+//    
+//    if (!self.dietDays && self.dietStart) {
+//        self.dietDays = [self settingDietDays];
+//    }
+//    
+//    NSString *currentMonthString = [NSString stringWithFormat:@"%i", month];
+//    
+//    if ([self.dietDays objectForKey:currentMonthString]) {
+//        
+//        NSCalendar *cal = [NSCalendar currentCalendar];
+//        NSDateComponents *comps;
+//        NSMutableArray *dates = [NSMutableArray array];
+//        
+//        for (id aDate in [self.dietDays objectForKey:currentMonthString]) {
+//            comps = [cal components:[self getUnitFlags] fromDate:aDate];
+//            
+//            [dates addObject:[NSNumber numberWithInt:[comps day]]];
+//        }
+//
+////        NSArray *dates = [NSArray arrayWithObjects:[NSNumber numberWithInt:1],[NSNumber numberWithInt:5], nil];
+//        [calendarView markDates:dates];
+//    }
+//}
+//
+//-(void)calendarView:(VRGCalendarView *)calendarView dateSelected:(NSDate *)date {
+//
+//    if ([self isDietDay:date]) {
+//
+//        [self performSegueWithIdentifier:@"SegueSelectDietDayToShowDetails" sender:date];
+//    }
+//    
+//}
 
 -(int)getDifferenceBetweenStartDateAndSelected:(NSDate*)selectedDate
 {
