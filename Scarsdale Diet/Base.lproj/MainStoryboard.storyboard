@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="NAE-fD-ruY">
     <dependencies>
-        <deployment defaultVersion="1552" identifier="iOS"/>
+        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
@@ -16,37 +16,10 @@
                     <view key="view" contentMode="scaleToFill" id="3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MAw-o7-k0n">
-                                <rect key="frame" x="0.0" y="36" width="320" height="434"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Ud-aS-Ok0">
-                                        <rect key="frame" x="0.0" y="-37" width="320" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="128" id="o2Y-rc-bmI"/>
-                                        </constraints>
-                                    </imageView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="6Ud-aS-Ok0" firstAttribute="top" secondItem="MAw-o7-k0n" secondAttribute="top" constant="-37" id="CCg-nI-ZoL"/>
-                                    <constraint firstItem="6Ud-aS-Ok0" firstAttribute="leading" secondItem="MAw-o7-k0n" secondAttribute="leading" id="Ptm-Mw-Kzv"/>
-                                    <constraint firstAttribute="trailing" secondItem="6Ud-aS-Ok0" secondAttribute="trailing" id="SGM-hl-RTm"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="MAw-o7-k0n" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" id="Jdz-Oo-zi7"/>
-                            <constraint firstItem="MAw-o7-k0n" firstAttribute="top" secondItem="3" secondAttribute="top" constant="36" id="dTQ-8K-h5K"/>
-                            <constraint firstAttribute="bottom" secondItem="MAw-o7-k0n" secondAttribute="bottom" constant="98" id="o4s-bU-Ni1"/>
-                            <constraint firstItem="MAw-o7-k0n" firstAttribute="leading" secondItem="3" secondAttribute="leading" id="sdq-Ek-Piu"/>
-                        </constraints>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Calendar" id="UZh-HY-7VK"/>
                     <connections>
-                        <outlet property="calendarView" destination="MAw-o7-k0n" id="qfl-jC-xIe"/>
                         <segue destination="WQo-Pz-Xdu" kind="push" identifier="SegueSelectDietDayToShowDetails" id="6t8-S2-XVB"/>
                     </connections>
                 </viewController>

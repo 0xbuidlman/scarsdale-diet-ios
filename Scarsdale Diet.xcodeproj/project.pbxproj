@@ -42,37 +42,13 @@
 		0CCE658D176B39380039D470 /* Default-Portrait@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CCE658C176B39380039D470 /* Default-Portrait@2x~ipad.png */; };
 		0CDDFD5C176661390011D0CA /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CDDFD5E176661390011D0CA /* MainStoryboard_iPad.storyboard */; };
 		0CE74035184E7774005F6265 /* SDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C10334F174CE2A7004C2ACC /* SDViewController.m */; };
-		0CE7406E184E7A40005F6265 /* libVurigCalendarLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CE7406B184E798A005F6265 /* libVurigCalendarLibrary.a */; };
 		0CF067BC1757BF9C009A93E0 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CF067BB1757BF9C009A93E0 /* SenTestingKit.framework */; };
 		0CF067BD1757BF9C009A93E0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C103333174CE2A7004C2ACC /* UIKit.framework */; };
 		0CF067BE1757BF9C009A93E0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C103335174CE2A7004C2ACC /* Foundation.framework */; };
 		0CF067C71757BF9D009A93E0 /* ScarsdaleDietLogicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF067C61757BF9D009A93E0 /* ScarsdaleDietLogicTests.m */; };
 		209D198A179F1E78003F23F9 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 209D1989179F1E78003F23F9 /* Default-Landscape~ipad.png */; };
+		7AC91BB54EAE4506A5788697 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 991AC2B1A1004DD4BF61466B /* libPods.a */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		0CE74068184E798A005F6265 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0CE74062184E7989005F6265 /* Vurig Calendar.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 93664AE0157522BF004EBE25;
-			remoteInfo = "Vurig Calendar";
-		};
-		0CE7406A184E798A005F6265 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0CE74062184E7989005F6265 /* Vurig Calendar.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 0CE7403A184E7926005F6265;
-			remoteInfo = VurigCalendarLibrary;
-		};
-		0CE7406C184E798A005F6265 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0CE74062184E7989005F6265 /* Vurig Calendar.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 0CE74047184E7926005F6265;
-			remoteInfo = VurigCalendarLibraryTests;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0C0220461761ED6300896649 /* SDViewControlleriPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDViewControlleriPad.h; sourceTree = "<group>"; };
@@ -123,7 +99,6 @@
 		0CDDFD5F1766613F0011D0CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		0CDDFD61176661440011D0CA /* bg */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bg; path = bg.lproj/MainStoryboard_iPad.strings; sourceTree = "<group>"; };
 		0CDDFD63176661450011D0CA /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/MainStoryboard_iPad.strings; sourceTree = "<group>"; };
-		0CE74062184E7989005F6265 /* Vurig Calendar.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Vurig Calendar.xcodeproj"; path = "../Vurig-Calendar/Vurig Calendar.xcodeproj"; sourceTree = "<group>"; };
 		0CF067BA1757BF9C009A93E0 /* ScarsdaleDietLogicTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScarsdaleDietLogicTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CF067BB1757BF9C009A93E0 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		0CF067C11757BF9D009A93E0 /* ScarsdaleDietLogicTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ScarsdaleDietLogicTests-Info.plist"; sourceTree = "<group>"; };
@@ -131,6 +106,8 @@
 		0CF067C61757BF9D009A93E0 /* ScarsdaleDietLogicTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScarsdaleDietLogicTests.m; sourceTree = "<group>"; };
 		0CF067C81757BF9D009A93E0 /* ScarsdaleDietLogicTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ScarsdaleDietLogicTests-Prefix.pch"; sourceTree = "<group>"; };
 		209D1989179F1E78003F23F9 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
+		991AC2B1A1004DD4BF61466B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B27124DD860B4D73ADD1FB6D /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,11 +115,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CE7406E184E7A40005F6265 /* libVurigCalendarLibrary.a in Frameworks */,
 				0C96D7481753A12B0043489C /* QuartzCore.framework in Frameworks */,
 				0C103334174CE2A7004C2ACC /* UIKit.framework in Frameworks */,
 				0C103336174CE2A7004C2ACC /* Foundation.framework in Frameworks */,
 				0C103338174CE2A7004C2ACC /* CoreGraphics.framework in Frameworks */,
+				7AC91BB54EAE4506A5788697 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,7 +167,6 @@
 		0C103327174CE2A7004C2ACC = {
 			isa = PBXGroup;
 			children = (
-				0CE74062184E7989005F6265 /* Vurig Calendar.xcodeproj */,
 				209D1989179F1E78003F23F9 /* Default-Landscape~ipad.png */,
 				0CCE658C176B39380039D470 /* Default-Portrait@2x~ipad.png */,
 				0C754C0A175FF5B50070B774 /* Settings.bundle */,
@@ -199,6 +175,7 @@
 				0CF067BF1757BF9C009A93E0 /* ScarsdaleDietLogicTests */,
 				0C103332174CE2A7004C2ACC /* Frameworks */,
 				0C103331174CE2A7004C2ACC /* Products */,
+				B27124DD860B4D73ADD1FB6D /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -218,6 +195,7 @@
 				0C103335174CE2A7004C2ACC /* Foundation.framework */,
 				0C103337174CE2A7004C2ACC /* CoreGraphics.framework */,
 				0CF067BB1757BF9C009A93E0 /* SenTestingKit.framework */,
+				991AC2B1A1004DD4BF61466B /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -276,16 +254,6 @@
 			name = Images;
 			sourceTree = "<group>";
 		};
-		0CE74063184E7989005F6265 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				0CE74069184E798A005F6265 /* Vurig Calendar.app */,
-				0CE7406B184E798A005F6265 /* libVurigCalendarLibrary.a */,
-				0CE7406D184E798A005F6265 /* VurigCalendarLibraryTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		0CF067BF1757BF9C009A93E0 /* ScarsdaleDietLogicTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -312,9 +280,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0C103353174CE2A7004C2ACC /* Build configuration list for PBXNativeTarget "Scarsdale Diet" */;
 			buildPhases = (
+				5E2A375B4ADA405DAE54718A /* Check Pods Manifest.lock */,
 				0C10332C174CE2A7004C2ACC /* Sources */,
 				0C10332D174CE2A7004C2ACC /* Frameworks */,
 				0C10332E174CE2A7004C2ACC /* Resources */,
+				7B3E0F38273F421099359D7B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -367,12 +337,6 @@
 			mainGroup = 0C103327174CE2A7004C2ACC;
 			productRefGroup = 0C103331174CE2A7004C2ACC /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 0CE74063184E7989005F6265 /* Products */;
-					ProjectRef = 0CE74062184E7989005F6265 /* Vurig Calendar.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				0C10332F174CE2A7004C2ACC /* Scarsdale Diet */,
@@ -380,30 +344,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		0CE74069184E798A005F6265 /* Vurig Calendar.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = "Vurig Calendar.app";
-			remoteRef = 0CE74068184E798A005F6265 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		0CE7406B184E798A005F6265 /* libVurigCalendarLibrary.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libVurigCalendarLibrary.a;
-			remoteRef = 0CE7406A184E798A005F6265 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		0CE7406D184E798A005F6265 /* VurigCalendarLibraryTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = VurigCalendarLibraryTests.xctest;
-			remoteRef = 0CE7406C184E798A005F6265 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		0C10332E174CE2A7004C2ACC /* Resources */ = {
@@ -458,6 +398,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		5E2A375B4ADA405DAE54718A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7B3E0F38273F421099359D7B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -592,6 +562,7 @@
 		};
 		0C103354174CE2A7004C2ACC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B27124DD860B4D73ADD1FB6D /* Pods.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Mihail Velikov (Q59675477H)";
@@ -613,6 +584,7 @@
 		};
 		0C103355174CE2A7004C2ACC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B27124DD860B4D73ADD1FB6D /* Pods.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Mihail Velikov (Q59675477H)";

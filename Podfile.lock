@@ -1,0 +1,10 @@
+PODS:
+  - RDVCalendarView (1.0.1)
+
+DEPENDENCIES:
+  - RDVCalendarView
+
+SPEC CHECKSUMS:
+  RDVCalendarView: 77d544c79d1c488572946600f3b1ad97f840242b
+
+COCOAPODS: 0.28.0

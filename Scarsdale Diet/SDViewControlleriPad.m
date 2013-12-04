@@ -23,21 +23,21 @@
     }
     return self;
 }
-
-- (void) dietStartDateSelected:(id)sender
-{
-    [super dietStartDateSelected:sender];
-    [self calendarView:self.calendar dateSelected:self.dietStart];
-}
--(void)calendarView:(VRGCalendarView *)calendarView dateSelected:(NSDate *)date {
-    
-    if ([self isDietDay:date]) {
-        NSString *key = [self getDietDayOffsetByDate:date];
-        NSDictionary *tmpItem = self.dietDaysInfoDictionary[key];
-        SDDietDayDetailsViewController *tmpDetailViewController = self.detailsViewController;
-        tmpDetailViewController.detailItem = tmpItem;
-    }
-}
+//
+//- (void) dietStartDateSelected:(id)sender
+//{
+//    [super dietStartDateSelected:sender];
+//    [self calendarView:self.calendar dateSelected:self.dietStart];
+//}
+//-(void)calendarView:(VRGCalendarView *)calendarView dateSelected:(NSDate *)date {
+//    
+//    if ([self isDietDay:date]) {
+//        NSString *key = [self getDietDayOffsetByDate:date];
+//        NSDictionary *tmpItem = self.dietDaysInfoDictionary[key];
+//        SDDietDayDetailsViewController *tmpDetailViewController = self.detailsViewController;
+//        tmpDetailViewController.detailItem = tmpItem;
+//    }
+//}
 
 - (void)viewDidLoad
 {
