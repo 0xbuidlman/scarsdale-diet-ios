@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 //#import "VRGCalendarView.h"
-//#import "SDDietDayDetailsViewController.h"
+#import "SDCalendar.h"
 #import "RDVCalendarView.h"
 #define kDietDaysPeriod 14
 
@@ -20,7 +20,6 @@
 -(void) clearDate:(id)sender;
 
 @property (strong, nonatomic) IBOutlet UIView *calendarView;
-@property (nonatomic, strong) RDVCalendarView *calendarViewObj;
 
 @property (strong, nonatomic) UIDatePicker *datePicker;
 

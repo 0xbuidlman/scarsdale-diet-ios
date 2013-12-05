@@ -8,6 +8,7 @@
 
 #import "SDViewController.h"
 #import "SDDietDayDetailsViewController.h"
+#import "SDCalendarDietDayCell.h"
 #import <QuartzCore/QuartzCore.h>
 
 @interface SDViewController ()
@@ -18,35 +19,46 @@
 
 //@synthesize datePicker, dietStart, calendar, dietDays;
 
-- (void)viewDidLoad
-{
+-(SDCalendar*)loadCalendarView {
     CGRect applicationFrame = [[UIScreen mainScreen] applicationFrame];
-//    CGRect applicationFrame = CGRectMake(0, 100, 320, 300);
+
     int topCalendarPadding = 64;
     applicationFrame.origin.y = topCalendarPadding;
     applicationFrame.size.height -= topCalendarPadding;
-    _calendarViewObj = [[RDVCalendarView alloc] initWithFrame:applicationFrame];
-    [_calendarView setAutoresizingMask:UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight];
-    [_calendarViewObj setSeparatorStyle:RDVCalendarViewDayCellSeparatorStyleHorizontal];
-    [_calendarViewObj setBackgroundColor:[UIColor whiteColor]];
-    [_calendarViewObj setDelegate:self];
-//    _calendarView = _calendarViewObj;
-    [[self view] addSubview:_calendarViewObj];
+    SDCalendar* calendarView = [[SDCalendar alloc] initWithFrame:applicationFrame];
+    [calendarView setAutoresizingMask:UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight];
+    [calendarView setSeparatorStyle:RDVCalendarViewDayCellSeparatorStyleHorizontal];
+    [calendarView setBackgroundColor:[UIColor whiteColor]];
+    [calendarView setDelegate:self];
+    
+    [calendarView registerDayCellClass:[SDCalendarDietDayCell class]];
+    
+    return calendarView;
+}
+
+- (void)calendarView:(SDCalendar *)calendarView configureDayCell:(RDVCalendarDayCell *)dayCell
+             atIndex:(NSInteger)index {
+    SDCalendarDietDayCell *exampleDayCell = (SDCalendarDietDayCell*)dayCell;
+    if (index % 5 == 0) {
+        
+        [[exampleDayCell notificationView] setHidden:NO];
+    }
+//    SDCalendarDietDayCell *exampleCell = SDC
+}
+
+- (void)viewDidLoad
+{
+
+
+    [[self view] addSubview:[self loadCalendarView]];
     [super viewDidLoad];
+    
 	// Do any additional setup after loading the view, typically from a nib.
 
     [self setRoundedCournersForNavigationController];
     
     self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:10/255.0f green:145/255.0f blue:5/255.0f alpha:1];
     
-//    if (self.calendar == nil) {
-////        self.calendar = [[VRGCalendarView alloc] init];
-//        self.calendar.delegate = self;
-//
-//    }
-//    
-//    [self.calendarView addSubview:self.calendar];
-
     if (!self.dietDaysInfoDictionary) {
         NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"diet-info" ofType:@"plist"];
         self.dietDaysInfoDictionary = [NSDictionary dictionaryWithContentsOfFile:plistPath];
@@ -86,6 +98,10 @@
 
 }
 
+
+- (void)calendarView:(RDVCalendarView *)calendarView didSelectDate:(NSDate *)date {
+
+}
 -(void) setRoundedCournersForNavigationController
 {
     CALayer *capa = [self.navigationController navigationBar].layer;
