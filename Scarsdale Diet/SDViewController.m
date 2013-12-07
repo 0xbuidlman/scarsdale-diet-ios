@@ -17,40 +17,15 @@
 
 @implementation SDViewController
 
+@synthesize calendar;
 //@synthesize datePicker, dietStart, calendar, dietDays;
 
--(SDCalendar*)loadCalendarView {
-    CGRect applicationFrame = [[UIScreen mainScreen] applicationFrame];
-
-    int topCalendarPadding = 64;
-    applicationFrame.origin.y = topCalendarPadding;
-    applicationFrame.size.height -= topCalendarPadding;
-    SDCalendar* calendarView = [[SDCalendar alloc] initWithFrame:applicationFrame];
-    [calendarView setAutoresizingMask:UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight];
-    [calendarView setSeparatorStyle:RDVCalendarViewDayCellSeparatorStyleHorizontal];
-    [calendarView setBackgroundColor:[UIColor whiteColor]];
-    [calendarView setDelegate:self];
-    
-    [calendarView registerDayCellClass:[SDCalendarDietDayCell class]];
-    
-    return calendarView;
-}
-
-- (void)calendarView:(SDCalendar *)calendarView configureDayCell:(RDVCalendarDayCell *)dayCell
-             atIndex:(NSInteger)index {
-    SDCalendarDietDayCell *exampleDayCell = (SDCalendarDietDayCell*)dayCell;
-    if (index % 5 == 0) {
-        
-        [[exampleDayCell notificationView] setHidden:NO];
-    }
-//    SDCalendarDietDayCell *exampleCell = SDC
-}
 
 - (void)viewDidLoad
 {
 
-
-    [[self view] addSubview:[self loadCalendarView]];
+    calendar = [self loadCalendarView];
+    [[self view] addSubview:calendar];
     [super viewDidLoad];
     
 	// Do any additional setup after loading the view, typically from a nib.
@@ -99,8 +74,42 @@
 }
 
 
-- (void)calendarView:(RDVCalendarView *)calendarView didSelectDate:(NSDate *)date {
+-(SDCalendar*)loadCalendarView {
+    CGRect applicationFrame = [[UIScreen mainScreen] applicationFrame];
+    
+    int topCalendarPadding = 64;
+    applicationFrame.origin.y = topCalendarPadding;
+    applicationFrame.size.height -= topCalendarPadding;
+    SDCalendar* calendarView = [[SDCalendar alloc] initWithFrame:applicationFrame];
+    [calendarView setAutoresizingMask:UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight];
+    [calendarView setSeparatorStyle:RDVCalendarViewDayCellSeparatorStyleHorizontal];
+    [calendarView setBackgroundColor:[UIColor whiteColor]];
+    [calendarView setDelegate:self];
+    
+    [calendarView registerDayCellClass:[SDCalendarDietDayCell class]];
+    
+    return calendarView;
+}
 
+- (void)calendarView:(SDCalendar *)calendarView configureDayCell:(RDVCalendarDayCell *)dayCell
+             atIndex:(NSInteger)index {
+    SDCalendarDietDayCell *exampleDayCell = (SDCalendarDietDayCell*)dayCell;
+    NSDateFormatter *dateFormater = [[NSDateFormatter alloc] init];
+    [dateFormater setDateFormat:@"dd MMMM y"];
+    NSString* dateString = [[NSString stringWithFormat:@"%d ", index + 1] stringByAppendingString:calendarView.monthLabel.text];
+    
+    NSDate* date = [dateFormater dateFromString:dateString];
+    if ([self isDietDay:date]) {
+    
+        [[exampleDayCell notificationView] setHidden:NO];
+    }
+
+}
+- (void)calendarView:(RDVCalendarView *)calendarView didSelectDate:(NSDate *)date {
+    if ([self isDietDay:date]) {
+
+        [self performSegueWithIdentifier:@"SegueSelectDietDayToShowDetails" sender:date];
+    }
 }
 -(void) setRoundedCournersForNavigationController
 {
@@ -206,6 +215,7 @@
     [defaults synchronize];
     self.dietDays = nil;
 //    [self.calendar markDates:nil];
+    [calendar reloadData];
     
     [self showStartButton];
 }
@@ -233,7 +243,9 @@
     
     [self.datePicker removeFromSuperview];
 //    [self.calendar markDates:[self markDietDays:self.calendar.currentMonth]];
-    
+    self.dietDays = [self settingDietDays];
+    [calendar reloadData];
+
     [self showClearButton];
 }
 

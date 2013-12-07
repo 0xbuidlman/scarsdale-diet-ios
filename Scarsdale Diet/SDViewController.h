@@ -23,7 +23,7 @@
 
 @property (strong, nonatomic) UIDatePicker *datePicker;
 
-//@property (strong, nonatomic) VRGCalendarView *calendar;
+@property (strong, nonatomic) SDCalendar *calendar;
 
 @property (strong, nonatomic) NSDate *dietStart;
 @property (strong, nonatomic) NSDictionary *dietDays;
