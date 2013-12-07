@@ -11,3 +11,4 @@
 @interface SDCalendarDietDayCell : RDVCalendarDayCell
 @property (nonatomic) UIView *notificationView;
 @end
+

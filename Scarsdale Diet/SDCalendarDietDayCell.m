@@ -24,8 +24,9 @@
 {
     self = [super initWithReuseIdentifier:reuseIdentifier];
     if (self) {
+        UIColor* appColor = [UIColor colorWithRed:11/255.0f green:140/255.0f blue:5/255.0f alpha:1];
         notificationView = [[UIView alloc] init];
-        [notificationView setBackgroundColor:[UIColor greenColor]];
+        [notificationView setBackgroundColor:appColor];
         [notificationView setHidden:YES];
         
         [self.contentView addSubview:notificationView];
@@ -39,7 +40,7 @@
     
     CGSize viewSize = self.contentView.frame.size;
     
-    [notificationView setFrame:CGRectMake(0, viewSize.height, viewSize.width, 10)];
+    [notificationView setFrame:CGRectMake(0, viewSize.height, viewSize.width, 8)];
 }
 
 - (void)prepareForReuse {
