@@ -17,6 +17,8 @@
 		0C17D9111758C1A3001520DC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C96D7471753A12B0043489C /* QuartzCore.framework */; };
 		0C17D9121758C319001520DC /* SDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C10334F174CE2A7004C2ACC /* SDViewController.m */; };
 		0C17D9141758C496001520DC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C103337174CE2A7004C2ACC /* CoreGraphics.framework */; };
+		0C2111341860981A00065F22 /* SDDietDayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2111331860981A00065F22 /* SDDietDayCell.m */; };
+		0C2111381860984900065F22 /* SDDietDay.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2111371860984900065F22 /* SDDietDay.m */; };
 		0C651EE0175F79CA00A0F01C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0C651EE2175F79CA00A0F01C /* Localizable.strings */; };
 		0C651EE4175F7D4B00A0F01C /* diet-info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C651EE6175F7D4B00A0F01C /* diet-info.plist */; };
 		0C754C0B175FF5B50070B774 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0C754C0A175FF5B50070B774 /* Settings.bundle */; };
@@ -66,6 +68,10 @@
 		0C103343174CE2A7004C2ACC /* SDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDAppDelegate.m; sourceTree = "<group>"; };
 		0C10334E174CE2A7004C2ACC /* SDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDViewController.h; sourceTree = "<group>"; };
 		0C10334F174CE2A7004C2ACC /* SDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDViewController.m; sourceTree = "<group>"; };
+		0C2111321860981A00065F22 /* SDDietDayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDDietDayCell.h; sourceTree = "<group>"; };
+		0C2111331860981A00065F22 /* SDDietDayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDDietDayCell.m; sourceTree = "<group>"; };
+		0C2111361860984900065F22 /* SDDietDay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDDietDay.h; sourceTree = "<group>"; };
+		0C2111371860984900065F22 /* SDDietDay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDDietDay.m; sourceTree = "<group>"; };
 		0C4AA7C8175FCF7400F99051 /* bg */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bg; path = bg.lproj/MainStoryboard.strings; sourceTree = "<group>"; };
 		0C4AA7C9175FCF7400F99051 /* bg */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bg; path = bg.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0C4AA7CB175FCF7400F99051 /* bg */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = bg; path = "bg.lproj/diet-info.plist"; sourceTree = "<group>"; };
@@ -204,6 +210,8 @@
 		0C103339174CE2A7004C2ACC /* Scarsdale Diet */ = {
 			isa = PBXGroup;
 			children = (
+				0C2111351860983700065F22 /* Models */,
+				0C2111301860963200065F22 /* Cells */,
 				0CE740B7184FCCF4005F6265 /* Calendar */,
 				0C103342174CE2A7004C2ACC /* SDAppDelegate.h */,
 				0C103343174CE2A7004C2ACC /* SDAppDelegate.m */,
@@ -234,6 +242,24 @@
 				0C651EE6175F7D4B00A0F01C /* diet-info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0C2111301860963200065F22 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0C2111321860981A00065F22 /* SDDietDayCell.h */,
+				0C2111331860981A00065F22 /* SDDietDayCell.m */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		0C2111351860983700065F22 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0C2111361860984900065F22 /* SDDietDay.h */,
+				0C2111371860984900065F22 /* SDDietDay.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		0C651EDA175F76FE00A0F01C /* Resources */ = {
@@ -470,6 +496,8 @@
 				0CB9727F1767300100900D5E /* SDDietDayDetailsViewControlleriPad.m in Sources */,
 				0CE740B6184FC97A005F6265 /* SDCalendar.m in Sources */,
 				0CE740BA184FCD32005F6265 /* SDCalendarDietDayCell.m in Sources */,
+				0C2111341860981A00065F22 /* SDDietDayCell.m in Sources */,
+				0C2111381860984900065F22 /* SDDietDay.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
