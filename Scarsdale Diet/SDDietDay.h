@@ -15,5 +15,9 @@
     NSString* dinner;
     NSString* replacement;
 }
-
+@property (retain, nonatomic) NSString* imageName;
+@property (retain, nonatomic) NSString* breakfast;
+@property (retain, nonatomic) NSString* lunch;
+@property (retain, nonatomic) NSString* dinner;
+@property (retain, nonatomic) NSString* replacement;
 @end

@@ -9,5 +9,5 @@
 #import "SDDietDay.h"
 
 @implementation SDDietDay
-
+@synthesize imageName, breakfast, lunch, dinner, replacement;
 @end
