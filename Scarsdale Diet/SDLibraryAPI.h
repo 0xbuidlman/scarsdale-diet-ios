@@ -1,5 +1,5 @@
 //
-//  SDPersistencyManager.h
+//  SDLibraryAPI.h
 //  Scarsdale Diet
 //
 //  Created by mihata on 12/29/13.
@@ -9,9 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "SDDietDay.h"
 
-@interface SDPersistencyManager : NSObject
+@interface SDLibraryAPI : NSObject
++ (SDLibraryAPI*)sharedInstance;
+
 - (NSArray*) getDietDays;
+- (void) addDietDay:(SDDietDay*)dietDay atIndex:(int)index;
 - (void) saveDietDays;
 - (void) deleteDietDays;
-- (void) addDietDay: (SDDietDay*)dietDay atIndex:(int)index;
 @end

@@ -16,19 +16,31 @@
 @end
 
 @implementation SDPersistencyManager
+
 - (id)init
 {
-    dietDays = [[NSMutableArray alloc] init];
+
     self = [super init];
 
     if (self) {
+        dietDays = [[NSMutableArray alloc] init];
         
+        NSData *data = [NSData dataWithContentsOfFile:[NSHomeDirectory() stringByAppendingString:SD_FILE_NAME]];
+        dietDays = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+        
+        if (dietDays != nil) {
+            [self saveDietDays];
+        }
     }
     return self;
 }
 
 - (NSArray*)getDietDays {
     return dietDays;
+}
+
+- (void) deleteDietDays {
+    [dietDays removeAllObjects];
 }
 
 - (void) addDietDay:(SDDietDay *)dietDay atIndex:(int)index {

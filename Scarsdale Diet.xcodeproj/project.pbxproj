@@ -42,6 +42,7 @@
 		0CCE6588176B350C0039D470 /* 144.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CCE6587176B350C0039D470 /* 144.png */; };
 		0CCE658D176B39380039D470 /* Default-Portrait@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CCE658C176B39380039D470 /* Default-Portrait@2x~ipad.png */; };
 		0CD86985187099B500B032E3 /* SDPersistencyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD86984187099B500B032E3 /* SDPersistencyManager.m */; };
+		0CD869881870A38800B032E3 /* SDLibraryAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD869871870A38800B032E3 /* SDLibraryAPI.m */; };
 		0CDDFD5C176661390011D0CA /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CDDFD5E176661390011D0CA /* MainStoryboard_iPad.storyboard */; };
 		0CE74035184E7774005F6265 /* SDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C10334F174CE2A7004C2ACC /* SDViewController.m */; };
 		0CE740B6184FC97A005F6265 /* SDCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE740B5184FC97A005F6265 /* SDCalendar.m */; };
@@ -104,6 +105,8 @@
 		0CCE658C176B39380039D470 /* Default-Portrait@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait@2x~ipad.png"; path = "../Default-Portrait@2x~ipad.png"; sourceTree = "<group>"; };
 		0CD86983187099B500B032E3 /* SDPersistencyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPersistencyManager.h; sourceTree = "<group>"; };
 		0CD86984187099B500B032E3 /* SDPersistencyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDPersistencyManager.m; sourceTree = "<group>"; };
+		0CD869861870A38800B032E3 /* SDLibraryAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDLibraryAPI.h; sourceTree = "<group>"; };
+		0CD869871870A38800B032E3 /* SDLibraryAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDLibraryAPI.m; sourceTree = "<group>"; };
 		0CDDFD5F1766613F0011D0CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		0CDDFD61176661440011D0CA /* bg */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bg; path = bg.lproj/MainStoryboard_iPad.strings; sourceTree = "<group>"; };
 		0CDDFD63176661450011D0CA /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/MainStoryboard_iPad.strings; sourceTree = "<group>"; };
@@ -280,6 +283,8 @@
 			children = (
 				0CD86983187099B500B032E3 /* SDPersistencyManager.h */,
 				0CD86984187099B500B032E3 /* SDPersistencyManager.m */,
+				0CD869861870A38800B032E3 /* SDLibraryAPI.h */,
+				0CD869871870A38800B032E3 /* SDLibraryAPI.m */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -489,6 +494,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C103340174CE2A7004C2ACC /* main.m in Sources */,
+				0CD869881870A38800B032E3 /* SDLibraryAPI.m in Sources */,
 				0CE74035184E7774005F6265 /* SDViewController.m in Sources */,
 				0C103344174CE2A7004C2ACC /* SDAppDelegate.m in Sources */,
 				0CD86985187099B500B032E3 /* SDPersistencyManager.m in Sources */,
