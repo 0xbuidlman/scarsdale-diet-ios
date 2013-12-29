@@ -268,7 +268,7 @@
     NSDateComponents *comps = [cal components:unitFlags fromDate:self.dietStart];
     NSDate *aDay;
     // initalize with dietStart date's month
-    NSMutableString *monthString = [NSString stringWithFormat:@"%i", [comps month]];
+    NSString *monthString = [NSString stringWithFormat:@"%i", [comps month]];
     NSMutableString *monthStringKeeper = [NSMutableString stringWithString:monthString];
     NSMutableDictionary *tempDict = [NSMutableDictionary dictionary];
     NSMutableArray *tempArray = [NSMutableArray array];
