@@ -8,16 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SDDietDay : NSObject {
-    NSString* imageName;
-    NSString* breakfast;
-    NSString* lunch;
-    NSString* dinner;
-    NSString* replacement;
-}
-@property (retain, nonatomic) NSString* imageName;
-@property (retain, nonatomic) NSString* breakfast;
-@property (retain, nonatomic) NSString* lunch;
-@property (retain, nonatomic) NSString* dinner;
-@property (retain, nonatomic) NSString* replacement;
+@interface SDDietDay : NSObject
+@property (retain, nonatomic, readonly) NSString *imageName, *breakfast, *lunch, *dinner, *replacement;
 @end
