@@ -17,7 +17,7 @@
 
 @implementation SDViewController
 
-@synthesize calendar;
+@synthesize calendar, startButton, clearButton, doneButton, datePicker;
 //@synthesize datePicker, dietStart, calendar, dietDays;
 
 
@@ -28,33 +28,7 @@
     [[self view] addSubview:calendar];
     [super viewDidLoad];
     
-	// Do any additional setup after loading the view, typically from a nib.
-
-    [self setRoundedCournersForNavigationController];
-    
-    self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:10/255.0f green:145/255.0f blue:5/255.0f alpha:1];
-    
-    if (!self.dietDaysInfoDictionary) {
-        NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"diet-info" ofType:@"plist"];
-        self.dietDaysInfoDictionary = [NSDictionary dictionaryWithContentsOfFile:plistPath];
-    }
-
-    
-//    NSString *locale = [[NSLocale currentLocale] localeIdentifier];
-
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    
-    self.dietStart = [defaults objectForKey:@"dietStart"];
-    
-    if (self.dietStart == nil) {
-        [self showStartButton];
-    } else {
-        if (!self.dietDays)
-            self.dietDays = [self settingDietDays];
-        
-        [self showClearButton];
-    }
-    
     BOOL disclaimer = [defaults boolForKey:@"disclaimer"];
 
     if (!disclaimer) {
@@ -70,9 +44,61 @@
         
         [alertView show];
     }
+    
+    self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:10/255.0f green:145/255.0f blue:5/255.0f alpha:1];
+    
+    startButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Start", nil) style:UIBarButtonItemStyleBordered target:self action:@selector(startDateTapped:)];
+    clearButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Clear", nil) style:UIBarButtonItemStyleBordered target:self action:@selector(clearDateTapped:)];
+    doneButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Done", nil) style:UIBarButtonItemStyleBordered target:self action:@selector(dietStartDateSelected:)];
 
+    self.navigationItem.rightBarButtonItem = startButton;
+    
+    datePicker = [[UIDatePicker alloc] init];
+    [datePicker addTarget:self action:nil forControlEvents:UIControlEventValueChanged];
+    
+    CGRect screenRect = [self.view frame];
+    CGSize pickerSize = [datePicker sizeThatFits:CGSizeZero];
+    CGRect pickerRect = CGRectMake(0, screenRect.origin.y + screenRect.size.height - pickerSize.height, pickerSize.width, pickerSize.height);
+    
+    datePicker.datePickerMode = UIDatePickerModeDate;
+    datePicker.frame = pickerRect;
+    self.datePicker.minimumDate = [self getDateWithOffset:-(kDietDaysPeriod - 1)];
+    self.datePicker.maximumDate = [self getDateWithOffset:(kDietDaysPeriod - 1)];
+    datePicker.backgroundColor = [UIColor whiteColor];
+    [datePicker setHidden:YES];
+    
+    [self.view addSubview:datePicker];
 }
 
+- (void) dietStartDateSelected: (id)sender {
+    NSDate *selectedDate = self.datePicker.date;
+    
+    NSCalendar *currentCalendar = [NSCalendar currentCalendar];
+    NSDateComponents *selectedDateComponents = [currentCalendar components:[self getUnitFlags] fromDate:selectedDate];
+    NSDateComponents *dietStartComponents = [[NSDateComponents alloc] init];
+    
+    [dietStartComponents setDay: [selectedDateComponents day]];
+    [dietStartComponents setMonth: [selectedDateComponents month]];
+    [dietStartComponents setYear:[selectedDateComponents year]];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    self.dietStart = [currentCalendar dateFromComponents:dietStartComponents];
+    [defaults setObject:self.dietStart forKey:@"dietStart"];
+    [defaults synchronize];
+    
+    [datePicker setHidden:YES];
+    
+    self.navigationItem.rightBarButtonItem = clearButton;
+}
+- (void) startDateTapped:(id) sender {
+    [datePicker setHidden:NO];
+    self.navigationItem.rightBarButtonItem = doneButton;
+}
+
+- (void) clearDateTapped: (id) sender {
+    self.navigationItem.rightBarButtonItem = startButton;
+}
 
 -(SDCalendar*)loadCalendarView {
     CGRect applicationFrame = [[UIScreen mainScreen] applicationFrame];
@@ -91,103 +117,6 @@
     return calendarView;
 }
 
-- (void)calendarView:(SDCalendar *)calendarView configureDayCell:(RDVCalendarDayCell *)dayCell
-             atIndex:(NSInteger)index {
-    SDCalendarDietDayCell *exampleDayCell = (SDCalendarDietDayCell*)dayCell;
-    NSDateFormatter *dateFormater = [[NSDateFormatter alloc] init];
-    [dateFormater setDateFormat:@"dd MMMM y"];
-    NSString* dateString = [[NSString stringWithFormat:@"%d ", index + 1] stringByAppendingString:calendarView.monthLabel.text];
-    
-    NSDate* date = [dateFormater dateFromString:dateString];
-    if ([self isDietDay:date]) {
-    
-        [[exampleDayCell notificationView] setHidden:NO];
-    }
-
-}
-- (void)calendarView:(RDVCalendarView *)calendarView didSelectDate:(NSDate *)date {
-    if ([self isDietDay:date]) {
-
-        [self performSegueWithIdentifier:@"SegueSelectDietDayToShowDetails" sender:date];
-    }
-}
--(void) setRoundedCournersForNavigationController
-{
-    CALayer *capa = [self.navigationController navigationBar].layer;
-    [capa setShadowColor: [[UIColor blackColor] CGColor]];
-    [capa setShadowOpacity:0.85f];
-    [capa setShadowOffset: CGSizeMake(0.0f, 1.5f)];
-    [capa setShadowRadius:2.0f];
-    [capa setShouldRasterize:YES];
-    
-    
-    //Round
-    CGRect bounds = capa.bounds;
-    bounds.size.height += 10.0f;    //I'm reserving enough room for the shadow
-    UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:bounds
-                                                   byRoundingCorners:(UIRectCornerTopLeft | UIRectCornerTopRight)
-                                                         cornerRadii:CGSizeMake(kCornerRadius, kCornerRadius)];
-    
-    CAShapeLayer *maskLayer = [CAShapeLayer layer];
-    maskLayer.frame = bounds;
-    maskLayer.path = maskPath.CGPath;
-    
-    [capa addSublayer:maskLayer];
-    capa.mask = maskLayer;
-}
--(void) showStartButton
-{
-
-    UIBarButtonItem *startButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Start", nil) style:UIBarButtonItemStyleBordered target:self action:@selector(startDate:)];
-    
-    self.navigationItem.rightBarButtonItem = startButton;
-}
-- (void) showClearButton
-{
-    UIBarButtonItem *clearButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Clear", nil) style:UIBarButtonItemStyleBordered target:self action:@selector(clearDate:)];
-    
-    
-    self.navigationItem.rightBarButtonItem = clearButton;
-}
-
--(void) showDoneButton
-{
-    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Done", nil) style:UIBarButtonItemStyleDone target:self action:@selector(dietStartDateSelected:)];
-    
-    self.navigationItem.rightBarButtonItem = doneButton;
-}
-
-
-/**
- * Initialize a new datePicker with min and max date (+/- 14 days) and
- * adds it to the main view.
- */
-- (void) showDatePicker {
-    if (self.datePicker == nil) {
-        self.datePicker = [[UIDatePicker alloc] init];
-        
-        [self.datePicker addTarget:self
-                            action:nil
-                  forControlEvents:UIControlEventValueChanged];
-    }
-    
-    CGRect screenRect = [self.view frame];
-    
-    CGSize pickerSize = [self.datePicker sizeThatFits:CGSizeZero];
-    
-    CGRect pickerRect = CGRectMake(0.0, screenRect.origin.y + screenRect.size.height - pickerSize.height, pickerSize.width, pickerSize.height);
-    
-    self.datePicker.datePickerMode = UIDatePickerModeDate;
-    self.datePicker.frame = pickerRect;
-    self.datePicker.minimumDate = [self getDateWithOffset:-(kDietDaysPeriod - 1)];
-    self.datePicker.maximumDate = [self getDateWithOffset:(kDietDaysPeriod - 1)];
-    
-    [self.view addSubview:self.datePicker];
-
-    [self showDoneButton];
-}
-
-
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -197,57 +126,6 @@
     [defaults synchronize];
 }
 
-- (void) startDate:(id)sender
-{
-    
-    [self showDatePicker];
-}
-
--(void) clearDate:(id)sender
-{
-//    NSString *appDomain = [[NSBundle mainBundle] bundleIdentifier];
-//    [[NSUserDefaults standardUserDefaults] removePersistentDomainForName:appDomain];
-
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    
-    self.dietStart = nil;
-    [defaults setObject:nil forKey:@"dietStart"];
-    [defaults synchronize];
-    self.dietDays = nil;
-//    [self.calendar markDates:nil];
-    [calendar reloadData];
-    
-    [self showStartButton];
-}
-
-/**
- * Handles doneButton selection. Diet days is set in NSUserDefaults
- */
-- (void) dietStartDateSelected:(id)sender {
-    
-    NSDate *selectedDate = self.datePicker.date;
-    
-    NSCalendar *currentCalendar = [NSCalendar currentCalendar];
-    NSDateComponents *selectedDateComponents = [currentCalendar components:[self getUnitFlags] fromDate:selectedDate];
-    NSDateComponents *dietStartComponents = [[NSDateComponents alloc] init];
-    
-    [dietStartComponents setDay: [selectedDateComponents day]];
-    [dietStartComponents setMonth: [selectedDateComponents month]];
-    [dietStartComponents setYear:[selectedDateComponents year]];
-    
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    
-    self.dietStart = [currentCalendar dateFromComponents:dietStartComponents];
-    [defaults setObject:self.dietStart forKey:@"dietStart"];
-    [defaults synchronize];
-    
-    [self.datePicker removeFromSuperview];
-//    [self.calendar markDates:[self markDietDays:self.calendar.currentMonth]];
-    self.dietDays = [self settingDietDays];
-    [calendar reloadData];
-
-    [self showClearButton];
-}
 
 // returnes flags used in NSDateComponents object
 -(unsigned)getUnitFlags
@@ -256,128 +134,21 @@
 }
 
 /**
- * Creates a dictionary with all diet days. The keys represent months numbers
- * and values are arrays with diet days in that month
- */
--(NSDictionary *) settingDietDays
-{
-    NSCalendar *cal = [NSCalendar currentCalendar];
-    
-    unsigned unitFlags = [self getUnitFlags];
-    
-    NSDateComponents *comps = [cal components:unitFlags fromDate:self.dietStart];
-    NSDate *aDay;
-    // initalize with dietStart date's month
-    NSString *monthString = [NSString stringWithFormat:@"%i", [comps month]];
-    NSMutableString *monthStringKeeper = [NSMutableString stringWithString:monthString];
-    NSMutableDictionary *tempDict = [NSMutableDictionary dictionary];
-    NSMutableArray *tempArray = [NSMutableArray array];
-
-    for (int i = 0; i < 14; i++) {
-
-        aDay = [cal dateFromComponents:comps];
-
-        comps = [cal components:unitFlags fromDate:aDay];
-        
-        monthString = [NSString stringWithFormat:@"%i", [comps month]];
-        
-        /**
-         * If diet is spread in two months new value have to be added in the
-         * dictionary. <#tempArray#> is reallocated.
-         * hacking :)
-         */
-        if (![monthStringKeeper isEqualToString:monthString]) {
-            tempArray = [[NSMutableArray alloc] init];
-            
-            monthStringKeeper = [NSMutableString stringWithString:monthString];
-        }
-        [tempArray addObject:aDay];        
-        [tempDict setObject:tempArray forKey:monthString];
-        [comps setDay:([comps day] + 1)];
-    }
-
-    return tempDict;
-}
-
-/**
- * Once a diet start day is selected all diet days are marked on the calendar.
- */
--(NSArray *) markDietDays:(NSDate *)forGivenMonth
-{
-    if (!self.dietDays)
-        self.dietDays = [self settingDietDays];
-    
-    NSCalendar *cal = [NSCalendar currentCalendar];
-    NSDateComponents *comps = [cal components:[self getUnitFlags] fromDate:forGivenMonth];
-    NSString *currentMonthString = [NSString stringWithFormat:@"%i", [comps month]];
-    NSMutableArray *dates = [NSMutableArray array];
-    
-    if ([self.dietDays objectForKey:currentMonthString]) {
-        
-        for (id aDate in [self.dietDays objectForKey:currentMonthString]) {
-            comps = [cal components:[self getUnitFlags] fromDate:aDate];
-
-            [dates addObject:[NSNumber numberWithInt:[comps day]]];
-        }
-//        [self.calendar markDates:dates];
-
-    }
-    
-    return dates;
-}
-/**
  * Returns a date object that is <#offset#> days before or after today.
  * Method accepts positive and negative numbers
  */
 -(NSDate *) getDateWithOffset:(NSInteger)offset
 {
     NSDate *today = [NSDate date];
-
+    
     NSCalendar *cal = [NSCalendar currentCalendar];
     
     NSDateComponents *comps = [cal components:[self getUnitFlags] fromDate:today];
     
     [comps setDay:([comps day] + offset)];
-
+    
     return [cal dateFromComponents:comps];
 }
-
-/**
- * Delegates switching months event. Used to prepopulate diet days.
- */
-//-(void)calendarView:(VRGCalendarView *)calendarView switchedToMonth:(int)month targetHeight:(float)targetHeight animated:(BOOL)animated {
-//    
-//    if (!self.dietDays && self.dietStart) {
-//        self.dietDays = [self settingDietDays];
-//    }
-//    
-//    NSString *currentMonthString = [NSString stringWithFormat:@"%i", month];
-//    
-//    if ([self.dietDays objectForKey:currentMonthString]) {
-//        
-//        NSCalendar *cal = [NSCalendar currentCalendar];
-//        NSDateComponents *comps;
-//        NSMutableArray *dates = [NSMutableArray array];
-//        
-//        for (id aDate in [self.dietDays objectForKey:currentMonthString]) {
-//            comps = [cal components:[self getUnitFlags] fromDate:aDate];
-//            
-//            [dates addObject:[NSNumber numberWithInt:[comps day]]];
-//        }
-//
-////        NSArray *dates = [NSArray arrayWithObjects:[NSNumber numberWithInt:1],[NSNumber numberWithInt:5], nil];
-//        [calendarView markDates:dates];
-//    }
-//}
-//
-//-(void)calendarView:(VRGCalendarView *)calendarView dateSelected:(NSDate *)date {
-//
-//    if ([self isDietDay:date]) {
-//
-//        [self performSegueWithIdentifier:@"SegueSelectDietDayToShowDetails" sender:date];
-//    }
-//    
-//}
 
 -(int)getDifferenceBetweenStartDateAndSelected:(NSDate*)selectedDate
 {
@@ -408,22 +179,6 @@
     return key;
 }
 
-/**
- *
- */
--(BOOL)isDietDay:(NSDate *)date
-{
-    NSCalendar *cal = [NSCalendar currentCalendar];
-    
-    NSDateComponents *comps = [cal components:[self getUnitFlags] fromDate:date];
-    
-    NSString *monthString = [NSString stringWithFormat:@"%i", [comps month]];
-    if ([self.dietDays objectForKey:monthString] && [self.dietDays[monthString] containsObject:date]) {
-        
-        return YES;
-    }
-    return NO;
-}
 
 - (void)didReceiveMemoryWarning
 {

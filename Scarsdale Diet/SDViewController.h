@@ -32,6 +32,9 @@
 
 @property (strong, nonatomic) SDDietDayDetailsViewController *detailsViewController;
 
+// navigationBar buttons
+@property (strong, nonatomic) UIBarButtonItem *startButton, *clearButton, *doneButton;
+
 
 -(BOOL)isDietDay:(NSDate *)date;
 //-(void)calendarView:(VRGCalendarView *)calendarView dateSelected:(NSDate *)date;
