@@ -10,10 +10,11 @@
 
 @implementation SDDietDay
 
-- (id) initWithImageName: (NSString*)imageName breakfast:(NSString*)breakfast lunch:(NSString*)lunch dinner:(NSString*)dinner andReplacement:(NSString*)replacement {
+- (id) initWithDate: (NSDate*) date ImageName: (NSString*)imageName breakfast:(NSString*)breakfast lunch:(NSString*)lunch dinner:(NSString*)dinner andReplacement:(NSString*)replacement {
     self = [super init];
     
     if (self) {
+        _date = date;
         _imageName = imageName;
         _breakfast = breakfast;
         _lunch = lunch;
@@ -25,6 +26,7 @@
 }
 
 -(void)encodeWithCoder:(NSCoder *)aCoder {
+    [aCoder encodeObject:self.date forKey:@"date"];
     [aCoder encodeObject:self.imageName forKey:@"image_name"];
     [aCoder encodeObject:self.breakfast forKey:@"breakfast"];
     [aCoder encodeObject:self.lunch forKey:@"lunch"];
@@ -35,6 +37,7 @@
 - (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super init];
     if (self) {
+        _date = [aDecoder decodeObjectForKey:@"date"];
         _imageName = [aDecoder decodeObjectForKey:@"image_name"];
         _breakfast = [aDecoder decodeObjectForKey:@"breakfast"];
         _dinner = [aDecoder decodeObjectForKey:@"dinner"];
