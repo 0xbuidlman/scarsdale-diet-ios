@@ -21,8 +21,10 @@
     self = [super init];
     
     if (self) {
-        
+        persistencyManager = [[SDPersistencyManager alloc] init];
     }
+    
+    return self;
 }
 + (SDLibraryAPI*)sharedInstance {
     static SDLibraryAPI *_sharedInstance = nil;
