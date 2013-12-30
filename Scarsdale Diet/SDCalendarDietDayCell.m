@@ -39,12 +39,24 @@
     [super layoutSubviews];
     
     CGSize viewSize = self.contentView.frame.size;
+
+    [notificationView setFrame:CGRectMake(0, 0, viewSize.width, viewSize.height)];
+    notificationView.alpha = 0.5;
+    notificationView.layer.cornerRadius = 23;
     
-    [notificationView setFrame:CGRectMake(0, viewSize.height, viewSize.width, 8)];
+    
 }
 
 - (void)prepareForReuse {
     [[self notificationView] setHidden:YES];
+}
+
+- (void)setSelected:(BOOL)selected {
+    self.layer.cornerRadius = 23;
+
+    [super setSelected:selected];
+
+
 }
 /*
 // Only override drawRect: if you perform custom drawing.
