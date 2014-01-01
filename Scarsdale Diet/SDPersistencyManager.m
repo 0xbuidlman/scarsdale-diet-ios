@@ -106,12 +106,27 @@
     return dietDaysDictionary;
 }
 
-- (BOOL) isDietDay: (NSDate*) date {
+- (NSString*)getMonthStringForDate: (NSDate*)date {
     NSCalendar *cal = [NSCalendar currentCalendar];
     
     NSDateComponents *comps = [cal components:[SDHelper getUnitFlags] fromDate:date];
     
-    NSString *monthString = [NSString stringWithFormat:@"%i", [comps month]];
+    return [NSString stringWithFormat:@"%i", [comps month]];
+    
+}
+
+- (id) getDietDayByDate: (NSDate *)date {
+    
+    NSString *monthString = [self getMonthStringForDate:date];
+    for (SDDietDay *idx in dietDays[monthString]) {
+        if ([idx.date compare:date] == NSOrderedSame) {
+            return idx;
+        }
+    }
+    return NO;
+}
+- (BOOL) isDietDay: (NSDate*) date {
+    NSString *monthString = [self getMonthStringForDate:date];
     BOOL flag = NO;
 
     if ([dietDays objectForKey:monthString]) {
