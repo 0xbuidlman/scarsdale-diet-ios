@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#define kCornerRadius 4
+
 
 @interface SDDietDayDetailsViewController : UIViewController <UISplitViewControllerDelegate>
 - (void)configureView;

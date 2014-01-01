@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#define kDietDaysPeriod 14
+#define kCornerRadius 4
 
 @interface SDHelper : NSObject
 + (unsigned) getUnitFlags;

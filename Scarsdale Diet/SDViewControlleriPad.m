@@ -49,9 +49,9 @@
     }
 }
 
--(void) clearDate:(id)sender
+- (void) clearDateTapped:(id)sender;
 {
-    [super clearDate:sender];
+    [super clearDateTapped:sender];
     self.detailsViewController.detailItem = nil;
 }
 - (void)didReceiveMemoryWarning

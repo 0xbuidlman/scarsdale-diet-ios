@@ -10,6 +10,7 @@
 #import "SDDietDayDetailsViewController.h"
 #import "SDCalendarDietDayCell.h"
 #import <QuartzCore/QuartzCore.h>
+#import "SDLibraryAPI.h"
 
 @interface SDViewController ()
 
@@ -17,7 +18,7 @@
 
 @implementation SDViewController
 
-@synthesize calendar, startButton, clearButton, doneButton, datePicker;
+@synthesize calendar, startButton, clearButton, doneButton, datePicker, dietDays, dietStart;
 //@synthesize datePicker, dietStart, calendar, dietDays;
 
 
@@ -62,8 +63,8 @@
     
     datePicker.datePickerMode = UIDatePickerModeDate;
     datePicker.frame = pickerRect;
-    self.datePicker.minimumDate = [self getDateWithOffset:-(kDietDaysPeriod - 1)];
-    self.datePicker.maximumDate = [self getDateWithOffset:(kDietDaysPeriod - 1)];
+    self.datePicker.minimumDate = [SDHelper getDateWithOffset:-(kDietDaysPeriod - 1)];
+    self.datePicker.maximumDate = [SDHelper getDateWithOffset:(kDietDaysPeriod - 1)];
     datePicker.backgroundColor = [UIColor whiteColor];
     [datePicker setHidden:YES];
     
@@ -74,7 +75,7 @@
     NSDate *selectedDate = self.datePicker.date;
     
     NSCalendar *currentCalendar = [NSCalendar currentCalendar];
-    NSDateComponents *selectedDateComponents = [currentCalendar components:[self getUnitFlags] fromDate:selectedDate];
+    NSDateComponents *selectedDateComponents = [currentCalendar components:[SDHelper getUnitFlags] fromDate:selectedDate];
     NSDateComponents *dietStartComponents = [[NSDateComponents alloc] init];
     
     [dietStartComponents setDay: [selectedDateComponents day]];
@@ -90,6 +91,8 @@
     [datePicker setHidden:YES];
     
     self.navigationItem.rightBarButtonItem = clearButton;
+    
+    dietDays = [[SDLibraryAPI sharedInstance] setDietDaysFromStartDate:dietStart];
 }
 - (void) startDateTapped:(id) sender {
     [datePicker setHidden:NO];
@@ -127,28 +130,7 @@
 }
 
 
-// returnes flags used in NSDateComponents object
--(unsigned)getUnitFlags
-{
-    return NSYearCalendarUnit | NSMonthCalendarUnit |  NSDayCalendarUnit;
-}
 
-/**
- * Returns a date object that is <#offset#> days before or after today.
- * Method accepts positive and negative numbers
- */
--(NSDate *) getDateWithOffset:(NSInteger)offset
-{
-    NSDate *today = [NSDate date];
-    
-    NSCalendar *cal = [NSCalendar currentCalendar];
-    
-    NSDateComponents *comps = [cal components:[self getUnitFlags] fromDate:today];
-    
-    [comps setDay:([comps day] + offset)];
-    
-    return [cal dateFromComponents:comps];
-}
 
 -(int)getDifferenceBetweenStartDateAndSelected:(NSDate*)selectedDate
 {
@@ -159,14 +141,14 @@
     NSInteger difference = [comps day];
     return difference;
 }
-
+#pragma todo todo
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:@"SegueSelectDietDayToShowDetails"]) {
-        
-        NSString* key = [self getDietDayOffsetByDate:sender];
-        NSDictionary *dietDayInfo = self.dietDaysInfoDictionary[key];
-        [[segue destinationViewController] setDetailItem:dietDayInfo];        
+
+//        NSString* key = [self getDietDayOffsetByDate:sender];
+//        NSDictionary *dietDayInfo = self.dietDaysInfoDictionary[key];
+//        [[segue destinationViewController] setDetailItem:dietDayInfo];        
     }
     
 }
