@@ -37,5 +37,5 @@
 
 //- (BOOL) isDietDay:(NSDate *)date;
 //-(void)calendarView:(VRGCalendarView *)calendarView dateSelected:(NSDate *)date;
-- (NSString*) getDietDayOffsetByDate:(NSDate *)theDate;
+//- (NSString*) getDietDayOffsetByDate:(NSDate *)theDate;
 @end
