@@ -10,14 +10,13 @@
 //#import "VRGCalendarView.h"
 #import "SDCalendar.h"
 #import "RDVCalendarView.h"
-#define kDietDaysPeriod 14
 
 @class SDDietDayDetailsViewController;
 
 @interface SDViewController : UIViewController <RDVCalendarViewDelegate>
 
 - (void) dietStartDateSelected:(id)sender;
--(void) clearDate:(id)sender;
+- (void) clearDateTapped:(id)sender;
 
 @property (strong, nonatomic) IBOutlet UIView *calendarView;
 
@@ -28,12 +27,15 @@
 @property (strong, nonatomic) NSDate *dietStart;
 @property (strong, nonatomic) NSDictionary *dietDays;
 
-@property (strong, nonatomic) NSDictionary *dietDaysInfoDictionary;
+//@property (strong, nonatomic) NSDictionary *dietDaysInfoDictionary;
 
 @property (strong, nonatomic) SDDietDayDetailsViewController *detailsViewController;
 
+// navigationBar buttons
+@property (strong, nonatomic) UIBarButtonItem *startButton, *clearButton, *doneButton;
 
--(BOOL)isDietDay:(NSDate *)date;
+
+//- (BOOL) isDietDay:(NSDate *)date;
 //-(void)calendarView:(VRGCalendarView *)calendarView dateSelected:(NSDate *)date;
--(NSString *)getDietDayOffsetByDate:(NSDate *)theDate;
+- (NSString*) getDietDayOffsetByDate:(NSDate *)theDate;
 @end
