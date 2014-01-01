@@ -16,5 +16,6 @@
 - (void) addDietDay:(SDDietDay*)dietDay forKey:(NSString*)key;
 - (void) saveDietDays;
 - (void) deleteDietDays;
-- (NSDictionary*) setDietDaysFromStartDate: (NSDate*)startDate;
+- (void) setDietDaysFromStartDate: (NSDate*)startDate;
+- (BOOL) isDietDay: (NSDate*) date;
 @end

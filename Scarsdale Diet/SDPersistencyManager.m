@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Mihail Velikov. All rights reserved.
 //
 
-#define SD_FILE_NAME @"/Documents/dietDays.bin"
+
 
 #import "SDPersistencyManager.h"
 
@@ -27,10 +27,8 @@
         dietDays = [[NSMutableDictionary alloc] init];
         
         NSData *data = [NSData dataWithContentsOfFile:[NSHomeDirectory() stringByAppendingString:SD_FILE_NAME]];
-        dietDays = [NSKeyedUnarchiver unarchiveObjectWithData:data];
-        
-        if (dietDays != nil) {
-            [self saveDietDays];
+        if (data) {
+            dietDays = [NSKeyedUnarchiver unarchiveObjectWithData:data];
         }
     }
     
@@ -107,6 +105,26 @@
     dietDays = dietDaysDictionary;
     return dietDaysDictionary;
 }
+
+- (BOOL) isDietDay: (NSDate*) date {
+    NSCalendar *cal = [NSCalendar currentCalendar];
+    
+    NSDateComponents *comps = [cal components:[SDHelper getUnitFlags] fromDate:date];
+    
+    NSString *monthString = [NSString stringWithFormat:@"%i", [comps month]];
+    BOOL flag = NO;
+
+    if ([dietDays objectForKey:monthString]) {
+        for (SDDietDay *idx in dietDays[monthString]) {
+            if ([idx.date compare:date] == NSOrderedSame) {
+                flag = YES;
+                break;
+            }
+        }
+    }
+    return flag;
+}
+
 
 - (void) saveDietDays {
     NSString *filename = [NSHomeDirectory() stringByAppendingString:SD_FILE_NAME];
