@@ -22,7 +22,7 @@
 
 @property (strong, nonatomic) UIDatePicker *datePicker;
 
-@property (strong, nonatomic) SDCalendar *calendar;
+@property (strong, nonatomic) SDCalendar *sdCalendar;
 
 @property (strong, nonatomic) NSDate *dietStart;
 @property (strong, nonatomic) NSDictionary *dietDays;
@@ -37,5 +37,5 @@
 
 //- (BOOL) isDietDay:(NSDate *)date;
 //-(void)calendarView:(VRGCalendarView *)calendarView dateSelected:(NSDate *)date;
-- (NSString*) getDietDayOffsetByDate:(NSDate *)theDate;
+//- (NSString*) getDietDayOffsetByDate:(NSDate *)theDate;
 @end

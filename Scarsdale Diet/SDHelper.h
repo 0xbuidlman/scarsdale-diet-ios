@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #define kDietDaysPeriod 14
 #define kCornerRadius 4
+#define kTopCalendarPadding 64
+#define kHalfCellHeight 23
 #define SD_FILE_NAME @"/Documents/dietDays.bin"
 
 @interface SDHelper : NSObject

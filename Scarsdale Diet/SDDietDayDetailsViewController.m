@@ -41,10 +41,11 @@
     // Update the user interface for the detail item.
     
     if (self.detailItem) {
-        self.lunchTextView.text = self.detailItem[@"lunch"];
-        self.dinnerTextView.text = self.detailItem[@"dinner"];
-        
-        NSString *imageName = self.detailItem[@"img"];
+        self.lunchTextView.text = self.detailItem[@"values"][1];
+        self.dinnerTextView.text = self.detailItem[@"values"][2];
+        self.breakfastTextView.text = self.detailItem[@"values"][0];
+        self.replaceMealTextView.text = self.detailItem[@"values"][3];
+        NSString *imageName = self.detailItem[@"values"][4];
         
         self.detailImage.image = [UIImage imageNamed:imageName];
         

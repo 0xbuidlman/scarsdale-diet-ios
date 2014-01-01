@@ -11,6 +11,7 @@
 #import "SDCalendarDietDayCell.h"
 #import <QuartzCore/QuartzCore.h>
 #import "SDLibraryAPI.h"
+#import "SDDietDay+TableRepresentation.h"
 
 @interface SDViewController ()
 
@@ -18,15 +19,15 @@
 
 @implementation SDViewController
 
-@synthesize calendar, startButton, clearButton, doneButton, datePicker, dietDays, dietStart;
+@synthesize sdCalendar, startButton, clearButton, doneButton, datePicker, dietDays, dietStart;
 //@synthesize datePicker, dietStart, calendar, dietDays;
 
 
 - (void)viewDidLoad
 {
 
-    calendar = [self loadCalendarView];
-    [[self view] addSubview:calendar];
+    sdCalendar = [self loadCalendarView];
+    [[self view] addSubview:sdCalendar];
     [super viewDidLoad];
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -45,6 +46,8 @@
         
         [alertView show];
     }
+    
+    dietStart = [defaults objectForKey:@"dietStart"];
     
     self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:10/255.0f green:145/255.0f blue:5/255.0f alpha:1];
     
@@ -87,14 +90,14 @@
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
-    self.dietStart = [currentCalendar dateFromComponents:dietStartComponents];
+    dietStart = [currentCalendar dateFromComponents:dietStartComponents];
     [defaults setObject:self.dietStart forKey:@"dietStart"];
     [defaults synchronize];
     
     [datePicker setHidden:YES];
     [[SDLibraryAPI sharedInstance] setDietDaysFromStartDate:dietStart];
 
-    [calendar reloadData];
+    [sdCalendar reloadData];
     
     self.navigationItem.rightBarButtonItem = clearButton;
 }
@@ -104,15 +107,22 @@
 }
 
 - (void) clearDateTapped: (id) sender {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:nil forKey:@"dietStart"];
+    [defaults synchronize];
+    dietStart = nil;
+    [[SDLibraryAPI sharedInstance] deleteDietDays];
     self.navigationItem.rightBarButtonItem = startButton;
+    
+    [sdCalendar reloadData];
+
 }
 
 -(SDCalendar*)loadCalendarView {
     CGRect applicationFrame = [[UIScreen mainScreen] applicationFrame];
     
-    int topCalendarPadding = 64;
-    applicationFrame.origin.y = topCalendarPadding;
-    applicationFrame.size.height -= topCalendarPadding;
+    applicationFrame.origin.y = kTopCalendarPadding;
+    applicationFrame.size.height -= kTopCalendarPadding;
     SDCalendar* calendarView = [[SDCalendar alloc] initWithFrame:applicationFrame];
     [calendarView setAutoresizingMask:UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight];
     [calendarView setSeparatorStyle:RDVCalendarViewDayCellSeparatorStyleHorizontal];
@@ -124,7 +134,7 @@
     return calendarView;
 }
 
-- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
+- (void) alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
@@ -133,39 +143,24 @@
     [defaults synchronize];
 }
 
-
-
-
--(int)getDifferenceBetweenStartDateAndSelected:(NSDate*)selectedDate
-{
-    NSCalendar *cal = [NSCalendar currentCalendar];
-    NSDateComponents *comps;
-    comps = [cal components:NSDayCalendarUnit fromDate:self.dietStart toDate:selectedDate options:0];
-
-    NSInteger difference = [comps day];
-    return difference;
-}
-#pragma todo todo
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:@"SegueSelectDietDayToShowDetails"]) {
 
-//        NSString* key = [self getDietDayOffsetByDate:sender];
-//        NSDictionary *dietDayInfo = self.dietDaysInfoDictionary[key];
-//        [[segue destinationViewController] setDetailItem:dietDayInfo];        
+//        NSString* key = [SDHelper getDietDay:dietStart OffsetByDate:sender];
+        
+        SDDietDay *dietDayInfo = [[SDLibraryAPI sharedInstance] getDietDayByDate:sender];
+        [[segue destinationViewController] setDetailItem:[dietDayInfo tr_tableRepresentation]];
     }
-    
 }
 
--(NSString *)getDietDayOffsetByDate:(NSDate *)theDate {
-    NSInteger differenceBetweenStartDateAndSelectedDate = [self getDifferenceBetweenStartDateAndSelected:theDate];
-    
-    NSString *key = [NSString stringWithFormat:@"%i", (differenceBetweenStartDateAndSelectedDate % 7)];
-    
-    return key;
+- (void) calendarView:(RDVCalendarView *)calendarView didSelectDate:(NSDate *)date {
+    if ([self isDietDay:date]) {
+        [self performSegueWithIdentifier:@"SegueSelectDietDayToShowDetails" sender:date];
+    }
 }
 
-- (void)calendarView:(SDCalendar *)calendarView configureDayCell:(RDVCalendarDayCell *)dayCell
+- (void) calendarView: (SDCalendar *)calendarView configureDayCell:(RDVCalendarDayCell *)dayCell
              atIndex:(NSInteger)index {
     SDCalendarDietDayCell *exampleDayCell = (SDCalendarDietDayCell*)dayCell;
     NSDateFormatter *dateFormater = [[NSDateFormatter alloc] init];
@@ -180,13 +175,9 @@
     
 }
 
--(BOOL)isDietDay:(NSDate *)date
+- (BOOL) isDietDay: (NSDate*)date
 {
-    if ([[SDLibraryAPI sharedInstance] isDietDay:date]) {
-        
-        return YES;
-    }
-    return NO;
+    return [[SDLibraryAPI sharedInstance] isDietDay:date];
 }
 
 - (void)saveCurrentState {

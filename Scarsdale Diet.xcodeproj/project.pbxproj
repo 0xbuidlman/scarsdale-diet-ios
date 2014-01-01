@@ -19,6 +19,7 @@
 		0C17D9141758C496001520DC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C103337174CE2A7004C2ACC /* CoreGraphics.framework */; };
 		0C2111381860984900065F22 /* SDDietDay.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2111371860984900065F22 /* SDDietDay.m */; };
 		0C37E1091874523B008725E4 /* SDHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37E1081874523B008725E4 /* SDHelper.m */; };
+		0C37E10F1874B765008725E4 /* SDDietDay+TableRepresentation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37E10E1874B765008725E4 /* SDDietDay+TableRepresentation.m */; };
 		0C651EE0175F79CA00A0F01C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0C651EE2175F79CA00A0F01C /* Localizable.strings */; };
 		0C651EE4175F7D4B00A0F01C /* diet-info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C651EE6175F7D4B00A0F01C /* diet-info.plist */; };
 		0C754C0B175FF5B50070B774 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0C754C0A175FF5B50070B774 /* Settings.bundle */; };
@@ -74,6 +75,8 @@
 		0C2111371860984900065F22 /* SDDietDay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDDietDay.m; sourceTree = "<group>"; };
 		0C37E1071874523B008725E4 /* SDHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDHelper.h; sourceTree = "<group>"; };
 		0C37E1081874523B008725E4 /* SDHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDHelper.m; sourceTree = "<group>"; };
+		0C37E10D1874B765008725E4 /* SDDietDay+TableRepresentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SDDietDay+TableRepresentation.h"; sourceTree = "<group>"; };
+		0C37E10E1874B765008725E4 /* SDDietDay+TableRepresentation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SDDietDay+TableRepresentation.m"; sourceTree = "<group>"; };
 		0C4AA7C8175FCF7400F99051 /* bg */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bg; path = bg.lproj/MainStoryboard.strings; sourceTree = "<group>"; };
 		0C4AA7C9175FCF7400F99051 /* bg */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bg; path = bg.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0C4AA7CB175FCF7400F99051 /* bg */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = bg; path = "bg.lproj/diet-info.plist"; sourceTree = "<group>"; };
@@ -171,8 +174,11 @@
 		0C0220101761C9C200896649 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0CE740B7184FCCF4005F6265 /* Calendar */,
 				0CDDFD5E176661390011D0CA /* MainStoryboard_iPad.storyboard */,
 				0C10334B174CE2A7004C2ACC /* MainStoryboard.storyboard */,
+				0C37E10D1874B765008725E4 /* SDDietDay+TableRepresentation.h */,
+				0C37E10E1874B765008725E4 /* SDDietDay+TableRepresentation.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -218,7 +224,6 @@
 				0C103343174CE2A7004C2ACC /* SDAppDelegate.m */,
 				0CD869821870999800B032E3 /* API */,
 				0C2111351860983700065F22 /* Models */,
-				0CE740B7184FCCF4005F6265 /* Calendar */,
 				0C0220101761C9C200896649 /* Views */,
 				0C02200F1761C9AF00896649 /* Controllers */,
 				0C651EDA175F76FE00A0F01C /* Resources */,
@@ -509,6 +514,7 @@
 				0C37E1091874523B008725E4 /* SDHelper.m in Sources */,
 				0CE740B6184FC97A005F6265 /* SDCalendar.m in Sources */,
 				0CE740BA184FCD32005F6265 /* SDCalendarDietDayCell.m in Sources */,
+				0C37E10F1874B765008725E4 /* SDDietDay+TableRepresentation.m in Sources */,
 				0C2111381860984900065F22 /* SDDietDay.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

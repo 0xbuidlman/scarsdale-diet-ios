@@ -37,6 +37,9 @@
     return _sharedInstance;
 }
 
+- (id) getDietDayByDate: (NSDate *)date {
+    return [persistencyManager getDietDayByDate:date];
+}
 - (void) setDietDaysFromStartDate: (NSDate*)startDate {
     [persistencyManager setDietDaysFromStartDate:startDate];
 }
