@@ -69,6 +69,9 @@
     [datePicker setHidden:YES];
     
     [self.view addSubview:datePicker];
+    
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(saveCurrentState) name:UIApplicationDidEnterBackgroundNotification object:nil];
 }
 
 - (void) dietStartDateSelected: (id)sender {
@@ -89,10 +92,11 @@
     [defaults synchronize];
     
     [datePicker setHidden:YES];
+    [[SDLibraryAPI sharedInstance] setDietDaysFromStartDate:dietStart];
+
+    [calendar reloadData];
     
     self.navigationItem.rightBarButtonItem = clearButton;
-    
-    dietDays = [[SDLibraryAPI sharedInstance] setDietDaysFromStartDate:dietStart];
 }
 - (void) startDateTapped:(id) sender {
     [datePicker setHidden:NO];
@@ -161,11 +165,43 @@
     return key;
 }
 
+- (void)calendarView:(SDCalendar *)calendarView configureDayCell:(RDVCalendarDayCell *)dayCell
+             atIndex:(NSInteger)index {
+    SDCalendarDietDayCell *exampleDayCell = (SDCalendarDietDayCell*)dayCell;
+    NSDateFormatter *dateFormater = [[NSDateFormatter alloc] init];
+    [dateFormater setDateFormat:@"dd MMMM y"];
+    NSString* dateString = [[NSString stringWithFormat:@"%d ", index + 1] stringByAppendingString:calendarView.monthLabel.text];
+    
+    NSDate* date = [dateFormater dateFromString:dateString];
+    if ([self isDietDay:date]) {
+        self.navigationItem.rightBarButtonItem = clearButton;
+        [[exampleDayCell notificationView] setHidden:NO];
+    }
+    
+}
+
+-(BOOL)isDietDay:(NSDate *)date
+{
+    if ([[SDLibraryAPI sharedInstance] isDietDay:date]) {
+        
+        return YES;
+    }
+    return NO;
+}
+
+- (void)saveCurrentState {
+    [[SDLibraryAPI sharedInstance] saveDietDays];
+}
+
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void) dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end
