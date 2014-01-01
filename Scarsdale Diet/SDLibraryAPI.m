@@ -37,6 +37,10 @@
     return _sharedInstance;
 }
 
+- (NSDictionary*) setDietDaysFromStartDate: (NSDate*)startDate {
+    return [persistencyManager setDietDaysFromStartDate:startDate];
+}
+
 - (NSArray*) getDietDays {
     return [persistencyManager getDietDays];
 }
