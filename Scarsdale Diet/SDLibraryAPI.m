@@ -41,11 +41,11 @@
     return [persistencyManager setDietDaysFromStartDate:startDate];
 }
 
-- (NSArray*) getDietDays {
+- (NSDictionary*) getDietDays {
     return [persistencyManager getDietDays];
 }
-- (void) addDietDay:(SDDietDay*)dietDay atIndex:(int)index {
-    [persistencyManager addDietDay:dietDay atIndex:index];
+- (void) addDietDay:(SDDietDay*)dietDay forKey:(NSString *)key {
+    [persistencyManager addDietDay:dietDay forKey:key];
 }
 - (void) saveDietDays {
     [persistencyManager saveDietDays];

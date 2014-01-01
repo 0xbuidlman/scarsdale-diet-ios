@@ -10,9 +10,9 @@
 #import "SDDietDay.h"
 
 @interface SDPersistencyManager : NSObject
-- (NSArray*) getDietDays;
+- (NSDictionary*) getDietDays;
 - (void) saveDietDays;
 - (void) deleteDietDays;
-- (void) addDietDay: (SDDietDay*)dietDay atIndex:(int)index;
+- (void) addDietDay: (SDDietDay*)dietDay forKey:(NSString*)key;
 - (NSDictionary*) setDietDaysFromStartDate: (NSDate*)startDate;
 @end

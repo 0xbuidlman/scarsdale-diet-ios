@@ -11,7 +11,8 @@
 #import "SDPersistencyManager.h"
 
 @interface SDPersistencyManager() {
-    NSMutableArray* dietDays;
+    NSMutableDictionary *dietDays;
+    NSDictionary *dietDaysInfoDictionary;
 }
 @end
 
@@ -23,7 +24,7 @@
     self = [super init];
 
     if (self) {
-        dietDays = [[NSMutableArray alloc] init];
+        dietDays = [[NSMutableDictionary alloc] init];
         
         NSData *data = [NSData dataWithContentsOfFile:[NSHomeDirectory() stringByAppendingString:SD_FILE_NAME]];
         dietDays = [NSKeyedUnarchiver unarchiveObjectWithData:data];
@@ -32,10 +33,14 @@
             [self saveDietDays];
         }
     }
+    
+    NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"diet-info" ofType:@"plist"];
+    dietDaysInfoDictionary = [NSDictionary dictionaryWithContentsOfFile:plistPath];
+    
     return self;
 }
 
-- (NSArray*)getDietDays {
+- (NSDictionary*)getDietDays {
     return dietDays;
 }
 
@@ -43,12 +48,8 @@
     [dietDays removeAllObjects];
 }
 
-- (void) addDietDay:(SDDietDay *)dietDay atIndex:(int)index {
-    if (dietDays.count >= index) {
-        [dietDays insertObject:dietDays atIndex:index];
-    } else {
-        [dietDays addObject:dietDays];
-    }
+- (void) addDietDay:(SDDietDay *)dietDay forKey:(NSString*)key {
+    [dietDays setObject:dietDays forKey:key];
 }
 
 - (NSDictionary*) setDietDaysFromStartDate: (NSDate*)startDate {
@@ -68,8 +69,14 @@
     
     NSMutableDictionary *dietDaysDictionary = [NSMutableDictionary dictionary];
     NSMutableArray *tempArray = [NSMutableArray array];
+    NSString *breakfast = NSLocalizedString(@"breakfast", nil);
+    NSString *replacement = NSLocalizedString(@"replacement", nil);
+    NSString *key;
+    
+    SDDietDay *aDietDay;
     
     for (int idx = 0; idx < kDietDaysPeriod; idx++) {
+        key = [NSString stringWithFormat:@"%d", idx % 7];
         aDay = [cal dateFromComponents:comps];
         comps = [cal components:unitFlags fromDate:aDay];
         monthString = [NSString stringWithFormat:@"%i", [comps month]];
@@ -85,11 +92,19 @@
             monthStringKeeper = [NSMutableString stringWithString:monthString];
         }
         
-        [tempArray addObject:aDay];
+        aDietDay = [[SDDietDay alloc] initWithDate:aDay
+                     ImageName:dietDaysInfoDictionary[key][@"img"]
+                     breakfast:breakfast
+                         lunch:dietDaysInfoDictionary[key][@"lunch"]
+                        dinner:dietDaysInfoDictionary[key][@"dinner"]
+               andReplacement:replacement];
+        
+        [tempArray addObject:aDietDay];
         [dietDaysDictionary setObject:tempArray forKey:monthString];
         [comps setDay:([comps day] + 1)];
     }
     
+    dietDays = dietDaysDictionary;
     return dietDaysDictionary;
 }
 

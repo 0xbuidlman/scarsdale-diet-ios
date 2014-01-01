@@ -12,8 +12,8 @@
 @interface SDLibraryAPI : NSObject
 + (SDLibraryAPI*)sharedInstance;
 
-- (NSArray*) getDietDays;
-- (void) addDietDay:(SDDietDay*)dietDay atIndex:(int)index;
+- (NSDictionary*) getDietDays;
+- (void) addDietDay:(SDDietDay*)dietDay forKey:(NSString*)key;
 - (void) saveDietDays;
 - (void) deleteDietDays;
 - (NSDictionary*) setDietDaysFromStartDate: (NSDate*)startDate;
