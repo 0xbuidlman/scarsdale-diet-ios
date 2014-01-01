@@ -110,9 +110,8 @@
 -(SDCalendar*)loadCalendarView {
     CGRect applicationFrame = [[UIScreen mainScreen] applicationFrame];
     
-    int topCalendarPadding = 64;
-    applicationFrame.origin.y = topCalendarPadding;
-    applicationFrame.size.height -= topCalendarPadding;
+    applicationFrame.origin.y = kTopCalendarPadding;
+    applicationFrame.size.height -= kTopCalendarPadding;
     SDCalendar* calendarView = [[SDCalendar alloc] initWithFrame:applicationFrame];
     [calendarView setAutoresizingMask:UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight];
     [calendarView setSeparatorStyle:RDVCalendarViewDayCellSeparatorStyleHorizontal];

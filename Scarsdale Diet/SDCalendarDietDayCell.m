@@ -42,7 +42,7 @@
 
     [notificationView setFrame:CGRectMake(0, 0, viewSize.width, viewSize.height)];
     notificationView.alpha = 0.5;
-    notificationView.layer.cornerRadius = 23;
+    notificationView.layer.cornerRadius = kHalfCellHeight;
     
     
 }
@@ -52,7 +52,7 @@
 }
 
 - (void)setSelected:(BOOL)selected {
-    self.layer.cornerRadius = 23;
+    self.layer.cornerRadius = kHalfCellHeight;
 
     [super setSelected:selected];
 
