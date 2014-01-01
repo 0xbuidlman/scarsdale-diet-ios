@@ -18,15 +18,15 @@
 
 @implementation SDViewController
 
-@synthesize calendar, startButton, clearButton, doneButton, datePicker, dietDays, dietStart;
+@synthesize sdCalendar, startButton, clearButton, doneButton, datePicker, dietDays, dietStart;
 //@synthesize datePicker, dietStart, calendar, dietDays;
 
 
 - (void)viewDidLoad
 {
 
-    calendar = [self loadCalendarView];
-    [[self view] addSubview:calendar];
+    sdCalendar = [self loadCalendarView];
+    [[self view] addSubview:sdCalendar];
     [super viewDidLoad];
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -94,7 +94,7 @@
     [datePicker setHidden:YES];
     [[SDLibraryAPI sharedInstance] setDietDaysFromStartDate:dietStart];
 
-    [calendar reloadData];
+    [sdCalendar reloadData];
     
     self.navigationItem.rightBarButtonItem = clearButton;
 }
