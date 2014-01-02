@@ -28,8 +28,11 @@
         notificationView = [[UIView alloc] init];
         [notificationView setBackgroundColor:appColor];
         [notificationView setHidden:YES];
-        
+
         [self.contentView addSubview:notificationView];
+        
+        self.backgroundView.layer.cornerRadius = kHalfCellHeight;
+        self.selectedBackgroundView.layer.cornerRadius = kHalfCellHeight;
     }
     return self;
 }

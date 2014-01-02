@@ -25,7 +25,7 @@
         UIColor* appColor = [UIColor colorWithRed:10/255.0f green:145/255.0f blue:5/255.0f alpha:1];
         currentDayColor = appColor;
 
-        selectedDayColor = [UIColor colorWithRed:10/255.0f green:145/255.0f blue:5/255.0f alpha:0.7];
+        selectedDayColor = [UIColor colorWithRed:10/255.0f green:145/255.0f blue:5/255.0f alpha:0.8];
         
         [self.backButton setTitleColor:appColor forState:UIControlStateNormal];
         [self.forwardButton setTitleColor:appColor forState:UIControlStateNormal];
