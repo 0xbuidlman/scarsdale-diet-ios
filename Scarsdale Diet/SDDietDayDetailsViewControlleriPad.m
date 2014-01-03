@@ -40,7 +40,7 @@
         [self.scrollView setHidden:NO];
     }
     
-    [super configureView];
+//    [super configureView];
 }
 
 - (void)didReceiveMemoryWarning
