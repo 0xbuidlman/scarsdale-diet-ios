@@ -17,11 +17,11 @@
 "replacement title" = "Replacement meal";
 "lunch title" = "Lunch";
 "dinner title" = "Dinner";
-"breakfast" = "1/2 grapefruit (if available - seasonal fruits)\
-a slice of toasted protein bread\
-coffee or tea without sugar, cream or milk";
-"replacement" = "If you wish, you can replace any Scarsdale Diet's menu with the following menu:\
-1/2 low-fat cheese or cottage cheese mixed with 1 tablespoon cream\
-fruit cut as desired\
-6 halves walnuts or pecans whole or chopped and mixed with cheese or sprinkled on fruit\
-coffee, tea, soda water with a little lemon";
+"breakfast1" = "1/2 grapefruit (if available - seasonal fruits)";
+"breakfast2" = "a slice of toasted protein bread";
+"breakfast3" = "coffee or tea without sugar, cream or milk";
+"replacement1" = "If you wish, you can replace any Scarsdale Diet's menu with the following menu:";
+"replacement2" = "1/2 low-fat cheese or cottage cheese mixed with 1 tablespoon cream";
+"replacement3" = "fruit cut as desired";
+"replacement4" = "6 halves walnuts or pecans whole or chopped and mixed with cheese or sprinkled on fruit";
+"replacement5" = "coffee, tea, soda water with a little lemon";
