@@ -67,8 +67,18 @@
     
     NSMutableDictionary *dietDaysDictionary = [NSMutableDictionary dictionary];
     NSMutableArray *tempArray = [NSMutableArray array];
-    NSString *breakfast = NSLocalizedString(@"breakfast", nil);
-    NSString *replacement = NSLocalizedString(@"replacement", nil);
+    NSArray *breakfast = [[NSArray alloc] initWithObjects:
+                          NSLocalizedString(@"breakfast1", nil),
+                          NSLocalizedString(@"breakfast2", nil),
+                          NSLocalizedString(@"breakfast3", nil),
+                          nil];
+    NSArray *replacement = [[NSArray alloc] initWithObjects:
+                             NSLocalizedString(@"replacement1", nil),
+                             NSLocalizedString(@"replacement2", nil),
+                             NSLocalizedString(@"replacement3", nil),
+                             NSLocalizedString(@"replacement4", nil),
+                             NSLocalizedString(@"replacement5", nil),
+                             nil];
     NSString *key;
     
     SDDietDay *aDietDay;
