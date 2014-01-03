@@ -100,7 +100,12 @@
     [label setTextAlignment:NSTextAlignmentJustified];
     
     [label sizeToFit];
-    return label.frame.size.height;
+    
+    CGFloat height = label.frame.size.height;
+    if (height <= 44) {
+        height = 44.0;
+    }
+    return height;
 }
 
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
