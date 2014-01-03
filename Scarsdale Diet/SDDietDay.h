@@ -9,8 +9,9 @@
 #import <Foundation/Foundation.h>
 
 @interface SDDietDay : NSObject <NSCoding>
-@property (retain, nonatomic, readonly) NSString *imageName, *breakfast, *lunch, *dinner, *replacement;
+@property (retain, nonatomic, readonly) NSArray *imageName, *lunch, *dinner;
+@property (retain, nonatomic, readonly) NSString *breakfast, *replacement;
 @property (retain, nonatomic, readonly) NSDate *date;
 
-- (id) initWithDate: (NSDate*)date ImageName: (NSString*)imageName breakfast:(NSString*)breakfast lunch:(NSString*)lunch dinner:(NSString*)dinner andReplacement:(NSString*)replacement;
+- (id) initWithDate: (NSDate*)date ImageName: (NSArray*)imageName breakfast:(NSArray*)breakfast lunch:(NSArray*)lunch dinner:(NSArray*)dinner andReplacement:(NSArray*)replacement;
 @end

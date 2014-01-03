@@ -20,8 +20,6 @@
 @implementation SDViewController
 
 @synthesize sdCalendar, startButton, clearButton, doneButton, datePicker, dietDays, dietStart;
-//@synthesize datePicker, dietStart, calendar, dietDays;
-
 
 - (void)viewDidLoad
 {
@@ -148,9 +146,6 @@
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:@"SegueSelectDietDayToShowDetails"]) {
-
-//        NSString* key = [SDHelper getDietDay:dietStart OffsetByDate:sender];
-        
         SDDietDay *dietDayInfo = [[SDLibraryAPI sharedInstance] getDietDayByDate:sender];
         [[segue destinationViewController] setDetailItem:[dietDayInfo tr_tableRepresentation]];
     }
