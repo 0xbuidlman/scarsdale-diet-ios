@@ -91,13 +91,15 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
     dietStart = [currentCalendar dateFromComponents:dietStartComponents];
-    [defaults setObject:self.dietStart forKey:@"dietStart"];
+    [defaults setObject:dietStart forKey:@"dietStart"];
     [defaults synchronize];
     
     [datePicker setHidden:YES];
     [[SDLibraryAPI sharedInstance] setDietDaysFromStartDate:dietStart];
 
     [sdCalendar reloadData];
+    
+    [self saveCurrentState];
     
     self.navigationItem.rightBarButtonItem = clearButton;
 }
