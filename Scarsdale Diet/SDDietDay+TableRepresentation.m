@@ -11,11 +11,13 @@
 @implementation SDDietDay (TableRepresentation)
 - (NSDictionary*)tr_tableRepresentation
 {
-    return @{@"titles":@[NSLocalizedString(@"breakfast", nil),
-                         NSLocalizedString(@"lunch", nil),
-                         NSLocalizedString(@"dinner", nil),
-                         NSLocalizedString(@"replacement", nil),
-                         @"img"],
-             @"values":@[self.breakfast, self.lunch, self.dinner, self.replacement, self.imageName]};
+    return @{@"titles":@[
+                         NSLocalizedString(@"breakfast title", nil),
+                         NSLocalizedString(@"lunch title", nil),
+                         NSLocalizedString(@"dinner title", nil),
+                         NSLocalizedString(@"replacement title", nil)
+                         ],
+             @"values":@[self.breakfast, self.lunch, self.dinner, self.replacement],
+             @"img":self.imageName, };
 }
 @end
