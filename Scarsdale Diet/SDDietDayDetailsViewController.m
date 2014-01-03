@@ -61,7 +61,8 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 1;
+
+    return [_detailItem[@"values"][section] count];
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
@@ -76,7 +77,8 @@
         cell = [[UITableViewCell alloc] initWithFrame:CGRectZero];
     }
 
-    [cell.textLabel setText:_detailItem[@"values"][indexPath.section]];
+    [cell.textLabel setText:_detailItem[@"values"][indexPath.section][indexPath.row]];
+    
     [cell.textLabel sizeToFit];
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     [cell.textLabel setNumberOfLines:0];
@@ -89,19 +91,18 @@
 }
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 0)];
+    NSString *text = _detailItem[@"values"][indexPath.section][indexPath.row];
     [label setNumberOfLines:0];
-    
-    [label setText:_detailItem[@"values"][indexPath.section]];
+    [label setText:text];
     [label setFont:[UIFont preferredFontForTextStyle:UIFontTextStyleHeadline]];
     [label setLineBreakMode:NSLineBreakByWordWrapping];
     [label setTextAlignment:NSTextAlignmentJustified];
-
+    
     [label sizeToFit];
-
     return label.frame.size.height;
 }
+
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     return indexPath;
