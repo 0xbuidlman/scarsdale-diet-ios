@@ -82,7 +82,7 @@
     [cell.textLabel sizeToFit];
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     [cell.textLabel setNumberOfLines:0];
-    [cell setFont:[UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline]];
+    [cell.textLabel setFont:[UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline]];
 
     [cell.textLabel setLineBreakMode:NSLineBreakByWordWrapping];
     [cell.textLabel setTextAlignment: NSTextAlignmentJustified];
