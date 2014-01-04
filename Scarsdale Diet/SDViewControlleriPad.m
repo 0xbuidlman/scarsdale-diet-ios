@@ -7,7 +7,7 @@
 //
 
 #import "SDViewControlleriPad.h"
-//#import "SDDietDayDetailsViewController.h"
+#import "SDDietDayDetailsViewController.h"
 
 @interface SDViewControlleriPad ()
 
@@ -22,19 +22,19 @@
 
 - (void) viewDidLoad {
     [super viewDidLoad];
-    self.detailViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"DetailViewiPad"];
-//    self.detailViewController = (SDDietDayDetailsViewControlleriPad *)[[self.splitViewController.viewControllers lastObject] topViewController];
+    if (self.detailViewController == nil) {
+        self.detailViewController = (SDDietDayDetailsViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+    }
 }
 
 - (CGRect) getPickerRectForSize: (CGSize) pickerSize AndScreenRect:(CGRect) screenRect {
-    //    return CGRectMake(0, screenRect.origin.y + screenRect.size.height - pickerSize.height, pickerSize.width, pickerSize.height);
     return CGRectMake(0, screenRect.origin.y + screenRect.size.width - pickerSize.height, pickerSize.width, pickerSize.height);
 }
 
 - (void) calendarView:(RDVCalendarView *)calendarView didSelectDate:(NSDate *)date {
     if ([self isDietDay:date]) {
         SDDietDay *dietDayInfo = [[SDLibraryAPI sharedInstance] getDietDayByDate:date];
-        self.detailViewController.detailItem = dietDayInfo;
+        self.detailViewController.detailItem = [dietDayInfo tr_tableRepresentation];
     }
 }
 

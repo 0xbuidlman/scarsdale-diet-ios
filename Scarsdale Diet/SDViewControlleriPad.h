@@ -8,9 +8,9 @@
 
 #import "SDViewController.h"
 //#import "SDDietDayDetailsViewControlleriPad.h"
-@class SDDietDayDetailsViewControlleriPad;
+@class SDDietDayDetailsViewController;
 @interface SDViewControlleriPad : SDViewController
 
-@property (strong, nonatomic) SDDietDayDetailsViewControlleriPad *detailViewController;
+@property (strong, nonatomic) SDDietDayDetailsViewController *detailViewController;
 
 @end
