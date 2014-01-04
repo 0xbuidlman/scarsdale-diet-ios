@@ -24,7 +24,7 @@
         <!--Diet Day Details View Controlleri Pad-->
         <scene sceneID="ZLV-bp-fuD">
             <objects>
-                <viewController storyboardIdentifier="DetailView" id="DAj-pn-Fus" customClass="SDDietDayDetailsViewControlleriPad" sceneMemberID="viewController">
+                <viewController id="DAj-pn-Fus" customClass="SDDietDayDetailsViewControlleriPad" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="7OV-5g-agA">
                         <rect key="frame" x="0.0" y="0.0" width="704" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -94,7 +94,8 @@
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <outlet property="detailImage" destination="DJR-IS-FGa" id="PCw-xI-FK8"/>
+                        <outlet property="detailImage" destination="DJR-IS-FGa" id="vcb-sZ-uLv"/>
+                        <outlet property="tableView" destination="7OV-5g-agA" id="z79-Km-Huf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7kQ-5C-h5Y" userLabel="First Responder" sceneMemberID="firstResponder"/>

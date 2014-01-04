@@ -18,7 +18,7 @@
 
 @implementation SDViewController
 
-@synthesize sdCalendar, startButton, clearButton, doneButton, datePicker, dietDays, dietStart;
+@synthesize sdCalendar, startButton, clearButton, doneButton, datePicker, dietStart;
 
 - (void)viewDidLoad
 {

@@ -12,7 +12,7 @@
 
 
 @interface SDDietDayDetailsViewController ()
-@property (retain, nonatomic) NSMutableDictionary* cellHeightHolder;
+
 @end
 
 @implementation SDDietDayDetailsViewController
@@ -39,7 +39,8 @@
 	// Do any additional setup after loading the view.
     
     self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:10/255.0f green:145/255.0f blue:5/255.0f alpha:1];
-    detailImage.image = [UIImage imageNamed:_detailItem[@"img"]];
+    if (_detailItem)
+        detailImage.image = [UIImage imageNamed:_detailItem[@"img"]];
     
     detailImage.frame = [self getDetailImageFrame];
 
