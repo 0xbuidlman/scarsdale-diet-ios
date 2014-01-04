@@ -16,12 +16,11 @@
 
 - (void) viewDidLoad {
     [super viewDidLoad];
-    self.detailImage.image = [UIImage imageNamed:@"fish.jpg"];
 }
 - (void)setDetailItem:(id)newDetailItem {
     [super setDetailItem:newDetailItem];
     [self.tableView reloadData];
-    
+    self.detailImage.image = [UIImage imageNamed:newDetailItem[@"img"]];
     if (self.masterPopoverController != nil) {
         [self.masterPopoverController dismissPopoverAnimated:YES];
     }
