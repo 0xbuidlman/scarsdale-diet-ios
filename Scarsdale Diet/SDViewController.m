@@ -10,8 +10,7 @@
 #import "SDDietDayDetailsViewController.h"
 #import "SDCalendarDietDayCell.h"
 #import <QuartzCore/QuartzCore.h>
-#import "SDLibraryAPI.h"
-#import "SDDietDay+TableRepresentation.h"
+
 
 @interface SDViewController ()
 

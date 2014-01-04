@@ -10,6 +10,8 @@
 //#import "VRGCalendarView.h"
 #import "SDCalendar.h"
 #import "RDVCalendarView.h"
+#import "SDLibraryAPI.h"
+#import "SDDietDay+TableRepresentation.h"
 
 @class SDDietDayDetailsViewController;
 
@@ -32,5 +34,6 @@
 // navigationBar buttons
 @property (strong, nonatomic) UIBarButtonItem *startButton, *clearButton, *doneButton;
 
+- (BOOL) isDietDay: (NSDate*)date;
 - (CGRect) getPickerRectForSize: (CGSize) pickerSize AndScreenRect:(CGRect) screenRect;
 @end
