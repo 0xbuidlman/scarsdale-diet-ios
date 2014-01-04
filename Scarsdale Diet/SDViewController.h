@@ -18,7 +18,7 @@
 - (void) dietStartDateSelected:(id)sender;
 - (void) clearDateTapped:(id)sender;
 
-@property (strong, nonatomic) IBOutlet UIView *calendarView;
+//@property (strong, nonatomic) IBOutlet UIView *calendarView;
 
 @property (strong, nonatomic) UIDatePicker *datePicker;
 
@@ -32,4 +32,5 @@
 // navigationBar buttons
 @property (strong, nonatomic) UIBarButtonItem *startButton, *clearButton, *doneButton;
 
+- (CGRect) getPickerRectForSize: (CGSize) pickerSize AndScreenRect:(CGRect) screenRect;
 @end
