@@ -14,50 +14,14 @@
 @end
 
 @implementation SDViewControlleriPad
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-//
-//- (void) dietStartDateSelected:(id)sender
-//{
-//    [super dietStartDateSelected:sender];
-//    [self calendarView:self.calendar dateSelected:self.dietStart];
-//}
-//-(void)calendarView:(VRGCalendarView *)calendarView dateSelected:(NSDate *)date {
-//    
-//    if ([self isDietDay:date]) {
-//        NSString *key = [self getDietDayOffsetByDate:date];
-//        NSDictionary *tmpItem = self.dietDaysInfoDictionary[key];
-//        SDDietDayDetailsViewController *tmpDetailViewController = self.detailsViewController;
-//        tmpDetailViewController.detailItem = tmpItem;
-//    }
-//}
-
-- (void)viewDidLoad
-{
-
-    [super viewDidLoad];
-	// Do any additional setup after loading the view.
-    if (self.detailsViewController == nil) {
-        self.detailsViewController = (SDDietDayDetailsViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
-    }
-}
-
 - (void) clearDateTapped:(id)sender;
 {
     [super clearDateTapped:sender];
     self.detailsViewController.detailItem = nil;
 }
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
+- (CGRect) getPickerRectForSize: (CGSize) pickerSize AndScreenRect:(CGRect) screenRect {
+    //    return CGRectMake(0, screenRect.origin.y + screenRect.size.height - pickerSize.height, pickerSize.width, pickerSize.height);
+    return CGRectMake(0, screenRect.origin.y + screenRect.size.width - pickerSize.height, pickerSize.width, pickerSize.height);
+}
 @end

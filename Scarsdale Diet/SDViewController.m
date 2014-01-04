@@ -60,7 +60,7 @@
     
     CGRect screenRect = [self.view frame];
     CGSize pickerSize = [datePicker sizeThatFits:CGSizeZero];
-    CGRect pickerRect = CGRectMake(0, screenRect.origin.y + screenRect.size.height - pickerSize.height, pickerSize.width, pickerSize.height);
+    CGRect pickerRect = [self getPickerRectForSize:pickerSize AndScreenRect:screenRect];
     
     datePicker.datePickerMode = UIDatePickerModeDate;
     datePicker.frame = pickerRect;
@@ -122,7 +122,9 @@
     CGRect applicationFrame = [[UIScreen mainScreen] applicationFrame];
     
     applicationFrame.origin.y = kTopCalendarPadding;
+    applicationFrame.origin.x = 0;
     applicationFrame.size.height -= kTopCalendarPadding;
+    applicationFrame.size.width = self.view.frame.size.width;
     SDCalendar* calendarView = [[SDCalendar alloc] initWithFrame:applicationFrame];
     [calendarView setAutoresizingMask:UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight];
     [calendarView setSeparatorStyle:RDVCalendarViewDayCellSeparatorStyleHorizontal];
@@ -186,6 +188,10 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (CGRect) getPickerRectForSize: (CGSize) pickerSize AndScreenRect:(CGRect) screenRect {
+    return CGRectMake(0, screenRect.origin.y + screenRect.size.height - pickerSize.height, pickerSize.width, pickerSize.height);
 }
 
 -(void) dealloc {

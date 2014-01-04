@@ -389,6 +389,11 @@
 				CLASSPREFIX = SD;
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Mihail Velikov";
+				TargetAttributes = {
+					0C10332F174CE2A7004C2ACC = {
+						DevelopmentTeam = Q59675477H;
+					};
+				};
 			};
 			buildConfigurationList = 0C10332B174CE2A7004C2ACC /* Build configuration list for PBXProject "Scarsdale Diet" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -586,7 +591,7 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Mihail Velikov (Q59675477H)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -619,7 +624,7 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Mihail Velikov (Q59675477H)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -639,7 +644,8 @@
 			baseConfigurationReference = B27124DD860B4D73ADD1FB6D /* Pods.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Mihail Velikov (Q59675477H)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Scarsdale Diet/Scarsdale Diet-Prefix.pch";
 				INFOPLIST_FILE = "Scarsdale Diet/Scarsdale Diet-Info.plist";
@@ -649,7 +655,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "E9E6D447-9D40-4011-A27C-42DC08EAFA52";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "../Vurig-Calendar/Vurig\\ Calendar/**";
 				WRAPPER_EXTENSION = app;
@@ -661,7 +667,8 @@
 			baseConfigurationReference = B27124DD860B4D73ADD1FB6D /* Pods.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Mihail Velikov (Q59675477H)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Scarsdale Diet/Scarsdale Diet-Prefix.pch";
 				INFOPLIST_FILE = "Scarsdale Diet/Scarsdale Diet-Info.plist";
@@ -671,7 +678,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "E9E6D447-9D40-4011-A27C-42DC08EAFA52";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "../Vurig-Calendar/Vurig\\ Calendar/**";
 				WRAPPER_EXTENSION = app;

@@ -20,8 +20,10 @@
 
 - (id) init {
     self = [super init];
-    if (self)
-        _cellHeightHolder = [[NSMutableDictionary alloc] init];
+    if (self) {
+        _cellWidth = 320;
+        _imageHeight = 240;
+    }
     return self;
 }
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -46,7 +48,9 @@
     
     self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:10/255.0f green:145/255.0f blue:5/255.0f alpha:1];
     detailImage.image = [UIImage imageNamed:_detailItem[@"img"]];
-
+    CGRect frame = detailImage.frame;
+    frame.size = CGSizeMake(self.view.frame.size.width, _imageHeight);
+    detailImage.frame = frame;
 
     self.tableView.delegate = self;
 }
@@ -91,7 +95,7 @@
 }
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 0)];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 0)];
     NSString *text = _detailItem[@"values"][indexPath.section][indexPath.row];
     [label setNumberOfLines:0];
     [label setText:text];
