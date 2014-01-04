@@ -19,7 +19,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nVO-CE-JFt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="504" y="696"/>
+            <point key="canvasLocation" x="329" y="425"/>
         </scene>
         <!--Diet Day Details View Controlleri Pad-->
         <scene sceneID="ZLV-bp-fuD">
@@ -30,17 +30,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                        <imageView key="tableHeaderView" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eggs.jpg" id="DJR-IS-FGa">
-                            <rect key="frame" x="0.0" y="0.0" width="704" height="256"/>
+                        <imageView key="tableHeaderView" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="DJR-IS-FGa">
+                            <rect key="frame" x="0.0" y="64" width="704" height="256"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <sections>
                             <tableViewSection headerTitle="Breakfast" id="5jB-Fm-Rg0">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="sHn-Zh-QLA">
-                                        <rect key="frame" x="0.0" y="278" width="704" height="44"/>
+                                        <rect key="frame" x="0.0" y="342" width="704" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sHn-Zh-QLA">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sHn-Zh-QLA" id="0ca-db-0tc">
                                             <rect key="frame" x="0.0" y="0.0" width="704" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
@@ -50,9 +50,9 @@
                             <tableViewSection headerTitle="Lunch" id="Ok5-dC-DWk">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="d7i-nK-1nE">
-                                        <rect key="frame" x="0.0" y="344" width="704" height="44"/>
+                                        <rect key="frame" x="0.0" y="408" width="704" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="d7i-nK-1nE">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="d7i-nK-1nE" id="xSF-T4-O6T">
                                             <rect key="frame" x="0.0" y="0.0" width="704" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
@@ -62,7 +62,7 @@
                             <tableViewSection headerTitle="Dinner" id="uXy-qT-sGX">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="K7p-Kx-wSa">
-                                        <rect key="frame" x="0.0" y="410" width="704" height="44"/>
+                                        <rect key="frame" x="0.0" y="474" width="704" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="K7p-Kx-wSa" id="NUP-yS-zWz">
                                             <rect key="frame" x="0.0" y="0.0" width="704" height="43"/>
@@ -74,7 +74,7 @@
                             <tableViewSection headerTitle="Replacement" id="0xn-XC-ABR">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="coM-TH-pLT">
-                                        <rect key="frame" x="0.0" y="476" width="704" height="44"/>
+                                        <rect key="frame" x="0.0" y="540" width="704" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="coM-TH-pLT" id="mqJ-hc-9Tg">
                                             <rect key="frame" x="0.0" y="0.0" width="704" height="43"/>
@@ -85,10 +85,10 @@
                             </tableViewSection>
                         </sections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="FaF-om-Fxs">
-                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="Ke1-MJ-Hc7">
+                    <navigationItem key="navigationItem" id="5Go-mS-laH">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="bHp-de-iBs">
                             <connections>
-                                <action selector="shareButton:" destination="DAj-pn-Fus" id="LBd-Sz-te2"/>
+                                <action selector="shareButton:" destination="DAj-pn-Fus" id="Rih-cj-bWd"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -99,7 +99,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7kQ-5C-h5Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1442" y="696"/>
+            <point key="canvasLocation" x="1194" y="425"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="PdY-hS-OKp">
@@ -131,9 +131,6 @@
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="7Hw-g3-8Tl"/>
-                    <connections>
-                        <segue destination="DAj-pn-Fus" kind="replace" identifier="SegueSelectDietDayToShowDetails" splitViewControllerTargetIndex="1" id="EiE-UR-Ohb"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Cn-Pn-E2S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -155,15 +152,9 @@
             <point key="canvasLocation" x="-875" y="-10"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="eggs.jpg" width="400" height="254"/>
-    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="EiE-UR-Ohb"/>
-    </inferredMetricsTieBreakers>
 </document>
