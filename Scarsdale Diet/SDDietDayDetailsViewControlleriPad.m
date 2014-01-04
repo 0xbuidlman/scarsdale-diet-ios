@@ -14,11 +14,9 @@
 
 @implementation SDDietDayDetailsViewControlleriPad
 
-- (void) viewDidLoad {
-    [super viewDidLoad];
-    self.detailImage.image = [UIImage imageNamed:self.detailItem[@"img"]];
+- (CGRect) getDetailImageFrame {
     CGRect frame = self.detailImage.frame;
-    frame.size = CGSizeMake(self.view.frame.size.width, 256);
-    self.detailImage.frame = frame;
+    frame.size = CGSizeMake(704, 256);
+    return frame;
 }
 @end
