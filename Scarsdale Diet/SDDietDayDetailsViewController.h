@@ -14,10 +14,9 @@
 
 @property (strong, nonatomic) id detailItem;
 @property (weak, nonatomic) IBOutlet UIImageView *detailImage;
-@property (nonatomic) int cellWidth;
-@property (nonatomic) int imageHeight;
 
 - (IBAction)shareButton:(id)sender;
 
+- (CGRect) getDetailImageFrame;
 
 @end
