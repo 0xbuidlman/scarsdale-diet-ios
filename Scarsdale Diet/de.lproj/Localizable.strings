@@ -13,6 +13,17 @@
 "Clear" = "Löschen";
 "Done" = "Geschehen";
 "Share Title" = "Ich benutze die Scarsdale Diet App aus iTunes - http://bit.ly/1b3h36Z";
-"breakfast" = "1/2 Grapefruit (falls vorhanden Saisonfrüchte)\n1 Scheibe geröstes Protein- oder Vollkornbrot aber ohne gefettet zu werden\nKaffee oder Tee ohne Zucker, Sahne oder Milch";
-"replacement" = "Wenn Sie wollen, können Sie eines von den Menüs von der Diät Scarsdale mit folgenden Menüs ersetzen:
-\n1/2 fettarme frische Käse oder Quark gemischte mit 1 Esslöffel Sahne\nFrüchte geschnittene wie Sie wollen\n6 Hälften Wallnüsse oder Pekanüsse, ganz oder gehackt und gemischtе mit dem Käse oder gestreutе auf die Früchte\nKaffee, Tee, Sodawasser mit etwas Zitrone";
+"breakfast title" = "Frühstück";
+"replacement title" = "Ersetzendes Mittagessen";
+"lunch title" = "Mittag";
+"dinner title" = "Abendessen";
+"breakfast1" = "1/2 Grapefruit (falls vorhanden Saisonfrüchte)";
+"breakfast2" = "1 Scheibe geröstes Protein- oder Vollkornbrot aber ohne gefettet zu werden";
+"breakfast3" = "Kaffee oder Tee ohne Zucker, Sahne oder Milch";
+"replacement1" = "Wenn Sie wollen, können Sie eines von den Menüs von der Diät Scarsdale mit folgenden Menüs ersetzen:";
+"replacement2" = "1/2 fettarme frische Käse oder Quark gemischte mit 1 Esslöffel Sahne";
+"replacement3" = "Früchte geschnittene wie Sie wollen";
+"replacement4" = "6 Hälften Wallnüsse oder Pekanüsse, ganz oder gehackt und gemischtе mit dem Käse oder gestreutе auf die Früchte";
+"replacement5" = "Kaffee, Tee, Sodawasser mit etwas Zitrone";
+"Prev" = "Zurück";
+"Next" = "Weiter";
