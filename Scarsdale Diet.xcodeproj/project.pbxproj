@@ -24,26 +24,16 @@
 		0C651EE0175F79CA00A0F01C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0C651EE2175F79CA00A0F01C /* Localizable.strings */; };
 		0C651EE4175F7D4B00A0F01C /* diet-info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C651EE6175F7D4B00A0F01C /* diet-info.plist */; };
 		0C754C0B175FF5B50070B774 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0C754C0A175FF5B50070B774 /* Settings.bundle */; };
-		0C7751A117524584009C636F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C7751A017524584009C636F /* Default@2x.png */; };
-		0C7751A3175245B1009C636F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C7751A2175245B1009C636F /* Default.png */; };
 		0C88924C174FA67000AAAC64 /* SDDietDayDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C88924B174FA67000AAAC64 /* SDDietDayDetailsViewController.m */; };
 		0C8892561750105900AAAC64 /* beef.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C8892551750105900AAAC64 /* beef.jpg */; };
 		0C8892581750108800AAAC64 /* tuna_salad.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C8892571750108800AAAC64 /* tuna_salad.jpg */; };
 		0C88925C1750A7F800AAAC64 /* fruit_salad.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C88925B1750A7F800AAAC64 /* fruit_salad.jpg */; };
 		0C88925E1750A9C300AAAC64 /* eggs.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C88925D1750A9C300AAAC64 /* eggs.jpg */; };
 		0C8892601750AAE000AAAC64 /* tomatoes_lettuce.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C88925F1750AAE000AAAC64 /* tomatoes_lettuce.jpg */; };
-		0C8892671752084A00AAAC64 /* 57.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C8892661752084A00AAAC64 /* 57.png */; };
-		0C8892691752084F00AAAC64 /* 114.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C8892681752084F00AAAC64 /* 114.png */; };
-		0C88926B17520F4700AAAC64 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C88926A17520F4700AAAC64 /* Default-568h@2x.png */; };
 		0C96D746175393100043489C /* fish.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C96D745175393100043489C /* fish.jpg */; };
 		0C96D7481753A12B0043489C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C96D7471753A12B0043489C /* QuartzCore.framework */; };
 		0CA15C42176B2AC600E6B7D0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0CA15C41176B2AC600E6B7D0 /* InfoPlist.strings */; };
 		0CB9727F1767300100900D5E /* SDDietDayDetailsViewControlleriPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CB9727E1767300100900D5E /* SDDietDayDetailsViewControlleriPad.m */; };
-		0CCE6582176B34AB0039D470 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CCE6581176B34AB0039D470 /* Default-Landscape~ipad.png */; };
-		0CCE6584176B34B60039D470 /* Default-Landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CCE6583176B34B60039D470 /* Default-Landscape@2x~ipad.png */; };
-		0CCE6586176B35080039D470 /* 72.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CCE6585176B35080039D470 /* 72.png */; };
-		0CCE6588176B350C0039D470 /* 144.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CCE6587176B350C0039D470 /* 144.png */; };
-		0CCE658D176B39380039D470 /* Default-Portrait@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CCE658C176B39380039D470 /* Default-Portrait@2x~ipad.png */; };
 		0CD86985187099B500B032E3 /* SDPersistencyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD86984187099B500B032E3 /* SDPersistencyManager.m */; };
 		0CD869881870A38800B032E3 /* SDLibraryAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD869871870A38800B032E3 /* SDLibraryAPI.m */; };
 		0CDDFD5C176661390011D0CA /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CDDFD5E176661390011D0CA /* MainStoryboard_iPad.storyboard */; };
@@ -54,7 +44,6 @@
 		0CF067BD1757BF9C009A93E0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C103333174CE2A7004C2ACC /* UIKit.framework */; };
 		0CF067BE1757BF9C009A93E0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C103335174CE2A7004C2ACC /* Foundation.framework */; };
 		0CF067C71757BF9D009A93E0 /* ScarsdaleDietLogicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF067C61757BF9D009A93E0 /* ScarsdaleDietLogicTests.m */; };
-		209D198A179F1E78003F23F9 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 209D1989179F1E78003F23F9 /* Default-Landscape~ipad.png */; };
 		7AC91BB54EAE4506A5788697 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 991AC2B1A1004DD4BF61466B /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -89,8 +78,6 @@
 		0C651EE8175F823F00A0F01C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		0C651EEC175F8BFE00A0F01C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/MainStoryboard.strings; sourceTree = "<group>"; };
 		0C754C0A175FF5B50070B774 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = "Scarsdale Diet/Settings.bundle"; sourceTree = "<group>"; };
-		0C7751A017524584009C636F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
-		0C7751A2175245B1009C636F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
 		0C88924A174FA67000AAAC64 /* SDDietDayDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDDietDayDetailsViewController.h; sourceTree = "<group>"; };
 		0C88924B174FA67000AAAC64 /* SDDietDayDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDDietDayDetailsViewController.m; sourceTree = "<group>"; };
 		0C8892551750105900AAAC64 /* beef.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = beef.jpg; sourceTree = "<group>"; };
@@ -98,19 +85,11 @@
 		0C88925B1750A7F800AAAC64 /* fruit_salad.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fruit_salad.jpg; sourceTree = "<group>"; };
 		0C88925D1750A9C300AAAC64 /* eggs.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = eggs.jpg; sourceTree = "<group>"; };
 		0C88925F1750AAE000AAAC64 /* tomatoes_lettuce.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tomatoes_lettuce.jpg; sourceTree = "<group>"; };
-		0C8892661752084A00AAAC64 /* 57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 57.png; path = ../57.png; sourceTree = "<group>"; };
-		0C8892681752084F00AAAC64 /* 114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 114.png; path = ../114.png; sourceTree = "<group>"; };
-		0C88926A17520F4700AAAC64 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		0C96D745175393100043489C /* fish.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = fish.jpg; path = ../../../Downloads/fish.jpg; sourceTree = "<group>"; };
 		0C96D7471753A12B0043489C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		0CA15C41176B2AC600E6B7D0 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		0CB9727D1767300100900D5E /* SDDietDayDetailsViewControlleriPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDDietDayDetailsViewControlleriPad.h; sourceTree = "<group>"; };
 		0CB9727E1767300100900D5E /* SDDietDayDetailsViewControlleriPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDDietDayDetailsViewControlleriPad.m; sourceTree = "<group>"; };
-		0CCE6581176B34AB0039D470 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape~ipad.png"; path = "../Default-Landscape~ipad.png"; sourceTree = "<group>"; };
-		0CCE6583176B34B60039D470 /* Default-Landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape@2x~ipad.png"; path = "../Default-Landscape@2x~ipad.png"; sourceTree = "<group>"; };
-		0CCE6585176B35080039D470 /* 72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 72.png; path = ../72.png; sourceTree = "<group>"; };
-		0CCE6587176B350C0039D470 /* 144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 144.png; path = ../144.png; sourceTree = "<group>"; };
-		0CCE658C176B39380039D470 /* Default-Portrait@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait@2x~ipad.png"; path = "../Default-Portrait@2x~ipad.png"; sourceTree = "<group>"; };
 		0CD86983187099B500B032E3 /* SDPersistencyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPersistencyManager.h; sourceTree = "<group>"; };
 		0CD86984187099B500B032E3 /* SDPersistencyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDPersistencyManager.m; sourceTree = "<group>"; };
 		0CD869861870A38800B032E3 /* SDLibraryAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDLibraryAPI.h; sourceTree = "<group>"; };
@@ -128,7 +107,6 @@
 		0CF067C51757BF9D009A93E0 /* ScarsdaleDietLogicTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScarsdaleDietLogicTests.h; sourceTree = "<group>"; };
 		0CF067C61757BF9D009A93E0 /* ScarsdaleDietLogicTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScarsdaleDietLogicTests.m; sourceTree = "<group>"; };
 		0CF067C81757BF9D009A93E0 /* ScarsdaleDietLogicTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ScarsdaleDietLogicTests-Prefix.pch"; sourceTree = "<group>"; };
-		209D1989179F1E78003F23F9 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape~ipad.png"; path = "../Default-Landscape~ipad.png"; sourceTree = "<group>"; };
 		991AC2B1A1004DD4BF61466B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B27124DD860B4D73ADD1FB6D /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -240,18 +218,7 @@
 		0C10333A174CE2A7004C2ACC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				209D1989179F1E78003F23F9 /* Default-Landscape~ipad.png */,
-				0CCE658C176B39380039D470 /* Default-Portrait@2x~ipad.png */,
-				0CCE6587176B350C0039D470 /* 144.png */,
-				0CCE6585176B35080039D470 /* 72.png */,
-				0CCE6583176B34B60039D470 /* Default-Landscape@2x~ipad.png */,
-				0CCE6581176B34AB0039D470 /* Default-Landscape~ipad.png */,
 				0CA15C41176B2AC600E6B7D0 /* InfoPlist.strings */,
-				0C7751A2175245B1009C636F /* Default.png */,
-				0C7751A017524584009C636F /* Default@2x.png */,
-				0C88926A17520F4700AAAC64 /* Default-568h@2x.png */,
-				0C8892681752084F00AAAC64 /* 114.png */,
-				0C8892661752084A00AAAC64 /* 57.png */,
 				0C10333B174CE2A7004C2ACC /* Scarsdale Diet-Info.plist */,
 				0C10333F174CE2A7004C2ACC /* main.m */,
 				0C103341174CE2A7004C2ACC /* Scarsdale Diet-Prefix.pch */,
@@ -432,23 +399,12 @@
 				0C88925C1750A7F800AAAC64 /* fruit_salad.jpg in Resources */,
 				0C88925E1750A9C300AAAC64 /* eggs.jpg in Resources */,
 				0C8892601750AAE000AAAC64 /* tomatoes_lettuce.jpg in Resources */,
-				209D198A179F1E78003F23F9 /* Default-Landscape~ipad.png in Resources */,
-				0C8892671752084A00AAAC64 /* 57.png in Resources */,
 				0C64D05918796B81006BB10A /* Images.xcassets in Resources */,
-				0C8892691752084F00AAAC64 /* 114.png in Resources */,
-				0C88926B17520F4700AAAC64 /* Default-568h@2x.png in Resources */,
-				0C7751A117524584009C636F /* Default@2x.png in Resources */,
-				0C7751A3175245B1009C636F /* Default.png in Resources */,
 				0C96D746175393100043489C /* fish.jpg in Resources */,
 				0C651EE0175F79CA00A0F01C /* Localizable.strings in Resources */,
 				0C754C0B175FF5B50070B774 /* Settings.bundle in Resources */,
 				0CDDFD5C176661390011D0CA /* MainStoryboard_iPad.storyboard in Resources */,
 				0CA15C42176B2AC600E6B7D0 /* InfoPlist.strings in Resources */,
-				0CCE6582176B34AB0039D470 /* Default-Landscape~ipad.png in Resources */,
-				0CCE6584176B34B60039D470 /* Default-Landscape@2x~ipad.png in Resources */,
-				0CCE6586176B35080039D470 /* 72.png in Resources */,
-				0CCE6588176B350C0039D470 /* 144.png in Resources */,
-				0CCE658D176B39380039D470 /* Default-Portrait@2x~ipad.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -648,6 +604,7 @@
 			baseConfigurationReference = B27124DD860B4D73ADD1FB6D /* Pods.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -672,6 +629,7 @@
 			baseConfigurationReference = B27124DD860B4D73ADD1FB6D /* Pods.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -684,7 +642,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "5F957388-BAAF-4B06-99E8-6DCFE0263528";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "../Vurig-Calendar/Vurig\\ Calendar/**";
 				WRAPPER_EXTENSION = app;
