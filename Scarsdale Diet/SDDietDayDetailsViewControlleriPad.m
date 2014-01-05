@@ -9,16 +9,25 @@
 #import "SDDietDayDetailsViewControlleriPad.h"
 
 @interface SDDietDayDetailsViewControlleriPad ()
-@property int imageHeight;
+@property (strong, nonatomic) UIPopoverController *masterPopoverController;
 @end
 
 @implementation SDDietDayDetailsViewControlleriPad
 
 - (void) viewDidLoad {
     [super viewDidLoad];
-    self.detailImage.image = [UIImage imageNamed:self.detailItem[@"img"]];
+}
+- (void)setDetailItem:(id)newDetailItem {
+    [super setDetailItem:newDetailItem];
+    [self.tableView reloadData];
+    self.detailImage.image = [UIImage imageNamed:newDetailItem[@"img"]];
+    if (self.masterPopoverController != nil) {
+        [self.masterPopoverController dismissPopoverAnimated:YES];
+    }
+}
+- (CGRect) getDetailImageFrame {
     CGRect frame = self.detailImage.frame;
-    frame.size = CGSizeMake(self.view.frame.size.width, 256);
-    self.detailImage.frame = frame;
+    frame.size = CGSizeMake(704, 256);
+    return frame;
 }
 @end

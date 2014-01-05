@@ -29,6 +29,8 @@
         
         [self.backButton setTitleColor:appColor forState:UIControlStateNormal];
         [self.forwardButton setTitleColor:appColor forState:UIControlStateNormal];
+        [self.backButton setTitle:NSLocalizedString(@"Prev", nil) forState:UIControlStateNormal];
+        [self.forwardButton setTitle:NSLocalizedString(@"Next", nil) forState:UIControlStateNormal];
     }
     return self;
 }

@@ -10,14 +10,15 @@
 
 
 @interface SDDietDayDetailsViewController : UITableViewController <UITableViewDelegate, UISplitViewControllerDelegate>
+
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIImageView *detailImage;
 
 @property (strong, nonatomic) id detailItem;
-@property (weak, nonatomic) IBOutlet UIImageView *detailImage;
-@property (nonatomic) int cellWidth;
-@property (nonatomic) int imageHeight;
 
 - (IBAction)shareButton:(id)sender;
 
+- (CGRect) getDetailImageFrame;
+- (void)setDetailItem:(id)newDetailItem;
 
 @end

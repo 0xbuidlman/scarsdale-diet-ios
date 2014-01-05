@@ -12,20 +12,12 @@
 
 
 @interface SDDietDayDetailsViewController ()
-@property (retain, nonatomic) NSMutableDictionary* cellHeightHolder;
+
 @end
 
 @implementation SDDietDayDetailsViewController
 @synthesize detailImage;
 
-- (id) init {
-    self = [super init];
-    if (self) {
-        _cellWidth = 320;
-        _imageHeight = 240;
-    }
-    return self;
-}
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -47,14 +39,19 @@
 	// Do any additional setup after loading the view.
     
     self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:10/255.0f green:145/255.0f blue:5/255.0f alpha:1];
-    detailImage.image = [UIImage imageNamed:_detailItem[@"img"]];
-    CGRect frame = detailImage.frame;
-    frame.size = CGSizeMake(self.view.frame.size.width, _imageHeight);
-    detailImage.frame = frame;
+    if (_detailItem)
+        detailImage.image = [UIImage imageNamed:_detailItem[@"img"]];
+    
+    detailImage.frame = [self getDetailImageFrame];
 
     self.tableView.delegate = self;
 }
 
+- (CGRect) getDetailImageFrame {
+    CGRect frame = detailImage.frame;
+    frame.size = CGSizeMake(self.view.frame.size.width, 240);
+    return frame;
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {

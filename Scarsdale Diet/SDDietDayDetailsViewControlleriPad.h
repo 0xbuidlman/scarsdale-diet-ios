@@ -8,6 +8,11 @@
 
 #import "SDDietDayDetailsViewController.h"
 
-@interface SDDietDayDetailsViewControlleriPad : SDDietDayDetailsViewController
+@interface SDDietDayDetailsViewControlleriPad : SDDietDayDetailsViewController <UISplitViewControllerDelegate>
+
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIImageView *detailImage;
+
+@property (strong, nonatomic) id detailItem;
 
 @end

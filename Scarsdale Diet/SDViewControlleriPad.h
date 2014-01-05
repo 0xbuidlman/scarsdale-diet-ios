@@ -7,7 +7,10 @@
 //
 
 #import "SDViewController.h"
-
+//#import "SDDietDayDetailsViewControlleriPad.h"
+@class SDDietDayDetailsViewController;
 @interface SDViewControlleriPad : SDViewController
+
+@property (strong, nonatomic) SDDietDayDetailsViewController *detailViewController;
 
 @end

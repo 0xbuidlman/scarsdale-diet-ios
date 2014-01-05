@@ -10,8 +10,7 @@
 #import "SDDietDayDetailsViewController.h"
 #import "SDCalendarDietDayCell.h"
 #import <QuartzCore/QuartzCore.h>
-#import "SDLibraryAPI.h"
-#import "SDDietDay+TableRepresentation.h"
+
 
 @interface SDViewController ()
 
@@ -19,7 +18,7 @@
 
 @implementation SDViewController
 
-@synthesize sdCalendar, startButton, clearButton, doneButton, datePicker, dietDays, dietStart;
+@synthesize sdCalendar, startButton, clearButton, doneButton, datePicker, dietStart;
 
 - (void)viewDidLoad
 {

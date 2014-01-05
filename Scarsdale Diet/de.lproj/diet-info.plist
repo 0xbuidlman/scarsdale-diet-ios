@@ -5,88 +5,116 @@
 	<key>0</key>
 	<dict>
 		<key>lunch</key>
-		<string>ausgewähltes kaltes unfettes Fleisch (nach Wahl – Hähnchen, Puten, Zunge, zartes Rindflesich)
-Tomaten, geschnitten, gebacken oder gedünstet
-Kaffee, Tee, Sodawasser</string>
+		<array>
+			<string>ausgewähltes kaltes unfettes Fleisch (nach Wahl – Hähnchen, Puten, Zunge, zartes Rindflesich)</string>
+			<string>Tomaten, geschnitten, gebacken oder gedünstet</string>
+			<string>Kaffee, Tee, Sodawasser</string>
+		</array>
 		<key>dinner</key>
-		<string>Fisch oder Krebsen, Garnellini
-kombinierter Salat (von jederlei  Gemüse nach Wahl)
-1 Scheibe Vollkorn- oder Proteinbrot geröstet
-Grapefruit oder Obst nach der Saison</string>
+		<array>
+			<string>Fisch oder Krebsen, Garnellini</string>
+			<string>kombinierter Salat (von jederlei  Gemüse nach Wahl)</string>
+			<string>1 Scheibe Vollkorn- oder Proteinbrot geröstet</string>
+			<string>Grapefruit oder Obst nach der Saison</string>
+		</array>
 		<key>img</key>
 		<string>fish.jpg</string>
 	</dict>
 	<key>1</key>
 	<dict>
 		<key>lunch</key>
-		<string>Obstsalat, jegliche Kombination aus Obst, so viel wie Sie wollen</string>
+		<array>
+			<string>Obstsalat, jegliche Kombination aus Obst, so viel wie Sie wollen</string>
+		</array>
 		<key>dinner</key>
-		<string>große Frikadelle aus Rindfleisch
-Tomaten, Gartensalat, Sellerie, Oliven, Rosenkohl, Gurke</string>
+		<array>
+			<string>große Frikadelle aus Rindfleisch</string>
+			<string>Tomaten, Gartensalat, Sellerie, Oliven, Rosenkohl, Gurke</string>
+		</array>
 		<key>img</key>
 		<string>fruit_salad.jpg</string>
 	</dict>
 	<key>2</key>
 	<dict>
 		<key>lunch</key>
-		<string>Thunfisch- oder Lachssalat (mit entferntem Öl) mit Zitrone oder Essig
-Grapefruit, Melone oder Saisonfrucht
-Kaffee, Tee, Sodawasser</string>
+		<array>
+			<string>Thunfisch- oder Lachssalat (mit entferntem Öl) mit Zitrone oder Essig</string>
+			<string>Grapefruit, Melone oder Saisonfrucht</string>
+			<string>Kaffee, Tee, Sodawasser</string>
+		</array>
 		<key>dinner</key>
-		<string>Lammbraten, geschnitten von Scheiben mit entfernten Fett
-Salat von Gartensalat, Tomaten, Gurken, Sellerie</string>
+		<array>
+			<string>Lammbraten, geschnitten von Scheiben mit entfernten Fett</string>
+			<string>Salat von Gartensalat, Tomaten, Gurken, Sellerie</string>
+		</array>
 		<key>img</key>
 		<string>tuna_salad.jpg</string>
 	</dict>
 	<key>3</key>
 	<dict>
 		<key>lunch</key>
-		<string>Zwei Eier zubereitet nach Wahl, aber ohne Öl
-fettarme frische Käse/Quark
-Zucchini oder grüne Bohnen oder Tomaten- geschnitte oder gedünstet
-1 Scheibe Protein- oder Vollkornbrot, geröstet
-Tee oder Kaffee</string>
+		<array>
+			<string>Zwei Eier zubereitet nach Wahl, aber ohne Öl</string>
+			<string>fettarme frische Käse/Quark</string>
+			<string>Zucchini oder grüne Bohnen oder Tomaten- geschnitte oder gedünstet</string>
+			<string>1 Scheibe Protein- oder Vollkornbrot, geröstet</string>
+			<string>Tee oder Kaffee</string>
+		</array>
 		<key>dinner</key>
-		<string>Hähnchen, zubereitet in Grill, auf dem Rost oder im Ofen (mit entfertem Haut oder Fett)
-große Portion von Spinat, Paprika  oder grüne Bohnen</string>
+		<array>
+			<string>Hähnchen, zubereitet in Grill, auf dem Rost oder im Ofen (mit entfertem Haut oder Fett)</string>
+			<string>große Portion von Spinat, Paprika  oder grüne Bohnen</string>
+		</array>
 		<key>img</key>
 		<string>eggs.jpg</string>
 	</dict>
 	<key>4</key>
 	<dict>
 		<key>lunch</key>
-		<string>Käse (fettarme), verschieden Arten, geschnitten in Scheiben
-Spinat
-1 Scheibe geröstes Protein- oder Vollkornbrot</string>
+		<array>
+			<string>Käse (fettarme), verschieden Arten, geschnitten in Scheiben</string>
+			<string>Spinat</string>
+			<string>1 Scheibe geröstes Protein- oder Vollkornbrot</string>
+		</array>
 		<key>dinner</key>
-		<string>Fisch oder Krebs, Garnellini
-kombinierter Salat von jederlei Gemüse nach Wahl
-1 Scheibe gerösteter Protein oder Vollkornbrot</string>
+		<array>
+			<string>Fisch oder Krebs, Garnellini</string>
+			<string>kombinierter Salat von jederlei Gemüse nach Wahl</string>
+			<string>1 Scheibe gerösteter Protein oder Vollkornbrot</string>
+		</array>
 		<key>img</key>
 		<string>fish.jpg</string>
 	</dict>
 	<key>5</key>
 	<dict>
 		<key>lunch</key>
-		<string>Obstsalat
-Kaffee oder Tee</string>
+		<array>
+			<string>Obstsalat</string>
+			<string>Kaffee oder Tee</string>
+		</array>
 		<key>dinner</key>
-		<string>Puten- oder Hähnchenbraten
-Salat mit Tomaten oder Gartensalat
-Grapefruit oder Saisonfrucht</string>
+		<array>
+			<string>Puten- oder Hähnchenbraten</string>
+			<string>Salat mit Tomaten oder Gartensalat</string>
+			<string>Grapefruit oder Saisonfrucht</string>
+		</array>
 		<key>img</key>
 		<string>tomatoes_lettuce.jpg</string>
 	</dict>
 	<key>6</key>
 	<dict>
 		<key>lunch</key>
-		<string>kaltes oder heißes Hähnchen- oder Putenfleisch
-Tomaten, Mören, gekochte Kohl, Brokkoli oder Blumenkohl
-Grapefruit oder Saisonfrucht
-Kaffee oder Tee</string>
+		<array>
+			<string>kaltes oder heißes Hähnchen- oder Putenfleisch</string>
+			<string>Tomaten, Mören, gekochte Kohl, Brokkoli oder Blumenkohl</string>
+			<string>Grapefruit oder Saisonfrucht</string>
+			<string>Kaffee oder Tee</string>
+		</array>
 		<key>dinner</key>
-		<string>ein großes Steck (mit sichtbarem entfernten Fett vor dem Essen)
-Salat mit Gartensalat, Gurke, Sellerie, Tomaten, Rosenkohl</string>
+		<array>
+			<string>ein großes Steck (mit sichtbarem entfernten Fett vor dem Essen)</string>
+			<string>Salat mit Gartensalat, Gurke, Sellerie, Tomaten, Rosenkohl</string>
+		</array>
 		<key>img</key>
 		<string>beef.jpg</string>
 	</dict>
