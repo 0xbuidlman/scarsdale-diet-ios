@@ -152,8 +152,8 @@
 
 
 - (void) saveDietDays {
-    NSString *filename = [NSHomeDirectory() stringByAppendingString:SD_FILE_NAME];
-    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:dietDays];
-    [data writeToFile:filename atomically:YES];
+//    NSString *filename = [NSHomeDirectory() stringByAppendingString:SD_FILE_NAME];
+//    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:dietDays];
+//    [data writeToFile:filename atomically:YES];
 }
 @end
