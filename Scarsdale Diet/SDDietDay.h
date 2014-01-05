@@ -10,7 +10,7 @@
 
 @interface SDDietDay : NSObject <NSCoding>
 @property (retain, nonatomic, readonly) NSArray *imageName, *lunch, *dinner;
-@property (retain, nonatomic, readonly) NSString *breakfast, *replacement;
+@property (retain, nonatomic, readonly) NSArray *breakfast, *replacement;
 @property (retain, nonatomic, readonly) NSDate *date;
 
 - (id) initWithDate: (NSDate*)date ImageName: (NSArray*)imageName breakfast:(NSArray*)breakfast lunch:(NSArray*)lunch dinner:(NSArray*)dinner andReplacement:(NSArray*)replacement;
