@@ -46,6 +46,10 @@
     
     dietStart = [defaults objectForKey:@"dietStart"];
     
+    if (dietStart) {
+        [[SDLibraryAPI sharedInstance] setDietDaysFromStartDate:dietStart];
+        [sdCalendar reloadData];
+    }
     self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:10/255.0f green:145/255.0f blue:5/255.0f alpha:1];
     
     startButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Start", nil) style:UIBarButtonItemStyleBordered target:self action:@selector(startDateTapped:)];
