@@ -20,6 +20,7 @@
 		0C2111381860984900065F22 /* SDDietDay.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2111371860984900065F22 /* SDDietDay.m */; };
 		0C37E1091874523B008725E4 /* SDHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37E1081874523B008725E4 /* SDHelper.m */; };
 		0C37E10F1874B765008725E4 /* SDDietDay+TableRepresentation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37E10E1874B765008725E4 /* SDDietDay+TableRepresentation.m */; };
+		0C64D05918796B81006BB10A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C64D05818796B81006BB10A /* Images.xcassets */; };
 		0C651EE0175F79CA00A0F01C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0C651EE2175F79CA00A0F01C /* Localizable.strings */; };
 		0C651EE4175F7D4B00A0F01C /* diet-info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C651EE6175F7D4B00A0F01C /* diet-info.plist */; };
 		0C754C0B175FF5B50070B774 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0C754C0A175FF5B50070B774 /* Settings.bundle */; };
@@ -80,6 +81,7 @@
 		0C4AA7C8175FCF7400F99051 /* bg */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bg; path = bg.lproj/MainStoryboard.strings; sourceTree = "<group>"; };
 		0C4AA7C9175FCF7400F99051 /* bg */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bg; path = bg.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0C4AA7CB175FCF7400F99051 /* bg */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = bg; path = "bg.lproj/diet-info.plist"; sourceTree = "<group>"; };
+		0C64D05818796B81006BB10A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0C651EE1175F79CA00A0F01C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0C651EE3175F79E800A0F01C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0C651EE5175F7D4B00A0F01C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = "en.lproj/diet-info.plist"; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 				0C10333A174CE2A7004C2ACC /* Supporting Files */,
 				0C37E1071874523B008725E4 /* SDHelper.h */,
 				0C37E1081874523B008725E4 /* SDHelper.m */,
+				0C64D05818796B81006BB10A /* Images.xcassets */,
 			);
 			path = "Scarsdale Diet";
 			sourceTree = "<group>";
@@ -431,6 +434,7 @@
 				0C8892601750AAE000AAAC64 /* tomatoes_lettuce.jpg in Resources */,
 				209D198A179F1E78003F23F9 /* Default-Landscape~ipad.png in Resources */,
 				0C8892671752084A00AAAC64 /* 57.png in Resources */,
+				0C64D05918796B81006BB10A /* Images.xcassets in Resources */,
 				0C8892691752084F00AAAC64 /* 114.png in Resources */,
 				0C88926B17520F4700AAAC64 /* Default-568h@2x.png in Resources */,
 				0C7751A117524584009C636F /* Default@2x.png in Resources */,
@@ -644,6 +648,7 @@
 			baseConfigurationReference = B27124DD860B4D73ADD1FB6D /* Pods.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -667,6 +672,7 @@
 			baseConfigurationReference = B27124DD860B4D73ADD1FB6D /* Pods.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
