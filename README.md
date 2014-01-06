@@ -3,7 +3,7 @@ Scarsdale Diet iOS
 
 Simple iOS application that helps users follow Scarsdale Diet's food plan.  
 
-In the application is used [Vurig Calendar for iOS](https://github.com/TjeerdVurig/Vurig-Calendar).  
+In the application is used [RDVCalendarView for iOS](https://github.com/robbdimitrov/RDVCalendarView).  
 Everything else is distributed under the MIT License
 
 
